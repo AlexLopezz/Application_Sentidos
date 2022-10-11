@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Compile Update="Authentication\Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Authentication\Register.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="CheckAccess.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Roles\Administrador.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Roles\Caja.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Roles\Maitre.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Roles\Mozo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+  </ItemGroup>
+</Project>
