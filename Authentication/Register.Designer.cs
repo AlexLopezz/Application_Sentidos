@@ -121,8 +121,10 @@
             // 
             // Register
             // 
-            this.ClientSize = new System.Drawing.Size(415, 313);
+            this.ClientSize = new System.Drawing.Size(340, 445);
             this.Name = "Register";
+            this.Text = "Registro de usuario - Restaurante Sentidos & Casa de Te";
+            this.Load += new System.EventHandler(this.Register_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
@@ -139,5 +141,20 @@
         private Label label3;
         private Label label4;
         private TextBox textBox2;
+        private Button button2;
+        private Label lblRol;
+        private ComboBox cboRole;
+        private Label lblPassword;
+        private TextBox txtPassword;
+        private Label lblUsername;
+        private TextBox txtUsername;
+        private Label lblEmail;
+        private TextBox txtEmail;
+        private Label lblDNI;
+        private TextBox txtDNI;
+        private Label lblNameSurname;
+        private Label label5;
+        private TextBox txtNameSurname;
+        private PictureBox picRegister;
     }
 }
