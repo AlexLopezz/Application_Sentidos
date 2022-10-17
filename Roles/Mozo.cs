@@ -1,13 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-using Application_Sentidos.Resources.Objects;
+﻿using Application_Sentidos.Resources.Objects;
 
 namespace Application_Sentidos.Roles
 {
@@ -18,6 +9,28 @@ namespace Application_Sentidos.Roles
         {
             InitializeComponent();
             userLogged = user;
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            Mozo_Cobrar mozo_Cobrar = new Mozo_Cobrar();
+            mozo_Cobrar.Show();
+        }
+
+        private void btnActualizarPedidos_Click(object sender, EventArgs e)
+        {
+            //getApi.get(parametros de todos los pedidos)
+        }
+
+        private void btnConfirmarPedido_Click(object sender, EventArgs e)
+        {
+            //deletear el pedido de la bd con el id o lo que sea, jeje
+        }
+
+        private void btnPagar_Click(object sender, EventArgs e)
+        {
+            Mozo_Cobrar mozo_Cobrar = new Mozo_Cobrar();
+            mozo_Cobrar.Show();
         }
     }
 }
