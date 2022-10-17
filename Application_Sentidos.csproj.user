@@ -22,5 +22,8 @@
     <Compile Update="Roles\Mozo.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="Roles\Mozo_Cobrar.cs">
+      <SubType>Form</SubType>
+    </Compile>
   </ItemGroup>
 </Project>
