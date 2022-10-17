@@ -4,16 +4,16 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Application_Sentidos.Resources.Objects
+namespace Application_Sentidos.Resources.Administrador.Registro_Form_Objects
 {
-    public class User
+    public class PostRegister
     {
-        public int id { get; set; }
-        public string fullname { get; set; } = "";
         public string username { get; set; } = "";
         public string email { get; set; } = "";
+        public string fullname { get; set; } = "";
         public int dni { get; set; } = 0;
-        public Role role { get; set; }
         public string password { get; set; } = "";
+        public int role { get; set; }   
+
     }
 }

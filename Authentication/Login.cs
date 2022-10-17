@@ -45,29 +45,28 @@ namespace Application_Sentidos.Authentication
 
                 if (httpResponse.IsSuccessStatusCode)
                 {
-                    MessageBox.Show("Inicio de sesion exitoso.");
                     var contentResponse = await httpResponse.Content.ReadAsStringAsync();
 
                     var user = JsonSerializer.Deserialize<User>(contentResponse, options); //Deserialized JSON to Object
 
-                    switch (user.role)
+                    switch (user.role.id)
                     {
-                        case "Administrador":
+                        case 1:
                             this.Hide();
                             Administrador myAdmin = new Administrador(user);
                             myAdmin.ShowDialog();
                             break;
-                        case "Maitre":
+                        case 2:
                             this.Hide();
                             Maitre maitre = new Maitre(user);
                             maitre.ShowDialog();
                             break;
-                        case "Mozo":
+                        case 3:
                             this.Hide();
                             Mozo mozo = new Mozo(user);
                             mozo.ShowDialog();
                             break;
-                        case "Caja":
+                        case 4:
                             this.Hide();
                             Caja caja = new Caja(user);
                             caja.ShowDialog();
