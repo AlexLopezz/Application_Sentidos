@@ -14,7 +14,7 @@ namespace Application_Sentidos.Resources.Administrador
 {
     public partial class Usuarios : Form
     {
-        string urlEliminar = "http://localhost:8000/api/deleteUser/?id=";
+        string urlEliminar = "https://binarysystem.pythonanywhere.com/api/deleteUser/?id=";
 
         HttpClient httpClient = new HttpClient();
         public Usuarios()
@@ -87,7 +87,7 @@ namespace Application_Sentidos.Resources.Administrador
                 else { MessageBox.Show("Hubo un error, verifique ID."); }
             }
         }
-        private void emptyDgv() { dgvUsuarios.DataSource = null; }
+        
         private void bttRegistrar_Click(object sender, EventArgs e)
         {
             Registro registro = new Registro();
@@ -124,25 +124,25 @@ namespace Application_Sentidos.Resources.Administrador
 
         private void rb_allUser_CheckedChanged(object sender, EventArgs e)
         {
-            if(rb_allUser.Checked == true) { cargarDgvUsuario("http://localhost:8000/api/allUser/"); }
+            if(rb_allUser.Checked == true) { cargarDgvUsuario("https://binarysystem.pythonanywhere.com/api/allUser/"); }
         }
 
         private void rb_Mozo_CheckedChanged(object sender, EventArgs e)
         {
-            if (rb_Mozo.Checked == true) { cargarDgvUsuario("http://localhost:8000/api/allMozo/"); }
+            if (rb_Mozo.Checked == true) { cargarDgvUsuario("https://binarysystem.pythonanywhere.com/api/allMozo/"); }
         }
 
         private void rb_Mitre_CheckedChanged(object sender, EventArgs e)
         {
-            if (rb_Mitre.Checked == true) { cargarDgvUsuario("http://localhost:8000/api/allMitre/"); }
+            if (rb_Mitre.Checked == true) { cargarDgvUsuario("https://binarysystem.pythonanywhere.com/api/allMitre/"); }
         }
 
         private void rb_Caja_CheckedChanged(object sender, EventArgs e)
         {
-            if (rb_Caja.Checked == true) { cargarDgvUsuario("http://localhost:8000/api/allCaja/"); }
+            if (rb_Caja.Checked == true) { cargarDgvUsuario("https://binarysystem.pythonanywhere.com/api/allCaja/"); }
         }
 
         private void rb_None_CheckedChanged(object sender, EventArgs e) => emptyDgv();
-
+        private void emptyDgv() { dgvUsuarios.DataSource = null; }
     }
 }

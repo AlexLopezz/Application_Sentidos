@@ -14,8 +14,10 @@ using System.Windows.Forms;
 
 namespace Application_Sentidos.Resources.Administrador
 {
+    
     public partial class Modificar : Form
     {
+        string urlBase = "https://binarysystem.pythonanywhere.com/api/modifyUser/";
         Registro utilidades_Registro;
         DataGridView dgvFormParent;
         public Modificar(Registro registro, DataGridView dgv)
@@ -44,7 +46,7 @@ namespace Application_Sentidos.Resources.Administrador
         {
             HttpClient httpClient = new HttpClient();
             JsonSerializerOptions options = new JsonSerializerOptions() { PropertyNameCaseInsensitive = true }; //The options ignore case sensitive values.
-            string urlBase = "http://localhost:8000/api/modifyUser/";
+            
             if (validateFields())
             {
                 MessageBox.Show("Debe completar todos los campos.");
