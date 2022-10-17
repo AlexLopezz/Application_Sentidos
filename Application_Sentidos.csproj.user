@@ -19,6 +19,9 @@
     <Compile Update="Resources\Administrador\Usuarios.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="Resources\Reservas\Reservas_Form_Objects\Reserva.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="Roles\Administrador.cs">
       <SubType>Form</SubType>
     </Compile>

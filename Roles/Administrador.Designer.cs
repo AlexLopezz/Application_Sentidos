@@ -128,6 +128,7 @@
             this.bttReservas.TabIndex = 3;
             this.bttReservas.Text = "RESERVAS";
             this.bttReservas.UseVisualStyleBackColor = false;
+            this.bttReservas.Click += new System.EventHandler(this.bttReservas_Click);
             // 
             // bttMisDatos
             // 

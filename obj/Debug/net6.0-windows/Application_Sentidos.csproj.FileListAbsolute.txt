@@ -49,3 +49,4 @@ C:\Users\Alex Lopez\Documents\C#\Application_Sentidos\obj\Debug\net6.0-windows\r
 C:\Users\Alex Lopez\Documents\C#\Application_Sentidos\obj\Debug\net6.0-windows\Application_Sentidos.Resources.Administrador.Usuarios.resources
 C:\Users\Alex Lopez\Documents\C#\Application_Sentidos\obj\Debug\net6.0-windows\Application_Sentidos.Resources.Administrador.Registro.resources
 C:\Users\Alex Lopez\Documents\C#\Application_Sentidos\obj\Debug\net6.0-windows\Application_Sentidos.Resources.Administrador.Modificar.resources
+C:\Users\Alex Lopez\Documents\C#\Application_Sentidos\obj\Debug\net6.0-windows\Application_Sentidos.Resources.Reserva.resources
