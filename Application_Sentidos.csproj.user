@@ -10,6 +10,18 @@
     <Compile Update="CheckAccess.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="Resources\Administrador\Modificar_Form_Objects\Modificar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Resources\Administrador\Registro_Form_Objects\Registro.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Resources\Administrador\Usuarios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Resources\Reservas\Reservas_Form_Objects\Reserva.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="Roles\Administrador.cs">
       <SubType>Form</SubType>
     </Compile>

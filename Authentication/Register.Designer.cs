@@ -124,7 +124,6 @@
             this.ClientSize = new System.Drawing.Size(340, 445);
             this.Name = "Register";
             this.Text = "Registro de usuario - Restaurante Sentidos & Casa de Te";
-            this.Load += new System.EventHandler(this.Register_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
