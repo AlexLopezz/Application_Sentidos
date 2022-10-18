@@ -61,16 +61,5 @@ namespace Application_Sentidos.Roles
         {
             AbrirFormPanel(new Reserva());
         }
-        /*
-private void bttReservas_Click(object sender, EventArgs e)
-{
-   AbrirFormPanel(new Reservas());
-}
-
-private void bttConsultas_Click(object sender, EventArgs e)
-{
-   AbrirFormPanel(new Consultas());
-}
-*/
     }
 }

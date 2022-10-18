@@ -9,6 +9,11 @@
       "Application_Sentidos/1.0.0": {
         "runtime": {
           "Application_Sentidos.dll": {}
+        },
+        "resources": {
+          "es-AR/Application_Sentidos.resources.dll": {
+            "locale": "es-AR"
+          }
         }
       }
     }
