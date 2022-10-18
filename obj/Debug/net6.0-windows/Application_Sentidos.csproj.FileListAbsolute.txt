@@ -55,3 +55,4 @@ C:\Users\Alex Lopez\Documents\C#\Application_Sentidos\obj\Debug\net6.0-windows\A
 C:\Users\Alex Lopez\Documents\C#\Application_Sentidos\obj\Debug\net6.0-windows\Application_Sentidos.Roles.Mozo_Cobrar.resources
 C:\Users\Alex Lopez\Documents\C#\Application_Sentidos\obj\Debug\net6.0-windows\Application_Sentidos.Roles.Mozo_Cobrar.es-AR.resources
 C:\Users\Alex Lopez\Documents\C#\Application_Sentidos\obj\Debug\net6.0-windows\es-AR\Application_Sentidos.resources.dll
+C:\Users\Alex Lopez\Documents\C#\Application_Sentidos\obj\Debug\net6.0-windows\Application_Sentidos.Resources.Mitre.CreateReserva.resources
