@@ -14,7 +14,7 @@ namespace Application_Sentidos.Resources.Administrador
 {
     public partial class Usuarios : Form
     {
-        string urlEliminar = "https://binarysystem.pythonanywhere.com/api/deleteUser/?id=";
+        string urlEliminar = "http://localhost:8000/api/deleteUser/?id=";
 
         HttpClient httpClient = new HttpClient();
         public Usuarios()
@@ -124,7 +124,7 @@ namespace Application_Sentidos.Resources.Administrador
 
         private void rb_allUser_CheckedChanged(object sender, EventArgs e)
         {
-            if(rb_allUser.Checked == true) { cargarDgvUsuario("https://binarysystem.pythonanywhere.com/api/allUser/"); }
+            if(rb_allUser.Checked == true) { cargarDgvUsuario("http://localhost:8000/api/allUser/"); }
         }
 
         private void rb_Mozo_CheckedChanged(object sender, EventArgs e)
@@ -134,12 +134,12 @@ namespace Application_Sentidos.Resources.Administrador
 
         private void rb_Mitre_CheckedChanged(object sender, EventArgs e)
         {
-            if (rb_Mitre.Checked == true) { cargarDgvUsuario("https://binarysystem.pythonanywhere.com/api/allMitre/"); }
+            if (rb_Mitre.Checked == true) { cargarDgvUsuario("http://localhost:8000/api/allMitre/"); }
         }
 
         private void rb_Caja_CheckedChanged(object sender, EventArgs e)
         {
-            if (rb_Caja.Checked == true) { cargarDgvUsuario("https://binarysystem.pythonanywhere.com/api/allCaja/"); }
+            if (rb_Caja.Checked == true) { cargarDgvUsuario("http://localhost:8000/api/allCaja/"); }
         }
 
         private void rb_None_CheckedChanged(object sender, EventArgs e) => emptyDgv();

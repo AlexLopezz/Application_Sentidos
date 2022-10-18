@@ -15,7 +15,7 @@ namespace Application_Sentidos.Resources.Administrador
 {
     public partial class Registro : Form
     {
-        string urlBase = "https://binarysystem.pythonanywhere.com/api/register/";
+        string urlBase = "http://localhost:8000/api/register/";
         public Registro()
         {
             InitializeComponent();
