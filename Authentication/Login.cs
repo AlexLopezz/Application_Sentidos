@@ -14,7 +14,7 @@ namespace Application_Sentidos.Authentication
 {
     public partial class Login : Form
     {
-        string urlBase = "https://binarysystem.pythonanywhere.com/api/login/"; //WARNING: Check the URL, generally i use localhost for testing app...
+        string urlBase = "http://localhost:8000/api/login/"; //WARNING: Check the URL, generally i use localhost for testing app...
         JsonSerializerOptions options = new JsonSerializerOptions() { PropertyNameCaseInsensitive = true }; //The options ignore case sensitive values.
         HttpClient httpClient = new HttpClient(); //We use for request post and get
 
@@ -49,24 +49,24 @@ namespace Application_Sentidos.Authentication
 
                     var user = JsonSerializer.Deserialize<User>(contentResponse, options); //Deserialized JSON to Object
 
-                    switch (user.role.id)
+                    switch (user.role.name)
                     {
-                        case 1:
+                        case "Administrador":
                             this.Hide();
                             Administrador myAdmin = new Administrador(user);
                             myAdmin.ShowDialog();
                             break;
-                        case 2:
+                        case "Mitre":
                             this.Hide();
                             Maitre maitre = new Maitre(user);
                             maitre.ShowDialog();
                             break;
-                        case 3:
+                        case "Mozo":
                             this.Hide();
                             Mozo mozo = new Mozo(user);
                             mozo.ShowDialog();
                             break;
-                        case 4:
+                        case "Caja":
                             this.Hide();
                             Caja caja = new Caja(user);
                             caja.ShowDialog();

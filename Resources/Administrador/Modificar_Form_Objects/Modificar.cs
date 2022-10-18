@@ -17,7 +17,7 @@ namespace Application_Sentidos.Resources.Administrador
     
     public partial class Modificar : Form
     {
-        string urlBase = "https://binarysystem.pythonanywhere.com/api/modifyUser/";
+        string urlBase = "http://localhost:8000/api/modifyUser/";
         Registro utilidades_Registro;
         DataGridView dgvFormParent;
         public Modificar(Registro registro, DataGridView dgv)
