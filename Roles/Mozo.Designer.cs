@@ -41,7 +41,6 @@
             this.label3 = new System.Windows.Forms.Label();
             this.listBox3 = new System.Windows.Forms.ListBox();
             this.btnPagar = new System.Windows.Forms.Button();
-            this.btnActualizarPedidos = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.btnConfirmar = new System.Windows.Forms.Button();
@@ -136,22 +135,13 @@
             // 
             // btnPagar
             // 
-            this.btnPagar.Location = new System.Drawing.Point(344, 12);
+            this.btnPagar.Location = new System.Drawing.Point(579, 263);
             this.btnPagar.Name = "btnPagar";
             this.btnPagar.Size = new System.Drawing.Size(75, 23);
             this.btnPagar.TabIndex = 10;
-            this.btnPagar.Text = "Pagar";
+            this.btnPagar.Text = "Finalizar";
             this.btnPagar.UseVisualStyleBackColor = true;
-            this.btnPagar.Click += new System.EventHandler(this.btnPagar_Click);
-            // 
-            // btnActualizarPedidos
-            // 
-            this.btnActualizarPedidos.Location = new System.Drawing.Point(660, 15);
-            this.btnActualizarPedidos.Name = "btnActualizarPedidos";
-            this.btnActualizarPedidos.Size = new System.Drawing.Size(75, 44);
-            this.btnActualizarPedidos.TabIndex = 11;
-            this.btnActualizarPedidos.Text = "Actualizar Pedidos";
-            this.btnActualizarPedidos.UseVisualStyleBackColor = true;
+            this.btnPagar.Click += new System.EventHandler(this.btnFinalizarPedido_Click);
             // 
             // label4
             // 
@@ -173,7 +163,7 @@
             // 
             // btnConfirmar
             // 
-            this.btnConfirmar.Location = new System.Drawing.Point(579, 236);
+            this.btnConfirmar.Location = new System.Drawing.Point(579, 214);
             this.btnConfirmar.Name = "btnConfirmar";
             this.btnConfirmar.Size = new System.Drawing.Size(75, 23);
             this.btnConfirmar.TabIndex = 14;
@@ -189,7 +179,6 @@
             this.Controls.Add(this.btnConfirmar);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.btnActualizarPedidos);
             this.Controls.Add(this.btnPagar);
             this.Controls.Add(this.listBox3);
             this.Controls.Add(this.label3);
@@ -226,7 +215,6 @@
         private Label label3;
         private ListBox listBox3;
         private Button btnPagar;
-        private Button btnActualizarPedidos;
         private Label label4;
         private Label label5;
         private Button btnConfirmar;

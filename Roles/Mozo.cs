@@ -13,7 +13,7 @@ namespace Application_Sentidos.Roles
 
         private void button3_Click(object sender, EventArgs e)
         {
-            Mozo_Cobrar mozo_Cobrar = new Mozo_Cobrar();
+            Caja_Cobrar mozo_Cobrar = new Caja_Cobrar();
             mozo_Cobrar.Show();
         }
 
@@ -27,10 +27,9 @@ namespace Application_Sentidos.Roles
             //deletear el pedido de la bd con el id o lo que sea, jeje
         }
 
-        private void btnPagar_Click(object sender, EventArgs e)
+        private void btnFinalizarPedido_Click(object sender, EventArgs e)
         {
-            Mozo_Cobrar mozo_Cobrar = new Mozo_Cobrar();
-            mozo_Cobrar.Show();
+            //enviar el pedido del mozo a la bd para generar la factura por caja
         }
     }
 }

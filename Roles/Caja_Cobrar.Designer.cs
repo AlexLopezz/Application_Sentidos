@@ -1,6 +1,6 @@
 ﻿namespace Application_Sentidos.Roles
 {
-    partial class Mozo_Cobrar
+    partial class Caja_Cobrar
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Mozo_Cobrar));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Caja_Cobrar));
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -41,14 +41,14 @@
             this.tarjCréditoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.listBox1 = new System.Windows.Forms.ListBox();
+            this.txtBoxNombre = new System.Windows.Forms.TextBox();
+            this.txtBoxApellido = new System.Windows.Forms.TextBox();
+            this.txtNumTarjeta = new System.Windows.Forms.TextBox();
+            this.txtBoxCodTarjeta = new System.Windows.Forms.TextBox();
+            this.txtBoxTelefono = new System.Windows.Forms.TextBox();
+            this.txtBoxDireccion = new System.Windows.Forms.TextBox();
+            this.cboBoxTipoFatura = new System.Windows.Forms.ComboBox();
+            this.listBoxDetallesPedido = new System.Windows.Forms.ListBox();
             this.label8 = new System.Windows.Forms.Label();
             this.btnPagar = new System.Windows.Forms.Button();
             this.btnCancelar = new System.Windows.Forms.Button();
@@ -121,51 +121,52 @@
             resources.ApplyResources(this.label7, "label7");
             this.label7.Name = "label7";
             // 
-            // textBox1
+            // txtBoxNombre
             // 
-            resources.ApplyResources(this.textBox1, "textBox1");
-            this.textBox1.Name = "textBox1";
+            resources.ApplyResources(this.txtBoxNombre, "txtBoxNombre");
+            this.txtBoxNombre.Name = "txtBoxNombre";
             // 
-            // textBox2
+            // txtBoxApellido
             // 
-            resources.ApplyResources(this.textBox2, "textBox2");
-            this.textBox2.Name = "textBox2";
+            resources.ApplyResources(this.txtBoxApellido, "txtBoxApellido");
+            this.txtBoxApellido.Name = "txtBoxApellido";
             // 
-            // textBox3
+            // txtNumTarjeta
             // 
-            resources.ApplyResources(this.textBox3, "textBox3");
-            this.textBox3.Name = "textBox3";
+            resources.ApplyResources(this.txtNumTarjeta, "txtNumTarjeta");
+            this.txtNumTarjeta.Name = "txtNumTarjeta";
             // 
-            // textBox4
+            // txtBoxCodTarjeta
             // 
-            resources.ApplyResources(this.textBox4, "textBox4");
-            this.textBox4.Name = "textBox4";
+            resources.ApplyResources(this.txtBoxCodTarjeta, "txtBoxCodTarjeta");
+            this.txtBoxCodTarjeta.Name = "txtBoxCodTarjeta";
             // 
-            // textBox5
+            // txtBoxTelefono
             // 
-            resources.ApplyResources(this.textBox5, "textBox5");
-            this.textBox5.Name = "textBox5";
+            resources.ApplyResources(this.txtBoxTelefono, "txtBoxTelefono");
+            this.txtBoxTelefono.Name = "txtBoxTelefono";
             // 
-            // textBox6
+            // txtBoxDireccion
             // 
-            resources.ApplyResources(this.textBox6, "textBox6");
-            this.textBox6.Name = "textBox6";
+            resources.ApplyResources(this.txtBoxDireccion, "txtBoxDireccion");
+            this.txtBoxDireccion.Name = "txtBoxDireccion";
+            this.txtBoxDireccion.TextChanged += new System.EventHandler(this.txtBoxDireccion_TextChanged);
             // 
-            // comboBox1
+            // cboBoxTipoFatura
             // 
-            resources.ApplyResources(this.comboBox1, "comboBox1");
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
-            resources.GetString("comboBox1.Items"),
-            resources.GetString("comboBox1.Items1"),
-            resources.GetString("comboBox1.Items2")});
-            this.comboBox1.Name = "comboBox1";
+            resources.ApplyResources(this.cboBoxTipoFatura, "cboBoxTipoFatura");
+            this.cboBoxTipoFatura.FormattingEnabled = true;
+            this.cboBoxTipoFatura.Items.AddRange(new object[] {
+            resources.GetString("cboBoxTipoFatura.Items"),
+            resources.GetString("cboBoxTipoFatura.Items1"),
+            resources.GetString("cboBoxTipoFatura.Items2")});
+            this.cboBoxTipoFatura.Name = "cboBoxTipoFatura";
             // 
-            // listBox1
+            // listBoxDetallesPedido
             // 
-            resources.ApplyResources(this.listBox1, "listBox1");
-            this.listBox1.FormattingEnabled = true;
-            this.listBox1.Name = "listBox1";
+            resources.ApplyResources(this.listBoxDetallesPedido, "listBoxDetallesPedido");
+            this.listBoxDetallesPedido.FormattingEnabled = true;
+            this.listBoxDetallesPedido.Name = "listBoxDetallesPedido";
             // 
             // label8
             // 
@@ -194,14 +195,14 @@
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.btnPagar);
             this.Controls.Add(this.label8);
-            this.Controls.Add(this.listBox1);
-            this.Controls.Add(this.comboBox1);
-            this.Controls.Add(this.textBox6);
-            this.Controls.Add(this.textBox5);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.listBoxDetallesPedido);
+            this.Controls.Add(this.cboBoxTipoFatura);
+            this.Controls.Add(this.txtBoxDireccion);
+            this.Controls.Add(this.txtBoxTelefono);
+            this.Controls.Add(this.txtBoxCodTarjeta);
+            this.Controls.Add(this.txtNumTarjeta);
+            this.Controls.Add(this.txtBoxApellido);
+            this.Controls.Add(this.txtBoxNombre);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
@@ -213,7 +214,7 @@
             this.Cursor = System.Windows.Forms.Cursors.Hand;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.MainMenuStrip = this.menuStrip1;
-            this.Name = "Mozo_Cobrar";
+            this.Name = "Caja_Cobrar";
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
@@ -235,14 +236,14 @@
         private ToolStripMenuItem tarjCréditoToolStripMenuItem;
         private Label label6;
         private Label label7;
-        private TextBox textBox1;
-        private TextBox textBox2;
-        private TextBox textBox3;
-        private TextBox textBox4;
-        private TextBox textBox5;
-        private TextBox textBox6;
-        private ComboBox comboBox1;
-        private ListBox listBox1;
+        private TextBox txtBoxNombre;
+        private TextBox txtBoxApellido;
+        private TextBox txtNumTarjeta;
+        private TextBox txtBoxCodTarjeta;
+        private TextBox txtBoxTelefono;
+        private TextBox txtBoxDireccion;
+        private ComboBox cboBoxTipoFatura;
+        private ListBox listBoxDetallesPedido;
         private Label label8;
         private Button btnPagar;
         private Button btnCancelar;

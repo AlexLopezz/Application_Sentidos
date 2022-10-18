@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Application_Sentidos.Roles
 {
-    public partial class Mozo_Cobrar : Form
+    public partial class Caja_Cobrar : Form
     {
-        public Mozo_Cobrar()
+        public Caja_Cobrar()
         {
             InitializeComponent();
         }
@@ -21,6 +21,11 @@ namespace Application_Sentidos.Roles
         {
             //generar factura y confirmacion de pago
             MessageBox.Show("El pago ha sido exitoso", "Confirmacion de Pago");
+        }
+
+        private void txtBoxDireccion_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -168,31 +168,34 @@
   <data name="label7.Text" xml:space="preserve">
     <value>Dirección</value>
   </data>
-  <data name="textBox1.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="txtBoxNombre.Size" type="System.Drawing.Size, System.Drawing">
     <value>182, 23</value>
   </data>
-  <data name="textBox2.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="txtBoxApellido.Size" type="System.Drawing.Size, System.Drawing">
     <value>182, 23</value>
   </data>
-  <data name="textBox3.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="txtNumTarjeta.Size" type="System.Drawing.Size, System.Drawing">
     <value>182, 23</value>
   </data>
-  <data name="textBox4.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="txtBoxCodTarjeta.Size" type="System.Drawing.Size, System.Drawing">
     <value>182, 23</value>
   </data>
-  <data name="textBox5.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="txtBoxTelefono.Size" type="System.Drawing.Size, System.Drawing">
     <value>182, 23</value>
   </data>
-  <data name="textBox6.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="txtBoxDireccion.Size" type="System.Drawing.Size, System.Drawing">
     <value>182, 23</value>
   </data>
-  <data name="comboBox1.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="txtBoxDireccion.TabIndex" type="System.Int32, mscorlib">
+    <value>7</value>
+  </data>
+  <data name="cboBoxTipoFatura.Size" type="System.Drawing.Size, System.Drawing">
     <value>182, 23</value>
   </data>
-  <data name="listBox1.ItemHeight" type="System.Int32, mscorlib">
+  <data name="listBoxDetallesPedido.ItemHeight" type="System.Int32, mscorlib">
     <value>15</value>
   </data>
-  <data name="listBox1.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="listBoxDetallesPedido.Size" type="System.Drawing.Size, System.Drawing">
     <value>449, 259</value>
   </data>
   <data name="label8.AutoSize" type="System.Boolean, mscorlib">
@@ -207,11 +210,17 @@
   <data name="label8.Text" xml:space="preserve">
     <value>Detalles</value>
   </data>
+  <data name="btnPagar.TabIndex" type="System.Int32, mscorlib">
+    <value>8</value>
+  </data>
   <data name="btnPagar.Text" xml:space="preserve">
     <value>Pagar</value>
   </data>
   <data name="btnCancelar.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
+  </data>
+  <data name="btnCancelar.TabIndex" type="System.Int32, mscorlib">
+    <value>9</value>
   </data>
   <data name="btnCancelar.Text" xml:space="preserve">
     <value>Cancelar</value>
