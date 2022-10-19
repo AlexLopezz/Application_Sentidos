@@ -192,12 +192,6 @@
   <data name="cboBoxTipoFatura.Size" type="System.Drawing.Size, System.Drawing">
     <value>182, 23</value>
   </data>
-  <data name="listBoxDetallesPedido.ItemHeight" type="System.Int32, mscorlib">
-    <value>15</value>
-  </data>
-  <data name="listBoxDetallesPedido.Size" type="System.Drawing.Size, System.Drawing">
-    <value>449, 259</value>
-  </data>
   <data name="label8.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
@@ -224,6 +218,15 @@
   </data>
   <data name="btnCancelar.Text" xml:space="preserve">
     <value>Cancelar</value>
+  </data>
+  <data name="dataGridDetalleCaja.Location" type="System.Drawing.Point, System.Drawing">
+    <value>339, 60</value>
+  </data>
+  <data name="dataGridDetalleCaja.Size" type="System.Drawing.Size, System.Drawing">
+    <value>449, 260</value>
+  </data>
+  <data name="dataGridDetalleCaja.TabIndex" type="System.Int32, mscorlib">
+    <value>17</value>
   </data>
   <data name="$this.AutoSizeMode" type="System.Windows.Forms.AutoSizeMode, System.Windows.Forms">
     <value>GrowAndShrink</value>

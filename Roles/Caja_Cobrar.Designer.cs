@@ -48,11 +48,12 @@
             this.txtBoxTelefono = new System.Windows.Forms.TextBox();
             this.txtBoxDireccion = new System.Windows.Forms.TextBox();
             this.cboBoxTipoFatura = new System.Windows.Forms.ComboBox();
-            this.listBoxDetallesPedido = new System.Windows.Forms.ListBox();
             this.label8 = new System.Windows.Forms.Label();
             this.btnPagar = new System.Windows.Forms.Button();
             this.btnCancelar = new System.Windows.Forms.Button();
+            this.dataGridDetalleCaja = new System.Windows.Forms.DataGridView();
             this.menuStrip1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridDetalleCaja)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -162,12 +163,6 @@
             resources.GetString("cboBoxTipoFatura.Items2")});
             this.cboBoxTipoFatura.Name = "cboBoxTipoFatura";
             // 
-            // listBoxDetallesPedido
-            // 
-            resources.ApplyResources(this.listBoxDetallesPedido, "listBoxDetallesPedido");
-            this.listBoxDetallesPedido.FormattingEnabled = true;
-            this.listBoxDetallesPedido.Name = "listBoxDetallesPedido";
-            // 
             // label8
             // 
             resources.ApplyResources(this.label8, "label8");
@@ -186,16 +181,23 @@
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.UseVisualStyleBackColor = true;
             // 
-            // Mozo_Cobrar
+            // dataGridDetalleCaja
+            // 
+            resources.ApplyResources(this.dataGridDetalleCaja, "dataGridDetalleCaja");
+            this.dataGridDetalleCaja.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridDetalleCaja.Name = "dataGridDetalleCaja";
+            this.dataGridDetalleCaja.RowTemplate.Height = 25;
+            // 
+            // Caja_Cobrar
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.CancelButton = this.btnCancelar;
+            this.Controls.Add(this.dataGridDetalleCaja);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.btnPagar);
             this.Controls.Add(this.label8);
-            this.Controls.Add(this.listBoxDetallesPedido);
             this.Controls.Add(this.cboBoxTipoFatura);
             this.Controls.Add(this.txtBoxDireccion);
             this.Controls.Add(this.txtBoxTelefono);
@@ -217,6 +219,7 @@
             this.Name = "Caja_Cobrar";
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridDetalleCaja)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -243,9 +246,9 @@
         private TextBox txtBoxTelefono;
         private TextBox txtBoxDireccion;
         private ComboBox cboBoxTipoFatura;
-        private ListBox listBoxDetallesPedido;
         private Label label8;
         private Button btnPagar;
         private Button btnCancelar;
+        private DataGridView dataGridDetalleCaja;
     }
 }
