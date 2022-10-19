@@ -36,7 +36,6 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.txtPhone = new System.Windows.Forms.TextBox();
-            this.txtSchedule = new System.Windows.Forms.TextBox();
             this.txtSelected_tables = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
@@ -71,9 +70,14 @@
             this.button3 = new System.Windows.Forms.Button();
             this.bttSelectUser = new System.Windows.Forms.Button();
             this.dateFecha = new System.Windows.Forms.DateTimePicker();
+            this.cboSchedule = new System.Windows.Forms.ComboBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.panelMesas.SuspendLayout();
             this.panel1.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.SuspendLayout();
             // 
             // button1
@@ -140,28 +144,23 @@
             this.txtPhone.Size = new System.Drawing.Size(124, 23);
             this.txtPhone.TabIndex = 11;
             // 
-            // txtSchedule
-            // 
-            this.txtSchedule.Location = new System.Drawing.Point(75, 133);
-            this.txtSchedule.Name = "txtSchedule";
-            this.txtSchedule.Size = new System.Drawing.Size(123, 23);
-            this.txtSchedule.TabIndex = 7;
-            // 
             // txtSelected_tables
             // 
             this.txtSelected_tables.Location = new System.Drawing.Point(133, 411);
             this.txtSelected_tables.Name = "txtSelected_tables";
-            this.txtSelected_tables.Size = new System.Drawing.Size(166, 23);
+            this.txtSelected_tables.ReadOnly = true;
+            this.txtSelected_tables.Size = new System.Drawing.Size(131, 23);
             this.txtSelected_tables.TabIndex = 14;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label2.Location = new System.Drawing.Point(11, 414);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(116, 15);
+            this.label2.Size = new System.Drawing.Size(119, 15);
             this.label2.TabIndex = 13;
-            this.label2.Text = "mesas seleccionadas";
+            this.label2.Text = "Mesas seleccionadas";
             // 
             // label6
             // 
@@ -218,6 +217,8 @@
             // 
             // panelMesas
             // 
+            this.panelMesas.Controls.Add(this.pictureBox3);
+            this.panelMesas.Controls.Add(this.pictureBox2);
             this.panelMesas.Controls.Add(this.label7);
             this.panelMesas.Controls.Add(this.panel1);
             this.panelMesas.Controls.Add(this.label6);
@@ -269,13 +270,13 @@
             this.tableLayoutPanel1.Controls.Add(this.button12, 4, 1);
             this.tableLayoutPanel1.Controls.Add(this.button11, 3, 1);
             this.tableLayoutPanel1.Controls.Add(this.button10, 2, 1);
-            this.tableLayoutPanel1.Controls.Add(this.button9, 1, 1);
             this.tableLayoutPanel1.Controls.Add(this.button8, 0, 1);
             this.tableLayoutPanel1.Controls.Add(this.button7, 4, 0);
             this.tableLayoutPanel1.Controls.Add(this.button6, 3, 0);
             this.tableLayoutPanel1.Controls.Add(this.button5, 2, 0);
             this.tableLayoutPanel1.Controls.Add(this.button4, 1, 0);
             this.tableLayoutPanel1.Controls.Add(this.button3, 0, 0);
+            this.tableLayoutPanel1.Controls.Add(this.button9, 1, 1);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 33);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
@@ -407,12 +408,13 @@
             // 
             // button9
             // 
+            this.button9.BackColor = System.Drawing.Color.Transparent;
             this.button9.Image = ((System.Drawing.Image)(resources.GetObject("button9.Image")));
             this.button9.Location = new System.Drawing.Point(76, 83);
             this.button9.Name = "button9";
             this.button9.Size = new System.Drawing.Size(67, 72);
             this.button9.TabIndex = 6;
-            this.button9.UseVisualStyleBackColor = true;
+            this.button9.UseVisualStyleBackColor = false;
             // 
             // button8
             // 
@@ -480,6 +482,7 @@
             // 
             // dateFecha
             // 
+            this.dateFecha.CalendarFont = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.dateFecha.CustomFormat = "yyyy-MM-dd";
             this.dateFecha.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dateFecha.Location = new System.Drawing.Point(75, 173);
@@ -489,12 +492,45 @@
             this.dateFecha.TabIndex = 22;
             this.dateFecha.Value = new System.DateTime(2022, 1, 11, 0, 0, 0, 0);
             // 
+            // cboSchedule
+            // 
+            this.cboSchedule.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cboSchedule.FormattingEnabled = true;
+            this.cboSchedule.Items.AddRange(new object[] {
+            "Desayuno",
+            "Almuerzo",
+            "Merienda",
+            "Cena"});
+            this.cboSchedule.Location = new System.Drawing.Point(77, 130);
+            this.cboSchedule.Name = "cboSchedule";
+            this.cboSchedule.Size = new System.Drawing.Size(121, 23);
+            this.cboSchedule.TabIndex = 23;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.BackColor = System.Drawing.Color.Red;
+            this.pictureBox2.Location = new System.Drawing.Point(100, 377);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(43, 24);
+            this.pictureBox2.TabIndex = 25;
+            this.pictureBox2.TabStop = false;
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.BackColor = System.Drawing.Color.Lime;
+            this.pictureBox3.Location = new System.Drawing.Point(222, 377);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(43, 24);
+            this.pictureBox3.TabIndex = 26;
+            this.pictureBox3.TabStop = false;
+            // 
             // CreateReserva
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.ClientSize = new System.Drawing.Size(858, 446);
+            this.Controls.Add(this.cboSchedule);
             this.Controls.Add(this.dateFecha);
             this.Controls.Add(this.bttSelectUser);
             this.Controls.Add(this.panelMesas);
@@ -504,7 +540,6 @@
             this.Controls.Add(this.listUserFilter);
             this.Controls.Add(this.txtPhone);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.txtSchedule);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.lblfecha);
             this.Controls.Add(this.txtBusquedaUser);
@@ -518,6 +553,8 @@
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.tableLayoutPanel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -532,7 +569,6 @@
         private Label label4;
         private Label label5;
         private TextBox txtPhone;
-        private TextBox txtSchedule;
         private TextBox txtSelected_tables;
         private Label label2;
         private Label label6;
@@ -567,5 +603,8 @@
         private Button button3;
         private Button bttSelectUser;
         private DateTimePicker dateFecha;
+        private ComboBox cboSchedule;
+        private PictureBox pictureBox3;
+        private PictureBox pictureBox2;
     }
 }

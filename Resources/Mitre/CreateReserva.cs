@@ -36,7 +36,7 @@ namespace Application_Sentidos.Resources.Mitre
             {
                 user_id = Int32.Parse(txtBusquedaUser.Text),
                 phone = txtPhone.Text,
-                schedule = txtSchedule.Text,
+                schedule = cboSchedule.Text,
                 date = dateFecha.Text,
                 selected_tables = txtSelected_tables.Text
             };
