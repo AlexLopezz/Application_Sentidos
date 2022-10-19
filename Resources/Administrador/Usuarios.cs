@@ -14,31 +14,92 @@ namespace Application_Sentidos.Resources.Administrador
 {
     public partial class Usuarios : Form
     {
-        string urlEliminar = "http://localhost:8000/api/deleteUser/?id=";
-
         HttpClient httpClient = new HttpClient();
         public Usuarios()
         {
             InitializeComponent();
         }
 
-        public async void cargarDgvUsuario(string urlBase)
+        private async void bttEliminar_Click(object sender, EventArgs e)
         {
-            var httpResponse = await httpClient.GetAsync(urlBase);
-            if (httpResponse.IsSuccessStatusCode)
-            {
-                var body = await httpResponse.Content.ReadAsStringAsync();
-                var user = JsonSerializer.Deserialize<List<User>>(body);
-                dgvUsuarios.DataSource = user;
-            }
-            else
-            {
-                MessageBox.Show("No hay ningun usuario en este Rol.");
-                emptyDgv();
-            }
 
+            string urlEliminar = "https://binarysystem.pythonanywhere.com/api/deleteUser/?id=";
+            var user_username = dgvUsuarios.CurrentRow.Cells[1].Value.ToString();
+
+            DialogResult decision = MessageBox.Show($"¿Seguro que desea borrar al usuario {user_username} ?", "Salir",
+                MessageBoxButtons.YesNoCancel);
+            if (decision == DialogResult.Yes)
+            {
+                int id = (int)dgvUsuarios.CurrentRow.Cells[0].Value;
+                var httpResponse = await httpClient.DeleteAsync(urlEliminar + id);
+                if (httpResponse.IsSuccessStatusCode)
+                {
+                    MessageBox.Show("Usuario eliminado correctamente.");
+                    checkRB_URL();
+                }
+                else { MessageBox.Show("Hubo un error, verifique ID."); }
+            }
+        }
+        
+        private void bttRegistrar_Click(object sender, EventArgs e)
+        {
+            Registro registro = new Registro();
+            registro.ShowDialog();
+            checkRB_URL();
         }
 
+        private void bttModificar_Click(object sender, EventArgs e)
+        {
+            Modificar modificar = new Modificar(new Registro(), dgvUsuarios);
+            modificar.ShowDialog();
+            checkRB_URL();
+        }
+
+        private void checkRB_URL()
+        {
+            if (rb_allUser.Checked == true)
+            {
+                cargarDgvUsuario("https://binarysystem.pythonanywhere.com/api/allUser/");
+            }
+            else if (rb_Mitre.Checked == true)
+            {
+                cargarDgvUsuario("https://binarysystem.pythonanywhere.com/api/allMitre/");
+            }
+            else if (rb_Caja.Checked==true)
+            {
+                cargarDgvUsuario("https://binarysystem.pythonanywhere.com/api/allCaja/");
+            }
+            else if (rb_Mozo.Checked==true)
+            {
+                cargarDgvUsuario("https://binarysystem.pythonanywhere.com/api/allMozo/");
+            }
+            else emptyDgv();
+        }
+
+        private void rb_allUser_CheckedChanged(object sender, EventArgs e)
+        {
+            if(rb_allUser.Checked == true) { cargarDgvUsuario("https://binarysystem.pythonanywhere.com/api/allUser/"); }
+        }
+
+        private void rb_Mozo_CheckedChanged(object sender, EventArgs e)
+        {
+            if (rb_Mozo.Checked == true) { cargarDgvUsuario("https://binarysystem.pythonanywhere.com/api/allMozo/"); }
+        }
+
+        private void rb_Mitre_CheckedChanged(object sender, EventArgs e)
+        {
+            if (rb_Mitre.Checked == true) { cargarDgvUsuario("https://binarysystem.pythonanywhere.com/api/allMitre/"); }
+        }
+
+        private void rb_Caja_CheckedChanged(object sender, EventArgs e)
+        {
+            if (rb_Caja.Checked == true) { cargarDgvUsuario("https://binarysystem.pythonanywhere.com/api/allCaja/"); }
+        }
+        private void rb_None_CheckedChanged(object sender, EventArgs e) => emptyDgv();
+       
+        
+        //Utilidades:
+        private void emptyDgv() { dgvUsuarios.DataSource = null; }
         private string rol_Select(int rol)
         {
             string str_rol = "";
@@ -63,86 +124,22 @@ namespace Application_Sentidos.Resources.Administrador
             }
             return str_rol;
         }
-
-        private void dgvUsuarios_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        public async void cargarDgvUsuario(string urlBase)
         {
-
-        }
-        //Eliminar usuario
-        private async void bttEliminar_Click(object sender, EventArgs e)
-        {
-            var user_username = dgvUsuarios.CurrentRow.Cells[1].Value.ToString();
-
-            DialogResult decision = MessageBox.Show($"¿Seguro que desea borrar al usuario {user_username} ?", "Salir",
-                MessageBoxButtons.YesNoCancel);
-            if (decision == DialogResult.Yes)
+            var httpResponse = await httpClient.GetAsync(urlBase);
+            if (httpResponse.IsSuccessStatusCode)
             {
-                int id = (int)dgvUsuarios.CurrentRow.Cells[0].Value;
-                var httpResponse = await httpClient.DeleteAsync(urlEliminar + id);
-                if (httpResponse.IsSuccessStatusCode)
-                {
-                    MessageBox.Show("Usuario eliminado correctamente.");
-                    checkRB_URL();
-                }
-                else { MessageBox.Show("Hubo un error, verifique ID."); }
+                var body = await httpResponse.Content.ReadAsStringAsync();
+                var user = JsonSerializer.Deserialize<List<User>>(body);
+                dgvUsuarios.DataSource = user;
             }
-        }
-        
-        private void bttRegistrar_Click(object sender, EventArgs e)
-        {
-            Registro registro = new Registro();
-            registro.ShowDialog();
-
-        }
-
-        private void bttModificar_Click(object sender, EventArgs e)
-        {
-            Modificar modificar = new Modificar(new Registro(), dgvUsuarios);
-            modificar.ShowDialog();
-        }
-
-        private void checkRB_URL()
-        {
-            if (rb_allUser.Checked == true)
+            else
             {
-                cargarDgvUsuario("http://localhost:8000/api/allUser/");
+                MessageBox.Show("No hay ningun usuario en este Rol.");
+                emptyDgv();
             }
-            else if (rb_Mitre.Checked == true)
-            {
-                cargarDgvUsuario("http://localhost:8000/api/allUser/");
-            }
-            else if (rb_Caja.Checked==true)
-            {
-                cargarDgvUsuario("http://localhost:8000/api/allCaja/");
-            }
-            else if (rb_Mozo.Checked==true)
-            {
-                cargarDgvUsuario("http://localhost:8000/api/allMozo/");
-            }
-            else emptyDgv();
-        }
 
-        private void rb_allUser_CheckedChanged(object sender, EventArgs e)
-        {
-            if(rb_allUser.Checked == true) { cargarDgvUsuario("http://localhost:8000/api/allUser/"); }
         }
-
-        private void rb_Mozo_CheckedChanged(object sender, EventArgs e)
-        {
-            if (rb_Mozo.Checked == true) { cargarDgvUsuario("https://binarysystem.pythonanywhere.com/api/allMozo/"); }
-        }
-
-        private void rb_Mitre_CheckedChanged(object sender, EventArgs e)
-        {
-            if (rb_Mitre.Checked == true) { cargarDgvUsuario("http://localhost:8000/api/allMitre/"); }
-        }
-
-        private void rb_Caja_CheckedChanged(object sender, EventArgs e)
-        {
-            if (rb_Caja.Checked == true) { cargarDgvUsuario("http://localhost:8000/api/allCaja/"); }
-        }
-
-        private void rb_None_CheckedChanged(object sender, EventArgs e) => emptyDgv();
-        private void emptyDgv() { dgvUsuarios.DataSource = null; }
     }
+
 }

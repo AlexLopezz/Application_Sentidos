@@ -24,8 +24,6 @@ C:\Users\Alex Lopez\Documents\TODOC#\Application_Sentidos\obj\Debug\net6.0-windo
 C:\Users\Alex Lopez\Documents\TODOC#\Application_Sentidos\obj\Debug\net6.0-windows\Application_Sentidos.Roles.Mozo.resources
 C:\Users\Alex Lopez\Documents\C#\Application_Sentidos\obj\Debug\net6.0-windows\Application_Sentidos.csproj.AssemblyReference.cache
 C:\Users\Alex Lopez\Documents\C#\Application_Sentidos\obj\Debug\net6.0-windows\Application_Sentidos.Authentication.Login.resources
-C:\Users\Alex Lopez\Documents\C#\Application_Sentidos\obj\Debug\net6.0-windows\Application_Sentidos.Authentication.Register.resources
-C:\Users\Alex Lopez\Documents\C#\Application_Sentidos\obj\Debug\net6.0-windows\Application_Sentidos.CheckAccess.resources
 C:\Users\Alex Lopez\Documents\C#\Application_Sentidos\obj\Debug\net6.0-windows\Application_Sentidos.Properties.Resources.resources
 C:\Users\Alex Lopez\Documents\C#\Application_Sentidos\obj\Debug\net6.0-windows\Application_Sentidos.Roles.Administrador.resources
 C:\Users\Alex Lopez\Documents\C#\Application_Sentidos\obj\Debug\net6.0-windows\Application_Sentidos.Roles.Caja.resources

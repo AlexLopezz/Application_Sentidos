@@ -15,12 +15,56 @@ namespace Application_Sentidos.Resources.Administrador
 {
     public partial class Registro : Form
     {
-        string urlBase = "http://localhost:8000/api/register/";
         public Registro()
         {
             InitializeComponent();
             this.CenterToScreen();
         }
+       
+        private async void bttRegistrar_Click(object sender, EventArgs e)
+        {
+            HttpClient httpClient = new HttpClient();
+           JsonSerializerOptions options = new JsonSerializerOptions() { PropertyNameCaseInsensitive = true }; //The options ignore case sensitive values.
+            
+            if (validateFields())
+            {
+                MessageBox.Show("Debe completar todos los campos.");
+            }
+            else
+            {
+
+                if (txtPassword.Text.Equals(txtVerifyPassword.Text))
+                {
+                    string urlBase = "https://binarysystem.pythonanywhere.com/api/register/";
+                    PostRegister Post = new PostRegister()
+                    {
+                        username = txtUsername.Text,
+                        email = txtEmail.Text,
+                        fullname = txtFullname.Text,
+                        dni = txtDNI.Text,
+                        password = txtPassword.Text,
+                        role = select_role(cboRoles.Text)
+                    };
+
+                    var requestJSON = JsonSerializer.Serialize<PostRegister>(Post, options);
+                    HttpContent content = new StringContent(requestJSON, Encoding.UTF8, "application/json");
+
+                    var httpResponse = await httpClient.PostAsync(urlBase, content);
+                    if (httpResponse.IsSuccessStatusCode)
+                    {
+                        MessageBox.Show("¡Usuario registrado con exito!");
+                        this.Close();
+                    }
+                    else { MessageBox.Show("Hubo un error, verifique sus datos."); }
+                }
+                else
+                {
+                    MessageBox.Show("Contraseñas no coinciden.");
+                }
+            }
+        }
+
+        //Utilidades:
         public int select_role(string txtRole)
         {
             int fk_role = 0;
@@ -30,7 +74,7 @@ namespace Application_Sentidos.Resources.Administrador
                     fk_role = 1;
                     break;
                 case "Mitre":
-                    fk_role=2;
+                    fk_role = 2;
                     break;
                 case "Mozo":
                     fk_role = 3;
@@ -49,49 +93,6 @@ namespace Application_Sentidos.Resources.Administrador
                 && string.IsNullOrEmpty(txtUsername.Text) && string.IsNullOrEmpty(txtPassword.Text) &&
                 string.IsNullOrEmpty(txtVerifyPassword.Text) && string.IsNullOrEmpty(cboRoles.Text);
         }
-
-        private async void bttRegistrar_Click(object sender, EventArgs e)
-        {
-            HttpClient httpClient = new HttpClient();
-           JsonSerializerOptions options = new JsonSerializerOptions() { PropertyNameCaseInsensitive = true }; //The options ignore case sensitive values.
-            
-            if (validateFields())
-            {
-                MessageBox.Show("Debe completar todos los campos.");
-            }
-            else
-            {
-
-                if (txtPassword.Text.Equals(txtVerifyPassword.Text))
-                {
-                    var Post = new PostRegister()
-                    {
-                        username = txtUsername.Text,
-                        email = txtEmail.Text,
-                        fullname = txtFullname.Text,
-                        dni = Int32.Parse(txtDNI.Text),
-                        password = txtPassword.Text,
-                        role = select_role(cboRoles.Text)
-                    };
-
-                    var requestJSON = JsonSerializer.Serialize<PostRegister>(Post, options);
-                    HttpContent content = new StringContent(requestJSON, Encoding.UTF8, "application/json");
-
-                    var httpResponse = await httpClient.PostAsync(urlBase, content);
-                    if (httpResponse.IsSuccessStatusCode)
-                    {
-                        MessageBox.Show("¡Usuario registrado con exito!");
-                        this.Close();
-                    }
-                    else { MessageBox.Show("Hubo un error. Verifique sus datos"); }
-                }
-                else
-                {
-                    MessageBox.Show("Contraseñas no coinciden.");
-                }
-            }
-        }
-
         private void panel1_Paint(object sender, PaintEventArgs e)
         {
 

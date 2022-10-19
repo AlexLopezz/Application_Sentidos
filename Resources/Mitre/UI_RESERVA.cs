@@ -24,7 +24,7 @@ namespace Application_Sentidos.Resources.Mitre
         }
         public async void cargarDgvReservation()
         {
-            string urlBase = "http://localhost:8000/api/allReservation/";
+            string urlBase = "https://binarysystem.pythonanywhere.com/api/allReservation/";
             HttpClient client = new HttpClient();
             var httpResponse = await client.GetAsync(urlBase);
             if (httpResponse.IsSuccessStatusCode)

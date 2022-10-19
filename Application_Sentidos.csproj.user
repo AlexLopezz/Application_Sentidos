@@ -1,13 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <Compile Update="Authentication\Login.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Update="Authentication\Register.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Update="CheckAccess.cs">
+    <Compile Update="Login.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="Resources\Administrador\Modificar_Form_Objects\Modificar.cs">
@@ -26,9 +20,6 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="Resources\Mitre\UI_RESERVA.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Update="Resources\Reservas\Reservas_Form_Objects\Reserva.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="Roles\Administrador.cs">

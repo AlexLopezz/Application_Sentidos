@@ -1,7 +1,7 @@
 using Application_Sentidos.Roles;
 using Application_Sentidos.Resources.Objects;
 using Application_Sentidos.Authentication;
-
+using Application_Sentidos.Resources.Mitre;
 
 namespace Application_Sentidos
 {
@@ -16,7 +16,7 @@ namespace Application_Sentidos
             // To customize application configuration such as set high DPI settings or default font,
             // see https://aka.ms/applicationconfiguration.
             ApplicationConfiguration.Initialize();
-            Application.Run(new Maitre(new User()));
+            Application.Run(new CreateReserva());
         }
     }
 }

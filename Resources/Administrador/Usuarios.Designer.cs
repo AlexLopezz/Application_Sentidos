@@ -59,9 +59,7 @@
             this.dgvUsuarios.Name = "dgvUsuarios";
             this.dgvUsuarios.RowTemplate.Height = 25;
             this.dgvUsuarios.Size = new System.Drawing.Size(503, 350);
-            this.dgvUsuarios.TabIndex = 0;
-            this.dgvUsuarios.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvUsuarios_CellContentClick);
-            // 
+            this.dgvUsuarios.TabIndex = 0;            // 
             // panel_User
             // 
             this.panel_User.Controls.Add(this.panel1);

@@ -12,8 +12,12 @@ namespace Application_Sentidos.Resources.Objects
         public string fullname { get; set; } = "";
         public string username { get; set; } = "";
         public string email { get; set; } = "";
-        public int dni { get; set; } = 0;
+        public string dni { get; set; } = "";
         public Role role { get; set; }
-        public string password { get; set; } = "";
+
+        public override string ToString()
+        {
+            return username;
+        }
     }
 }
