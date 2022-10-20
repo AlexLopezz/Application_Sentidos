@@ -9,7 +9,8 @@ namespace Application_Sentidos.Resources.Mitre
 {
     public class HttpGetReserva
     {
-        public int user_id { get; set; }
+        public int id { get; set; }
+        public string user_id { get; set; }
         public string phone { get; set; } = "";
         public string schedule { get; set; } = "";
         public string date { get; set; } = "";

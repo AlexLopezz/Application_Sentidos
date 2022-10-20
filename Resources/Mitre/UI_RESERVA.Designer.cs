@@ -33,7 +33,7 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.lblReservaciones = new System.Windows.Forms.Label();
             this.bttCancelReserva = new System.Windows.Forms.Button();
-            this.bttModifyReserva = new System.Windows.Forms.Button();
+            this.bttRefrescar = new System.Windows.Forms.Button();
             this.bttCreate_Reserva = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.dgvReserva = new System.Windows.Forms.DataGridView();
@@ -56,24 +56,25 @@
             // 
             this.bttCancelReserva.FlatAppearance.BorderSize = 0;
             this.bttCancelReserva.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.bttCancelReserva.Location = new System.Drawing.Point(570, 317);
+            this.bttCancelReserva.Location = new System.Drawing.Point(358, 317);
             this.bttCancelReserva.Name = "bttCancelReserva";
             this.bttCancelReserva.Size = new System.Drawing.Size(91, 47);
             this.bttCancelReserva.TabIndex = 8;
             this.bttCancelReserva.Text = "CANCELAR\r\nRESERVACION";
             this.bttCancelReserva.UseVisualStyleBackColor = true;
+            this.bttCancelReserva.Click += new System.EventHandler(this.bttCancelReserva_Click);
             // 
-            // bttModifyReserva
+            // bttRefrescar
             // 
-            this.bttModifyReserva.FlatAppearance.BorderSize = 0;
-            this.bttModifyReserva.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.bttModifyReserva.Location = new System.Drawing.Point(452, 317);
-            this.bttModifyReserva.Name = "bttModifyReserva";
-            this.bttModifyReserva.Size = new System.Drawing.Size(91, 47);
-            this.bttModifyReserva.TabIndex = 7;
-            this.bttModifyReserva.Text = "MODIFICAR\r\nRESERVACION";
-            this.bttModifyReserva.UseVisualStyleBackColor = true;
-            this.bttModifyReserva.Click += new System.EventHandler(this.bttModifyReserva_Click);
+            this.bttRefrescar.FlatAppearance.BorderSize = 0;
+            this.bttRefrescar.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.bttRefrescar.Location = new System.Drawing.Point(673, 317);
+            this.bttRefrescar.Name = "bttRefrescar";
+            this.bttRefrescar.Size = new System.Drawing.Size(71, 29);
+            this.bttRefrescar.TabIndex = 7;
+            this.bttRefrescar.Text = "Refrescar";
+            this.bttRefrescar.UseVisualStyleBackColor = true;
+            this.bttRefrescar.Click += new System.EventHandler(this.bttRefrescar_Click);
             // 
             // bttCreate_Reserva
             // 
@@ -81,7 +82,7 @@
             this.bttCreate_Reserva.FlatAppearance.BorderSize = 0;
             this.bttCreate_Reserva.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.bttCreate_Reserva.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.bttCreate_Reserva.Location = new System.Drawing.Point(335, 317);
+            this.bttCreate_Reserva.Location = new System.Drawing.Point(261, 317);
             this.bttCreate_Reserva.Name = "bttCreate_Reserva";
             this.bttCreate_Reserva.Size = new System.Drawing.Size(91, 47);
             this.bttCreate_Reserva.TabIndex = 6;
@@ -142,7 +143,7 @@
             this.ControlBox = false;
             this.Controls.Add(this.lblReservaciones);
             this.Controls.Add(this.bttCancelReserva);
-            this.Controls.Add(this.bttModifyReserva);
+            this.Controls.Add(this.bttRefrescar);
             this.Controls.Add(this.bttCreate_Reserva);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -159,7 +160,7 @@
 
         private Label lblReservaciones;
         private Button bttCancelReserva;
-        private Button bttModifyReserva;
+        private Button bttRefrescar;
         private Button bttCreate_Reserva;
         private Panel panel1;
         private DataGridView dgvReserva;

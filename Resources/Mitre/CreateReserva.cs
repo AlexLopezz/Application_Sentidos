@@ -51,22 +51,28 @@ namespace Application_Sentidos.Resources.Mitre
         }
         private async void bttBuscarMesas_Click(object sender, EventArgs e)
         {
-
-            var httpResponse = await httpClient.GetAsync("http://localhost:8000/api/getReservation/?schedule=" + cboSchedule.Text + "&date=" + dateFecha.Text);
-            if (httpResponse.IsSuccessStatusCode)
+            if (string.IsNullOrEmpty(cboSchedule.Text))
             {
-                load_ButtonsLime();
-                var body = await httpResponse.Content.ReadAsStringAsync();
-                try
-                {
-                    var list_TableSelected = JsonSerializer.Deserialize<List<GetSelectedTable>>(body);
-
-                    loadTables(list_TableSelected, buttonsTables());
-                }
-                catch (Exception)
+                MessageBox.Show("Para buscar una mesa disponible, usted debe ingresar un horario.");
+            }
+            else
+            {
+                var httpResponse = await httpClient.GetAsync("https://binarysystem.pythonanywhere.com/api/getReservation/?schedule=" + cboSchedule.Text + "&date=" + dateFecha.Text);
+                if (httpResponse.IsSuccessStatusCode)
                 {
                     load_ButtonsLime();
-                    lblResultadoDisponibles.Text = buttonsTables().Count.ToString();
+                    var body = await httpResponse.Content.ReadAsStringAsync();
+                    try
+                    {
+                        var list_TableSelected = JsonSerializer.Deserialize<List<GetSelectedTable>>(body);
+
+                        loadTables(list_TableSelected, buttonsTables());
+                    }
+                    catch (Exception)
+                    {
+                        load_ButtonsLime();
+                        lblResultadoDisponibles.Text = buttonsTables().Count.ToString();
+                    }
                 }
             }
         }
