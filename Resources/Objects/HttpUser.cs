@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace Application_Sentidos.Resources.Objects
 {
-    public class User
+    //Utilizamos para: Registro de usuario.
+    public class HttpUser
     {
         public int id { get; set; }
         public string fullname { get; set; } = "";
@@ -19,5 +20,21 @@ namespace Application_Sentidos.Resources.Objects
         {
             return username;
         }
+    }
+    public class Role
+    {
+        public int id { get; set; } = 0;
+        public string name { get; set; } = "";
+
+        public override string ToString() { return name; }
+
+    }
+
+
+    //Utilizamos para: Login de Usuarios
+    public class PostLogin
+    {
+        public string username { get; set; }
+        public string password { get; set; }
     }
 }

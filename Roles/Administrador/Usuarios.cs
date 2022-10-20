@@ -130,7 +130,7 @@ namespace Application_Sentidos.Resources.Administrador
             if (httpResponse.IsSuccessStatusCode)
             {
                 var body = await httpResponse.Content.ReadAsStringAsync();
-                var user = JsonSerializer.Deserialize<List<User>>(body);
+                var user = JsonSerializer.Deserialize<List<HttpUser>>(body);
                 dgvUsuarios.DataSource = user;
             }
             else

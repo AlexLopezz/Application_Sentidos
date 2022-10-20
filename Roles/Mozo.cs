@@ -4,8 +4,8 @@ namespace Application_Sentidos.Roles
 {
     public partial class Mozo : Form
     {
-        User userLogged;
-        public Mozo(User user)
+        HttpUser userLogged;
+        public Mozo(HttpUser user)
         {
             InitializeComponent();
             userLogged = user;

@@ -1,6 +1,6 @@
 ﻿namespace Application_Sentidos.Resources.Mitre
 {
-    partial class UI_RESERVA
+    partial class GeneralReserva
     {
         /// <summary>
         /// Required designer variable.
@@ -46,7 +46,7 @@
             this.lblReservaciones.AutoSize = true;
             this.lblReservaciones.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.lblReservaciones.ForeColor = System.Drawing.Color.Black;
-            this.lblReservaciones.Location = new System.Drawing.Point(261, 51);
+            this.lblReservaciones.Location = new System.Drawing.Point(38, 37);
             this.lblReservaciones.Name = "lblReservaciones";
             this.lblReservaciones.Size = new System.Drawing.Size(129, 21);
             this.lblReservaciones.TabIndex = 9;
@@ -54,9 +54,10 @@
             // 
             // bttCancelReserva
             // 
+            this.bttCancelReserva.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.bttCancelReserva.FlatAppearance.BorderSize = 0;
             this.bttCancelReserva.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.bttCancelReserva.Location = new System.Drawing.Point(358, 317);
+            this.bttCancelReserva.Location = new System.Drawing.Point(135, 303);
             this.bttCancelReserva.Name = "bttCancelReserva";
             this.bttCancelReserva.Size = new System.Drawing.Size(91, 47);
             this.bttCancelReserva.TabIndex = 8;
@@ -66,9 +67,10 @@
             // 
             // bttRefrescar
             // 
+            this.bttRefrescar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.bttRefrescar.FlatAppearance.BorderSize = 0;
             this.bttRefrescar.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.bttRefrescar.Location = new System.Drawing.Point(673, 317);
+            this.bttRefrescar.Location = new System.Drawing.Point(450, 303);
             this.bttRefrescar.Name = "bttRefrescar";
             this.bttRefrescar.Size = new System.Drawing.Size(71, 29);
             this.bttRefrescar.TabIndex = 7;
@@ -78,11 +80,12 @@
             // 
             // bttCreate_Reserva
             // 
+            this.bttCreate_Reserva.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.bttCreate_Reserva.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.bttCreate_Reserva.FlatAppearance.BorderSize = 0;
             this.bttCreate_Reserva.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.bttCreate_Reserva.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.bttCreate_Reserva.Location = new System.Drawing.Point(261, 317);
+            this.bttCreate_Reserva.Location = new System.Drawing.Point(38, 303);
             this.bttCreate_Reserva.Name = "bttCreate_Reserva";
             this.bttCreate_Reserva.Size = new System.Drawing.Size(91, 47);
             this.bttCreate_Reserva.TabIndex = 6;
@@ -92,8 +95,11 @@
             // 
             // panel1
             // 
+            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.panel1.Controls.Add(this.dgvReserva);
-            this.panel1.Location = new System.Drawing.Point(261, 75);
+            this.panel1.Location = new System.Drawing.Point(38, 61);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(483, 236);
             this.panel1.TabIndex = 10;
@@ -134,20 +140,19 @@
             this.dgvReserva.Size = new System.Drawing.Size(483, 236);
             this.dgvReserva.TabIndex = 0;
             // 
-            // UI_RESERVA
+            // GeneralReserva
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            this.ClientSize = new System.Drawing.Size(811, 447);
+            this.ClientSize = new System.Drawing.Size(586, 411);
             this.ControlBox = false;
             this.Controls.Add(this.lblReservaciones);
             this.Controls.Add(this.bttCancelReserva);
             this.Controls.Add(this.bttRefrescar);
             this.Controls.Add(this.bttCreate_Reserva);
             this.Controls.Add(this.panel1);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "UI_RESERVA";
+            this.Name = "GeneralReserva";
             this.Text = "UI_RESERVA";
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvReserva)).EndInit();

@@ -47,7 +47,7 @@ namespace Application_Sentidos.Authentication
                 {
                     var contentResponse = await httpResponse.Content.ReadAsStringAsync();
 
-                    var user = JsonSerializer.Deserialize<User>(contentResponse, options); //Deserialized JSON to Object
+                    var user = JsonSerializer.Deserialize<HttpUser>(contentResponse, options); //Deserialized JSON to Object
 
                     switch (user.role.name)
                     {

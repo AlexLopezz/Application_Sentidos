@@ -7,27 +7,39 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using Application_Sentidos.Resources.Objects;
-using Application_Sentidos.Resources.Mitre;
 using Application_Sentidos.Authentication;
+using Application_Sentidos.Resources.Objects;
+using Application_Sentidos.Resources.Administrador;
+using Application_Sentidos.Resources;
 
 namespace Application_Sentidos.Roles
 {
-    public partial class Maitre : Form
+    public partial class Administrador : Form
     {
-        
-        User userLogged;
-        public Maitre(User user)
+        HttpUser userLogged;
+        public Administrador(HttpUser user)
         {
             InitializeComponent();
+            this.CenterToScreen();
             userLogged = user;
-            lblUser.Text = user.username.ToUpper();
+            lblUser.Text = "@"+userLogged.username;
         }
 
-        private void realizarReservaToolStripMenuItem_Click(object sender, EventArgs e)
+        private void salirToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            var login = new Login();
+            this.Hide();
+            login.ShowDialog();
         }
+
+        private void picMenu_Click(object sender, EventArgs e)
+        {
+            if (panelMenuLateral.Width == 266)
+                panelMenuLateral.Width = 74;
+            else
+                panelMenuLateral.Width = 266;
+        }
+
         private void AbrirFormPanel(object FormHijo)
         {
             if (this.panelContenedor.Controls.Count > 0)
@@ -39,9 +51,15 @@ namespace Application_Sentidos.Roles
             this.panelContenedor.Tag = fh;
             fh.Show();
         }
+
+        private void bttUsuarios_Click(object sender, EventArgs e)
+        {
+            AbrirFormPanel(new Usuarios());
+        }
+
         private void bttReservas_Click(object sender, EventArgs e)
         {
-            AbrirFormPanel(new UI_RESERVA());
+            AbrirFormPanel(new Reserva());
         }
 
         private void bttSalir_Click(object sender, EventArgs e)

@@ -10,16 +10,16 @@ using System.Text;
 using System.Text.Json;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Application_Sentidos.Resources.Objects;
 
 namespace Application_Sentidos.Resources.Mitre
 {
-    public partial class UI_RESERVA : Form
+    public partial class GeneralReserva : Form
     {
         HttpClient client = new HttpClient();
-        public UI_RESERVA()
+        public GeneralReserva()
         {
             InitializeComponent();
-            this.CenterToScreen();
             cargarDgvReservation();
             loadColumnsDgvReservation();
         }

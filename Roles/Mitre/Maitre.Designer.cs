@@ -150,6 +150,7 @@
             this.bttMisDatos.TabIndex = 0;
             this.bttMisDatos.Text = "MIS DATOS";
             this.bttMisDatos.UseVisualStyleBackColor = false;
+            this.bttMisDatos.Click += new System.EventHandler(this.bttMisDatos_Click);
             // 
             // panel1
             // 
@@ -202,6 +203,7 @@
             this.Controls.Add(this.panelContenedor);
             this.Name = "Maitre";
             this.Text = "Maitre";
+            this.Load += new System.EventHandler(this.Maitre_Load);
             this.panelContenedor.ResumeLayout(false);
             this.panelLateralIzquierdo.ResumeLayout(false);
             this.panelSalir.ResumeLayout(false);

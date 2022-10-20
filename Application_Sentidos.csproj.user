@@ -4,31 +4,34 @@
     <Compile Update="Login.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="Resources\Administrador\Modificar_Form_Objects\Modificar.cs">
+    <Compile Update="Resources\Objects\MisDatos.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="Resources\Administrador\Registro_Form_Objects\Registro.cs">
+    <Compile Update="Roles\Administrador\Modificar_Form_Objects\Modificar.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="Resources\Administrador\Usuarios.cs">
+    <Compile Update="Roles\Administrador\Registro_Form_Objects\Registro.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="Resources\Administrador\Reservas\Reservas_Form_Objects\Reserva.cs">
+    <Compile Update="Roles\Administrador\Usuarios.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="Resources\Mitre\CreateReserva.cs">
+    <Compile Update="Roles\Administrador\Reservas\Reservas_Form_Objects\Reserva.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="Resources\Mitre\UI_RESERVA.cs">
+    <Compile Update="Roles\Mitre\CreateReserva.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="Roles\Administrador.cs">
+    <Compile Update="Roles\Mitre\GeneralReserva.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Roles\Administrador\Administrador.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="Roles\Caja.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="Roles\Maitre.cs">
+    <Compile Update="Roles\Mitre\Maitre.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="Roles\Mozo.cs">
