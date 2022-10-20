@@ -9,12 +9,11 @@ namespace Application_Sentidos.Resources.Mitre
 {
     public class HttpGetReserva
     {
-        public int id { get; set; } = 0;
-        public User user_id { get; set; }
+        public int user_id { get; set; }
         public string phone { get; set; } = "";
         public string schedule { get; set; } = "";
         public string date { get; set; } = "";
-        public string selected_tables { get; set; } = "";
+        public List<SelectedTable> selected_tables { get; set; }
 
         public override string ToString()
         {
@@ -27,7 +26,7 @@ namespace Application_Sentidos.Resources.Mitre
         public string phone { get; set; } = "";
         public string schedule { get; set; } = "";
         public string date { get; set; } = "";
-        public string selected_tables { get; set; } = "";
+        public List<int> selected_tables { get; set; }
     }
     public class GetUserFilter
     {
@@ -36,7 +35,21 @@ namespace Application_Sentidos.Resources.Mitre
 
         public override string ToString()
         {
-            return username.ToUpper();
+            return id+" "+username;
         }
     }
+    public class GetSelectedTable
+    {
+        public List<SelectedTable> selected_tables { get; set; }
+    }
+    public class SelectedTable
+    {
+        public int id { get; set; }
+        public int number_mesa { get; set; }
+    }
+
+    
+
+
+
 }

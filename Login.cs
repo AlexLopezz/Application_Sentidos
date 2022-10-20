@@ -94,5 +94,10 @@ namespace Application_Sentidos.Authentication
             txtUsername.Text = String.Empty;
             txtPassword.Text = String.Empty;
         }
+
+        private void Login_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }

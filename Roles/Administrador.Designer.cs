@@ -203,6 +203,7 @@
             this.bttSalir.Text = "SALIR";
             this.bttSalir.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.bttSalir.UseVisualStyleBackColor = true;
+            this.bttSalir.Click += new System.EventHandler(this.bttSalir_Click);
             // 
             // pictureBox1
             // 

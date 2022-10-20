@@ -61,5 +61,12 @@ namespace Application_Sentidos.Roles
         {
             AbrirFormPanel(new Reserva());
         }
+
+        private void bttSalir_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            Login login = new Login();
+            login.Show();
+        }
     }
 }

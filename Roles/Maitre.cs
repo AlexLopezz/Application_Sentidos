@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Application_Sentidos.Resources.Objects;
 using Application_Sentidos.Resources.Mitre;
+using Application_Sentidos.Authentication;
 
 namespace Application_Sentidos.Roles
 {
@@ -41,6 +42,13 @@ namespace Application_Sentidos.Roles
         private void bttReservas_Click(object sender, EventArgs e)
         {
             AbrirFormPanel(new UI_RESERVA());
+        }
+
+        private void bttSalir_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            Login login = new Login();
+            login.Show();
         }
     }
 }

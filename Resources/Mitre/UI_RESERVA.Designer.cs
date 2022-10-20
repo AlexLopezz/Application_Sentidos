@@ -73,6 +73,7 @@
             this.bttModifyReserva.TabIndex = 7;
             this.bttModifyReserva.Text = "MODIFICAR\r\nRESERVACION";
             this.bttModifyReserva.UseVisualStyleBackColor = true;
+            this.bttModifyReserva.Click += new System.EventHandler(this.bttModifyReserva_Click);
             // 
             // bttCreate_Reserva
             // 
@@ -86,6 +87,7 @@
             this.bttCreate_Reserva.TabIndex = 6;
             this.bttCreate_Reserva.Text = "REGISTRAR\r\nRESERVACION";
             this.bttCreate_Reserva.UseVisualStyleBackColor = true;
+            this.bttCreate_Reserva.Click += new System.EventHandler(this.bttCreate_Reserva_Click_1);
             // 
             // panel1
             // 

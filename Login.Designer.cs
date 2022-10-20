@@ -117,6 +117,7 @@
             this.MaximizeBox = false;
             this.Name = "Login";
             this.Text = "Inicar Sesion - Restaurante Sentidos & Casa de Te";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Login_FormClosed);
             this.panelLogin.ResumeLayout(false);
             this.panelLogin.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

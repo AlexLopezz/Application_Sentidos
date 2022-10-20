@@ -46,11 +46,16 @@ namespace Application_Sentidos.Resources.Mitre
         }
         private void emptyDgv() { dgvReserva.DataSource = null; }
 
-        private void bttCreate_Reserva_Click(object sender, EventArgs e)
+        private void bttCreate_Reserva_Click_1(object sender, EventArgs e)
         {
             CreateReserva createReserva = new CreateReserva();
             createReserva.ShowDialog();
             cargarDgvReservation();
+        }
+
+        private void bttModifyReserva_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
