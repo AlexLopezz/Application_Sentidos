@@ -14,8 +14,8 @@ namespace Application_Sentidos.Roles
 
     public partial class Caja : Form
     {
-        User userLogged;
-        public Caja(User user)
+        HttpUser userLogged;
+        public Caja(HttpUser user)
         {
             InitializeComponent();
             userLogged = user;

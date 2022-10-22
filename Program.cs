@@ -1,6 +1,7 @@
 using Application_Sentidos.Roles;
 using Application_Sentidos.Resources.Objects;
 using Application_Sentidos.Authentication;
+using Application_Sentidos.Resources.Mitre;
 
 namespace Application_Sentidos
 {

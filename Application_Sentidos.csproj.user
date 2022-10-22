@@ -1,34 +1,37 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <Compile Update="Authentication\Login.cs">
+    <Compile Update="Login.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="Authentication\Register.cs">
+    <Compile Update="Resources\Objects\MisDatos.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="CheckAccess.cs">
+    <Compile Update="Roles\Administrador\Modificar_Form_Objects\Modificar.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="Resources\Administrador\Modificar_Form_Objects\Modificar.cs">
+    <Compile Update="Roles\Administrador\Registro_Form_Objects\Registro.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="Resources\Administrador\Registro_Form_Objects\Registro.cs">
+    <Compile Update="Roles\Administrador\Usuarios.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="Resources\Administrador\Usuarios.cs">
+    <Compile Update="Roles\Administrador\Reservas\Reservas_Form_Objects\Reserva.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="Resources\Reservas\Reservas_Form_Objects\Reserva.cs">
+    <Compile Update="Roles\Mitre\CreateReserva.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="Roles\Administrador.cs">
+    <Compile Update="Roles\Mitre\GeneralReserva.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Roles\Administrador\Administrador.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="Roles\Caja.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="Roles\Maitre.cs">
+    <Compile Update="Roles\Mitre\Maitre.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="Roles\Mozo.cs">
