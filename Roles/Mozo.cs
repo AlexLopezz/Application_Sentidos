@@ -10,27 +10,24 @@ namespace Application_Sentidos.Roles
             InitializeComponent();
             userLogged = user;
         }
-
-        private void button3_Click(object sender, EventArgs e)
+        private void btnModificarPedido_Click(object sender, EventArgs e)
         {
-            Mozo_Cobrar mozo_Cobrar = new Mozo_Cobrar();
-            mozo_Cobrar.Show();
+            //Modifica el pedido seleccionado de la mesa x
+        }
+        private void btnCerrarMesa_Click(object sender, EventArgs e)
+        {
+            int numMesa = cboBoxMesas.SelectedIndex + 1;
+            //generar el post de la mesa para que pase a caja para ser abonado
         }
 
-        private void btnActualizarPedidos_Click(object sender, EventArgs e)
+        private void btnAgregar_Click(object sender, EventArgs e)
         {
-            //getApi.get(parametros de todos los pedidos)
+            //agregar elemento seleccionado de la lista de items del menu
         }
 
-        private void btnConfirmarPedido_Click(object sender, EventArgs e)
+        private void btnBorrar_Click(object sender, EventArgs e)
         {
-            //deletear el pedido de la bd con el id o lo que sea, jeje
-        }
-
-        private void btnPagar_Click(object sender, EventArgs e)
-        {
-            Mozo_Cobrar mozo_Cobrar = new Mozo_Cobrar();
-            mozo_Cobrar.Show();
+            //Borra elemento seleccionado de la lista de elementos de pedidos de a mesa
         }
     }
 }
