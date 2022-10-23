@@ -38,8 +38,6 @@
             this.btnBorrar = new System.Windows.Forms.Button();
             this.listBoxPedido = new System.Windows.Forms.ListBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.listBox3 = new System.Windows.Forms.ListBox();
-            this.btnPagar = new System.Windows.Forms.Button();
             this.listBoxPedidosAConfirmar = new System.Windows.Forms.ListBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
@@ -124,22 +122,6 @@
             // 
             // listBoxPedidosAConfirmar
             // 
-            this.listBox3.FormattingEnabled = true;
-            this.listBox3.ItemHeight = 15;
-            this.listBox3.Location = new System.Drawing.Point(660, 111);
-            this.listBox3.Name = "listBox3";
-            this.listBox3.Size = new System.Drawing.Size(207, 319);
-            this.listBox3.TabIndex = 9;
-            // 
-            // btnPagar
-            // 
-            this.btnPagar.Location = new System.Drawing.Point(579, 263);
-            this.btnPagar.Name = "btnPagar";
-            this.btnPagar.Size = new System.Drawing.Size(75, 23);
-            this.btnPagar.TabIndex = 10;
-            this.btnPagar.Text = "Finalizar";
-            this.btnPagar.UseVisualStyleBackColor = true;
-            this.btnPagar.Click += new System.EventHandler(this.btnFinalizarPedido_Click);
             this.listBoxPedidosAConfirmar.FormattingEnabled = true;
             this.listBoxPedidosAConfirmar.ItemHeight = 15;
             this.listBoxPedidosAConfirmar.Location = new System.Drawing.Point(585, 111);
@@ -167,7 +149,6 @@
             // 
             // btnConfirmar
             // 
-            this.btnConfirmar.Location = new System.Drawing.Point(579, 214);
             this.btnConfirmar.Location = new System.Drawing.Point(810, 111);
             this.btnConfirmar.Name = "btnConfirmar";
             this.btnConfirmar.Size = new System.Drawing.Size(75, 39);
@@ -228,15 +209,13 @@
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.ClientSize = new System.Drawing.Size(897, 457);
+            this.ClientSize = new System.Drawing.Size(898, 457);
             this.Controls.Add(this.cboBoxMesas);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.btnModificarPedido);
             this.Controls.Add(this.btnConfirmar);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.btnPagar);
-            this.Controls.Add(this.listBox3);
             this.Controls.Add(this.listBoxPedidosAConfirmar);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.listBoxPedido);
@@ -268,8 +247,6 @@
         private Button btnBorrar;
         private ListBox listBoxPedido;
         private Label label3;
-        private ListBox listBox3;
-        private Button btnPagar;
         private ListBox listBoxPedidosAConfirmar;
         private Label label4;
         private Label label5;
