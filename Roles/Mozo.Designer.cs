@@ -38,12 +38,9 @@
             this.btnBorrar = new System.Windows.Forms.Button();
             this.listBoxPedido = new System.Windows.Forms.ListBox();
             this.label3 = new System.Windows.Forms.Label();
-<<<<<<< HEAD
             this.listBox3 = new System.Windows.Forms.ListBox();
             this.btnPagar = new System.Windows.Forms.Button();
-=======
             this.listBoxPedidosAConfirmar = new System.Windows.Forms.ListBox();
->>>>>>> master
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.btnConfirmar = new System.Windows.Forms.Button();
@@ -127,7 +124,6 @@
             // 
             // listBoxPedidosAConfirmar
             // 
-<<<<<<< HEAD
             this.listBox3.FormattingEnabled = true;
             this.listBox3.ItemHeight = 15;
             this.listBox3.Location = new System.Drawing.Point(660, 111);
@@ -144,14 +140,12 @@
             this.btnPagar.Text = "Finalizar";
             this.btnPagar.UseVisualStyleBackColor = true;
             this.btnPagar.Click += new System.EventHandler(this.btnFinalizarPedido_Click);
-=======
             this.listBoxPedidosAConfirmar.FormattingEnabled = true;
             this.listBoxPedidosAConfirmar.ItemHeight = 15;
             this.listBoxPedidosAConfirmar.Location = new System.Drawing.Point(585, 111);
             this.listBoxPedidosAConfirmar.Name = "listBoxPedidosAConfirmar";
             this.listBoxPedidosAConfirmar.Size = new System.Drawing.Size(207, 319);
             this.listBoxPedidosAConfirmar.TabIndex = 9;
->>>>>>> master
             // 
             // label4
             // 
@@ -173,17 +167,13 @@
             // 
             // btnConfirmar
             // 
-<<<<<<< HEAD
             this.btnConfirmar.Location = new System.Drawing.Point(579, 214);
-=======
             this.btnConfirmar.Location = new System.Drawing.Point(810, 111);
->>>>>>> master
             this.btnConfirmar.Name = "btnConfirmar";
             this.btnConfirmar.Size = new System.Drawing.Size(75, 39);
             this.btnConfirmar.TabIndex = 14;
             this.btnConfirmar.Text = "Cerrar Mesa";
             this.btnConfirmar.UseVisualStyleBackColor = true;
-            this.btnConfirmar.Click += new System.EventHandler(this.btnCerrarMesa_Click);
             // 
             // btnModificarPedido
             // 
@@ -245,12 +235,9 @@
             this.Controls.Add(this.btnConfirmar);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
-<<<<<<< HEAD
             this.Controls.Add(this.btnPagar);
             this.Controls.Add(this.listBox3);
-=======
             this.Controls.Add(this.listBoxPedidosAConfirmar);
->>>>>>> master
             this.Controls.Add(this.label3);
             this.Controls.Add(this.listBoxPedido);
             this.Controls.Add(this.btnBorrar);
@@ -281,12 +268,9 @@
         private Button btnBorrar;
         private ListBox listBoxPedido;
         private Label label3;
-<<<<<<< HEAD
         private ListBox listBox3;
         private Button btnPagar;
-=======
         private ListBox listBoxPedidosAConfirmar;
->>>>>>> master
         private Label label4;
         private Label label5;
         private Button btnConfirmar;
