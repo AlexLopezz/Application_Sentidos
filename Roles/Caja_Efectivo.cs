@@ -16,5 +16,16 @@ namespace Application_Sentidos.Roles
         {
             InitializeComponent();
         }
+
+        private void btnPagar_Click(object sender, EventArgs e)
+        {
+            //Imprimir ticket o factura
+            MessageBox.Show("Gracias por su compra", "EFECTIVO");
+        }
+
+        private void btnCancelar_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

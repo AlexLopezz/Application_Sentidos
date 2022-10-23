@@ -52,7 +52,7 @@
             this.label12 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
-            this.lblTotalSumaArticulos = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridDetallesFactura)).BeginInit();
             this.SuspendLayout();
             // 
@@ -233,7 +233,7 @@
             // 
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label12.Location = new System.Drawing.Point(444, 236);
+            this.label12.Location = new System.Drawing.Point(434, 248);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(64, 23);
             this.label12.TabIndex = 21;
@@ -258,15 +258,15 @@
             this.button2.Text = "CANCELAR";
             this.button2.UseVisualStyleBackColor = true;
             // 
-            // lblTotalSumaArticulos
+            // textBox1
             // 
-            this.lblTotalSumaArticulos.AutoSize = true;
-            this.lblTotalSumaArticulos.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lblTotalSumaArticulos.Location = new System.Drawing.Point(515, 236);
-            this.lblTotalSumaArticulos.Name = "lblTotalSumaArticulos";
-            this.lblTotalSumaArticulos.Size = new System.Drawing.Size(64, 23);
-            this.lblTotalSumaArticulos.TabIndex = 26;
-            this.lblTotalSumaArticulos.Text = "TOTAL";
+            this.textBox1.BackColor = System.Drawing.SystemColors.WindowFrame;
+            this.textBox1.ForeColor = System.Drawing.Color.Lime;
+            this.textBox1.Location = new System.Drawing.Point(509, 236);
+            this.textBox1.Multiline = true;
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(85, 44);
+            this.textBox1.TabIndex = 25;
             // 
             // Facturas
             // 
@@ -274,7 +274,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(606, 510);
-            this.Controls.Add(this.lblTotalSumaArticulos);
+            this.Controls.Add(this.textBox1);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label12);
@@ -335,6 +335,6 @@
         private Label label12;
         private Button button1;
         private Button button2;
-        private Label lblTotalSumaArticulos;
+        private TextBox textBox1;
     }
 }

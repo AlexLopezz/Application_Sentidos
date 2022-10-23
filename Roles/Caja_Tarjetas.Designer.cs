@@ -34,10 +34,6 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.metodoDePagoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.tarjDToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.tarjCréditoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.txtBoxNombre = new System.Windows.Forms.TextBox();
@@ -51,7 +47,8 @@
             this.btnPagar = new System.Windows.Forms.Button();
             this.btnCancelar = new System.Windows.Forms.Button();
             this.dataGridDetalleCaja = new System.Windows.Forms.DataGridView();
-            this.menuStrip1.SuspendLayout();
+            this.txtBoxTotal = new System.Windows.Forms.TextBox();
+            this.label9 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridDetalleCaja)).BeginInit();
             this.SuspendLayout();
             // 
@@ -79,31 +76,6 @@
             // 
             resources.ApplyResources(this.label5, "label5");
             this.label5.Name = "label5";
-            // 
-            // menuStrip1
-            // 
-            resources.ApplyResources(this.menuStrip1, "menuStrip1");
-            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.metodoDePagoToolStripMenuItem});
-            this.menuStrip1.Name = "menuStrip1";
-            // 
-            // metodoDePagoToolStripMenuItem
-            // 
-            resources.ApplyResources(this.metodoDePagoToolStripMenuItem, "metodoDePagoToolStripMenuItem");
-            this.metodoDePagoToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.tarjDToolStripMenuItem,
-            this.tarjCréditoToolStripMenuItem});
-            this.metodoDePagoToolStripMenuItem.Name = "metodoDePagoToolStripMenuItem";
-            // 
-            // tarjDToolStripMenuItem
-            // 
-            resources.ApplyResources(this.tarjDToolStripMenuItem, "tarjDToolStripMenuItem");
-            this.tarjDToolStripMenuItem.Name = "tarjDToolStripMenuItem";
-            // 
-            // tarjCréditoToolStripMenuItem
-            // 
-            resources.ApplyResources(this.tarjCréditoToolStripMenuItem, "tarjCréditoToolStripMenuItem");
-            this.tarjCréditoToolStripMenuItem.Name = "tarjCréditoToolStripMenuItem";
             // 
             // label6
             // 
@@ -181,12 +153,26 @@
             this.dataGridDetalleCaja.Name = "dataGridDetalleCaja";
             this.dataGridDetalleCaja.RowTemplate.Height = 25;
             // 
+            // txtBoxTotal
+            // 
+            resources.ApplyResources(this.txtBoxTotal, "txtBoxTotal");
+            this.txtBoxTotal.BackColor = System.Drawing.SystemColors.WindowFrame;
+            this.txtBoxTotal.ForeColor = System.Drawing.Color.Lime;
+            this.txtBoxTotal.Name = "txtBoxTotal";
+            // 
+            // label9
+            // 
+            resources.ApplyResources(this.label9, "label9");
+            this.label9.Name = "label9";
+            // 
             // Caja_Tarjetas
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.CancelButton = this.btnCancelar;
+            this.Controls.Add(this.txtBoxTotal);
+            this.Controls.Add(this.label9);
             this.Controls.Add(this.dataGridDetalleCaja);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.btnPagar);
@@ -205,13 +191,9 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.menuStrip1);
             this.Cursor = System.Windows.Forms.Cursors.Hand;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
-            this.MainMenuStrip = this.menuStrip1;
             this.Name = "Caja_Tarjetas";
-            this.menuStrip1.ResumeLayout(false);
-            this.menuStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridDetalleCaja)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -225,10 +207,6 @@
         private Label label3;
         private Label label4;
         private Label label5;
-        private MenuStrip menuStrip1;
-        private ToolStripMenuItem metodoDePagoToolStripMenuItem;
-        private ToolStripMenuItem tarjDToolStripMenuItem;
-        private ToolStripMenuItem tarjCréditoToolStripMenuItem;
         private Label label6;
         private Label label7;
         private TextBox txtBoxNombre;
@@ -242,5 +220,7 @@
         private Button btnPagar;
         private Button btnCancelar;
         private DataGridView dataGridDetalleCaja;
+        private TextBox txtBoxTotal;
+        private Label label9;
     }
 }
