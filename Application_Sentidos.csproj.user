@@ -19,10 +19,16 @@
     <Compile Update="Roles\Administrador\Reservas\Reservas_Form_Objects\Reserva.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="Roles\Mitre\CreateReserva.cs">
+    <Compile Update="Roles\Caja_Efectivo.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="Roles\Mitre\GeneralReserva.cs">
+    <Compile Update="Roles\Facturas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Roles\Maitre\CreateReserva.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Roles\Maitre\GeneralReserva.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="Roles\Administrador\Administrador.cs">
@@ -31,14 +37,19 @@
     <Compile Update="Roles\Caja.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="Roles\Mitre\Maitre.cs">
+    <Compile Update="Roles\Maitre\Maitre.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="Roles\Mozo.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="Roles\Caja_Cobrar.cs">
+    <Compile Update="Roles\Caja_Tarjetas.cs">
       <SubType>Form</SubType>
     </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Update="Login.resx">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
   </ItemGroup>
 </Project>

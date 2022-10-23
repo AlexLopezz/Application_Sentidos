@@ -155,7 +155,6 @@
             this.btnConfirmar.TabIndex = 14;
             this.btnConfirmar.Text = "Cerrar Mesa";
             this.btnConfirmar.UseVisualStyleBackColor = true;
-            this.btnConfirmar.Click += new System.EventHandler(this.btnCerrarMesa_Click);
             // 
             // btnModificarPedido
             // 
@@ -210,7 +209,7 @@
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.ClientSize = new System.Drawing.Size(897, 457);
+            this.ClientSize = new System.Drawing.Size(898, 457);
             this.Controls.Add(this.cboBoxMesas);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.btnModificarPedido);

@@ -20,5 +20,23 @@ namespace Application_Sentidos.Roles
             InitializeComponent();
             userLogged = user;
         }
+
+        private void tarjCreditoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Caja_Tarjetas caja_Cobrar = new Caja_Tarjetas();
+            caja_Cobrar.Show();
+        }
+
+        private void tarjDebitoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Caja_Tarjetas caja_Cobrar = new Caja_Tarjetas();
+            caja_Cobrar.Show();
+        }
+
+        private void efectivoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Caja_Efectivo caja_Efectivo = new Caja_Efectivo();
+            caja_Efectivo.Show();
+        }
     }
 }

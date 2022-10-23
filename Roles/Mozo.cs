@@ -27,7 +27,12 @@ namespace Application_Sentidos.Roles
 
         private void btnBorrar_Click(object sender, EventArgs e)
         {
-            //Borra elemento seleccionado de la lista de elementos de pedidos de a mesa
+            //deletear el pedido de la bd con el id o lo que sea, jeje
+        }
+
+        private void btnFinalizarPedido_Click(object sender, EventArgs e)
+        {
+            //enviar el pedido del mozo a la bd para generar la factura por caja
         }
     }
 }
