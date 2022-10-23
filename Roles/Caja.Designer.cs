@@ -28,10 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-<<<<<<< HEAD
-            this.button1 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.dataGridDetalleCajaPedidos = new System.Windows.Forms.DataGridView();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.metodoDePagoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -39,45 +36,27 @@
             this.tarjCreditoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tarjDebitoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.creditoPersonalToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.chequeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridDetalleCajaPedidos)).BeginInit();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(507, 264);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
-            // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(526, 216);
+            this.label1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label1.Location = new System.Drawing.Point(383, 71);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(38, 15);
+            this.label1.Size = new System.Drawing.Size(73, 19);
             this.label1.TabIndex = 1;
-            this.label1.Text = "label1";
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Location = new System.Drawing.Point(12, 140);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(147, 121);
-            this.pictureBox1.TabIndex = 2;
-            this.pictureBox1.TabStop = false;
+            this.label1.Text = "PEDIDOS";
             // 
             // dataGridDetalleCajaPedidos
             // 
             this.dataGridDetalleCajaPedidos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridDetalleCajaPedidos.Location = new System.Drawing.Point(168, 186);
+            this.dataGridDetalleCajaPedidos.Location = new System.Drawing.Point(383, 93);
             this.dataGridDetalleCajaPedidos.Name = "dataGridDetalleCajaPedidos";
             this.dataGridDetalleCajaPedidos.RowTemplate.Height = 25;
-            this.dataGridDetalleCajaPedidos.Size = new System.Drawing.Size(240, 150);
+            this.dataGridDetalleCajaPedidos.Size = new System.Drawing.Size(240, 375);
             this.dataGridDetalleCajaPedidos.TabIndex = 3;
             // 
             // menuStrip1
@@ -86,7 +65,7 @@
             this.metodoDePagoToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(800, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(635, 24);
             this.menuStrip1.TabIndex = 4;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -96,8 +75,7 @@
             this.efectivoToolStripMenuItem,
             this.tarjCreditoToolStripMenuItem,
             this.tarjDebitoToolStripMenuItem,
-            this.creditoPersonalToolStripMenuItem,
-            this.chequeToolStripMenuItem});
+            this.creditoPersonalToolStripMenuItem});
             this.metodoDePagoToolStripMenuItem.Name = "metodoDePagoToolStripMenuItem";
             this.metodoDePagoToolStripMenuItem.Size = new System.Drawing.Size(107, 20);
             this.metodoDePagoToolStripMenuItem.Text = "Metodo de Pago";
@@ -105,75 +83,53 @@
             // efectivoToolStripMenuItem
             // 
             this.efectivoToolStripMenuItem.Name = "efectivoToolStripMenuItem";
-            this.efectivoToolStripMenuItem.Size = new System.Drawing.Size(161, 22);
+            this.efectivoToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.efectivoToolStripMenuItem.Text = "Efectivo";
+            this.efectivoToolStripMenuItem.Click += new System.EventHandler(this.efectivoToolStripMenuItem_Click);
             // 
             // tarjCreditoToolStripMenuItem
             // 
             this.tarjCreditoToolStripMenuItem.Name = "tarjCreditoToolStripMenuItem";
-            this.tarjCreditoToolStripMenuItem.Size = new System.Drawing.Size(161, 22);
+            this.tarjCreditoToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.tarjCreditoToolStripMenuItem.Text = "Tarj. Credito";
+            this.tarjCreditoToolStripMenuItem.Click += new System.EventHandler(this.tarjCreditoToolStripMenuItem_Click);
             // 
             // tarjDebitoToolStripMenuItem
             // 
             this.tarjDebitoToolStripMenuItem.Name = "tarjDebitoToolStripMenuItem";
-            this.tarjDebitoToolStripMenuItem.Size = new System.Drawing.Size(161, 22);
+            this.tarjDebitoToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.tarjDebitoToolStripMenuItem.Text = "Tarj. Debito";
+            this.tarjDebitoToolStripMenuItem.Click += new System.EventHandler(this.tarjDebitoToolStripMenuItem_Click);
             // 
             // creditoPersonalToolStripMenuItem
             // 
             this.creditoPersonalToolStripMenuItem.Name = "creditoPersonalToolStripMenuItem";
-            this.creditoPersonalToolStripMenuItem.Size = new System.Drawing.Size(161, 22);
-            this.creditoPersonalToolStripMenuItem.Text = "Credito Personal";
-            // 
-            // chequeToolStripMenuItem
-            // 
-            this.chequeToolStripMenuItem.Name = "chequeToolStripMenuItem";
-            this.chequeToolStripMenuItem.Size = new System.Drawing.Size(161, 22);
-            this.chequeToolStripMenuItem.Text = "Cheque";
-            // 
-            // Caja
-            // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.dataGridDetalleCajaPedidos);
-            this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.menuStrip1);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
-            this.MainMenuStrip = this.menuStrip1;
-            this.Name = "Caja";
-            this.Text = "Caja";
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridDetalleCajaPedidos)).EndInit();
-            this.menuStrip1.ResumeLayout(false);
-            this.menuStrip1.PerformLayout();
-            this.ResumeLayout(false);
-            this.PerformLayout();
-=======
-            this.SuspendLayout();
+            this.creditoPersonalToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.creditoPersonalToolStripMenuItem.Text = "Mercado Pago";
             // 
             // Caja
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 480);
+            this.ClientSize = new System.Drawing.Size(635, 480);
+            this.Controls.Add(this.dataGridDetalleCajaPedidos);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.menuStrip1);
             this.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            this.MainMenuStrip = this.menuStrip1;
             this.Name = "Caja";
             this.Text = "Caja";
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridDetalleCajaPedidos)).EndInit();
+            this.menuStrip1.ResumeLayout(false);
+            this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
->>>>>>> master
+            this.PerformLayout();
 
         }
 
         #endregion
-
-        private Button button1;
         private Label label1;
-        private PictureBox pictureBox1;
         private DataGridView dataGridDetalleCajaPedidos;
         private MenuStrip menuStrip1;
         private ToolStripMenuItem metodoDePagoToolStripMenuItem;
@@ -181,6 +137,5 @@
         private ToolStripMenuItem tarjCreditoToolStripMenuItem;
         private ToolStripMenuItem tarjDebitoToolStripMenuItem;
         private ToolStripMenuItem creditoPersonalToolStripMenuItem;
-        private ToolStripMenuItem chequeToolStripMenuItem;
     }
 }

@@ -118,7 +118,7 @@
             this.cboRoles.FormattingEnabled = true;
             this.cboRoles.Items.AddRange(new object[] {
             "Administrador",
-            "Mitre",
+            "Maitre",
             "Mozo",
             "Caja"});
             this.cboRoles.Location = new System.Drawing.Point(49, 377);

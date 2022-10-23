@@ -1,6 +1,6 @@
 ﻿namespace Application_Sentidos.Roles
 {
-    partial class Caja_Cobrar
+    partial class Caja_Tarjetas
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Caja_Cobrar));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Caja_Tarjetas));
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -36,7 +36,6 @@
             this.label5 = new System.Windows.Forms.Label();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.metodoDePagoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.efectivoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tarjDToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tarjCréditoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.label6 = new System.Windows.Forms.Label();
@@ -92,15 +91,9 @@
             // 
             resources.ApplyResources(this.metodoDePagoToolStripMenuItem, "metodoDePagoToolStripMenuItem");
             this.metodoDePagoToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.efectivoToolStripMenuItem,
             this.tarjDToolStripMenuItem,
             this.tarjCréditoToolStripMenuItem});
             this.metodoDePagoToolStripMenuItem.Name = "metodoDePagoToolStripMenuItem";
-            // 
-            // efectivoToolStripMenuItem
-            // 
-            resources.ApplyResources(this.efectivoToolStripMenuItem, "efectivoToolStripMenuItem");
-            this.efectivoToolStripMenuItem.Name = "efectivoToolStripMenuItem";
             // 
             // tarjDToolStripMenuItem
             // 
@@ -188,7 +181,7 @@
             this.dataGridDetalleCaja.Name = "dataGridDetalleCaja";
             this.dataGridDetalleCaja.RowTemplate.Height = 25;
             // 
-            // Caja_Cobrar
+            // Caja_Tarjetas
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -216,7 +209,7 @@
             this.Cursor = System.Windows.Forms.Cursors.Hand;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.MainMenuStrip = this.menuStrip1;
-            this.Name = "Caja_Cobrar";
+            this.Name = "Caja_Tarjetas";
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridDetalleCaja)).EndInit();
@@ -234,7 +227,6 @@
         private Label label5;
         private MenuStrip menuStrip1;
         private ToolStripMenuItem metodoDePagoToolStripMenuItem;
-        private ToolStripMenuItem efectivoToolStripMenuItem;
         private ToolStripMenuItem tarjDToolStripMenuItem;
         private ToolStripMenuItem tarjCréditoToolStripMenuItem;
         private Label label6;

@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Application_Sentidos.Roles
 {
-    public partial class Caja_Cobrar : Form
+    public partial class Caja_Tarjetas : Form
     {
-        public Caja_Cobrar()
+        public Caja_Tarjetas()
         {
             InitializeComponent();
         }

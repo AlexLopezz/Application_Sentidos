@@ -90,3 +90,10 @@ C:\Users\Alex Lopez\Documents\C#\Application_Sentidos\obj\Debug\net6.0-windows\A
 C:\Users\Alex Lopez\Documents\C#\Application_Sentidos\obj\Debug\net6.0-windows\Application_Sentidos.Resources.Mitre.GeneralReserva.resources
 C:\Users\Alex Lopez\Documents\C#\Application_Sentidos\obj\Debug\net6.0-windows\Application_Sentidos.Resources.MisDatos.resources
 >>>>>>> master
+C:\Users\cabre\OneDrive\Escritorio\Sentidos-Desktop\Application_Sentidos\obj\Debug\net6.0-windows\Application_Sentidos.Resources.MisDatos.resources
+C:\Users\cabre\OneDrive\Escritorio\Sentidos-Desktop\Application_Sentidos\obj\Debug\net6.0-windows\Application_Sentidos.Roles.Caja_Efectivo.resources
+C:\Users\cabre\OneDrive\Escritorio\Sentidos-Desktop\Application_Sentidos\obj\Debug\net6.0-windows\Application_Sentidos.Roles.Caja_Tarjetas.resources
+C:\Users\cabre\OneDrive\Escritorio\Sentidos-Desktop\Application_Sentidos\obj\Debug\net6.0-windows\Application_Sentidos.Roles.Facturas.resources
+C:\Users\cabre\OneDrive\Escritorio\Sentidos-Desktop\Application_Sentidos\obj\Debug\net6.0-windows\Application_Sentidos.Resources.Mitre.CreateReserva.resources
+C:\Users\cabre\OneDrive\Escritorio\Sentidos-Desktop\Application_Sentidos\obj\Debug\net6.0-windows\Application_Sentidos.Resources.Mitre.GeneralReserva.resources
+C:\Users\cabre\OneDrive\Escritorio\Sentidos-Desktop\Application_Sentidos\obj\Debug\net6.0-windows\Application_Sentidos.Roles.Caja_Tarjetas.es-AR.resources
