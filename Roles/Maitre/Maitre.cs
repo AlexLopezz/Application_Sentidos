@@ -16,6 +16,7 @@ namespace Application_Sentidos.Roles
 {
     public partial class Maitre : Form
     {
+        Utilidades utilidades = new Utilidades();
         private Form activeForm = null;
         HttpUser userLogged;
         public Maitre(HttpUser user)
@@ -26,7 +27,7 @@ namespace Application_Sentidos.Roles
         }
         private void bttReservas_Click(object sender, EventArgs e)
         {
-            openChildForm(new GeneralReserva());
+            utilidades.openChildForm(new GeneralReserva(), panelContenedor);
         }
 
         private void bttSalir_Click(object sender, EventArgs e)
@@ -36,6 +37,9 @@ namespace Application_Sentidos.Roles
             login.Show();
             
         }
+<<<<<<< HEAD:Roles/Mitre/Maitre.cs
+        private void Maitre_Load(object sender, EventArgs e) => this.CenterToScreen();
+=======
         
         private void openChildForm(Form formHijo)
         {
@@ -46,15 +50,11 @@ namespace Application_Sentidos.Roles
             formHijo.TopLevel = false;
             formHijo.FormBorderStyle = FormBorderStyle.None;
             formHijo.Dock = DockStyle.Fill;
+>>>>>>> 7557749be28cac5659656df135fab99b3c7df4da:Roles/Maitre/Maitre.cs
 
-            panelContenedor.Controls.Add(formHijo);
-            panelContenedor.Tag = formHijo;
-            formHijo.BringToFront();
-            formHijo.Show();
-        }
         private void bttMisDatos_Click(object sender, EventArgs e)
         {
-            openChildForm(new MisDatos(userLogged));
+            utilidades.openChildForm(new MisDatos(userLogged), panelContenedor);
         }
         private void Maitre_Load(object sender, EventArgs e)
         {
