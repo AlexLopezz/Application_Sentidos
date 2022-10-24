@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Registro));
-            this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.txtEmail = new System.Windows.Forms.TextBox();
             this.lblEmail = new System.Windows.Forms.Label();
@@ -45,25 +44,15 @@
             this.lblDNI = new System.Windows.Forms.Label();
             this.txtFullname = new System.Windows.Forms.TextBox();
             this.lblFullname = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.bttRegistrar = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label1.Location = new System.Drawing.Point(127, 3);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(220, 25);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "REGISTRO DE USUARIO";
             // 
             // panel1
             // 
+            this.panel1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel1.BackgroundImage")));
+            this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.panel1.Controls.Add(this.bttRegistrar);
             this.panel1.Controls.Add(this.txtEmail);
             this.panel1.Controls.Add(this.lblEmail);
             this.panel1.Controls.Add(this.lblRol);
@@ -78,38 +67,35 @@
             this.panel1.Controls.Add(this.lblDNI);
             this.panel1.Controls.Add(this.txtFullname);
             this.panel1.Controls.Add(this.lblFullname);
-            this.panel1.Controls.Add(this.label2);
-            this.panel1.Controls.Add(this.pictureBox1);
-            this.panel1.Controls.Add(this.label1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(348, 488);
+            this.panel1.Size = new System.Drawing.Size(392, 485);
             this.panel1.TabIndex = 1;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // txtEmail
             // 
-            this.txtEmail.Location = new System.Drawing.Point(14, 202);
+            this.txtEmail.Location = new System.Drawing.Point(111, 132);
             this.txtEmail.Name = "txtEmail";
-            this.txtEmail.Size = new System.Drawing.Size(160, 23);
+            this.txtEmail.Size = new System.Drawing.Size(160, 22);
             this.txtEmail.TabIndex = 17;
             // 
             // lblEmail
             // 
             this.lblEmail.AutoSize = true;
-            this.lblEmail.Location = new System.Drawing.Point(16, 181);
+            this.lblEmail.Location = new System.Drawing.Point(12, 135);
             this.lblEmail.Name = "lblEmail";
-            this.lblEmail.Size = new System.Drawing.Size(36, 15);
+            this.lblEmail.Size = new System.Drawing.Size(39, 17);
             this.lblEmail.TabIndex = 16;
             this.lblEmail.Text = "Email";
             // 
             // lblRol
             // 
             this.lblRol.AutoSize = true;
-            this.lblRol.Location = new System.Drawing.Point(14, 380);
+            this.lblRol.Location = new System.Drawing.Point(12, 318);
             this.lblRol.Name = "lblRol";
-            this.lblRol.Size = new System.Drawing.Size(29, 15);
+            this.lblRol.Size = new System.Drawing.Size(31, 17);
             this.lblRol.TabIndex = 14;
             this.lblRol.Text = "ROL";
             // 
@@ -121,115 +107,96 @@
             "Maitre",
             "Mozo",
             "Caja"});
-            this.cboRoles.Location = new System.Drawing.Point(49, 377);
+            this.cboRoles.Location = new System.Drawing.Point(111, 312);
             this.cboRoles.Name = "cboRoles";
-            this.cboRoles.Size = new System.Drawing.Size(121, 23);
+            this.cboRoles.Size = new System.Drawing.Size(160, 25);
             this.cboRoles.TabIndex = 13;
             // 
             // txtVerifyPassword
             // 
-            this.txtVerifyPassword.Location = new System.Drawing.Point(14, 334);
+            this.txtVerifyPassword.Location = new System.Drawing.Point(111, 267);
             this.txtVerifyPassword.Name = "txtVerifyPassword";
-            this.txtVerifyPassword.Size = new System.Drawing.Size(160, 23);
+            this.txtVerifyPassword.Size = new System.Drawing.Size(160, 22);
             this.txtVerifyPassword.TabIndex = 12;
             // 
             // lblVerifyPassword
             // 
             this.lblVerifyPassword.AutoSize = true;
-            this.lblVerifyPassword.Location = new System.Drawing.Point(14, 316);
+            this.lblVerifyPassword.Location = new System.Drawing.Point(12, 270);
             this.lblVerifyPassword.Name = "lblVerifyPassword";
-            this.lblVerifyPassword.Size = new System.Drawing.Size(141, 15);
+            this.lblVerifyPassword.Size = new System.Drawing.Size(83, 17);
             this.lblVerifyPassword.TabIndex = 11;
-            this.lblVerifyPassword.Text = "*Contraseña(Verificacion)";
+            this.lblVerifyPassword.Text = "*Contraseña";
             // 
             // txtPassword
             // 
-            this.txtPassword.Location = new System.Drawing.Point(14, 290);
+            this.txtPassword.Location = new System.Drawing.Point(111, 222);
             this.txtPassword.Name = "txtPassword";
-            this.txtPassword.Size = new System.Drawing.Size(160, 23);
+            this.txtPassword.Size = new System.Drawing.Size(160, 22);
             this.txtPassword.TabIndex = 10;
             // 
             // lblPassword
             // 
             this.lblPassword.AutoSize = true;
-            this.lblPassword.Location = new System.Drawing.Point(14, 272);
+            this.lblPassword.Location = new System.Drawing.Point(12, 225);
             this.lblPassword.Name = "lblPassword";
-            this.lblPassword.Size = new System.Drawing.Size(67, 15);
+            this.lblPassword.Size = new System.Drawing.Size(77, 17);
             this.lblPassword.TabIndex = 9;
             this.lblPassword.Text = "Contraseña";
             // 
             // txtUsername
             // 
-            this.txtUsername.Location = new System.Drawing.Point(14, 246);
+            this.txtUsername.Location = new System.Drawing.Point(111, 177);
             this.txtUsername.Name = "txtUsername";
-            this.txtUsername.Size = new System.Drawing.Size(160, 23);
+            this.txtUsername.Size = new System.Drawing.Size(160, 22);
             this.txtUsername.TabIndex = 8;
             // 
             // lblUsuario
             // 
             this.lblUsuario.AutoSize = true;
-            this.lblUsuario.Location = new System.Drawing.Point(14, 228);
+            this.lblUsuario.Location = new System.Drawing.Point(12, 180);
             this.lblUsuario.Name = "lblUsuario";
-            this.lblUsuario.Size = new System.Drawing.Size(47, 15);
+            this.lblUsuario.Size = new System.Drawing.Size(51, 17);
             this.lblUsuario.TabIndex = 7;
             this.lblUsuario.Text = "Usuario";
             // 
             // txtDNI
             // 
-            this.txtDNI.Location = new System.Drawing.Point(12, 155);
+            this.txtDNI.Location = new System.Drawing.Point(111, 87);
             this.txtDNI.Name = "txtDNI";
-            this.txtDNI.Size = new System.Drawing.Size(160, 23);
+            this.txtDNI.Size = new System.Drawing.Size(160, 22);
             this.txtDNI.TabIndex = 6;
             // 
             // lblDNI
             // 
             this.lblDNI.AutoSize = true;
-            this.lblDNI.Location = new System.Drawing.Point(14, 137);
+            this.lblDNI.Location = new System.Drawing.Point(12, 90);
             this.lblDNI.Name = "lblDNI";
-            this.lblDNI.Size = new System.Drawing.Size(27, 15);
+            this.lblDNI.Size = new System.Drawing.Size(29, 17);
             this.lblDNI.TabIndex = 5;
             this.lblDNI.Text = "DNI";
             // 
             // txtFullname
             // 
-            this.txtFullname.Location = new System.Drawing.Point(12, 111);
+            this.txtFullname.Location = new System.Drawing.Point(111, 42);
             this.txtFullname.Name = "txtFullname";
-            this.txtFullname.Size = new System.Drawing.Size(160, 23);
+            this.txtFullname.Size = new System.Drawing.Size(160, 22);
             this.txtFullname.TabIndex = 4;
             // 
             // lblFullname
             // 
             this.lblFullname.AutoSize = true;
-            this.lblFullname.Location = new System.Drawing.Point(12, 93);
+            this.lblFullname.Location = new System.Drawing.Point(12, 45);
             this.lblFullname.Name = "lblFullname";
-            this.lblFullname.Size = new System.Drawing.Size(105, 15);
+            this.lblFullname.Size = new System.Drawing.Size(56, 17);
             this.lblFullname.TabIndex = 3;
-            this.lblFullname.Text = "Nombre completo";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(130, 28);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(117, 15);
-            this.label2.TabIndex = 2;
-            this.label2.Text = "Restaurante Sentidos";
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(3, 3);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(121, 87);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 1;
-            this.pictureBox1.TabStop = false;
+            this.lblFullname.Text = "Nombre";
             // 
             // bttRegistrar
             // 
-            this.bttRegistrar.Location = new System.Drawing.Point(11, 437);
+            this.bttRegistrar.Location = new System.Drawing.Point(111, 392);
             this.bttRegistrar.Name = "bttRegistrar";
-            this.bttRegistrar.Size = new System.Drawing.Size(157, 48);
+            this.bttRegistrar.Size = new System.Drawing.Size(160, 54);
             this.bttRegistrar.TabIndex = 15;
             this.bttRegistrar.Text = "REGISTRAR";
             this.bttRegistrar.UseVisualStyleBackColor = true;
@@ -237,23 +204,21 @@
             // 
             // Registro
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(348, 488);
-            this.Controls.Add(this.bttRegistrar);
+            this.ClientSize = new System.Drawing.Size(392, 485);
             this.Controls.Add(this.panel1);
+            this.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Name = "Registro";
-            this.Text = "Registro";
+            this.Text = "Registro de Usuarios";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
-
-        private Label label1;
         private Panel panel1;
         private Button bttRegistrar;
         private Label lblRol;
@@ -268,8 +233,6 @@
         private Label lblDNI;
         private TextBox txtFullname;
         private Label lblFullname;
-        private Label label2;
-        private PictureBox pictureBox1;
         private TextBox txtEmail;
         private Label lblEmail;
         private TextBox txtUsername;

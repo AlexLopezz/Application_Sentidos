@@ -46,10 +46,10 @@
             this.label8 = new System.Windows.Forms.Label();
             this.btnPagar = new System.Windows.Forms.Button();
             this.btnCancelar = new System.Windows.Forms.Button();
-            this.dataGridDetalleCaja = new System.Windows.Forms.DataGridView();
+            this.dgvDetalleCaja = new System.Windows.Forms.DataGridView();
             this.txtBoxTotal = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridDetalleCaja)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvDetalleCaja)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -120,12 +120,12 @@
             // 
             // cboBoxTipoFatura
             // 
-            resources.ApplyResources(this.cboBoxTipoFatura, "cboBoxTipoFatura");
             this.cboBoxTipoFatura.FormattingEnabled = true;
             this.cboBoxTipoFatura.Items.AddRange(new object[] {
             resources.GetString("cboBoxTipoFatura.Items"),
             resources.GetString("cboBoxTipoFatura.Items1"),
             resources.GetString("cboBoxTipoFatura.Items2")});
+            resources.ApplyResources(this.cboBoxTipoFatura, "cboBoxTipoFatura");
             this.cboBoxTipoFatura.Name = "cboBoxTipoFatura";
             // 
             // label8
@@ -146,18 +146,18 @@
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.UseVisualStyleBackColor = true;
             // 
-            // dataGridDetalleCaja
+            // dgvDetalleCaja
             // 
-            resources.ApplyResources(this.dataGridDetalleCaja, "dataGridDetalleCaja");
-            this.dataGridDetalleCaja.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridDetalleCaja.Name = "dataGridDetalleCaja";
-            this.dataGridDetalleCaja.RowTemplate.Height = 25;
+            this.dgvDetalleCaja.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            resources.ApplyResources(this.dgvDetalleCaja, "dgvDetalleCaja");
+            this.dgvDetalleCaja.Name = "dgvDetalleCaja";
+            this.dgvDetalleCaja.RowTemplate.Height = 25;
             // 
             // txtBoxTotal
             // 
-            resources.ApplyResources(this.txtBoxTotal, "txtBoxTotal");
             this.txtBoxTotal.BackColor = System.Drawing.SystemColors.WindowFrame;
             this.txtBoxTotal.ForeColor = System.Drawing.Color.Lime;
+            resources.ApplyResources(this.txtBoxTotal, "txtBoxTotal");
             this.txtBoxTotal.Name = "txtBoxTotal";
             // 
             // label9
@@ -173,7 +173,7 @@
             this.CancelButton = this.btnCancelar;
             this.Controls.Add(this.txtBoxTotal);
             this.Controls.Add(this.label9);
-            this.Controls.Add(this.dataGridDetalleCaja);
+            this.Controls.Add(this.dgvDetalleCaja);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.btnPagar);
             this.Controls.Add(this.label8);
@@ -194,7 +194,7 @@
             this.Cursor = System.Windows.Forms.Cursors.Hand;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Name = "Caja_Tarjetas";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridDetalleCaja)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvDetalleCaja)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -219,7 +219,7 @@
         private Label label8;
         private Button btnPagar;
         private Button btnCancelar;
-        private DataGridView dataGridDetalleCaja;
+        private DataGridView dgvDetalleCaja;
         private TextBox txtBoxTotal;
         private Label label9;
     }

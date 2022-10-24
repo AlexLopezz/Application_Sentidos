@@ -59,7 +59,8 @@
             this.dgvUsuarios.Name = "dgvUsuarios";
             this.dgvUsuarios.RowTemplate.Height = 25;
             this.dgvUsuarios.Size = new System.Drawing.Size(503, 350);
-            this.dgvUsuarios.TabIndex = 0;            // 
+            this.dgvUsuarios.TabIndex = 0;
+            // 
             // panel_User
             // 
             this.panel_User.Controls.Add(this.panel1);
@@ -134,9 +135,9 @@
             this.rb_allUser.AutoSize = true;
             this.rb_allUser.Location = new System.Drawing.Point(6, 8);
             this.rb_allUser.Name = "rb_allUser";
-            this.rb_allUser.Size = new System.Drawing.Size(121, 19);
+            this.rb_allUser.Size = new System.Drawing.Size(105, 19);
             this.rb_allUser.TabIndex = 0;
-            this.rb_allUser.Text = "Todos los usuarios";
+            this.rb_allUser.Text = "Todos los Roles";
             this.rb_allUser.UseVisualStyleBackColor = true;
             this.rb_allUser.CheckedChanged += new System.EventHandler(this.rb_allUser_CheckedChanged);
             // 

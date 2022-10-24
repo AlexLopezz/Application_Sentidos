@@ -38,5 +38,10 @@ namespace Application_Sentidos.Roles
             Caja_Efectivo caja_Efectivo = new Caja_Efectivo();
             caja_Efectivo.Show();
         }
+
+        private void btnActualizar_Click(object sender, EventArgs e)
+        {
+            //Actualizar el dataGV para ver las nuevas mesas cerradas
+        }
     }
 }
