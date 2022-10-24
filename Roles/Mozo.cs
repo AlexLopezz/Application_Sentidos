@@ -1,5 +1,5 @@
 ﻿using Application_Sentidos.Resources.Objects;
-using Newtonsoft.Json.Linq;
+using System.Text.Json;
 
 namespace Application_Sentidos.Roles
 {
@@ -24,30 +24,39 @@ namespace Application_Sentidos.Roles
         {
             //deletear el pedido de la bd con el id o lo que sea, jeje
         }
-        public void cargarCategorias(string categoria)
+        public async Task cargarCategorias(string categoria)
         {
-            using (var client = new HttpClient())
+            //var urlRequest = "https://jsonplaceholder.typicode.com/posts";
+            var urlRequest = "https://binarysystem.pythonanywhere.com/api/filterCategory/?nameCategory=" + categoria;
+            HttpClient client = new HttpClient();
+            var httpResponse = await client.GetAsync(urlRequest);
+
+            if (httpResponse.IsSuccessStatusCode)
             {
-                var urlRequest = "https://binarysystem.pythonanywhere.com/api/filterCategory/?nameCategory=" + categoria;
-                var response = client.GetAsync(urlRequest).Result;
-                var data = response.Content.ReadAsStringAsync().Result;
-                dynamic dataSource = JObject.Parse(data);
+                MessageBox.Show(urlRequest);
+                var content = await httpResponse.Content.ReadAsStringAsync();
+                List<Productos> productos = JsonSerializer.Deserialize<List<Productos>>(content);
+                MessageBox.Show("Join 2");
+                foreach (var item in productos)
+                {
+                    listBoxProductos.Items.Add(item.name);
+                }
+                MessageBox.Show("Join 3");
             }
+
         }
         private void cboBoxCategorias_SelectedIndexChanged(object sender, EventArgs e)
         {
-            string choice = cboBoxCategorias.Text;
-
-            switch (choice)
+            switch (cboBoxCategorias.Text)
             {
-                case "Bebidas sin alcohol": { cargarCategorias(choice); break; }
-                case "Bebidas con alcohol": { cargarCategorias(choice); break; }
-                case "Hamburguesas": { cargarCategorias(choice); break; }
-                case "Lomitos": { cargarCategorias(choice); break; }
-                case "Pastas": { cargarCategorias(choice); break; }
-                case "Pescados": { cargarCategorias(choice); break; }
-                case "Pizzas": { cargarCategorias(choice); break; }
-                case "Snacks": { cargarCategorias(choice); break; }
+                case "Bebidas sin alcohol": { cargarCategorias(cboBoxCategorias.Text); break; }
+                case "Bebidas con alcohol": { cargarCategorias(cboBoxCategorias.Text); break; }
+                case "Hamburguesas": { cargarCategorias(cboBoxCategorias.Text); break; }
+                case "Lomitos": { cargarCategorias(cboBoxCategorias.Text); break; }
+                case "Pastas": { cargarCategorias(cboBoxCategorias.Text); break; }
+                case "Pescados": { cargarCategorias(cboBoxCategorias.Text); break; }
+                case "Pizzas": { cargarCategorias(cboBoxCategorias.Text); break; }
+                case "Snacks": { cargarCategorias(cboBoxCategorias.Text); break; }
             }
         }
         private void cboBoxMesas_SelectedIndexChanged(object sender, EventArgs e)
@@ -62,5 +71,19 @@ namespace Application_Sentidos.Roles
         {
             Application.Exit();
         }
+    }
+    public class Productos
+    {
+        public string name { get; set; }
+        public string description { get; set; }
+        public int price { get; set; }
+        public string img { get; set; }
+    }
+    public class Post
+    {
+        public int userId { get; set; }
+        public int id { get; set; }
+        public string title { get; set; }
+        public string body { get; set; }
     }
 }

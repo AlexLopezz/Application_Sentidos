@@ -48,6 +48,7 @@
             this.dgvPedidosACerrar = new System.Windows.Forms.DataGridView();
             this.label7 = new System.Windows.Forms.Label();
             this.txtBoxCantidad = new System.Windows.Forms.TextBox();
+            this.listBoxProductos = new System.Windows.Forms.ListBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvProductos)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPedidoMesa)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPedidosACerrar)).BeginInit();
@@ -201,11 +202,11 @@
             this.dgvProductos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column1,
             this.Column2});
-            this.dgvProductos.Location = new System.Drawing.Point(12, 141);
+            this.dgvProductos.Location = new System.Drawing.Point(473, 29);
             this.dgvProductos.Name = "dgvProductos";
             this.dgvProductos.RowHeadersVisible = false;
             this.dgvProductos.RowTemplate.Height = 25;
-            this.dgvProductos.Size = new System.Drawing.Size(240, 304);
+            this.dgvProductos.Size = new System.Drawing.Size(111, 97);
             this.dgvProductos.TabIndex = 18;
             // 
             // Column1
@@ -258,12 +259,22 @@
             this.txtBoxCantidad.Size = new System.Drawing.Size(121, 23);
             this.txtBoxCantidad.TabIndex = 22;
             // 
+            // listBoxProductos
+            // 
+            this.listBoxProductos.FormattingEnabled = true;
+            this.listBoxProductos.ItemHeight = 15;
+            this.listBoxProductos.Location = new System.Drawing.Point(12, 143);
+            this.listBoxProductos.Name = "listBoxProductos";
+            this.listBoxProductos.Size = new System.Drawing.Size(245, 304);
+            this.listBoxProductos.TabIndex = 23;
+            // 
             // Mozo
             // 
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.ClientSize = new System.Drawing.Size(962, 457);
+            this.Controls.Add(this.listBoxProductos);
             this.Controls.Add(this.txtBoxCantidad);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.dgvPedidosACerrar);
@@ -317,5 +328,6 @@
         private DataGridView dgvPedidosACerrar;
         private Label label7;
         private TextBox txtBoxCantidad;
+        private ListBox listBoxProductos;
     }
 }
