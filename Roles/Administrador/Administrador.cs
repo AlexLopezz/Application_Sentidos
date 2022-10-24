@@ -16,6 +16,7 @@ namespace Application_Sentidos.Roles
 {
     public partial class Administrador : Form
     {
+        Utilidades utilidades = new Utilidades();
         HttpUser userLogged;
         public Administrador(HttpUser user)
         {
@@ -31,36 +32,9 @@ namespace Application_Sentidos.Roles
             this.Hide();
             login.ShowDialog();
         }
+        private void bttUsuarios_Click(object sender, EventArgs e)=> utilidades.openChildForm(new Usuarios(), panelContenedor);
 
-        private void picMenu_Click(object sender, EventArgs e)
-        {
-            if (panelMenuLateral.Width == 266)
-                panelMenuLateral.Width = 74;
-            else
-                panelMenuLateral.Width = 266;
-        }
-
-        private void AbrirFormPanel(object FormHijo)
-        {
-            if (this.panelContenedor.Controls.Count > 0)
-                this.panelContenedor.Controls.RemoveAt(0);
-            var fh = FormHijo as Form;
-            fh.TopLevel = false;
-            fh.Dock = DockStyle.Fill;
-            this.panelContenedor.Controls.Add(fh);
-            this.panelContenedor.Tag = fh;
-            fh.Show();
-        }
-
-        private void bttUsuarios_Click(object sender, EventArgs e)
-        {
-            AbrirFormPanel(new Usuarios());
-        }
-
-        private void bttReservas_Click(object sender, EventArgs e)
-        {
-            AbrirFormPanel(new Reserva());
-        }
+        private void bttReservas_Click(object sender, EventArgs e) => utilidades.openChildForm(new Reserva(), panelContenedor);
 
         private void bttSalir_Click(object sender, EventArgs e)
         {
