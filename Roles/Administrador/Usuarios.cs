@@ -1,14 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
+﻿using Application_Sentidos.Resources.Objects;
 using System.Text.Json;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-using Application_Sentidos.Resources.Objects;
 
 namespace Application_Sentidos.Resources.Administrador
 {
@@ -40,7 +31,7 @@ namespace Application_Sentidos.Resources.Administrador
                 else { MessageBox.Show("Hubo un error, verifique ID."); }
             }
         }
-        
+
         private void bttRegistrar_Click(object sender, EventArgs e)
         {
             Registro registro = new Registro();
@@ -65,11 +56,11 @@ namespace Application_Sentidos.Resources.Administrador
             {
                 cargarDgvUsuario("https://binarysystem.pythonanywhere.com/api/allMitre/");
             }
-            else if (rb_Caja.Checked==true)
+            else if (rb_Caja.Checked == true)
             {
                 cargarDgvUsuario("https://binarysystem.pythonanywhere.com/api/allCaja/");
             }
-            else if (rb_Mozo.Checked==true)
+            else if (rb_Mozo.Checked == true)
             {
                 cargarDgvUsuario("https://binarysystem.pythonanywhere.com/api/allMozo/");
             }
@@ -78,7 +69,7 @@ namespace Application_Sentidos.Resources.Administrador
 
         private void rb_allUser_CheckedChanged(object sender, EventArgs e)
         {
-            if(rb_allUser.Checked == true) { cargarDgvUsuario("https://binarysystem.pythonanywhere.com/api/allUser/"); }
+            if (rb_allUser.Checked == true) { cargarDgvUsuario("https://binarysystem.pythonanywhere.com/api/allUser/"); }
         }
 
         private void rb_Mozo_CheckedChanged(object sender, EventArgs e)
@@ -96,8 +87,8 @@ namespace Application_Sentidos.Resources.Administrador
             if (rb_Caja.Checked == true) { cargarDgvUsuario("https://binarysystem.pythonanywhere.com/api/allCaja/"); }
         }
         private void rb_None_CheckedChanged(object sender, EventArgs e) => emptyDgv();
-       
-        
+
+
         //Utilidades:
         private void emptyDgv() { dgvUsuarios.DataSource = null; }
         private string rol_Select(int rol)
