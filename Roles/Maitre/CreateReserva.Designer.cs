@@ -731,6 +731,7 @@
             this.Controls.Add(this.txtBusquedaUser);
             this.Controls.Add(this.lblMitre);
             this.Controls.Add(this.button1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Name = "CreateReserva";
             this.Text = "CreateReserva";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.CreateReserva_FormClosed);
