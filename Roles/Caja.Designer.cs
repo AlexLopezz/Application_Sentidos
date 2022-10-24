@@ -71,21 +71,21 @@
             this.efectivoToolStripMenuItem.Name = "efectivoToolStripMenuItem";
             this.efectivoToolStripMenuItem.Size = new System.Drawing.Size(191, 24);
             this.efectivoToolStripMenuItem.Text = "Efectivo";
-            this.efectivoToolStripMenuItem.Click += new System.EventHandler(this.efectivoToolStripMenuItem_Click);
+            this.efectivoToolStripMenuItem.Click += new System.EventHandler(this.EfectivoToolStripMenuItem_Click);
             // 
             // tarjCreditoToolStripMenuItem
             // 
             this.tarjCreditoToolStripMenuItem.Name = "tarjCreditoToolStripMenuItem";
             this.tarjCreditoToolStripMenuItem.Size = new System.Drawing.Size(191, 24);
             this.tarjCreditoToolStripMenuItem.Text = "Tarj. Credito";
-            this.tarjCreditoToolStripMenuItem.Click += new System.EventHandler(this.tarjCreditoToolStripMenuItem_Click);
+            this.tarjCreditoToolStripMenuItem.Click += new System.EventHandler(this.TarjCreditoToolStripMenuItem_Click);
             // 
             // tarjDebitoToolStripMenuItem
             // 
             this.tarjDebitoToolStripMenuItem.Name = "tarjDebitoToolStripMenuItem";
             this.tarjDebitoToolStripMenuItem.Size = new System.Drawing.Size(191, 24);
             this.tarjDebitoToolStripMenuItem.Text = "Tarj. Debito";
-            this.tarjDebitoToolStripMenuItem.Click += new System.EventHandler(this.tarjDebitoToolStripMenuItem_Click);
+            this.tarjDebitoToolStripMenuItem.Click += new System.EventHandler(this.TarjDebitoToolStripMenuItem_Click);
             // 
             // creditoPersonalToolStripMenuItem
             // 
@@ -147,7 +147,7 @@
             this.btnActualizar.TabIndex = 5;
             this.btnActualizar.Text = "Actualizar";
             this.btnActualizar.UseVisualStyleBackColor = true;
-            this.btnActualizar.Click += new System.EventHandler(this.btnActualizar_Click);
+            this.btnActualizar.Click += new System.EventHandler(this.BtnActualizar_Click);
             // 
             // Caja
             // 
@@ -164,6 +164,7 @@
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "Caja";
             this.Text = "Caja";
+            this.Load += new System.EventHandler(this.Caja_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvSeleccionMesa)).EndInit();

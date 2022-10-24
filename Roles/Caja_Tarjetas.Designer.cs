@@ -167,6 +167,7 @@
             // 
             // Caja_Tarjetas
             // 
+            this.AcceptButton = this.btnPagar;
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
