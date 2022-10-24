@@ -73,7 +73,7 @@ namespace Application_Sentidos.Resources.Administrador
                 case "Administrador":
                     fk_role = 1;
                     break;
-                case "Mitre":
+                case "Maitre":
                     fk_role = 2;
                     break;
                 case "Mozo":

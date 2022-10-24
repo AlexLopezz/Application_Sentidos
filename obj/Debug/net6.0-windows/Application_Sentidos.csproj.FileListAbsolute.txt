@@ -34,6 +34,7 @@ C:\Users\cabre\OneDrive\Escritorio\Sentidos-Desktop\Application_Sentidos\bin\Deb
 C:\Users\cabre\OneDrive\Escritorio\Sentidos-Desktop\Application_Sentidos\obj\Debug\net6.0-windows\Application_Sentidos.genruntimeconfig.cache
 C:\Users\cabre\OneDrive\Escritorio\Sentidos-Desktop\Application_Sentidos\obj\Debug\net6.0-windows\ref\Application_Sentidos.dll
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 C:\Users\Alex Lopez\Documents\C#\Application_Sentidos\bin\Debug\net6.0-windows\es-AR\Application_Sentidos.resources.dll
 C:\Users\Alex Lopez\Documents\C#\Application_Sentidos\obj\Debug\net6.0-windows\Application_Sentidos.Roles.Mozo_Cobrar.resources
@@ -87,4 +88,9 @@ C:\Users\cabre\OneDrive\Escritorio\Sentidos-Desktop\Application_Sentidos\obj\Deb
 C:\Users\cabre\OneDrive\Escritorio\Sentidos-Desktop\Application_Sentidos\obj\Debug\net6.0-windows\Application_Sentidos.Roles.Caja_Tarjetas.es-AR.resources
 >>>>>>> dani
 =======
+>>>>>>> dani
+=======
+C:\Users\cabre\OneDrive\Escritorio\Sentidos-Desktop\Application_Sentidos\bin\Debug\net6.0-windows\RestSharp.dll
+C:\Users\cabre\OneDrive\Escritorio\Sentidos-Desktop\Application_Sentidos\obj\Debug\net6.0-windows\Application_Sentidos.csproj.CopyComplete
+C:\Users\cabre\OneDrive\Escritorio\Sentidos-Desktop\Application_Sentidos\bin\Debug\net6.0-windows\Newtonsoft.Json.dll
 >>>>>>> dani

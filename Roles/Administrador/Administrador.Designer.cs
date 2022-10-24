@@ -280,6 +280,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Name = "Administrador";
             this.Text = "ADMINISTRADOR";
+            this.Load += new System.EventHandler(this.Administrador_Load);
             ((System.ComponentModel.ISupportInitialize)(this.picMenu)).EndInit();
             this.panelMenuLateral.ResumeLayout(false);
             this.panelContenedorOpciones.ResumeLayout(false);

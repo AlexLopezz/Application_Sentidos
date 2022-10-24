@@ -227,7 +227,6 @@
         private Label lblVerifyPassword;
         private TextBox txtPassword;
         private Label lblPassword;
-        private TextBox txtUser;
         private Label lblUsuario;
         private TextBox txtDNI;
         private Label lblDNI;

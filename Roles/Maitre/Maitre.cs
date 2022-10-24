@@ -36,7 +36,7 @@ namespace Application_Sentidos.Roles
             login.Show();
             
         }
-        private void Maitre_Load(object sender, EventArgs e) => this.CenterToScreen();
+        
         private void openChildForm(Form formHijo)
         {
             if (activeForm != null)
@@ -55,6 +55,14 @@ namespace Application_Sentidos.Roles
         private void bttMisDatos_Click(object sender, EventArgs e)
         {
             openChildForm(new MisDatos(userLogged));
+        }
+        private void Maitre_Load(object sender, EventArgs e)
+        {
+            this.FormClosed += new FormClosedEventHandler(closeApp);
+        }
+        private void closeApp(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
     }
 }
