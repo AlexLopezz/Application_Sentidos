@@ -56,7 +56,7 @@ namespace Application_Sentidos.Authentication
                             Administrador myAdmin = new Administrador(user);
                             myAdmin.ShowDialog();
                             break;
-                        case "Mitre":
+                        case "Maitre":
                             this.Hide();
                             Maitre maitre = new Maitre(user);
                             maitre.ShowDialog();
