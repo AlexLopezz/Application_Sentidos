@@ -37,11 +37,32 @@ namespace Application_Sentidos.Roles
             login.Show();
             
         }
+<<<<<<< HEAD:Roles/Mitre/Maitre.cs
         private void Maitre_Load(object sender, EventArgs e) => this.CenterToScreen();
+=======
+        
+        private void openChildForm(Form formHijo)
+        {
+            if (activeForm != null)
+                activeForm.Close();
+            
+            activeForm = formHijo;
+            formHijo.TopLevel = false;
+            formHijo.FormBorderStyle = FormBorderStyle.None;
+            formHijo.Dock = DockStyle.Fill;
+>>>>>>> 7557749be28cac5659656df135fab99b3c7df4da:Roles/Maitre/Maitre.cs
 
         private void bttMisDatos_Click(object sender, EventArgs e)
         {
             utilidades.openChildForm(new MisDatos(userLogged), panelContenedor);
+        }
+        private void Maitre_Load(object sender, EventArgs e)
+        {
+            this.FormClosed += new FormClosedEventHandler(closeApp);
+        }
+        private void closeApp(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
     }
 }

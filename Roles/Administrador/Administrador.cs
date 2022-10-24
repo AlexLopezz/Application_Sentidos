@@ -42,5 +42,14 @@ namespace Application_Sentidos.Roles
             Login login = new Login();
             login.Show();
         }
+
+        private void Administrador_Load(object sender, EventArgs e)
+        {
+            this.FormClosed += new FormClosedEventHandler(closeApp);
+        }
+        private void closeApp(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }

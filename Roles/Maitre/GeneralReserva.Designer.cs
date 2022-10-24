@@ -152,6 +152,7 @@
             this.Controls.Add(this.bttRefrescar);
             this.Controls.Add(this.bttCreate_Reserva);
             this.Controls.Add(this.panel1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Name = "GeneralReserva";
             this.Text = "UI_RESERVA";
             this.panel1.ResumeLayout(false);

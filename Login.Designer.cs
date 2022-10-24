@@ -56,7 +56,7 @@
             // 
             // bttLogin
             // 
-            this.bttLogin.Location = new System.Drawing.Point(218, 109);
+            this.bttLogin.Location = new System.Drawing.Point(236, 109);
             this.bttLogin.Name = "bttLogin";
             this.bttLogin.Size = new System.Drawing.Size(84, 23);
             this.bttLogin.TabIndex = 5;
@@ -67,7 +67,7 @@
             // lblPassword
             // 
             this.lblPassword.AutoSize = true;
-            this.lblPassword.Location = new System.Drawing.Point(226, 62);
+            this.lblPassword.Location = new System.Drawing.Point(244, 62);
             this.lblPassword.Name = "lblPassword";
             this.lblPassword.Size = new System.Drawing.Size(67, 15);
             this.lblPassword.TabIndex = 4;
@@ -75,7 +75,7 @@
             // 
             // txtPassword
             // 
-            this.txtPassword.Location = new System.Drawing.Point(202, 80);
+            this.txtPassword.Location = new System.Drawing.Point(220, 80);
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.PasswordChar = '*';
             this.txtPassword.Size = new System.Drawing.Size(118, 23);
@@ -84,7 +84,7 @@
             // lblUsername
             // 
             this.lblUsername.AutoSize = true;
-            this.lblUsername.Location = new System.Drawing.Point(236, 18);
+            this.lblUsername.Location = new System.Drawing.Point(254, 18);
             this.lblUsername.Name = "lblUsername";
             this.lblUsername.Size = new System.Drawing.Size(47, 15);
             this.lblUsername.TabIndex = 2;
@@ -92,7 +92,7 @@
             // 
             // txtUsername
             // 
-            this.txtUsername.Location = new System.Drawing.Point(202, 36);
+            this.txtUsername.Location = new System.Drawing.Point(220, 36);
             this.txtUsername.Name = "txtUsername";
             this.txtUsername.Size = new System.Drawing.Size(118, 23);
             this.txtUsername.TabIndex = 1;
@@ -102,18 +102,19 @@
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(3, 3);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(158, 145);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.Size = new System.Drawing.Size(165, 145);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
             // Login
             // 
+            this.AcceptButton = this.bttLogin;
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(383, 151);
             this.Controls.Add(this.panelLogin);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.MaximizeBox = false;
             this.Name = "Login";
             this.Text = "Inicar Sesion - Restaurante Sentidos & Casa de Te";
