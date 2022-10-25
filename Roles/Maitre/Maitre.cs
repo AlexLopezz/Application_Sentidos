@@ -1,4 +1,5 @@
 ﻿using Application_Sentidos.Authentication;
+using Application_Sentidos.Resources;
 using Application_Sentidos.Resources.Mitre;
 using Application_Sentidos.Resources.Objects;
 
@@ -27,8 +28,6 @@ namespace Application_Sentidos.Roles
             login.Show();
 
         }
-        private void Maitre_Load(object sender, EventArgs e) => this.CenterToScreen();
-
         private void openChildForm(Form formHijo)
         {
             if (activeForm != null)
@@ -42,18 +41,16 @@ namespace Application_Sentidos.Roles
         }
         private void bttMisDatos_Click(object sender, EventArgs e)
         {
-            // openChildForm(new MisDatos(userLogged), panelContenedor);
+            //openChildForm(new MisDatos(userLogged), panelContenedor);
         }
 
-
-        private void Maitre_Load1(object sender, EventArgs e)
-        {
-            this.FormClosed += new FormClosedEventHandler(closeApp);
-        }
-
-        private static void closeApp(object sender, EventArgs e)
+        private static void CloseApp(object sender, EventArgs e)
         {
             Application.Exit();
+        }
+        private void Maitre_Load(object sender, EventArgs e)
+        {
+            this.FormClosed += new FormClosedEventHandler(CloseApp);
         }
     }
 }

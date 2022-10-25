@@ -5,7 +5,7 @@ namespace Application_Sentidos.Roles
 {
     public partial class Mozo : Form
     {
-        
+
         List<Productos> listaProductos = new List<Productos>();
 
         HttpUser userLogged;
@@ -22,6 +22,10 @@ namespace Application_Sentidos.Roles
             {
                 MessageBox.Show("Genere y cargue un pedido para moder modificar su seleccion", "Generar y cargar para Modificar");
             }
+            else if (dgvPedidoMesa.Rows.Count != 0)
+            {
+                MessageBox.Show("Debe terminar de cargar su pedido para modificar otro", "Finalice su pedido");
+            }
             else
             {
                 cboBoxMesas.Text = dgvPedidosACerrar.CurrentRow.Cells[0].Value.ToString();
@@ -34,6 +38,14 @@ namespace Application_Sentidos.Roles
                             listaProductos[i].price, listaProductos[i].totalProducto);
                     }
                 }
+                for (int i = 0; i < listaProductos.Count; i++)
+                {
+                    if (listaProductos[i].numMesa == nmesa)
+                    {
+                        listaProductos.RemoveAt(i);
+                    }
+                }
+                dgvPedidosACerrar.Rows.RemoveAt(dgvPedidosACerrar.CurrentRow.Index);
             }
         }
         private void btnAgregar_Click(object sender, EventArgs e)
@@ -158,7 +170,7 @@ namespace Application_Sentidos.Roles
                 {
                     total += (double)row.Cells[3].Value;
                 }
-                dgvPedidosACerrar.Rows.Add(lblNumeroMesa.Text, total);
+                dgvPedidosACerrar.Rows.Add(cboBoxMesas.Text, total);
 
 
                 foreach (DataGridViewRow row in dgvPedidoMesa.Rows)
@@ -181,13 +193,13 @@ namespace Application_Sentidos.Roles
             dgvPedidoMesa.Rows.Clear();
             cboBoxCategorias.Text = "";
             cboBoxMesas.Text = "";
-            txtBoxCantidad.Clear();
+            txtBoxCantidad.Text = "1";
             lblNumeroMesa.Text = "";
         }
 
         private void btnCerrarMesa_Click_1(object sender, EventArgs e)
         {
-
+            //post
         }
         private void Mozo_Load(object sender, EventArgs e)
         {

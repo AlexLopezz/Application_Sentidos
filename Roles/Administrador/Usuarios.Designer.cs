@@ -113,9 +113,9 @@
             this.rb_Mitre.AutoSize = true;
             this.rb_Mitre.Location = new System.Drawing.Point(6, 58);
             this.rb_Mitre.Name = "rb_Mitre";
-            this.rb_Mitre.Size = new System.Drawing.Size(53, 19);
+            this.rb_Mitre.Size = new System.Drawing.Size(59, 19);
             this.rb_Mitre.TabIndex = 2;
-            this.rb_Mitre.Text = "Mitre";
+            this.rb_Mitre.Text = "Maitre";
             this.rb_Mitre.UseVisualStyleBackColor = true;
             this.rb_Mitre.CheckedChanged += new System.EventHandler(this.rb_Mitre_CheckedChanged);
             // 

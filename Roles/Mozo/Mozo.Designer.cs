@@ -50,12 +50,12 @@
             this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgvPedidosACerrar = new System.Windows.Forms.DataGridView();
+            this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label7 = new System.Windows.Forms.Label();
             this.txtBoxCantidad = new System.Windows.Forms.TextBox();
             this.btnNuevoPedido = new System.Windows.Forms.Button();
             this.btnCerrarMesa = new System.Windows.Forms.Button();
-            this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvProductos)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPedidoMesa)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPedidosACerrar)).BeginInit();
@@ -292,6 +292,18 @@
             this.dgvPedidosACerrar.Size = new System.Drawing.Size(287, 304);
             this.dgvPedidosACerrar.TabIndex = 20;
             // 
+            // Column7
+            // 
+            this.Column7.HeaderText = "N° Mesa";
+            this.Column7.Name = "Column7";
+            this.Column7.ReadOnly = true;
+            // 
+            // Column8
+            // 
+            this.Column8.HeaderText = "Total";
+            this.Column8.Name = "Column8";
+            this.Column8.ReadOnly = true;
+            // 
             // label7
             // 
             this.label7.AutoSize = true;
@@ -327,18 +339,6 @@
             this.btnCerrarMesa.Text = "Cerrar Mesa";
             this.btnCerrarMesa.UseVisualStyleBackColor = true;
             this.btnCerrarMesa.Click += new System.EventHandler(this.btnCerrarMesa_Click_1);
-            // 
-            // Column7
-            // 
-            this.Column7.HeaderText = "N° Mesa";
-            this.Column7.Name = "Column7";
-            this.Column7.ReadOnly = true;
-            // 
-            // Column8
-            // 
-            this.Column8.HeaderText = "Total";
-            this.Column8.Name = "Column8";
-            this.Column8.ReadOnly = true;
             // 
             // Mozo
             // 
