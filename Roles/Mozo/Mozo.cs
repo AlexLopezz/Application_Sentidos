@@ -5,7 +5,7 @@ namespace Application_Sentidos.Roles
 {
     public partial class Mozo : Form
     {
-        private Productos prod = new Productos();
+        
         List<Productos> listaProductos = new List<Productos>();
 
         HttpUser userLogged;
@@ -163,6 +163,7 @@ namespace Application_Sentidos.Roles
 
                 foreach (DataGridViewRow row in dgvPedidoMesa.Rows)
                 {
+                    Productos prod = new Productos();
                     prod.numMesa = int.Parse(cboBoxMesas.Text);
                     prod.name = row.Cells[0].Value.ToString();
                     prod.cantidad = row.Cells[1].Value.ToString();

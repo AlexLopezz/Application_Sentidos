@@ -50,21 +50,6 @@
             this.panelLogo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxAdmin)).BeginInit();
             this.SuspendLayout();
-            // 
-<<<<<<< HEAD
-=======
-            // picMenu
-            // 
-            this.picMenu.Image = ((System.Drawing.Image)(resources.GetObject("picMenu.Image")));
-            this.picMenu.Location = new System.Drawing.Point(0, 0);
-            this.picMenu.Name = "picMenu";
-            this.picMenu.Size = new System.Drawing.Size(33, 36);
-            this.picMenu.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.picMenu.TabIndex = 3;
-            this.picMenu.TabStop = false;
-            this.picMenu.Click += new System.EventHandler(this.picMenu_Click);
-            // 
->>>>>>> 7557749be28cac5659656df135fab99b3c7df4da
             // panelMenuLateral
             // 
             this.panelMenuLateral.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
@@ -75,11 +60,8 @@
             this.panelMenuLateral.ForeColor = System.Drawing.Color.White;
             this.panelMenuLateral.Location = new System.Drawing.Point(0, 0);
             this.panelMenuLateral.Name = "panelMenuLateral";
-<<<<<<< HEAD
             this.panelMenuLateral.Size = new System.Drawing.Size(198, 453);
-=======
             this.panelMenuLateral.Size = new System.Drawing.Size(266, 513);
->>>>>>> 7557749be28cac5659656df135fab99b3c7df4da
             this.panelMenuLateral.TabIndex = 3;
             // 
             // panelContenedorOpciones
@@ -88,16 +70,13 @@
             this.panelContenedorOpciones.Controls.Add(this.bttReservas);
             this.panelContenedorOpciones.Controls.Add(this.bttMisDatos);
             this.panelContenedorOpciones.Controls.Add(this.bttUsuarios);
-<<<<<<< HEAD
             this.panelContenedorOpciones.Location = new System.Drawing.Point(0, 120);
             this.panelContenedorOpciones.Name = "panelContenedorOpciones";
             this.panelContenedorOpciones.Size = new System.Drawing.Size(195, 223);
-=======
             this.panelContenedorOpciones.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelContenedorOpciones.Location = new System.Drawing.Point(0, 87);
             this.panelContenedorOpciones.Name = "panelContenedorOpciones";
             this.panelContenedorOpciones.Size = new System.Drawing.Size(266, 253);
->>>>>>> 7557749be28cac5659656df135fab99b3c7df4da
             this.panelContenedorOpciones.TabIndex = 7;
             // 
             // bttConsultas
@@ -113,11 +92,8 @@
             this.bttConsultas.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.bttConsultas.Location = new System.Drawing.Point(0, 193);
             this.bttConsultas.Name = "bttConsultas";
-<<<<<<< HEAD
             this.bttConsultas.Size = new System.Drawing.Size(195, 51);
-=======
             this.bttConsultas.Size = new System.Drawing.Size(266, 58);
->>>>>>> 7557749be28cac5659656df135fab99b3c7df4da
             this.bttConsultas.TabIndex = 6;
             this.bttConsultas.Text = "CONSULTAS";
             this.bttConsultas.UseVisualStyleBackColor = false;
@@ -136,11 +112,8 @@
             this.bttReservas.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.bttReservas.Location = new System.Drawing.Point(3, 130);
             this.bttReservas.Name = "bttReservas";
-<<<<<<< HEAD
             this.bttReservas.Size = new System.Drawing.Size(195, 50);
-=======
             this.bttReservas.Size = new System.Drawing.Size(263, 57);
->>>>>>> 7557749be28cac5659656df135fab99b3c7df4da
             this.bttReservas.TabIndex = 3;
             this.bttReservas.Text = "RESERVAS";
             this.bttReservas.UseVisualStyleBackColor = false;
@@ -160,11 +133,8 @@
             this.bttMisDatos.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.bttMisDatos.Location = new System.Drawing.Point(3, 7);
             this.bttMisDatos.Name = "bttMisDatos";
-<<<<<<< HEAD
             this.bttMisDatos.Size = new System.Drawing.Size(195, 47);
-=======
             this.bttMisDatos.Size = new System.Drawing.Size(263, 53);
->>>>>>> 7557749be28cac5659656df135fab99b3c7df4da
             this.bttMisDatos.TabIndex = 3;
             this.bttMisDatos.Text = "MIS DATOS";
             this.bttMisDatos.UseVisualStyleBackColor = false;
@@ -183,11 +153,8 @@
             this.bttUsuarios.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.bttUsuarios.Location = new System.Drawing.Point(3, 67);
             this.bttUsuarios.Name = "bttUsuarios";
-<<<<<<< HEAD
             this.bttUsuarios.Size = new System.Drawing.Size(195, 50);
-=======
             this.bttUsuarios.Size = new System.Drawing.Size(263, 57);
->>>>>>> 7557749be28cac5659656df135fab99b3c7df4da
             this.bttUsuarios.TabIndex = 5;
             this.bttUsuarios.Text = "USUARIOS";
             this.bttUsuarios.UseVisualStyleBackColor = false;
@@ -199,11 +166,8 @@
             this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel2.Location = new System.Drawing.Point(0, 464);
             this.panel2.Name = "panel2";
-<<<<<<< HEAD
             this.panel2.Size = new System.Drawing.Size(198, 43);
-=======
             this.panel2.Size = new System.Drawing.Size(266, 49);
->>>>>>> 7557749be28cac5659656df135fab99b3c7df4da
             this.panel2.TabIndex = 5;
             // 
             // panel3
@@ -212,11 +176,8 @@
             this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel3.Location = new System.Drawing.Point(0, 0);
             this.panel3.Name = "panel3";
-<<<<<<< HEAD
             this.panel3.Size = new System.Drawing.Size(198, 43);
-=======
             this.panel3.Size = new System.Drawing.Size(191, 49);
->>>>>>> 7557749be28cac5659656df135fab99b3c7df4da
             this.panel3.TabIndex = 3;
             // 
             // bttSalir
@@ -232,30 +193,13 @@
             this.bttSalir.Location = new System.Drawing.Point(0, 0);
             this.bttSalir.Name = "bttSalir";
             this.bttSalir.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
-<<<<<<< HEAD
             this.bttSalir.Size = new System.Drawing.Size(198, 43);
-=======
             this.bttSalir.Size = new System.Drawing.Size(191, 49);
->>>>>>> 7557749be28cac5659656df135fab99b3c7df4da
             this.bttSalir.TabIndex = 3;
             this.bttSalir.Text = "SALIR";
             this.bttSalir.UseVisualStyleBackColor = false;
             this.bttSalir.Click += new System.EventHandler(this.bttSalir_Click);
             // 
-<<<<<<< HEAD
-=======
-            // pictureBox1
-            // 
-            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Left;
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(75, 49);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 3;
-            this.pictureBox1.TabStop = false;
-            // 
->>>>>>> 7557749be28cac5659656df135fab99b3c7df4da
             // panelLogo
             // 
             this.panelLogo.Controls.Add(this.lblUser);
@@ -264,23 +208,17 @@
             this.panelLogo.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelLogo.Location = new System.Drawing.Point(0, 0);
             this.panelLogo.Name = "panelLogo";
-<<<<<<< HEAD
             this.panelLogo.Size = new System.Drawing.Size(198, 60);
-=======
             this.panelLogo.Size = new System.Drawing.Size(266, 87);
->>>>>>> 7557749be28cac5659656df135fab99b3c7df4da
             this.panelLogo.TabIndex = 6;
             // 
             // lblUser
             // 
             this.lblUser.AutoSize = true;
-<<<<<<< HEAD
             this.lblUser.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.lblUser.Location = new System.Drawing.Point(94, 21);
-=======
             this.lblUser.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.lblUser.Location = new System.Drawing.Point(124, 36);
->>>>>>> 7557749be28cac5659656df135fab99b3c7df4da
             this.lblUser.Name = "lblUser";
             this.lblUser.Size = new System.Drawing.Size(77, 17);
             this.lblUser.TabIndex = 5;
@@ -305,11 +243,8 @@
             this.pictureBoxAdmin.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxAdmin.Image")));
             this.pictureBoxAdmin.Location = new System.Drawing.Point(0, 0);
             this.pictureBoxAdmin.Name = "pictureBoxAdmin";
-<<<<<<< HEAD
             this.pictureBoxAdmin.Size = new System.Drawing.Size(75, 60);
-=======
             this.pictureBoxAdmin.Size = new System.Drawing.Size(75, 87);
->>>>>>> 7557749be28cac5659656df135fab99b3c7df4da
             this.pictureBoxAdmin.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBoxAdmin.TabIndex = 3;
             this.pictureBoxAdmin.TabStop = false;
@@ -319,11 +254,8 @@
             this.panelContenedor.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelContenedor.Location = new System.Drawing.Point(198, 0);
             this.panelContenedor.Name = "panelContenedor";
-<<<<<<< HEAD
             this.panelContenedor.Size = new System.Drawing.Size(702, 453);
-=======
             this.panelContenedor.Size = new System.Drawing.Size(634, 513);
->>>>>>> 7557749be28cac5659656df135fab99b3c7df4da
             this.panelContenedor.TabIndex = 4;
             // 
             // Administrador
@@ -336,13 +268,9 @@
             this.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Name = "Administrador";
-<<<<<<< HEAD
             this.Text = "Administrador";
-=======
             this.Text = "ADMINISTRADOR";
             this.Load += new System.EventHandler(this.Administrador_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.picMenu)).EndInit();
->>>>>>> 7557749be28cac5659656df135fab99b3c7df4da
             this.panelMenuLateral.ResumeLayout(false);
             this.panelContenedorOpciones.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
