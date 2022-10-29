@@ -145,6 +145,11 @@ namespace Application_Sentidos.Resources.Administrador
         {
             cargarDgvUsuario("https://binarysystem.pythonanywhere.com/api/filterForUsername/?username=" + txtSearchUser.Text);
         }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 
 }

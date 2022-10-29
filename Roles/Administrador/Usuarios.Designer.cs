@@ -69,7 +69,7 @@
             this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label1.Location = new System.Drawing.Point(8, 9);
+            this.label1.Location = new System.Drawing.Point(659, 88);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(80, 15);
             this.label1.TabIndex = 6;
@@ -77,11 +77,11 @@
             // 
             // rb_Client
             // 
-            this.rb_Client.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.rb_Client.AutoSize = true;
-            this.rb_Client.Location = new System.Drawing.Point(8, 27);
+            this.rb_Client.Dock = System.Windows.Forms.DockStyle.Top;
+            this.rb_Client.Location = new System.Drawing.Point(0, 95);
             this.rb_Client.Name = "rb_Client";
-            this.rb_Client.Size = new System.Drawing.Size(126, 19);
+            this.rb_Client.Size = new System.Drawing.Size(145, 19);
             this.rb_Client.TabIndex = 5;
             this.rb_Client.Text = "Usuarios - Sentidos";
             this.rb_Client.UseVisualStyleBackColor = true;
@@ -89,12 +89,12 @@
             // 
             // rb_None
             // 
-            this.rb_None.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.rb_None.AutoSize = true;
             this.rb_None.Checked = true;
-            this.rb_None.Location = new System.Drawing.Point(8, 152);
+            this.rb_None.Dock = System.Windows.Forms.DockStyle.Top;
+            this.rb_None.Location = new System.Drawing.Point(0, 0);
             this.rb_None.Name = "rb_None";
-            this.rb_None.Size = new System.Drawing.Size(72, 19);
+            this.rb_None.Size = new System.Drawing.Size(145, 19);
             this.rb_None.TabIndex = 4;
             this.rb_None.TabStop = true;
             this.rb_None.Text = "Ninguno";
@@ -103,11 +103,11 @@
             // 
             // rb_Caja
             // 
-            this.rb_Caja.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.rb_Caja.AutoSize = true;
-            this.rb_Caja.Location = new System.Drawing.Point(8, 127);
+            this.rb_Caja.Dock = System.Windows.Forms.DockStyle.Top;
+            this.rb_Caja.Location = new System.Drawing.Point(0, 19);
             this.rb_Caja.Name = "rb_Caja";
-            this.rb_Caja.Size = new System.Drawing.Size(104, 19);
+            this.rb_Caja.Size = new System.Drawing.Size(145, 19);
             this.rb_Caja.TabIndex = 3;
             this.rb_Caja.Text = "Caja - Sentidos";
             this.rb_Caja.UseVisualStyleBackColor = true;
@@ -115,11 +115,11 @@
             // 
             // rb_Mitre
             // 
-            this.rb_Mitre.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.rb_Mitre.AutoSize = true;
-            this.rb_Mitre.Location = new System.Drawing.Point(8, 102);
+            this.rb_Mitre.Dock = System.Windows.Forms.DockStyle.Top;
+            this.rb_Mitre.Location = new System.Drawing.Point(0, 38);
             this.rb_Mitre.Name = "rb_Mitre";
-            this.rb_Mitre.Size = new System.Drawing.Size(118, 19);
+            this.rb_Mitre.Size = new System.Drawing.Size(145, 19);
             this.rb_Mitre.TabIndex = 2;
             this.rb_Mitre.Text = "Maitre  - Sentidos";
             this.rb_Mitre.UseVisualStyleBackColor = true;
@@ -127,11 +127,11 @@
             // 
             // rb_Mozo
             // 
-            this.rb_Mozo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.rb_Mozo.AutoSize = true;
-            this.rb_Mozo.Location = new System.Drawing.Point(8, 77);
+            this.rb_Mozo.Dock = System.Windows.Forms.DockStyle.Top;
+            this.rb_Mozo.Location = new System.Drawing.Point(0, 57);
             this.rb_Mozo.Name = "rb_Mozo";
-            this.rb_Mozo.Size = new System.Drawing.Size(111, 19);
+            this.rb_Mozo.Size = new System.Drawing.Size(145, 19);
             this.rb_Mozo.TabIndex = 1;
             this.rb_Mozo.Text = "Mozo - Sentidos";
             this.rb_Mozo.UseVisualStyleBackColor = true;
@@ -139,11 +139,11 @@
             // 
             // rb_allUser
             // 
-            this.rb_allUser.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.rb_allUser.AutoSize = true;
-            this.rb_allUser.Location = new System.Drawing.Point(8, 52);
+            this.rb_allUser.Dock = System.Windows.Forms.DockStyle.Top;
+            this.rb_allUser.Location = new System.Drawing.Point(0, 76);
             this.rb_allUser.Name = "rb_allUser";
-            this.rb_allUser.Size = new System.Drawing.Size(105, 19);
+            this.rb_allUser.Size = new System.Drawing.Size(145, 19);
             this.rb_allUser.TabIndex = 0;
             this.rb_allUser.Text = "Todos los Roles";
             this.rb_allUser.UseVisualStyleBackColor = true;
@@ -178,7 +178,7 @@
             this.bttModificar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bttModificar.Image = ((System.Drawing.Image)(resources.GetObject("bttModificar.Image")));
             this.bttModificar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.bttModificar.Location = new System.Drawing.Point(160, 377);
+            this.bttModificar.Location = new System.Drawing.Point(525, 161);
             this.bttModificar.Name = "bttModificar";
             this.bttModificar.Size = new System.Drawing.Size(112, 41);
             this.bttModificar.TabIndex = 4;
@@ -194,7 +194,7 @@
             this.bttRegistrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bttRegistrar.Image = ((System.Drawing.Image)(resources.GetObject("bttRegistrar.Image")));
             this.bttRegistrar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.bttRegistrar.Location = new System.Drawing.Point(43, 377);
+            this.bttRegistrar.Location = new System.Drawing.Point(526, 109);
             this.bttRegistrar.Name = "bttRegistrar";
             this.bttRegistrar.Size = new System.Drawing.Size(111, 41);
             this.bttRegistrar.TabIndex = 2;
@@ -212,7 +212,7 @@
             this.bttEliminar.ForeColor = System.Drawing.Color.White;
             this.bttEliminar.Image = ((System.Drawing.Image)(resources.GetObject("bttEliminar.Image")));
             this.bttEliminar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.bttEliminar.Location = new System.Drawing.Point(278, 377);
+            this.bttEliminar.Location = new System.Drawing.Point(525, 214);
             this.bttEliminar.Name = "bttEliminar";
             this.bttEliminar.Size = new System.Drawing.Size(112, 41);
             this.bttEliminar.TabIndex = 3;
@@ -236,25 +236,25 @@
             this.label2.AutoSize = true;
             this.label2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label2.Font = new System.Drawing.Font("Segoe Script", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
-            this.label2.Location = new System.Drawing.Point(120, 30);
+            this.label2.Location = new System.Drawing.Point(119, 30);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(270, 20);
+            this.label2.Size = new System.Drawing.Size(443, 20);
             this.label2.TabIndex = 7;
-            this.label2.Text = "\"Los sabores que te harán sentir bien\"";
+            this.label2.Text = "\"Ninguno de nosotros es tan bueno como todos nosotros juntos.\"";
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.rb_Client);
             this.panel1.Controls.Add(this.rb_allUser);
             this.panel1.Controls.Add(this.rb_Mozo);
             this.panel1.Controls.Add(this.rb_Mitre);
             this.panel1.Controls.Add(this.rb_Caja);
             this.panel1.Controls.Add(this.rb_None);
-            this.panel1.Location = new System.Drawing.Point(537, 109);
+            this.panel1.Location = new System.Drawing.Point(659, 109);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(145, 182);
+            this.panel1.Size = new System.Drawing.Size(145, 116);
             this.panel1.TabIndex = 8;
+            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // txtSearchUser
             // 
@@ -279,6 +279,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
             this.ClientSize = new System.Drawing.Size(825, 420);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.txtSearchUser);
             this.Controls.Add(this.label2);
