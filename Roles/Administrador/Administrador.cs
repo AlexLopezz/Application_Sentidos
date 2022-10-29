@@ -51,5 +51,10 @@ namespace Application_Sentidos.Roles
         {
             Application.Exit();
         }
+
+        private void bttConsultas_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

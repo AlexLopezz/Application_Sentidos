@@ -91,8 +91,9 @@
             this.bttConsultas.Name = "bttConsultas";
             this.bttConsultas.Size = new System.Drawing.Size(266, 58);
             this.bttConsultas.TabIndex = 6;
-            this.bttConsultas.Text = "CONSULTAS";
+            this.bttConsultas.Text = "CONTACTO";
             this.bttConsultas.UseVisualStyleBackColor = false;
+            this.bttConsultas.Click += new System.EventHandler(this.bttConsultas_Click);
             // 
             // bttReservas
             // 

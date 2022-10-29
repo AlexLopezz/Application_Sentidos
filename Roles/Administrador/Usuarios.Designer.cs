@@ -119,15 +119,11 @@
             this.rb_Mitre.Dock = System.Windows.Forms.DockStyle.Top;
             this.rb_Mitre.Location = new System.Drawing.Point(0, 38);
             this.rb_Mitre.Name = "rb_Mitre";
-<<<<<<< HEAD
-            this.rb_Mitre.Size = new System.Drawing.Size(59, 19);
-            this.rb_Mitre.TabIndex = 2;
-            this.rb_Mitre.Text = "Maitre";
-=======
+
             this.rb_Mitre.Size = new System.Drawing.Size(145, 19);
             this.rb_Mitre.TabIndex = 2;
             this.rb_Mitre.Text = "Maitre  - Sentidos";
->>>>>>> 34e00ca3ac153aa9cef94fe59b12e996e5a0966a
+
             this.rb_Mitre.UseVisualStyleBackColor = true;
             this.rb_Mitre.CheckedChanged += new System.EventHandler(this.rb_Mitre_CheckedChanged);
             // 
