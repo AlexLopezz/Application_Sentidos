@@ -151,10 +151,42 @@ namespace Application_Sentidos.Resources
             }
         }
         private void emptyDgv() { dgvReserva.Rows.Clear(); }
-
+        private void emptyFieldsTXT() 
+        {
+            cboSchedule.Text = String.Empty;
+            reservasUtilidades.load_ButtonsLime(buttonsTables());
+        }
         private void bttRefresh_Click(object sender, EventArgs e)
         {
+            emptyFieldsTXT();
+            reservasUtilidades.load_ButtonsStandard(buttonsTables());
             cargarDgvReservation();
+        }
+
+        private void bttAddReserva_Click(object sender, EventArgs e)
+        {
+            CreateReserva createReserva = new CreateReserva();
+            createReserva.ShowDialog();
+            cargarDgvReservation();
+        }
+
+        private async void bttDeleteReserva_Click(object sender, EventArgs e)
+        {
+            string urlEliminar = "https://binarysystem.pythonanywhere.com/api/deleteReservation/?id=";
+
+            DialogResult decision = MessageBox.Show($"¿Seguro que desea borrar esta reservacion ?", "Salir",
+                MessageBoxButtons.YesNoCancel);
+            if (decision == DialogResult.Yes)
+            {
+                int id = (int)dgvReserva.CurrentRow.Cells[0].Value;
+                var httpResponse = await httpClient.DeleteAsync(urlEliminar + id);
+                if (httpResponse.IsSuccessStatusCode)
+                {
+                    MessageBox.Show("Usuario eliminado correctamente.");
+                    cargarDgvReservation();
+                }
+                else { MessageBox.Show("Hubo un error, verifique ID."); }
+            }
         }
     }
 }

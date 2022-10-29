@@ -198,6 +198,7 @@ namespace Application_Sentidos.Resources.Mitre
 
 
         public void load_ButtonsLime(List<Button> buttonsTables) { foreach (var b in buttonsTables) { b.BackColor = Color.Lime; } }
+        public void load_ButtonsStandard(List<Button> buttonsTables) { foreach (var b in buttonsTables) { b.BackColor = Color.Transparent; } }
 
         public void loadTables(List<GetSelectedTable> list_TableSelected, List<Button> list_button)
         {
