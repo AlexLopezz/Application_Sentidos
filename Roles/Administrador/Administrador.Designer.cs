@@ -50,6 +50,7 @@
             this.panelLogo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxAdmin)).BeginInit();
             this.SuspendLayout();
+            // 
             // panelMenuLateral
             // 
             this.panelMenuLateral.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
@@ -60,8 +61,7 @@
             this.panelMenuLateral.ForeColor = System.Drawing.Color.White;
             this.panelMenuLateral.Location = new System.Drawing.Point(0, 0);
             this.panelMenuLateral.Name = "panelMenuLateral";
-            this.panelMenuLateral.Size = new System.Drawing.Size(198, 453);
-            this.panelMenuLateral.Size = new System.Drawing.Size(266, 513);
+            this.panelMenuLateral.Size = new System.Drawing.Size(266, 425);
             this.panelMenuLateral.TabIndex = 3;
             // 
             // panelContenedorOpciones
@@ -70,9 +70,6 @@
             this.panelContenedorOpciones.Controls.Add(this.bttReservas);
             this.panelContenedorOpciones.Controls.Add(this.bttMisDatos);
             this.panelContenedorOpciones.Controls.Add(this.bttUsuarios);
-            this.panelContenedorOpciones.Location = new System.Drawing.Point(0, 120);
-            this.panelContenedorOpciones.Name = "panelContenedorOpciones";
-            this.panelContenedorOpciones.Size = new System.Drawing.Size(195, 223);
             this.panelContenedorOpciones.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelContenedorOpciones.Location = new System.Drawing.Point(0, 87);
             this.panelContenedorOpciones.Name = "panelContenedorOpciones";
@@ -92,7 +89,6 @@
             this.bttConsultas.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.bttConsultas.Location = new System.Drawing.Point(0, 193);
             this.bttConsultas.Name = "bttConsultas";
-            this.bttConsultas.Size = new System.Drawing.Size(195, 51);
             this.bttConsultas.Size = new System.Drawing.Size(266, 58);
             this.bttConsultas.TabIndex = 6;
             this.bttConsultas.Text = "CONSULTAS";
@@ -112,7 +108,6 @@
             this.bttReservas.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.bttReservas.Location = new System.Drawing.Point(3, 130);
             this.bttReservas.Name = "bttReservas";
-            this.bttReservas.Size = new System.Drawing.Size(195, 50);
             this.bttReservas.Size = new System.Drawing.Size(263, 57);
             this.bttReservas.TabIndex = 3;
             this.bttReservas.Text = "RESERVAS";
@@ -133,7 +128,6 @@
             this.bttMisDatos.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.bttMisDatos.Location = new System.Drawing.Point(3, 7);
             this.bttMisDatos.Name = "bttMisDatos";
-            this.bttMisDatos.Size = new System.Drawing.Size(195, 47);
             this.bttMisDatos.Size = new System.Drawing.Size(263, 53);
             this.bttMisDatos.TabIndex = 3;
             this.bttMisDatos.Text = "MIS DATOS";
@@ -153,7 +147,6 @@
             this.bttUsuarios.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.bttUsuarios.Location = new System.Drawing.Point(3, 67);
             this.bttUsuarios.Name = "bttUsuarios";
-            this.bttUsuarios.Size = new System.Drawing.Size(195, 50);
             this.bttUsuarios.Size = new System.Drawing.Size(263, 57);
             this.bttUsuarios.TabIndex = 5;
             this.bttUsuarios.Text = "USUARIOS";
@@ -164,9 +157,8 @@
             // 
             this.panel2.Controls.Add(this.panel3);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel2.Location = new System.Drawing.Point(0, 464);
+            this.panel2.Location = new System.Drawing.Point(0, 376);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(198, 43);
             this.panel2.Size = new System.Drawing.Size(266, 49);
             this.panel2.TabIndex = 5;
             // 
@@ -176,8 +168,7 @@
             this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel3.Location = new System.Drawing.Point(0, 0);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(198, 43);
-            this.panel3.Size = new System.Drawing.Size(191, 49);
+            this.panel3.Size = new System.Drawing.Size(266, 49);
             this.panel3.TabIndex = 3;
             // 
             // bttSalir
@@ -193,8 +184,7 @@
             this.bttSalir.Location = new System.Drawing.Point(0, 0);
             this.bttSalir.Name = "bttSalir";
             this.bttSalir.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
-            this.bttSalir.Size = new System.Drawing.Size(198, 43);
-            this.bttSalir.Size = new System.Drawing.Size(191, 49);
+            this.bttSalir.Size = new System.Drawing.Size(266, 49);
             this.bttSalir.TabIndex = 3;
             this.bttSalir.Text = "SALIR";
             this.bttSalir.UseVisualStyleBackColor = false;
@@ -208,19 +198,16 @@
             this.panelLogo.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelLogo.Location = new System.Drawing.Point(0, 0);
             this.panelLogo.Name = "panelLogo";
-            this.panelLogo.Size = new System.Drawing.Size(198, 60);
             this.panelLogo.Size = new System.Drawing.Size(266, 87);
             this.panelLogo.TabIndex = 6;
             // 
             // lblUser
             // 
             this.lblUser.AutoSize = true;
-            this.lblUser.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lblUser.Location = new System.Drawing.Point(94, 21);
             this.lblUser.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lblUser.Location = new System.Drawing.Point(124, 36);
+            this.lblUser.Location = new System.Drawing.Point(83, 21);
             this.lblUser.Name = "lblUser";
-            this.lblUser.Size = new System.Drawing.Size(77, 17);
+            this.lblUser.Size = new System.Drawing.Size(142, 32);
             this.lblUser.TabIndex = 5;
             this.lblUser.Text = "*user here*";
             // 
@@ -243,7 +230,6 @@
             this.pictureBoxAdmin.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxAdmin.Image")));
             this.pictureBoxAdmin.Location = new System.Drawing.Point(0, 0);
             this.pictureBoxAdmin.Name = "pictureBoxAdmin";
-            this.pictureBoxAdmin.Size = new System.Drawing.Size(75, 60);
             this.pictureBoxAdmin.Size = new System.Drawing.Size(75, 87);
             this.pictureBoxAdmin.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBoxAdmin.TabIndex = 3;
@@ -252,23 +238,21 @@
             // panelContenedor
             // 
             this.panelContenedor.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelContenedor.Location = new System.Drawing.Point(198, 0);
+            this.panelContenedor.Location = new System.Drawing.Point(266, 0);
             this.panelContenedor.Name = "panelContenedor";
-            this.panelContenedor.Size = new System.Drawing.Size(702, 453);
-            this.panelContenedor.Size = new System.Drawing.Size(634, 513);
+            this.panelContenedor.Size = new System.Drawing.Size(825, 425);
             this.panelContenedor.TabIndex = 4;
             // 
             // Administrador
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(900, 513);
+            this.ClientSize = new System.Drawing.Size(1091, 425);
             this.Controls.Add(this.panelContenedor);
             this.Controls.Add(this.panelMenuLateral);
-            this.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Name = "Administrador";
-            this.Text = "Administrador";
             this.Text = "ADMINISTRADOR";
             this.Load += new System.EventHandler(this.Administrador_Load);
             this.panelMenuLateral.ResumeLayout(false);

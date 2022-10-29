@@ -82,6 +82,9 @@ namespace Application_Sentidos.Resources.Administrador
                 case "Caja":
                     fk_role = 4;
                     break;
+                case "Usuario":
+                    fk_role= 5;
+                    break;
                 default:
                     break;
             }

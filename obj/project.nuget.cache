@@ -1,11 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "Egk7/A6WBHwCdK/9h/S3RQoCwpbNrNE0rIN/g6kq+P5VPA2KoqQ2mFtUtq8TnPhcsplhJ2mbu5/GwYWTps40fA==",
+  "dgSpecHash": "hZMRDL2dBFzDtlJxzOoNpn7sX9D5qOjnW+ZB/tRqbkp1GcJs2rN3AaxHOhhucteXiS1DGSncZ3ujYOIfW1zhLQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\cabre\\OneDrive\\Escritorio\\Sentidos-Desktop\\Application_Sentidos\\Application_Sentidos.csproj",
+  "projectFilePath": "C:\\Users\\Alex Lopez\\Documents\\C#\\Application_Sentidos\\Application_Sentidos.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\cabre\\.nuget\\packages\\newtonsoft.json\\13.0.1\\newtonsoft.json.13.0.1.nupkg.sha512",
-    "C:\\Users\\cabre\\.nuget\\packages\\restsharp\\108.0.2\\restsharp.108.0.2.nupkg.sha512"
+    "C:\\Users\\Alex Lopez\\.nuget\\packages\\newtonsoft.json\\13.0.1\\newtonsoft.json.13.0.1.nupkg.sha512",
+    "C:\\Users\\Alex Lopez\\.nuget\\packages\\restsharp\\108.0.2\\restsharp.108.0.2.nupkg.sha512"
   ],
   "logs": []
 }
