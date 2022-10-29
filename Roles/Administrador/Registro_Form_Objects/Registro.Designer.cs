@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Registro));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.bttRegistrar = new System.Windows.Forms.Button();
             this.txtEmail = new System.Windows.Forms.TextBox();
             this.lblEmail = new System.Windows.Forms.Label();
             this.lblRol = new System.Windows.Forms.Label();
@@ -44,12 +45,12 @@
             this.lblDNI = new System.Windows.Forms.Label();
             this.txtFullname = new System.Windows.Forms.TextBox();
             this.lblFullname = new System.Windows.Forms.Label();
-            this.bttRegistrar = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
             // 
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
             this.panel1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel1.BackgroundImage")));
             this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.panel1.Controls.Add(this.bttRegistrar);
@@ -70,146 +71,164 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(392, 485);
+            this.panel1.Size = new System.Drawing.Size(354, 428);
             this.panel1.TabIndex = 1;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
+            // bttRegistrar
+            // 
+            this.bttRegistrar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.bttRegistrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.bttRegistrar.Image = ((System.Drawing.Image)(resources.GetObject("bttRegistrar.Image")));
+            this.bttRegistrar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.bttRegistrar.Location = new System.Drawing.Point(111, 368);
+            this.bttRegistrar.Name = "bttRegistrar";
+            this.bttRegistrar.Size = new System.Drawing.Size(139, 54);
+            this.bttRegistrar.TabIndex = 15;
+            this.bttRegistrar.Text = "REGISTRAR";
+            this.bttRegistrar.UseVisualStyleBackColor = false;
+            this.bttRegistrar.Click += new System.EventHandler(this.bttRegistrar_Click);
+            // 
             // txtEmail
             // 
-            this.txtEmail.Location = new System.Drawing.Point(111, 132);
+            this.txtEmail.Location = new System.Drawing.Point(111, 133);
             this.txtEmail.Name = "txtEmail";
-            this.txtEmail.Size = new System.Drawing.Size(160, 22);
+            this.txtEmail.Size = new System.Drawing.Size(160, 21);
             this.txtEmail.TabIndex = 17;
             // 
             // lblEmail
             // 
             this.lblEmail.AutoSize = true;
-            this.lblEmail.Location = new System.Drawing.Point(12, 135);
+            this.lblEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lblEmail.Location = new System.Drawing.Point(12, 136);
             this.lblEmail.Name = "lblEmail";
-            this.lblEmail.Size = new System.Drawing.Size(39, 17);
+            this.lblEmail.Size = new System.Drawing.Size(44, 15);
             this.lblEmail.TabIndex = 16;
             this.lblEmail.Text = "Email";
             // 
             // lblRol
             // 
             this.lblRol.AutoSize = true;
-            this.lblRol.Location = new System.Drawing.Point(12, 318);
+            this.lblRol.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lblRol.Location = new System.Drawing.Point(12, 316);
             this.lblRol.Name = "lblRol";
-            this.lblRol.Size = new System.Drawing.Size(31, 17);
+            this.lblRol.Size = new System.Drawing.Size(35, 15);
             this.lblRol.TabIndex = 14;
             this.lblRol.Text = "ROL";
             // 
             // cboRoles
             // 
+            this.cboRoles.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboRoles.FormattingEnabled = true;
             this.cboRoles.Items.AddRange(new object[] {
             "Administrador",
             "Maitre",
             "Mozo",
-            "Caja"});
-            this.cboRoles.Location = new System.Drawing.Point(111, 312);
+            "Caja",
+            "Usuario"});
+            this.cboRoles.Location = new System.Drawing.Point(111, 313);
             this.cboRoles.Name = "cboRoles";
-            this.cboRoles.Size = new System.Drawing.Size(160, 25);
+            this.cboRoles.Size = new System.Drawing.Size(160, 23);
             this.cboRoles.TabIndex = 13;
             // 
             // txtVerifyPassword
             // 
-            this.txtVerifyPassword.Location = new System.Drawing.Point(111, 267);
+            this.txtVerifyPassword.Location = new System.Drawing.Point(111, 268);
             this.txtVerifyPassword.Name = "txtVerifyPassword";
-            this.txtVerifyPassword.Size = new System.Drawing.Size(160, 22);
+            this.txtVerifyPassword.PasswordChar = '*';
+            this.txtVerifyPassword.Size = new System.Drawing.Size(160, 21);
             this.txtVerifyPassword.TabIndex = 12;
             // 
             // lblVerifyPassword
             // 
             this.lblVerifyPassword.AutoSize = true;
-            this.lblVerifyPassword.Location = new System.Drawing.Point(12, 270);
+            this.lblVerifyPassword.BackColor = System.Drawing.Color.Transparent;
+            this.lblVerifyPassword.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.lblVerifyPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lblVerifyPassword.Location = new System.Drawing.Point(12, 259);
             this.lblVerifyPassword.Name = "lblVerifyPassword";
-            this.lblVerifyPassword.Size = new System.Drawing.Size(83, 17);
+            this.lblVerifyPassword.Size = new System.Drawing.Size(80, 30);
             this.lblVerifyPassword.TabIndex = 11;
-            this.lblVerifyPassword.Text = "*Contraseña";
+            this.lblVerifyPassword.Text = "Verificar\r\nContraseña";
             // 
             // txtPassword
             // 
-            this.txtPassword.Location = new System.Drawing.Point(111, 222);
+            this.txtPassword.Location = new System.Drawing.Point(111, 223);
             this.txtPassword.Name = "txtPassword";
-            this.txtPassword.Size = new System.Drawing.Size(160, 22);
+            this.txtPassword.PasswordChar = '*';
+            this.txtPassword.Size = new System.Drawing.Size(160, 21);
             this.txtPassword.TabIndex = 10;
             // 
             // lblPassword
             // 
             this.lblPassword.AutoSize = true;
-            this.lblPassword.Location = new System.Drawing.Point(12, 225);
+            this.lblPassword.BackColor = System.Drawing.Color.Transparent;
+            this.lblPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lblPassword.Location = new System.Drawing.Point(12, 226);
             this.lblPassword.Name = "lblPassword";
-            this.lblPassword.Size = new System.Drawing.Size(77, 17);
+            this.lblPassword.Size = new System.Drawing.Size(80, 15);
             this.lblPassword.TabIndex = 9;
             this.lblPassword.Text = "Contraseña";
             // 
             // txtUsername
             // 
-            this.txtUsername.Location = new System.Drawing.Point(111, 177);
+            this.txtUsername.Location = new System.Drawing.Point(111, 178);
             this.txtUsername.Name = "txtUsername";
-            this.txtUsername.Size = new System.Drawing.Size(160, 22);
+            this.txtUsername.Size = new System.Drawing.Size(160, 21);
             this.txtUsername.TabIndex = 8;
             // 
             // lblUsuario
             // 
             this.lblUsuario.AutoSize = true;
-            this.lblUsuario.Location = new System.Drawing.Point(12, 180);
+            this.lblUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lblUsuario.Location = new System.Drawing.Point(12, 181);
             this.lblUsuario.Name = "lblUsuario";
-            this.lblUsuario.Size = new System.Drawing.Size(51, 17);
+            this.lblUsuario.Size = new System.Drawing.Size(57, 15);
             this.lblUsuario.TabIndex = 7;
             this.lblUsuario.Text = "Usuario";
             // 
             // txtDNI
             // 
-            this.txtDNI.Location = new System.Drawing.Point(111, 87);
+            this.txtDNI.Location = new System.Drawing.Point(111, 88);
             this.txtDNI.Name = "txtDNI";
-            this.txtDNI.Size = new System.Drawing.Size(160, 22);
+            this.txtDNI.Size = new System.Drawing.Size(160, 21);
             this.txtDNI.TabIndex = 6;
             // 
             // lblDNI
             // 
             this.lblDNI.AutoSize = true;
-            this.lblDNI.Location = new System.Drawing.Point(12, 90);
+            this.lblDNI.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lblDNI.Location = new System.Drawing.Point(12, 91);
             this.lblDNI.Name = "lblDNI";
-            this.lblDNI.Size = new System.Drawing.Size(29, 17);
+            this.lblDNI.Size = new System.Drawing.Size(31, 15);
             this.lblDNI.TabIndex = 5;
             this.lblDNI.Text = "DNI";
             // 
             // txtFullname
             // 
-            this.txtFullname.Location = new System.Drawing.Point(111, 42);
+            this.txtFullname.Location = new System.Drawing.Point(111, 43);
             this.txtFullname.Name = "txtFullname";
-            this.txtFullname.Size = new System.Drawing.Size(160, 22);
+            this.txtFullname.Size = new System.Drawing.Size(160, 21);
             this.txtFullname.TabIndex = 4;
             // 
             // lblFullname
             // 
             this.lblFullname.AutoSize = true;
-            this.lblFullname.Location = new System.Drawing.Point(12, 45);
+            this.lblFullname.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lblFullname.Location = new System.Drawing.Point(12, 46);
             this.lblFullname.Name = "lblFullname";
-            this.lblFullname.Size = new System.Drawing.Size(56, 17);
+            this.lblFullname.Size = new System.Drawing.Size(58, 15);
             this.lblFullname.TabIndex = 3;
             this.lblFullname.Text = "Nombre";
             // 
-            // bttRegistrar
-            // 
-            this.bttRegistrar.Location = new System.Drawing.Point(111, 392);
-            this.bttRegistrar.Name = "bttRegistrar";
-            this.bttRegistrar.Size = new System.Drawing.Size(160, 54);
-            this.bttRegistrar.TabIndex = 15;
-            this.bttRegistrar.Text = "REGISTRAR";
-            this.bttRegistrar.UseVisualStyleBackColor = true;
-            this.bttRegistrar.Click += new System.EventHandler(this.bttRegistrar_Click);
-            // 
             // Registro
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(392, 485);
+            this.ClientSize = new System.Drawing.Size(354, 428);
             this.Controls.Add(this.panel1);
-            this.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            this.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "Registro";
             this.Text = "Registro de Usuarios";
             this.panel1.ResumeLayout(false);

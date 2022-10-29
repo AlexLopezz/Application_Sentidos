@@ -5,6 +5,7 @@ namespace Application_Sentidos.Resources.Administrador
 {
     public partial class Usuarios : Form
     {
+        string auxSearchUser = string.Empty;
         HttpClient httpClient = new HttpClient();
         public Usuarios()
         {
@@ -63,6 +64,8 @@ namespace Application_Sentidos.Resources.Administrador
             else if (rb_Mozo.Checked == true)
             {
                 cargarDgvUsuario("https://binarysystem.pythonanywhere.com/api/allMozo/");
+            }else if(rb_Client.Checked == true){
+                cargarDgvUsuario("https://binarysystem.pythonanywhere.com/api/allClient/");
             }
             else emptyDgv();
         }
@@ -117,6 +120,7 @@ namespace Application_Sentidos.Resources.Administrador
         }
         public async void cargarDgvUsuario(string urlBase)
         {
+            emptyDgv();
             var httpResponse = await httpClient.GetAsync(urlBase);
             if (httpResponse.IsSuccessStatusCode)
             {
@@ -130,6 +134,16 @@ namespace Application_Sentidos.Resources.Administrador
                 emptyDgv();
             }
 
+        }
+
+        private void rb_Client_CheckedChanged(object sender, EventArgs e)
+        {
+            if (rb_Client.Checked == true) { cargarDgvUsuario("https://binarysystem.pythonanywhere.com/api/allClient/"); }
+        }
+
+        private void bttBuscar_Click(object sender, EventArgs e)
+        {
+            cargarDgvUsuario("https://binarysystem.pythonanywhere.com/api/filterForUsername/?username=" + txtSearchUser.Text);
         }
     }
 
