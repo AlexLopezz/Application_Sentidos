@@ -112,3 +112,4 @@ C:\Users\alexdev\Documents\C#\Application_Sentidos\obj\Debug\net6.0-windows\es-A
 C:\Users\alexdev\Documents\C#\Application_Sentidos\obj\Debug\net6.0-windows\Application_Sentidos.csproj.CopyComplete
 C:\Users\alexdev\Documents\C#\Application_Sentidos\obj\Debug\net6.0-windows\Application_Sentidos.genruntimeconfig.cache
 C:\Users\alexdev\Documents\C#\Application_Sentidos\obj\Debug\net6.0-windows\ref\Application_Sentidos.dll
+C:\Users\alexdev\Documents\C#\Application_Sentidos\obj\Debug\net6.0-windows\Application_Sentidos.Roles.AdministradorFolder.ContactForm.resources

@@ -7,19 +7,19 @@
     <Compile Update="Resources\Objects\MisDatos.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="Roles\Administrador\Contacto_Form_Objects\Contacto.cs">
+    <Compile Update="Roles\AdministradorFolder\ContactForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="Roles\Administrador\Modificar_Form_Objects\Modificar.cs">
+    <Compile Update="Roles\AdministradorFolder\Modificar.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="Roles\Administrador\Registro_Form_Objects\Registro.cs">
+    <Compile Update="Roles\AdministradorFolder\Registro.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="Roles\Administrador\Usuarios.cs">
+    <Compile Update="Roles\AdministradorFolder\Usuarios.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="Roles\Administrador\Reservas\Reservas_Form_Objects\Reserva.cs">
+    <Compile Update="Roles\AdministradorFolder\Reserva.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="Roles\Caja\Caja_Efectivo.cs">
@@ -34,7 +34,7 @@
     <Compile Update="Roles\Maitre\GeneralReserva.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="Roles\Administrador\Administrador.cs">
+    <Compile Update="Roles\AdministradorFolder\Administrador.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="Roles\Caja\Caja.cs">

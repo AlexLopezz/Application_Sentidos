@@ -8,8 +8,8 @@ using System.Text;
 using System.Text.Json;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using Application_Sentidos.Resources.Administrador.Registro_Form_Objects;
 using Application_Sentidos.Resources.Administrador;
+using Application_Sentidos.Roles.AdministradorFolder;
 
 namespace Application_Sentidos.Resources.Administrador
 {

@@ -1,6 +1,5 @@
-﻿using Application_Sentidos.Resources.Administrador.Modificar_Form_Objects;
-using Application_Sentidos.Resources.Administrador.Registro_Form_Objects;
-using Application_Sentidos.Resources.Objects;
+﻿using Application_Sentidos.Resources.Objects;
+using Application_Sentidos.Roles.AdministradorFolder;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -18,7 +17,7 @@ using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 
 namespace Application_Sentidos.Resources.Administrador
 {
-    
+
     public partial class Modificar : Form
     {
         

@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Application_Sentidos.Resources.Administrador.Registro_Form_Objects
+namespace Application_Sentidos.Roles.AdministradorFolder
 {
     public class PostRegister
     {
@@ -13,7 +13,7 @@ namespace Application_Sentidos.Resources.Administrador.Registro_Form_Objects
         public string fullname { get; set; } = "";
         public string dni { get; set; } = "";
         public string password { get; set; } = "";
-        public int role { get; set; }   
+        public int role { get; set; }
 
     }
 }
