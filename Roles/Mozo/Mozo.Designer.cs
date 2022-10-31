@@ -44,6 +44,7 @@
             this.dgvProductos = new System.Windows.Forms.DataGridView();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgvPedidoMesa = new System.Windows.Forms.DataGridView();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -56,6 +57,7 @@
             this.txtBoxCantidad = new System.Windows.Forms.TextBox();
             this.btnNuevoPedido = new System.Windows.Forms.Button();
             this.btnCerrarMesa = new System.Windows.Forms.Button();
+            this.Column10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvProductos)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPedidoMesa)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPedidosACerrar)).BeginInit();
@@ -120,7 +122,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(344, 111);
+            this.label3.Location = new System.Drawing.Point(328, 111);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(94, 15);
             this.label3.TabIndex = 8;
@@ -138,7 +140,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(698, 111);
+            this.label5.Location = new System.Drawing.Point(663, 111);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(102, 15);
             this.label5.TabIndex = 13;
@@ -167,7 +169,7 @@
             // lblNumeroMesa
             // 
             this.lblNumeroMesa.AutoSize = true;
-            this.lblNumeroMesa.Location = new System.Drawing.Point(444, 111);
+            this.lblNumeroMesa.Location = new System.Drawing.Point(428, 111);
             this.lblNumeroMesa.Name = "lblNumeroMesa";
             this.lblNumeroMesa.Size = new System.Drawing.Size(12, 15);
             this.lblNumeroMesa.TabIndex = 16;
@@ -211,7 +213,8 @@
             this.dgvProductos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvProductos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column1,
-            this.Column2});
+            this.Column2,
+            this.Column9});
             this.dgvProductos.Location = new System.Drawing.Point(12, 141);
             this.dgvProductos.Name = "dgvProductos";
             this.dgvProductos.ReadOnly = true;
@@ -232,6 +235,12 @@
             this.Column2.Name = "Column2";
             this.Column2.ReadOnly = true;
             // 
+            // Column9
+            // 
+            this.Column9.HeaderText = "Cod Prod";
+            this.Column9.Name = "Column9";
+            this.Column9.ReadOnly = true;
+            // 
             // dgvPedidoMesa
             // 
             this.dgvPedidoMesa.AllowUserToAddRows = false;
@@ -242,7 +251,8 @@
             this.Column3,
             this.Column4,
             this.Column5,
-            this.Column6});
+            this.Column6,
+            this.Column10});
             this.dgvPedidoMesa.Location = new System.Drawing.Point(328, 141);
             this.dgvPedidoMesa.Name = "dgvPedidoMesa";
             this.dgvPedidoMesa.ReadOnly = true;
@@ -340,6 +350,12 @@
             this.btnCerrarMesa.UseVisualStyleBackColor = true;
             this.btnCerrarMesa.Click += new System.EventHandler(this.btnCerrarMesa_Click_1);
             // 
+            // Column10
+            // 
+            this.Column10.HeaderText = "Cod Prod";
+            this.Column10.Name = "Column10";
+            this.Column10.ReadOnly = true;
+            // 
             // Mozo
             // 
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
@@ -409,5 +425,7 @@
         private Button btnCerrarMesa;
         private DataGridViewTextBoxColumn Column7;
         private DataGridViewTextBoxColumn Column8;
+        private DataGridViewTextBoxColumn Column9;
+        private DataGridViewTextBoxColumn Column10;
     }
 }
