@@ -18,7 +18,7 @@ namespace Application_Sentidos.Resources.Mitre
         GetUserFilter userSelected = new GetUserFilter();
         DateTime date = DateTime.Now;
         HttpClient httpClient = new HttpClient();
-        private List<Button> buttonsTables()
+        public List<Button> buttonsTables()
         {
             List<Button> buttonList = new List<Button>();
             buttonList.Add(bttMesa1);
@@ -48,7 +48,7 @@ namespace Application_Sentidos.Resources.Mitre
         {
             InitializeComponent();
             this.CenterToScreen();
-            setDateFecha();
+            setDateFecha(dateFecha);
         }
         private async void bttBuscarMesas_Click(object sender, EventArgs e)
         {
@@ -61,7 +61,7 @@ namespace Application_Sentidos.Resources.Mitre
                 var httpResponse = await httpClient.GetAsync("https://binarysystem.pythonanywhere.com/api/getReservation/?schedule=" + cboSchedule.Text + "&date=" + dateFecha.Text);
                 if (httpResponse.IsSuccessStatusCode)
                 {
-                    load_ButtonsLime();
+                    load_ButtonsLime(buttonsTables());
                     var body = await httpResponse.Content.ReadAsStringAsync();
                     try
                     {
@@ -71,7 +71,7 @@ namespace Application_Sentidos.Resources.Mitre
                     }
                     catch (Exception)
                     {
-                        load_ButtonsLime();
+                        load_ButtonsLime(buttonsTables());
                         lblResultadoDisponibles.Text = buttonsTables().Count.ToString();
                     }
                 }
@@ -128,7 +128,7 @@ namespace Application_Sentidos.Resources.Mitre
             }
         }
        
-        private void setDateFecha()
+        public void setDateFecha(DateTimePicker dateFecha)
         {
             dateFecha.MinDate = date;
             dateFecha.MaxDate = date.AddDays(30);
@@ -197,9 +197,10 @@ namespace Application_Sentidos.Resources.Mitre
         }
 
 
-        private void load_ButtonsLime() { foreach (var b in buttonsTables()) { b.BackColor = Color.Lime; } }
+        public void load_ButtonsLime(List<Button> buttonsTables) { foreach (var b in buttonsTables) { b.BackColor = Color.Lime; } }
+        public void load_ButtonsStandard(List<Button> buttonsTables) { foreach (var b in buttonsTables) { b.BackColor = Color.Transparent; } }
 
-        private void loadTables(List<GetSelectedTable> list_TableSelected, List<Button> list_button)
+        public void loadTables(List<GetSelectedTable> list_TableSelected, List<Button> list_button)
         {
             int mesasReservadas = 0;
 

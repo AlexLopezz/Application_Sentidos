@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Application_Sentidos.Roles.AdministradorFolder;
 using Application_Sentidos.Authentication;
 using Application_Sentidos.Resources.Objects;
 using Application_Sentidos.Resources.Administrador;
@@ -51,5 +52,7 @@ namespace Application_Sentidos.Roles
         {
             Application.Exit();
         }
+
+        private void bttConsultas_Click(object sender, EventArgs e) => utilidades.openChildForm(new ContactForm(), panelContenedor);
     }
 }

@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Application_Sentidos.Resources.Administrador.Modificar_Form_Objects
+namespace Application_Sentidos.Roles.AdministradorFolder
 {
     public class PutModify
     {
