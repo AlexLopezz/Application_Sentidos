@@ -1,85 +1,20 @@
-C:\Users\cabre\OneDrive\Escritorio\Sentidos-Desktop\Application_Sentidos\bin\Debug\net6.0-windows\Application_Sentidos.exe
-C:\Users\cabre\OneDrive\Escritorio\Sentidos-Desktop\Application_Sentidos\bin\Debug\net6.0-windows\Application_Sentidos.deps.json
-C:\Users\cabre\OneDrive\Escritorio\Sentidos-Desktop\Application_Sentidos\bin\Debug\net6.0-windows\Application_Sentidos.runtimeconfig.json
-C:\Users\cabre\OneDrive\Escritorio\Sentidos-Desktop\Application_Sentidos\bin\Debug\net6.0-windows\Application_Sentidos.dll
-C:\Users\cabre\OneDrive\Escritorio\Sentidos-Desktop\Application_Sentidos\bin\Debug\net6.0-windows\Application_Sentidos.pdb
-C:\Users\cabre\OneDrive\Escritorio\Sentidos-Desktop\Application_Sentidos\bin\Debug\net6.0-windows\es-AR\Application_Sentidos.resources.dll
-C:\Users\cabre\OneDrive\Escritorio\Sentidos-Desktop\Application_Sentidos\bin\Debug\net6.0-windows\Newtonsoft.Json.dll
-C:\Users\cabre\OneDrive\Escritorio\Sentidos-Desktop\Application_Sentidos\bin\Debug\net6.0-windows\RestSharp.dll
-C:\Users\cabre\OneDrive\Escritorio\Sentidos-Desktop\Application_Sentidos\obj\Debug\net6.0-windows\Application_Sentidos.csproj.AssemblyReference.cache
-C:\Users\cabre\OneDrive\Escritorio\Sentidos-Desktop\Application_Sentidos\obj\Debug\net6.0-windows\Application_Sentidos.Authentication.Login.resources
-C:\Users\cabre\OneDrive\Escritorio\Sentidos-Desktop\Application_Sentidos\obj\Debug\net6.0-windows\Application_Sentidos.Properties.Resources.resources
-C:\Users\cabre\OneDrive\Escritorio\Sentidos-Desktop\Application_Sentidos\obj\Debug\net6.0-windows\Application_Sentidos.Resources.MisDatos.resources
-C:\Users\cabre\OneDrive\Escritorio\Sentidos-Desktop\Application_Sentidos\obj\Debug\net6.0-windows\Application_Sentidos.Roles.Administrador.resources
-C:\Users\cabre\OneDrive\Escritorio\Sentidos-Desktop\Application_Sentidos\obj\Debug\net6.0-windows\Application_Sentidos.Resources.Administrador.Modificar.resources
-C:\Users\cabre\OneDrive\Escritorio\Sentidos-Desktop\Application_Sentidos\obj\Debug\net6.0-windows\Application_Sentidos.Resources.Administrador.Registro.resources
-C:\Users\cabre\OneDrive\Escritorio\Sentidos-Desktop\Application_Sentidos\obj\Debug\net6.0-windows\Application_Sentidos.Resources.Reserva.resources
-C:\Users\cabre\OneDrive\Escritorio\Sentidos-Desktop\Application_Sentidos\obj\Debug\net6.0-windows\Application_Sentidos.Resources.Administrador.Usuarios.resources
-C:\Users\cabre\OneDrive\Escritorio\Sentidos-Desktop\Application_Sentidos\obj\Debug\net6.0-windows\Application_Sentidos.Roles.Caja.resources
-C:\Users\cabre\OneDrive\Escritorio\Sentidos-Desktop\Application_Sentidos\obj\Debug\net6.0-windows\Application_Sentidos.Roles.Caja_Efectivo.resources
-C:\Users\cabre\OneDrive\Escritorio\Sentidos-Desktop\Application_Sentidos\obj\Debug\net6.0-windows\Application_Sentidos.Roles.Caja_Tarjetas.resources
-C:\Users\cabre\OneDrive\Escritorio\Sentidos-Desktop\Application_Sentidos\obj\Debug\net6.0-windows\Application_Sentidos.Roles.Facturas.resources
-C:\Users\cabre\OneDrive\Escritorio\Sentidos-Desktop\Application_Sentidos\obj\Debug\net6.0-windows\Application_Sentidos.Resources.Mitre.CreateReserva.resources
-C:\Users\cabre\OneDrive\Escritorio\Sentidos-Desktop\Application_Sentidos\obj\Debug\net6.0-windows\Application_Sentidos.Resources.Mitre.GeneralReserva.resources
-C:\Users\cabre\OneDrive\Escritorio\Sentidos-Desktop\Application_Sentidos\obj\Debug\net6.0-windows\Application_Sentidos.Roles.Maitre.resources
-C:\Users\cabre\OneDrive\Escritorio\Sentidos-Desktop\Application_Sentidos\obj\Debug\net6.0-windows\Application_Sentidos.Roles.Mozo.resources
-C:\Users\cabre\OneDrive\Escritorio\Sentidos-Desktop\Application_Sentidos\obj\Debug\net6.0-windows\Application_Sentidos.Roles.Caja_Tarjetas.es-AR.resources
-C:\Users\cabre\OneDrive\Escritorio\Sentidos-Desktop\Application_Sentidos\obj\Debug\net6.0-windows\Application_Sentidos.csproj.GenerateResource.cache
-C:\Users\cabre\OneDrive\Escritorio\Sentidos-Desktop\Application_Sentidos\obj\Debug\net6.0-windows\Application_Sentidos.GeneratedMSBuildEditorConfig.editorconfig
-C:\Users\cabre\OneDrive\Escritorio\Sentidos-Desktop\Application_Sentidos\obj\Debug\net6.0-windows\Application_Sentidos.AssemblyInfoInputs.cache
-C:\Users\cabre\OneDrive\Escritorio\Sentidos-Desktop\Application_Sentidos\obj\Debug\net6.0-windows\Application_Sentidos.AssemblyInfo.cs
-C:\Users\cabre\OneDrive\Escritorio\Sentidos-Desktop\Application_Sentidos\obj\Debug\net6.0-windows\Application_Sentidos.csproj.CoreCompileInputs.cache
-C:\Users\cabre\OneDrive\Escritorio\Sentidos-Desktop\Application_Sentidos\obj\Debug\net6.0-windows\es-AR\Application_Sentidos.resources.dll
-C:\Users\cabre\OneDrive\Escritorio\Sentidos-Desktop\Application_Sentidos\obj\Debug\net6.0-windows\Application_Sentidos.csproj.CopyComplete
-C:\Users\cabre\OneDrive\Escritorio\Sentidos-Desktop\Application_Sentidos\obj\Debug\net6.0-windows\Application_Sentidos.dll
-C:\Users\cabre\OneDrive\Escritorio\Sentidos-Desktop\Application_Sentidos\obj\Debug\net6.0-windows\refint\Application_Sentidos.dll
-C:\Users\cabre\OneDrive\Escritorio\Sentidos-Desktop\Application_Sentidos\obj\Debug\net6.0-windows\Application_Sentidos.pdb
-C:\Users\cabre\OneDrive\Escritorio\Sentidos-Desktop\Application_Sentidos\obj\Debug\net6.0-windows\Application_Sentidos.genruntimeconfig.cache
-C:\Users\cabre\OneDrive\Escritorio\Sentidos-Desktop\Application_Sentidos\obj\Debug\net6.0-windows\ref\Application_Sentidos.dll
-<<<<<<< HEAD
-C:\Users\Alex Lopez\Documents\C#\Application_Sentidos\bin\Debug\net6.0-windows\Application_Sentidos.exe
-C:\Users\Alex Lopez\Documents\C#\Application_Sentidos\bin\Debug\net6.0-windows\Application_Sentidos.deps.json
-C:\Users\Alex Lopez\Documents\C#\Application_Sentidos\bin\Debug\net6.0-windows\Application_Sentidos.runtimeconfig.json
-C:\Users\Alex Lopez\Documents\C#\Application_Sentidos\bin\Debug\net6.0-windows\Application_Sentidos.dll
-C:\Users\Alex Lopez\Documents\C#\Application_Sentidos\bin\Debug\net6.0-windows\Application_Sentidos.pdb
-C:\Users\Alex Lopez\Documents\C#\Application_Sentidos\bin\Debug\net6.0-windows\es-AR\Application_Sentidos.resources.dll
-C:\Users\Alex Lopez\Documents\C#\Application_Sentidos\bin\Debug\net6.0-windows\Newtonsoft.Json.dll
-C:\Users\Alex Lopez\Documents\C#\Application_Sentidos\bin\Debug\net6.0-windows\RestSharp.dll
-C:\Users\Alex Lopez\Documents\C#\Application_Sentidos\obj\Debug\net6.0-windows\Application_Sentidos.csproj.AssemblyReference.cache
-C:\Users\Alex Lopez\Documents\C#\Application_Sentidos\obj\Debug\net6.0-windows\Application_Sentidos.Authentication.Login.resources
-C:\Users\Alex Lopez\Documents\C#\Application_Sentidos\obj\Debug\net6.0-windows\Application_Sentidos.Properties.Resources.resources
-C:\Users\Alex Lopez\Documents\C#\Application_Sentidos\obj\Debug\net6.0-windows\Application_Sentidos.Resources.MisDatos.resources
-C:\Users\Alex Lopez\Documents\C#\Application_Sentidos\obj\Debug\net6.0-windows\Application_Sentidos.Roles.Administrador.resources
-C:\Users\Alex Lopez\Documents\C#\Application_Sentidos\obj\Debug\net6.0-windows\Application_Sentidos.Resources.Administrador.Modificar.resources
-C:\Users\Alex Lopez\Documents\C#\Application_Sentidos\obj\Debug\net6.0-windows\Application_Sentidos.Resources.Administrador.Registro.resources
-C:\Users\Alex Lopez\Documents\C#\Application_Sentidos\obj\Debug\net6.0-windows\Application_Sentidos.Resources.Reserva.resources
-C:\Users\Alex Lopez\Documents\C#\Application_Sentidos\obj\Debug\net6.0-windows\Application_Sentidos.Resources.Administrador.Usuarios.resources
-C:\Users\Alex Lopez\Documents\C#\Application_Sentidos\obj\Debug\net6.0-windows\Application_Sentidos.Roles.Caja.resources
-C:\Users\Alex Lopez\Documents\C#\Application_Sentidos\obj\Debug\net6.0-windows\Application_Sentidos.Roles.Caja_Efectivo.resources
-C:\Users\Alex Lopez\Documents\C#\Application_Sentidos\obj\Debug\net6.0-windows\Application_Sentidos.Roles.Caja_Tarjetas.resources
-C:\Users\Alex Lopez\Documents\C#\Application_Sentidos\obj\Debug\net6.0-windows\Application_Sentidos.Roles.Facturas.resources
-C:\Users\Alex Lopez\Documents\C#\Application_Sentidos\obj\Debug\net6.0-windows\Application_Sentidos.Resources.Mitre.CreateReserva.resources
-C:\Users\Alex Lopez\Documents\C#\Application_Sentidos\obj\Debug\net6.0-windows\Application_Sentidos.Resources.Mitre.GeneralReserva.resources
-C:\Users\Alex Lopez\Documents\C#\Application_Sentidos\obj\Debug\net6.0-windows\Application_Sentidos.Roles.Maitre.resources
-C:\Users\Alex Lopez\Documents\C#\Application_Sentidos\obj\Debug\net6.0-windows\Application_Sentidos.Roles.Mozo.resources
-C:\Users\Alex Lopez\Documents\C#\Application_Sentidos\obj\Debug\net6.0-windows\Application_Sentidos.Roles.Caja_Tarjetas.es-AR.resources
-C:\Users\Alex Lopez\Documents\C#\Application_Sentidos\obj\Debug\net6.0-windows\Application_Sentidos.csproj.GenerateResource.cache
-C:\Users\Alex Lopez\Documents\C#\Application_Sentidos\obj\Debug\net6.0-windows\Application_Sentidos.GeneratedMSBuildEditorConfig.editorconfig
-C:\Users\Alex Lopez\Documents\C#\Application_Sentidos\obj\Debug\net6.0-windows\Application_Sentidos.AssemblyInfoInputs.cache
-C:\Users\Alex Lopez\Documents\C#\Application_Sentidos\obj\Debug\net6.0-windows\Application_Sentidos.AssemblyInfo.cs
-C:\Users\Alex Lopez\Documents\C#\Application_Sentidos\obj\Debug\net6.0-windows\Application_Sentidos.csproj.CoreCompileInputs.cache
-C:\Users\Alex Lopez\Documents\C#\Application_Sentidos\obj\Debug\net6.0-windows\es-AR\Application_Sentidos.resources.dll
-C:\Users\Alex Lopez\Documents\C#\Application_Sentidos\obj\Debug\net6.0-windows\Application_Sentidos.csproj.CopyComplete
-C:\Users\Alex Lopez\Documents\C#\Application_Sentidos\obj\Debug\net6.0-windows\Application_Sentidos.dll
-C:\Users\Alex Lopez\Documents\C#\Application_Sentidos\obj\Debug\net6.0-windows\refint\Application_Sentidos.dll
-C:\Users\Alex Lopez\Documents\C#\Application_Sentidos\obj\Debug\net6.0-windows\Application_Sentidos.pdb
-C:\Users\Alex Lopez\Documents\C#\Application_Sentidos\obj\Debug\net6.0-windows\Application_Sentidos.genruntimeconfig.cache
-C:\Users\Alex Lopez\Documents\C#\Application_Sentidos\obj\Debug\net6.0-windows\ref\Application_Sentidos.dll
+C:\Users\alexdev\Documents\C#\Application_Sentidos\bin\Debug\net6.0-windows\Application_Sentidos.exe
+C:\Users\alexdev\Documents\C#\Application_Sentidos\bin\Debug\net6.0-windows\Application_Sentidos.deps.json
+C:\Users\alexdev\Documents\C#\Application_Sentidos\bin\Debug\net6.0-windows\Application_Sentidos.runtimeconfig.json
+C:\Users\alexdev\Documents\C#\Application_Sentidos\bin\Debug\net6.0-windows\Application_Sentidos.dll
+C:\Users\alexdev\Documents\C#\Application_Sentidos\bin\Debug\net6.0-windows\Application_Sentidos.pdb
+C:\Users\alexdev\Documents\C#\Application_Sentidos\bin\Debug\net6.0-windows\es-AR\Application_Sentidos.resources.dll
+C:\Users\alexdev\Documents\C#\Application_Sentidos\bin\Debug\net6.0-windows\System.Net.Http.Formatting.dll
+C:\Users\alexdev\Documents\C#\Application_Sentidos\bin\Debug\net6.0-windows\System.Web.Http.dll
+C:\Users\alexdev\Documents\C#\Application_Sentidos\bin\Debug\net6.0-windows\Newtonsoft.Json.dll
+C:\Users\alexdev\Documents\C#\Application_Sentidos\bin\Debug\net6.0-windows\Newtonsoft.Json.Bson.dll
+C:\Users\alexdev\Documents\C#\Application_Sentidos\bin\Debug\net6.0-windows\RestSharp.dll
 C:\Users\alexdev\Documents\C#\Application_Sentidos\obj\Debug\net6.0-windows\Application_Sentidos.csproj.AssemblyReference.cache
 C:\Users\alexdev\Documents\C#\Application_Sentidos\obj\Debug\net6.0-windows\Application_Sentidos.Authentication.Login.resources
 C:\Users\alexdev\Documents\C#\Application_Sentidos\obj\Debug\net6.0-windows\Application_Sentidos.Properties.Resources.resources
 C:\Users\alexdev\Documents\C#\Application_Sentidos\obj\Debug\net6.0-windows\Application_Sentidos.Resources.MisDatos.resources
 C:\Users\alexdev\Documents\C#\Application_Sentidos\obj\Debug\net6.0-windows\Application_Sentidos.Roles.Administrador.resources
+C:\Users\alexdev\Documents\C#\Application_Sentidos\obj\Debug\net6.0-windows\Application_Sentidos.Roles.AdministradorFolder.ContactForm.resources
 C:\Users\alexdev\Documents\C#\Application_Sentidos\obj\Debug\net6.0-windows\Application_Sentidos.Resources.Administrador.Modificar.resources
 C:\Users\alexdev\Documents\C#\Application_Sentidos\obj\Debug\net6.0-windows\Application_Sentidos.Resources.Administrador.Registro.resources
 C:\Users\alexdev\Documents\C#\Application_Sentidos\obj\Debug\net6.0-windows\Application_Sentidos.Resources.Reserva.resources
@@ -98,24 +33,10 @@ C:\Users\alexdev\Documents\C#\Application_Sentidos\obj\Debug\net6.0-windows\Appl
 C:\Users\alexdev\Documents\C#\Application_Sentidos\obj\Debug\net6.0-windows\Application_Sentidos.AssemblyInfoInputs.cache
 C:\Users\alexdev\Documents\C#\Application_Sentidos\obj\Debug\net6.0-windows\Application_Sentidos.AssemblyInfo.cs
 C:\Users\alexdev\Documents\C#\Application_Sentidos\obj\Debug\net6.0-windows\Application_Sentidos.csproj.CoreCompileInputs.cache
+C:\Users\alexdev\Documents\C#\Application_Sentidos\obj\Debug\net6.0-windows\es-AR\Application_Sentidos.resources.dll
+C:\Users\alexdev\Documents\C#\Application_Sentidos\obj\Debug\net6.0-windows\Application_Sentidos.csproj.CopyComplete
 C:\Users\alexdev\Documents\C#\Application_Sentidos\obj\Debug\net6.0-windows\Application_Sentidos.dll
 C:\Users\alexdev\Documents\C#\Application_Sentidos\obj\Debug\net6.0-windows\refint\Application_Sentidos.dll
 C:\Users\alexdev\Documents\C#\Application_Sentidos\obj\Debug\net6.0-windows\Application_Sentidos.pdb
-C:\Users\alexdev\Documents\C#\Application_Sentidos\bin\Debug\net6.0-windows\Application_Sentidos.exe
-C:\Users\alexdev\Documents\C#\Application_Sentidos\bin\Debug\net6.0-windows\Application_Sentidos.deps.json
-C:\Users\alexdev\Documents\C#\Application_Sentidos\bin\Debug\net6.0-windows\Application_Sentidos.runtimeconfig.json
-C:\Users\alexdev\Documents\C#\Application_Sentidos\bin\Debug\net6.0-windows\Application_Sentidos.dll
-C:\Users\alexdev\Documents\C#\Application_Sentidos\bin\Debug\net6.0-windows\Application_Sentidos.pdb
-C:\Users\alexdev\Documents\C#\Application_Sentidos\bin\Debug\net6.0-windows\es-AR\Application_Sentidos.resources.dll
-C:\Users\alexdev\Documents\C#\Application_Sentidos\bin\Debug\net6.0-windows\Newtonsoft.Json.dll
-C:\Users\alexdev\Documents\C#\Application_Sentidos\bin\Debug\net6.0-windows\RestSharp.dll
-C:\Users\alexdev\Documents\C#\Application_Sentidos\obj\Debug\net6.0-windows\es-AR\Application_Sentidos.resources.dll
-C:\Users\alexdev\Documents\C#\Application_Sentidos\obj\Debug\net6.0-windows\Application_Sentidos.csproj.CopyComplete
 C:\Users\alexdev\Documents\C#\Application_Sentidos\obj\Debug\net6.0-windows\Application_Sentidos.genruntimeconfig.cache
 C:\Users\alexdev\Documents\C#\Application_Sentidos\obj\Debug\net6.0-windows\ref\Application_Sentidos.dll
-C:\Users\alexdev\Documents\C#\Application_Sentidos\obj\Debug\net6.0-windows\Application_Sentidos.Roles.AdministradorFolder.ContactForm.resources
-=======
-C:\Users\cabre\OneDrive\Escritorio\Sentidos-Desktop\Application_Sentidos\bin\Debug\net6.0-windows\System.Net.Http.Formatting.dll
-C:\Users\cabre\OneDrive\Escritorio\Sentidos-Desktop\Application_Sentidos\bin\Debug\net6.0-windows\System.Web.Http.dll
-C:\Users\cabre\OneDrive\Escritorio\Sentidos-Desktop\Application_Sentidos\bin\Debug\net6.0-windows\Newtonsoft.Json.Bson.dll
->>>>>>> 915598f685b0fa7d21263e0fa1f0d024e175c04f
