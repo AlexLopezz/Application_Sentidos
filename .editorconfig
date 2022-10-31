@@ -2,3 +2,6 @@
 
 # IDE0058: El valor de la expresión no se utiliza nunca.
 dotnet_diagnostic.IDE0058.severity = silent
+
+# Default severity for all analyzer diagnostics
+dotnet_analyzer_diagnostic.severity = silent

@@ -1,5 +1,5 @@
 ﻿using Application_Sentidos.Resources.Objects;
-using System.Text.Json;
+using JsonSerializer = System.Text.Json.JsonSerializer;
 
 namespace Application_Sentidos.Roles
 {
@@ -34,7 +34,7 @@ namespace Application_Sentidos.Roles
                 {
                     if (listaProductos[i].numMesa == nmesa)
                     {
-                        dgvPedidoMesa.Rows.Add(listaProductos[i].name, listaProductos[i].cantidad,
+                        dgvPedidoMesa.Rows.Add(listaProductos[i].name, listaProductos[i].quantity,
                             listaProductos[i].price, listaProductos[i].totalProducto);
                     }
                 }
@@ -68,7 +68,7 @@ namespace Application_Sentidos.Roles
                 double cantidad = double.Parse(txtBoxCantidad.Text);
                 double prod = (double)dgvProductos.CurrentRow.Cells[1].Value;
                 double totalProducto = prod * cantidad;
-                dgvPedidoMesa.Rows.Add(dgvProductos.CurrentRow.Cells[0].Value, txtBoxCantidad.Text, dgvProductos.CurrentRow.Cells[1].Value, totalProducto);
+                dgvPedidoMesa.Rows.Add(dgvProductos.CurrentRow.Cells[0].Value, txtBoxCantidad.Text, dgvProductos.CurrentRow.Cells[1].Value, totalProducto, dgvProductos.CurrentRow.Cells[2].Value);
             }
         }
         private void btnBorrar_Click(object sender, EventArgs e)
@@ -95,8 +95,9 @@ namespace Application_Sentidos.Roles
 
                 foreach (var item in productos)
                 {
-                    dgvProductos.Rows.Add(item.name, item.price);
+                    dgvProductos.Rows.Add(item.name, item.price, item.id);
                 }
+                txtBoxCantidad.Text = "1";
             }
         }
         private void cboBoxCategorias_SelectedIndexChanged(object sender, EventArgs e)
@@ -106,49 +107,49 @@ namespace Application_Sentidos.Roles
                 case "Bebidas sin alcohol":
                     {
                         dgvProductos.Rows.Clear();
-                        cargarCategorias(cboBoxCategorias.Text);
+                        _ = cargarCategorias(cboBoxCategorias.Text);
                         break;
                     }
                 case "Bebidas con alcohol":
                     {
                         dgvProductos.Rows.Clear();
-                        cargarCategorias(cboBoxCategorias.Text);
+                        _ = cargarCategorias(cboBoxCategorias.Text);
                         break;
                     }
                 case "Hamburguesas":
                     {
                         dgvProductos.Rows.Clear();
-                        cargarCategorias(cboBoxCategorias.Text);
+                        _ = cargarCategorias(cboBoxCategorias.Text);
                         break;
                     }
                 case "Lomitos":
                     {
                         dgvProductos.Rows.Clear();
-                        cargarCategorias(cboBoxCategorias.Text);
+                        _ = cargarCategorias(cboBoxCategorias.Text);
                         break;
                     }
                 case "Pastas":
                     {
                         dgvProductos.Rows.Clear();
-                        cargarCategorias(cboBoxCategorias.Text);
+                        _ = cargarCategorias(cboBoxCategorias.Text);
                         break;
                     }
                 case "Pescados":
                     {
                         dgvProductos.Rows.Clear();
-                        cargarCategorias(cboBoxCategorias.Text);
+                        _ = cargarCategorias(cboBoxCategorias.Text);
                         break;
                     }
                 case "Pizzas":
                     {
                         dgvProductos.Rows.Clear();
-                        cargarCategorias(cboBoxCategorias.Text);
+                        _ = cargarCategorias(cboBoxCategorias.Text);
                         break;
                     }
                 case "Snacks":
                     {
                         dgvProductos.Rows.Clear();
-                        cargarCategorias(cboBoxCategorias.Text);
+                        _ = cargarCategorias(cboBoxCategorias.Text);
                         break;
                     }
             }
@@ -159,7 +160,10 @@ namespace Application_Sentidos.Roles
         }
         private void btnCargarMesa_Click(object sender, EventArgs e)
         {
+            //borrar lo que se tiene en el dgvCargarpedidos para evitar error de multiples cargas de la mesa
             double total = 0;
+
+
             if (dgvPedidoMesa.Rows.Count == 0)
             {
                 MessageBox.Show("Debe generar un pedido antes de cargarlo", "Carga de Pedido Requerida");
@@ -176,17 +180,18 @@ namespace Application_Sentidos.Roles
                 foreach (DataGridViewRow row in dgvPedidoMesa.Rows)
                 {
                     Productos prod = new Productos();
+                    prod.id = Convert.ToInt32(row.Cells[4].Value);
                     prod.numMesa = int.Parse(cboBoxMesas.Text);
                     prod.name = row.Cells[0].Value.ToString();
-                    prod.cantidad = row.Cells[1].Value.ToString();
+                    prod.quantity = Convert.ToInt32(row.Cells[1].Value);
                     prod.price = (double)row.Cells[2].Value;
                     prod.totalProducto = (double)row.Cells[3].Value;
                     listaProductos.Add(prod);
                 }
+                dgvPedidoMesa.Rows.Clear();
             }
 
         }
-
         private void btnNuevoPedido_Click(object sender, EventArgs e)
         {
             dgvProductos.Rows.Clear();
@@ -196,10 +201,39 @@ namespace Application_Sentidos.Roles
             txtBoxCantidad.Text = "1";
             lblNumeroMesa.Text = "";
         }
-
-        private void btnCerrarMesa_Click_1(object sender, EventArgs e)
+        private async void btnCerrarMesa_Click_1(object sender, EventArgs e)
         {
-            //post
+
+            List<Products> listaProducts = new List<Products>();
+            string url = "https://binarysystem.pythonanywhere.com/api/orderPost/";
+            var client = new HttpClient();
+            int table = int.Parse(cboBoxMesas.Text);
+
+            foreach (var item in listaProductos)
+            {
+                if (item.numMesa == table)
+                {
+                    Products products = new Products();
+                    products.product = item.id;
+                    products.quantity = item.quantity;
+                    products.price = item.totalProducto;
+                    listaProducts.Add(products);
+                }
+            }
+            Ordenes orden = new Ordenes()
+            {
+                table = int.Parse(cboBoxMesas.Text),
+                products = listaProducts,
+            };
+
+            var data = JsonSerializer.Serialize<Ordenes>(orden);
+            HttpContent httpContent = new StringContent(data, System.Text.Encoding.UTF8, "application/json");
+            var httpResponse = await client.PostAsync(url, httpContent);
+
+            if (httpResponse.IsSuccessStatusCode)
+            {
+                MessageBox.Show("Pedido cerrado con exito", "Sentidos Restaurant & Casa de Té");
+            }
         }
         private void Mozo_Load(object sender, EventArgs e)
         {
@@ -217,8 +251,20 @@ namespace Application_Sentidos.Roles
         public string description { get; set; }
         public double price { get; set; }
         public string img { get; set; }
-        public string cantidad { get; set; }
+        public int quantity { get; set; }
         public double totalProducto { get; set; }
         public int numMesa { get; set; }
+    }
+    public class Products
+    {
+        public int product { get; set; }
+        public int quantity { get; set; }
+        public double price { get; set; }
+
+    }
+    public class Ordenes
+    {
+        public int table { get; set; }
+        public List<Products> products { get; set; }
     }
 }
