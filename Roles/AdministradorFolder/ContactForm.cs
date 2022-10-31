@@ -56,7 +56,7 @@ namespace Application_Sentidos.Roles.AdministradorFolder
             
         }
         private async void loadAverage() {
-            string URLBase = "http://localhost:8000/api/getAverage/";
+            string URLBase = "https://binarysystem.pythonanywhere.com/api/getAverage/";
             var httpResponse = await httpClient.GetAsync(URLBase);
 
             if (httpResponse.IsSuccessStatusCode)
@@ -69,8 +69,6 @@ namespace Application_Sentidos.Roles.AdministradorFolder
                 fillStars(bttFood, average.food);
                 fillStars(bttPrice, average.price);
             }
-
-
         }
 
         private void fillStars(List<Button> stars, int avg)
@@ -84,17 +82,12 @@ namespace Application_Sentidos.Roles.AdministradorFolder
                     i++;
                 }
             }
-            i = 0;
         }
-
-
-
-
 
         private void emptyDgv() { dgvContact.Rows.Clear(); }
         private async void loadDgvContact()
         {
-            string URLBase = "http://localhost:8000/api/listContact/";
+            string URLBase = "https://binarysystem.pythonanywhere.com/api/listContact/";
             var httpResponse = await httpClient.GetAsync(URLBase);
 
             if (httpResponse.IsSuccessStatusCode)
@@ -126,7 +119,7 @@ namespace Application_Sentidos.Roles.AdministradorFolder
         {
             if (dgvContact.Rows.Count > 0)
             {
-                string URLBase = "http://localhost:8000/api/deleteAllContacts/";
+                string URLBase = "https://binarysystem.pythonanywhere.com/api/deleteAllContacts/";
                 var httpResponse = await httpClient.GetAsync(URLBase);
                 if (httpResponse.IsSuccessStatusCode)
                 {
@@ -143,7 +136,7 @@ namespace Application_Sentidos.Roles.AdministradorFolder
             if(dgvContact.Rows.Count > 0)
             {
                 string fullname = dgvContact.CurrentRow.Cells[0].Value.ToString();
-                string URLBase = "http://localhost:8000/api/deleteContact?fullname="+fullname;
+                string URLBase = "https://binarysystem.pythonanywhere.com/api/deleteContact?fullname=" + fullname;
                 var httpResponse = await httpClient.GetAsync(URLBase);
                 if (httpResponse.IsSuccessStatusCode) {
                     MessageBox.Show("Consulta eliminada correctamente.");
