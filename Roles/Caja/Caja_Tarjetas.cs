@@ -12,7 +12,7 @@ namespace Application_Sentidos.Roles
 {
     public partial class Caja_Tarjetas : Form
     {
-        public Caja_Tarjetas()
+        public Caja_Tarjetas(int numero)
         {
             InitializeComponent();
         }
@@ -20,6 +20,7 @@ namespace Application_Sentidos.Roles
         private void btnPagar_Click(object sender, EventArgs e)
         {
             //generar factura y confirmacion de pago
+            string urlFactura = "https://binarysystem.pythonanywhere.com/api/checking_invoice/";//para la factura
             MessageBox.Show("El pago ha sido exitoso", "Confirmacion de Pago");
         }
 

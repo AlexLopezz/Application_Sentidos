@@ -232,7 +232,9 @@ namespace Application_Sentidos.Roles
 
             if (httpResponse.IsSuccessStatusCode)
             {
+                var result = await httpResponse.Content.ReadAsStringAsync();
                 MessageBox.Show("Pedido cerrado con exito", "Sentidos Restaurant & Casa de Té");
+                MessageBox.Show(result);
             }
         }
         private void Mozo_Load(object sender, EventArgs e)

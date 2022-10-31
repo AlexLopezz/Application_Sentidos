@@ -49,6 +49,9 @@
             this.dgvDetalleCaja = new System.Windows.Forms.DataGridView();
             this.txtBoxTotal = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDetalleCaja)).BeginInit();
             this.SuspendLayout();
             // 
@@ -148,9 +151,20 @@
             // 
             // dgvDetalleCaja
             // 
+            this.dgvDetalleCaja.AllowUserToAddRows = false;
+            this.dgvDetalleCaja.AllowUserToDeleteRows = false;
+            this.dgvDetalleCaja.AllowUserToResizeColumns = false;
+            this.dgvDetalleCaja.AllowUserToResizeRows = false;
+            this.dgvDetalleCaja.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvDetalleCaja.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvDetalleCaja.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Column1,
+            this.Column2,
+            this.Column3});
             resources.ApplyResources(this.dgvDetalleCaja, "dgvDetalleCaja");
             this.dgvDetalleCaja.Name = "dgvDetalleCaja";
+            this.dgvDetalleCaja.ReadOnly = true;
+            this.dgvDetalleCaja.RowHeadersVisible = false;
             this.dgvDetalleCaja.RowTemplate.Height = 25;
             // 
             // txtBoxTotal
@@ -164,6 +178,24 @@
             // 
             resources.ApplyResources(this.label9, "label9");
             this.label9.Name = "label9";
+            // 
+            // Column1
+            // 
+            resources.ApplyResources(this.Column1, "Column1");
+            this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
+            // 
+            // Column2
+            // 
+            resources.ApplyResources(this.Column2, "Column2");
+            this.Column2.Name = "Column2";
+            this.Column2.ReadOnly = true;
+            // 
+            // Column3
+            // 
+            resources.ApplyResources(this.Column3, "Column3");
+            this.Column3.Name = "Column3";
+            this.Column3.ReadOnly = true;
             // 
             // Caja_Tarjetas
             // 
@@ -223,5 +255,8 @@
         private DataGridView dgvDetalleCaja;
         private TextBox txtBoxTotal;
         private Label label9;
+        private DataGridViewTextBoxColumn Column1;
+        private DataGridViewTextBoxColumn Column2;
+        private DataGridViewTextBoxColumn Column3;
     }
 }

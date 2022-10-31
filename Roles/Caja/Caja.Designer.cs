@@ -35,13 +35,12 @@
             this.tarjDebitoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.creditoPersonalToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.label1 = new System.Windows.Forms.Label();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgvDetallesPedidos = new System.Windows.Forms.DataGridView();
+            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgvSeleccionMesa = new System.Windows.Forms.DataGridView();
             this.btnActualizar = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvSeleccionMesa)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvDetallesPedidos)).BeginInit();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -51,7 +50,7 @@
             this.metodoDePagoToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(565, 28);
+            this.menuStrip1.Size = new System.Drawing.Size(361, 28);
             this.menuStrip1.TabIndex = 4;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -69,29 +68,29 @@
             // efectivoToolStripMenuItem
             // 
             this.efectivoToolStripMenuItem.Name = "efectivoToolStripMenuItem";
-            this.efectivoToolStripMenuItem.Size = new System.Drawing.Size(191, 24);
+            this.efectivoToolStripMenuItem.Size = new System.Drawing.Size(207, 24);
             this.efectivoToolStripMenuItem.Text = "Efectivo";
             this.efectivoToolStripMenuItem.Click += new System.EventHandler(this.EfectivoToolStripMenuItem_Click);
             // 
             // tarjCreditoToolStripMenuItem
             // 
             this.tarjCreditoToolStripMenuItem.Name = "tarjCreditoToolStripMenuItem";
-            this.tarjCreditoToolStripMenuItem.Size = new System.Drawing.Size(191, 24);
+            this.tarjCreditoToolStripMenuItem.Size = new System.Drawing.Size(207, 24);
             this.tarjCreditoToolStripMenuItem.Text = "Tarj. Credito";
             this.tarjCreditoToolStripMenuItem.Click += new System.EventHandler(this.TarjCreditoToolStripMenuItem_Click);
             // 
             // tarjDebitoToolStripMenuItem
             // 
             this.tarjDebitoToolStripMenuItem.Name = "tarjDebitoToolStripMenuItem";
-            this.tarjDebitoToolStripMenuItem.Size = new System.Drawing.Size(191, 24);
+            this.tarjDebitoToolStripMenuItem.Size = new System.Drawing.Size(207, 24);
             this.tarjDebitoToolStripMenuItem.Text = "Tarj. Debito";
             this.tarjDebitoToolStripMenuItem.Click += new System.EventHandler(this.TarjDebitoToolStripMenuItem_Click);
             // 
             // creditoPersonalToolStripMenuItem
             // 
             this.creditoPersonalToolStripMenuItem.Name = "creditoPersonalToolStripMenuItem";
-            this.creditoPersonalToolStripMenuItem.Size = new System.Drawing.Size(191, 24);
-            this.creditoPersonalToolStripMenuItem.Text = "Mercado Pago";
+            this.creditoPersonalToolStripMenuItem.Size = new System.Drawing.Size(207, 24);
+            this.creditoPersonalToolStripMenuItem.Text = "Plataforma Digital";
             // 
             // label1
             // 
@@ -103,17 +102,30 @@
             this.label1.TabIndex = 1;
             this.label1.Text = "PEDIDOS";
             // 
-            // Column3
+            // dgvDetallesPedidos
             // 
-            this.Column3.HeaderText = "Total";
-            this.Column3.Name = "Column3";
-            this.Column3.ReadOnly = true;
+            this.dgvDetallesPedidos.AllowUserToAddRows = false;
+            this.dgvDetallesPedidos.AllowUserToDeleteRows = false;
+            this.dgvDetallesPedidos.AllowUserToResizeColumns = false;
+            this.dgvDetallesPedidos.AllowUserToResizeRows = false;
+            this.dgvDetallesPedidos.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvDetallesPedidos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvDetallesPedidos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Column4,
+            this.Column1});
+            this.dgvDetallesPedidos.Location = new System.Drawing.Point(12, 102);
+            this.dgvDetallesPedidos.Name = "dgvDetallesPedidos";
+            this.dgvDetallesPedidos.ReadOnly = true;
+            this.dgvDetallesPedidos.RowHeadersVisible = false;
+            this.dgvDetallesPedidos.RowTemplate.Height = 25;
+            this.dgvDetallesPedidos.Size = new System.Drawing.Size(331, 375);
+            this.dgvDetallesPedidos.TabIndex = 3;
             // 
-            // Column2
+            // Column4
             // 
-            this.Column2.HeaderText = "Mozo";
-            this.Column2.Name = "Column2";
-            this.Column2.ReadOnly = true;
+            this.Column4.HeaderText = "Pedido N°";
+            this.Column4.Name = "Column4";
+            this.Column4.ReadOnly = true;
             // 
             // Column1
             // 
@@ -121,27 +133,9 @@
             this.Column1.Name = "Column1";
             this.Column1.ReadOnly = true;
             // 
-            // dgvSeleccionMesa
-            // 
-            this.dgvSeleccionMesa.AllowUserToAddRows = false;
-            this.dgvSeleccionMesa.AllowUserToDeleteRows = false;
-            this.dgvSeleccionMesa.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dgvSeleccionMesa.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvSeleccionMesa.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Column1,
-            this.Column2,
-            this.Column3});
-            this.dgvSeleccionMesa.Location = new System.Drawing.Point(12, 93);
-            this.dgvSeleccionMesa.Name = "dgvSeleccionMesa";
-            this.dgvSeleccionMesa.ReadOnly = true;
-            this.dgvSeleccionMesa.RowHeadersVisible = false;
-            this.dgvSeleccionMesa.RowTemplate.Height = 25;
-            this.dgvSeleccionMesa.Size = new System.Drawing.Size(541, 375);
-            this.dgvSeleccionMesa.TabIndex = 3;
-            // 
             // btnActualizar
             // 
-            this.btnActualizar.Location = new System.Drawing.Point(460, 31);
+            this.btnActualizar.Location = new System.Drawing.Point(250, 36);
             this.btnActualizar.Name = "btnActualizar";
             this.btnActualizar.Size = new System.Drawing.Size(93, 60);
             this.btnActualizar.TabIndex = 5;
@@ -154,9 +148,9 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.ClientSize = new System.Drawing.Size(565, 480);
+            this.ClientSize = new System.Drawing.Size(361, 489);
             this.Controls.Add(this.btnActualizar);
-            this.Controls.Add(this.dgvSeleccionMesa);
+            this.Controls.Add(this.dgvDetallesPedidos);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.menuStrip1);
             this.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
@@ -167,7 +161,7 @@
             this.Load += new System.EventHandler(this.Caja_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvSeleccionMesa)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvDetallesPedidos)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -181,10 +175,9 @@
         private ToolStripMenuItem tarjDebitoToolStripMenuItem;
         private ToolStripMenuItem creditoPersonalToolStripMenuItem;
         private Label label1;
-        private DataGridViewTextBoxColumn Column3;
-        private DataGridViewTextBoxColumn Column2;
-        private DataGridViewTextBoxColumn Column1;
-        private DataGridView dgvSeleccionMesa;
+        private DataGridView dgvDetallesPedidos;
         private Button btnActualizar;
+        private DataGridViewTextBoxColumn Column4;
+        private DataGridViewTextBoxColumn Column1;
     }
 }
