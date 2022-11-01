@@ -7,7 +7,6 @@ namespace Application_Sentidos.Roles
     public partial class Caja : Form
     {
         HttpUser userLogged;
-
         public Caja(HttpUser user)
         {
             InitializeComponent();
@@ -17,21 +16,25 @@ namespace Application_Sentidos.Roles
         private void TarjCreditoToolStripMenuItem_Click(object sender, EventArgs e)
         {
             int numberOrder = (int)dgvDetallesPedidos.CurrentRow.Cells[0].Value;
-            Caja_Tarjetas caja_Cobrar = new Caja_Tarjetas(numberOrder);
-            caja_Cobrar.ShowDialog();
+            Caja_Tarjetas caja_Credito = new Caja_Tarjetas(numberOrder);
+            caja_Credito.numeroOrden = numberOrder;
+            caja_Credito.ShowDialog();
         }
 
         private void TarjDebitoToolStripMenuItem_Click(object sender, EventArgs e)
         {
             int numberOrder = (int)dgvDetallesPedidos.CurrentRow.Cells[0].Value;
-            Caja_Tarjetas caja_Cobrar = new Caja_Tarjetas(numberOrder);
-            caja_Cobrar.ShowDialog();
+            Caja_Tarjetas caja_Debito = new Caja_Tarjetas(numberOrder);
+            caja_Debito.numeroOrden = numberOrder;
+            caja_Debito.ShowDialog();
         }
 
         private void EfectivoToolStripMenuItem_Click(object sender, EventArgs e)
         {
             int numberOrder = (int)dgvDetallesPedidos.CurrentRow.Cells[0].Value;
             Caja_Efectivo caja_Efectivo = new Caja_Efectivo(numberOrder);
+            caja_Efectivo.numeroOrden = numberOrder;
+            caja_Efectivo.numeroMesa = numberOrder;
             caja_Efectivo.ShowDialog();
         }
 

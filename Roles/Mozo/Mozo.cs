@@ -262,7 +262,7 @@ namespace Application_Sentidos.Roles
             {
                 var result = await httpResponse.Content.ReadAsStringAsync();
                 MessageBox.Show("Pedido cerrado con exito", "Sentidos Restaurant & Casa de Té");
-                MessageBox.Show(result);
+                dgvPedidosACerrar.Rows.RemoveAt(dgvPedidosACerrar.CurrentRow.Index);
             }
         }
         private void Mozo_Load(object sender, EventArgs e)

@@ -1,20 +1,24 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\alexdev\\Documents\\C#\\Application_Sentidos\\Application_Sentidos.csproj": {}
+    "C:\\Users\\cabre\\OneDrive\\Escritorio\\Sentidos-Desktop\\Application_Sentidos\\Application_Sentidos.csproj": {}
   },
   "projects": {
-    "C:\\Users\\alexdev\\Documents\\C#\\Application_Sentidos\\Application_Sentidos.csproj": {
+    "C:\\Users\\cabre\\OneDrive\\Escritorio\\Sentidos-Desktop\\Application_Sentidos\\Application_Sentidos.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\alexdev\\Documents\\C#\\Application_Sentidos\\Application_Sentidos.csproj",
+        "projectUniqueName": "C:\\Users\\cabre\\OneDrive\\Escritorio\\Sentidos-Desktop\\Application_Sentidos\\Application_Sentidos.csproj",
         "projectName": "Application_Sentidos",
-        "projectPath": "C:\\Users\\alexdev\\Documents\\C#\\Application_Sentidos\\Application_Sentidos.csproj",
-        "packagesPath": "C:\\Users\\alexdev\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\alexdev\\Documents\\C#\\Application_Sentidos\\obj\\",
+        "projectPath": "C:\\Users\\cabre\\OneDrive\\Escritorio\\Sentidos-Desktop\\Application_Sentidos\\Application_Sentidos.csproj",
+        "packagesPath": "C:\\Users\\cabre\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\cabre\\OneDrive\\Escritorio\\Sentidos-Desktop\\Application_Sentidos\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\alexdev\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\cabre\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [

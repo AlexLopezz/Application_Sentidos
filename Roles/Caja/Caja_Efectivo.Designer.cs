@@ -115,22 +115,23 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label4.Location = new System.Drawing.Point(61, 432);
+            this.label4.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label4.Location = new System.Drawing.Point(72, 419);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(50, 20);
+            this.label4.Size = new System.Drawing.Size(64, 23);
             this.label4.TabIndex = 4;
             this.label4.Text = "TOTAL";
             // 
             // txtBoxTotalItems
             // 
             this.txtBoxTotalItems.BackColor = System.Drawing.SystemColors.WindowFrame;
-            this.txtBoxTotalItems.ForeColor = System.Drawing.Color.Lime;
-            this.txtBoxTotalItems.Location = new System.Drawing.Point(142, 412);
-            this.txtBoxTotalItems.Multiline = true;
+            this.txtBoxTotalItems.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.txtBoxTotalItems.ForeColor = System.Drawing.Color.LimeGreen;
+            this.txtBoxTotalItems.Location = new System.Drawing.Point(142, 409);
             this.txtBoxTotalItems.Name = "txtBoxTotalItems";
-            this.txtBoxTotalItems.Size = new System.Drawing.Size(112, 39);
+            this.txtBoxTotalItems.Size = new System.Drawing.Size(112, 33);
             this.txtBoxTotalItems.TabIndex = 5;
+            this.txtBoxTotalItems.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // txtBoxIngreso
             // 
@@ -138,6 +139,7 @@
             this.txtBoxIngreso.Name = "txtBoxIngreso";
             this.txtBoxIngreso.Size = new System.Drawing.Size(112, 22);
             this.txtBoxIngreso.TabIndex = 3;
+            this.txtBoxIngreso.TextChanged += new System.EventHandler(this.txtBoxIngreso_TextChanged);
             // 
             // btnPagar
             // 
@@ -162,12 +164,13 @@
             // txtBoxVuelto
             // 
             this.txtBoxVuelto.BackColor = System.Drawing.SystemColors.WindowFrame;
-            this.txtBoxVuelto.ForeColor = System.Drawing.Color.Lime;
-            this.txtBoxVuelto.Location = new System.Drawing.Point(442, 319);
-            this.txtBoxVuelto.Multiline = true;
+            this.txtBoxVuelto.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.txtBoxVuelto.ForeColor = System.Drawing.Color.LimeGreen;
+            this.txtBoxVuelto.Location = new System.Drawing.Point(442, 321);
             this.txtBoxVuelto.Name = "txtBoxVuelto";
-            this.txtBoxVuelto.Size = new System.Drawing.Size(112, 39);
+            this.txtBoxVuelto.Size = new System.Drawing.Size(112, 33);
             this.txtBoxVuelto.TabIndex = 10;
+            this.txtBoxVuelto.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // Caja_Efectivo
             // 

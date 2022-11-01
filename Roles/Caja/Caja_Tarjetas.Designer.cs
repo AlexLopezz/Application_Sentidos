@@ -46,13 +46,13 @@
             this.label8 = new System.Windows.Forms.Label();
             this.btnPagar = new System.Windows.Forms.Button();
             this.btnCancelar = new System.Windows.Forms.Button();
-            this.dgvDetalleCaja = new System.Windows.Forms.DataGridView();
-            this.txtBoxTotal = new System.Windows.Forms.TextBox();
-            this.label9 = new System.Windows.Forms.Label();
+            this.dgvDetalleCajaTarjeta = new System.Windows.Forms.DataGridView();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvDetalleCaja)).BeginInit();
+            this.txtBoxTotal = new System.Windows.Forms.TextBox();
+            this.label9 = new System.Windows.Forms.Label();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvDetalleCajaTarjeta)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -119,7 +119,6 @@
             // 
             resources.ApplyResources(this.txtBoxDireccion, "txtBoxDireccion");
             this.txtBoxDireccion.Name = "txtBoxDireccion";
-            this.txtBoxDireccion.TextChanged += new System.EventHandler(this.txtBoxDireccion_TextChanged);
             // 
             // cboBoxTipoFatura
             // 
@@ -149,35 +148,23 @@
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.UseVisualStyleBackColor = true;
             // 
-            // dgvDetalleCaja
+            // dgvDetalleCajaTarjeta
             // 
-            this.dgvDetalleCaja.AllowUserToAddRows = false;
-            this.dgvDetalleCaja.AllowUserToDeleteRows = false;
-            this.dgvDetalleCaja.AllowUserToResizeColumns = false;
-            this.dgvDetalleCaja.AllowUserToResizeRows = false;
-            this.dgvDetalleCaja.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dgvDetalleCaja.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvDetalleCaja.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dgvDetalleCajaTarjeta.AllowUserToAddRows = false;
+            this.dgvDetalleCajaTarjeta.AllowUserToDeleteRows = false;
+            this.dgvDetalleCajaTarjeta.AllowUserToResizeColumns = false;
+            this.dgvDetalleCajaTarjeta.AllowUserToResizeRows = false;
+            this.dgvDetalleCajaTarjeta.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvDetalleCajaTarjeta.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvDetalleCajaTarjeta.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column1,
             this.Column2,
             this.Column3});
-            resources.ApplyResources(this.dgvDetalleCaja, "dgvDetalleCaja");
-            this.dgvDetalleCaja.Name = "dgvDetalleCaja";
-            this.dgvDetalleCaja.ReadOnly = true;
-            this.dgvDetalleCaja.RowHeadersVisible = false;
-            this.dgvDetalleCaja.RowTemplate.Height = 25;
-            // 
-            // txtBoxTotal
-            // 
-            this.txtBoxTotal.BackColor = System.Drawing.SystemColors.WindowFrame;
-            this.txtBoxTotal.ForeColor = System.Drawing.Color.Lime;
-            resources.ApplyResources(this.txtBoxTotal, "txtBoxTotal");
-            this.txtBoxTotal.Name = "txtBoxTotal";
-            // 
-            // label9
-            // 
-            resources.ApplyResources(this.label9, "label9");
-            this.label9.Name = "label9";
+            resources.ApplyResources(this.dgvDetalleCajaTarjeta, "dgvDetalleCajaTarjeta");
+            this.dgvDetalleCajaTarjeta.Name = "dgvDetalleCajaTarjeta";
+            this.dgvDetalleCajaTarjeta.ReadOnly = true;
+            this.dgvDetalleCajaTarjeta.RowHeadersVisible = false;
+            this.dgvDetalleCajaTarjeta.RowTemplate.Height = 25;
             // 
             // Column1
             // 
@@ -197,6 +184,18 @@
             this.Column3.Name = "Column3";
             this.Column3.ReadOnly = true;
             // 
+            // txtBoxTotal
+            // 
+            this.txtBoxTotal.BackColor = System.Drawing.SystemColors.WindowFrame;
+            resources.ApplyResources(this.txtBoxTotal, "txtBoxTotal");
+            this.txtBoxTotal.ForeColor = System.Drawing.Color.LimeGreen;
+            this.txtBoxTotal.Name = "txtBoxTotal";
+            // 
+            // label9
+            // 
+            resources.ApplyResources(this.label9, "label9");
+            this.label9.Name = "label9";
+            // 
             // Caja_Tarjetas
             // 
             this.AcceptButton = this.btnPagar;
@@ -206,7 +205,7 @@
             this.CancelButton = this.btnCancelar;
             this.Controls.Add(this.txtBoxTotal);
             this.Controls.Add(this.label9);
-            this.Controls.Add(this.dgvDetalleCaja);
+            this.Controls.Add(this.dgvDetalleCajaTarjeta);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.btnPagar);
             this.Controls.Add(this.label8);
@@ -227,7 +226,7 @@
             this.Cursor = System.Windows.Forms.Cursors.Hand;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Name = "Caja_Tarjetas";
-            ((System.ComponentModel.ISupportInitialize)(this.dgvDetalleCaja)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvDetalleCajaTarjeta)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -252,7 +251,7 @@
         private Label label8;
         private Button btnPagar;
         private Button btnCancelar;
-        private DataGridView dgvDetalleCaja;
+        private DataGridView dgvDetalleCajaTarjeta;
         private TextBox txtBoxTotal;
         private Label label9;
         private DataGridViewTextBoxColumn Column1;
