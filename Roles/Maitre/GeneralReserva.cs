@@ -37,20 +37,23 @@ namespace Application_Sentidos.Resources.Mitre
         private async void bttCancelReserva_Click(object sender, EventArgs e)
         {
             string urlEliminar = "https://binarysystem.pythonanywhere.com/api/deleteReservation/?id=";
-
-            DialogResult decision = MessageBox.Show($"¿Seguro que desea borrar esta reservacion ?", "Salir",
-                MessageBoxButtons.YesNoCancel);
-            if (decision == DialogResult.Yes)
+            if (dgvReserva.Rows.Count != 0)
             {
-                int id = (int)dgvReserva.CurrentRow.Cells[0].Value;
-                var httpResponse = await client.DeleteAsync(urlEliminar + id);
-                if (httpResponse.IsSuccessStatusCode)
+                DialogResult decision = MessageBox.Show($"¿Seguro que desea borrar esta reservacion ?", "Salir",
+                    MessageBoxButtons.YesNoCancel);
+                if (decision == DialogResult.Yes)
                 {
-                    MessageBox.Show("Usuario eliminado correctamente.");
-                    cargarDgvReservation();
+                    int id = (int)dgvReserva.CurrentRow.Cells[0].Value;
+                    var httpResponse = await client.DeleteAsync(urlEliminar + id);
+                    if (httpResponse.IsSuccessStatusCode)
+                    {
+                        MessageBox.Show("Reserva eliminada correctamente.");
+                        cargarDgvReservation();
+                    }
+                    else { MessageBox.Show("Hubo un error, verifique ID."); }
                 }
-                else { MessageBox.Show("Hubo un error, verifique ID."); }
             }
+            else { MessageBox.Show("Por el momento no hay reservas disponibles para eliminar."); }
         }
 
 
