@@ -66,7 +66,7 @@
             this.panelMenuLateral.ForeColor = System.Drawing.Color.White;
             this.panelMenuLateral.Location = new System.Drawing.Point(0, 0);
             this.panelMenuLateral.Name = "panelMenuLateral";
-            this.panelMenuLateral.Size = new System.Drawing.Size(266, 425);
+            this.panelMenuLateral.Size = new System.Drawing.Size(266, 420);
             this.panelMenuLateral.TabIndex = 3;
             // 
             // panelContenedorOpciones
@@ -163,7 +163,7 @@
             // 
             this.panel2.Controls.Add(this.panel3);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel2.Location = new System.Drawing.Point(0, 376);
+            this.panel2.Location = new System.Drawing.Point(0, 371);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(266, 49);
             this.panel2.TabIndex = 5;
@@ -249,7 +249,7 @@
             this.panelContenedor.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelContenedor.Location = new System.Drawing.Point(266, 0);
             this.panelContenedor.Name = "panelContenedor";
-            this.panelContenedor.Size = new System.Drawing.Size(825, 425);
+            this.panelContenedor.Size = new System.Drawing.Size(825, 420);
             this.panelContenedor.TabIndex = 4;
             // 
             // pictureBox2
@@ -276,7 +276,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1091, 425);
+            this.ClientSize = new System.Drawing.Size(1091, 420);
             this.Controls.Add(this.panelContenedor);
             this.Controls.Add(this.panelMenuLateral);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
