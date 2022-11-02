@@ -33,7 +33,7 @@
             this.panelContenedorOpciones = new System.Windows.Forms.Panel();
             this.bttConsultas = new System.Windows.Forms.Button();
             this.bttReservas = new System.Windows.Forms.Button();
-            this.bttMisDatos = new System.Windows.Forms.Button();
+            this.bttFacturas = new System.Windows.Forms.Button();
             this.bttUsuarios = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
@@ -73,7 +73,7 @@
             // 
             this.panelContenedorOpciones.Controls.Add(this.bttConsultas);
             this.panelContenedorOpciones.Controls.Add(this.bttReservas);
-            this.panelContenedorOpciones.Controls.Add(this.bttMisDatos);
+            this.panelContenedorOpciones.Controls.Add(this.bttFacturas);
             this.panelContenedorOpciones.Controls.Add(this.bttUsuarios);
             this.panelContenedorOpciones.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelContenedorOpciones.Location = new System.Drawing.Point(0, 87);
@@ -120,24 +120,25 @@
             this.bttReservas.UseVisualStyleBackColor = false;
             this.bttReservas.Click += new System.EventHandler(this.bttReservas_Click);
             // 
-            // bttMisDatos
+            // bttFacturas
             // 
-            this.bttMisDatos.BackColor = System.Drawing.SystemColors.GrayText;
-            this.bttMisDatos.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.bttMisDatos.FlatAppearance.BorderSize = 0;
-            this.bttMisDatos.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Black;
-            this.bttMisDatos.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.GrayText;
-            this.bttMisDatos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.bttMisDatos.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.bttMisDatos.ForeColor = System.Drawing.Color.Transparent;
-            this.bttMisDatos.Image = ((System.Drawing.Image)(resources.GetObject("bttMisDatos.Image")));
-            this.bttMisDatos.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.bttMisDatos.Location = new System.Drawing.Point(3, 7);
-            this.bttMisDatos.Name = "bttMisDatos";
-            this.bttMisDatos.Size = new System.Drawing.Size(263, 53);
-            this.bttMisDatos.TabIndex = 3;
-            this.bttMisDatos.Text = "MIS DATOS";
-            this.bttMisDatos.UseVisualStyleBackColor = false;
+            this.bttFacturas.BackColor = System.Drawing.SystemColors.GrayText;
+            this.bttFacturas.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.bttFacturas.FlatAppearance.BorderSize = 0;
+            this.bttFacturas.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Black;
+            this.bttFacturas.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.GrayText;
+            this.bttFacturas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.bttFacturas.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.bttFacturas.ForeColor = System.Drawing.Color.Transparent;
+            this.bttFacturas.Image = ((System.Drawing.Image)(resources.GetObject("bttFacturas.Image")));
+            this.bttFacturas.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.bttFacturas.Location = new System.Drawing.Point(3, 7);
+            this.bttFacturas.Name = "bttFacturas";
+            this.bttFacturas.Size = new System.Drawing.Size(263, 53);
+            this.bttFacturas.TabIndex = 3;
+            this.bttFacturas.Text = "FACTURAS";
+            this.bttFacturas.UseVisualStyleBackColor = false;
+            this.bttFacturas.Click += new System.EventHandler(this.bttFacturas_Click);
             // 
             // bttUsuarios
             // 
@@ -303,7 +304,7 @@
         private Button bttConsultas;
         private Button bttReservas;
         private Button bttUsuarios;
-        private Button bttMisDatos;
+        private Button bttFacturas;
         private Panel panel2;
         private Panel panel3;
         private Button bttSalir;

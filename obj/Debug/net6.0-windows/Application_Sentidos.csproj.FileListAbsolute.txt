@@ -40,3 +40,4 @@ C:\Users\alexdev\Documents\C#\Application_Sentidos\obj\Debug\net6.0-windows\refi
 C:\Users\alexdev\Documents\C#\Application_Sentidos\obj\Debug\net6.0-windows\Application_Sentidos.pdb
 C:\Users\alexdev\Documents\C#\Application_Sentidos\obj\Debug\net6.0-windows\Application_Sentidos.genruntimeconfig.cache
 C:\Users\alexdev\Documents\C#\Application_Sentidos\obj\Debug\net6.0-windows\ref\Application_Sentidos.dll
+C:\Users\alexdev\Documents\C#\Application_Sentidos\obj\Debug\net6.0-windows\Application_Sentidos.Roles.AdministradorFolder.Factura.resources

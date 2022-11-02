@@ -177,6 +177,7 @@
             // 
             // cboBoxMesas
             // 
+            this.cboBoxMesas.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboBoxMesas.FormattingEnabled = true;
             this.cboBoxMesas.Items.AddRange(new object[] {
             "1",
