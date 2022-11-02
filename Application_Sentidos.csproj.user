@@ -10,6 +10,9 @@
     <Compile Update="Roles\AdministradorFolder\ContactForm.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="Roles\AdministradorFolder\Factura.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="Roles\AdministradorFolder\Modificar.cs">
       <SubType>Form</SubType>
     </Compile>

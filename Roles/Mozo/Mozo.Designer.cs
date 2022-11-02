@@ -50,6 +50,7 @@
             this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgvPedidosACerrar = new System.Windows.Forms.DataGridView();
             this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -57,7 +58,6 @@
             this.txtBoxCantidad = new System.Windows.Forms.TextBox();
             this.btnNuevoPedido = new System.Windows.Forms.Button();
             this.btnCerrarMesa = new System.Windows.Forms.Button();
-            this.Column10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvProductos)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPedidoMesa)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPedidosACerrar)).BeginInit();
@@ -177,6 +177,7 @@
             // 
             // cboBoxMesas
             // 
+            this.cboBoxMesas.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboBoxMesas.FormattingEnabled = true;
             this.cboBoxMesas.Items.AddRange(new object[] {
             "1",
@@ -285,6 +286,12 @@
             this.Column6.Name = "Column6";
             this.Column6.ReadOnly = true;
             // 
+            // Column10
+            // 
+            this.Column10.HeaderText = "Cod Prod";
+            this.Column10.Name = "Column10";
+            this.Column10.ReadOnly = true;
+            // 
             // dgvPedidosACerrar
             // 
             this.dgvPedidosACerrar.AllowUserToAddRows = false;
@@ -349,12 +356,6 @@
             this.btnCerrarMesa.Text = "Cerrar Mesa";
             this.btnCerrarMesa.UseVisualStyleBackColor = true;
             this.btnCerrarMesa.Click += new System.EventHandler(this.btnCerrarMesa_Click_1);
-            // 
-            // Column10
-            // 
-            this.Column10.HeaderText = "Cod Prod";
-            this.Column10.Name = "Column10";
-            this.Column10.ReadOnly = true;
             // 
             // Mozo
             // 
