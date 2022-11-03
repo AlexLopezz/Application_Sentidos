@@ -125,7 +125,8 @@
             "Maitre",
             "Mozo",
             "Caja",
-            "Usuario"});
+            "Usuario",
+            "Chef"});
             this.cboRoles.Location = new System.Drawing.Point(111, 313);
             this.cboRoles.Name = "cboRoles";
             this.cboRoles.Size = new System.Drawing.Size(160, 23);

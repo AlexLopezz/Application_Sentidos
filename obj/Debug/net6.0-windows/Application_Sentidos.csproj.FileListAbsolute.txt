@@ -1,9 +1,4 @@
 C:\Users\alexdev\Documents\C#\Application_Sentidos\bin\Debug\net6.0-windows\Application_Sentidos.exe
-C:\Users\alexdev\Documents\C#\Application_Sentidos\bin\Debug\net6.0-windows\Application_Sentidos.deps.json
-C:\Users\alexdev\Documents\C#\Application_Sentidos\bin\Debug\net6.0-windows\Application_Sentidos.runtimeconfig.json
-C:\Users\alexdev\Documents\C#\Application_Sentidos\bin\Debug\net6.0-windows\Application_Sentidos.dll
-C:\Users\alexdev\Documents\C#\Application_Sentidos\bin\Debug\net6.0-windows\Application_Sentidos.pdb
-C:\Users\alexdev\Documents\C#\Application_Sentidos\bin\Debug\net6.0-windows\es-AR\Application_Sentidos.resources.dll
 C:\Users\alexdev\Documents\C#\Application_Sentidos\bin\Debug\net6.0-windows\System.Net.Http.Formatting.dll
 C:\Users\alexdev\Documents\C#\Application_Sentidos\bin\Debug\net6.0-windows\System.Web.Http.dll
 C:\Users\alexdev\Documents\C#\Application_Sentidos\bin\Debug\net6.0-windows\Newtonsoft.Json.dll
@@ -15,6 +10,7 @@ C:\Users\alexdev\Documents\C#\Application_Sentidos\obj\Debug\net6.0-windows\Appl
 C:\Users\alexdev\Documents\C#\Application_Sentidos\obj\Debug\net6.0-windows\Application_Sentidos.Resources.MisDatos.resources
 C:\Users\alexdev\Documents\C#\Application_Sentidos\obj\Debug\net6.0-windows\Application_Sentidos.Roles.Administrador.resources
 C:\Users\alexdev\Documents\C#\Application_Sentidos\obj\Debug\net6.0-windows\Application_Sentidos.Roles.AdministradorFolder.ContactForm.resources
+C:\Users\alexdev\Documents\C#\Application_Sentidos\obj\Debug\net6.0-windows\Application_Sentidos.Roles.AdministradorFolder.Factura.resources
 C:\Users\alexdev\Documents\C#\Application_Sentidos\obj\Debug\net6.0-windows\Application_Sentidos.Resources.Administrador.Modificar.resources
 C:\Users\alexdev\Documents\C#\Application_Sentidos\obj\Debug\net6.0-windows\Application_Sentidos.Resources.Administrador.Registro.resources
 C:\Users\alexdev\Documents\C#\Application_Sentidos\obj\Debug\net6.0-windows\Application_Sentidos.Resources.Reserva.resources
@@ -23,6 +19,10 @@ C:\Users\alexdev\Documents\C#\Application_Sentidos\obj\Debug\net6.0-windows\Appl
 C:\Users\alexdev\Documents\C#\Application_Sentidos\obj\Debug\net6.0-windows\Application_Sentidos.Roles.Caja_Efectivo.resources
 C:\Users\alexdev\Documents\C#\Application_Sentidos\obj\Debug\net6.0-windows\Application_Sentidos.Roles.Caja_Tarjetas.resources
 C:\Users\alexdev\Documents\C#\Application_Sentidos\obj\Debug\net6.0-windows\Application_Sentidos.Roles.Facturas.resources
+C:\Users\alexdev\Documents\C#\Application_Sentidos\obj\Debug\net6.0-windows\Application_Sentidos.Roles.Chef.Categoria.resources
+C:\Users\alexdev\Documents\C#\Application_Sentidos\obj\Debug\net6.0-windows\Application_Sentidos.Roles.Chef.Chef.resources
+C:\Users\alexdev\Documents\C#\Application_Sentidos\obj\Debug\net6.0-windows\Application_Sentidos.Roles.Chef.Menu.resources
+C:\Users\alexdev\Documents\C#\Application_Sentidos\obj\Debug\net6.0-windows\Application_Sentidos.Roles.Chef.Productos.resources
 C:\Users\alexdev\Documents\C#\Application_Sentidos\obj\Debug\net6.0-windows\Application_Sentidos.Resources.Mitre.CreateReserva.resources
 C:\Users\alexdev\Documents\C#\Application_Sentidos\obj\Debug\net6.0-windows\Application_Sentidos.Resources.Mitre.GeneralReserva.resources
 C:\Users\alexdev\Documents\C#\Application_Sentidos\obj\Debug\net6.0-windows\Application_Sentidos.Roles.Maitre.resources
@@ -38,6 +38,10 @@ C:\Users\alexdev\Documents\C#\Application_Sentidos\obj\Debug\net6.0-windows\Appl
 C:\Users\alexdev\Documents\C#\Application_Sentidos\obj\Debug\net6.0-windows\Application_Sentidos.dll
 C:\Users\alexdev\Documents\C#\Application_Sentidos\obj\Debug\net6.0-windows\refint\Application_Sentidos.dll
 C:\Users\alexdev\Documents\C#\Application_Sentidos\obj\Debug\net6.0-windows\Application_Sentidos.pdb
+C:\Users\alexdev\Documents\C#\Application_Sentidos\bin\Debug\net6.0-windows\Application_Sentidos.deps.json
+C:\Users\alexdev\Documents\C#\Application_Sentidos\bin\Debug\net6.0-windows\Application_Sentidos.runtimeconfig.json
+C:\Users\alexdev\Documents\C#\Application_Sentidos\bin\Debug\net6.0-windows\Application_Sentidos.dll
+C:\Users\alexdev\Documents\C#\Application_Sentidos\bin\Debug\net6.0-windows\Application_Sentidos.pdb
+C:\Users\alexdev\Documents\C#\Application_Sentidos\bin\Debug\net6.0-windows\es-AR\Application_Sentidos.resources.dll
 C:\Users\alexdev\Documents\C#\Application_Sentidos\obj\Debug\net6.0-windows\Application_Sentidos.genruntimeconfig.cache
 C:\Users\alexdev\Documents\C#\Application_Sentidos\obj\Debug\net6.0-windows\ref\Application_Sentidos.dll
-C:\Users\alexdev\Documents\C#\Application_Sentidos\obj\Debug\net6.0-windows\Application_Sentidos.Roles.AdministradorFolder.Factura.resources

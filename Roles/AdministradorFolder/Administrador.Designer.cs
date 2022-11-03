@@ -78,7 +78,7 @@
             this.panelContenedorOpciones.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelContenedorOpciones.Location = new System.Drawing.Point(0, 87);
             this.panelContenedorOpciones.Name = "panelContenedorOpciones";
-            this.panelContenedorOpciones.Size = new System.Drawing.Size(266, 253);
+            this.panelContenedorOpciones.Size = new System.Drawing.Size(266, 264);
             this.panelContenedorOpciones.TabIndex = 7;
             // 
             // bttConsultas
