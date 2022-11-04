@@ -104,5 +104,11 @@ namespace Application_Sentidos.Roles.Chef
             m.ShowDialog();
             loadNameMenu();
         }
+
+        private void bttModificarMenu_Click(object sender, EventArgs e)
+        {
+            Modificar modificarMenu = new Modificar(dgvMenuName.CurrentCell.Value.ToString());
+            modificarMenu.ShowDialog();
+        }
     }
 }

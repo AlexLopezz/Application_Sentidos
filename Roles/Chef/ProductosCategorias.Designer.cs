@@ -1,6 +1,6 @@
 ﻿namespace Application_Sentidos.Roles.Chef
 {
-    partial class Categoria
+    partial class ProductosCategorias
     {
         /// <summary>
         /// Required designer variable.
@@ -30,15 +30,15 @@
         {
             this.SuspendLayout();
             // 
-            // Categoria
+            // Productos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.ClientSize = new System.Drawing.Size(809, 381);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "Categoria";
-            this.Text = "Categoria";
+            this.Name = "Productos";
+            this.Text = "Productos";
             this.ResumeLayout(false);
 
         }

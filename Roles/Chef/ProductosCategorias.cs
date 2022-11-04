@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Application_Sentidos.Roles.Chef
 {
-    public partial class Productos : Form
+    public partial class ProductosCategorias : Form
     {
-        public Productos()
+        public ProductosCategorias()
         {
             InitializeComponent();
         }

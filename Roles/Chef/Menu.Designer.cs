@@ -243,6 +243,7 @@
             this.bttModificarMenu.TabIndex = 5;
             this.bttModificarMenu.Text = "Modificar menu";
             this.bttModificarMenu.UseVisualStyleBackColor = false;
+            this.bttModificarMenu.Click += new System.EventHandler(this.bttModificarMenu_Click);
             // 
             // bttEliminarMenu
             // 

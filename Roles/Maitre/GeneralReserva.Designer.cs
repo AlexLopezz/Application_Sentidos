@@ -113,12 +113,6 @@
             // 
             // dgvReserva
             // 
-<<<<<<< HEAD
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.White;
-            this.dgvReserva.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
-            this.dgvReserva.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-=======
             this.dgvReserva.AllowUserToAddRows = false;
             this.dgvReserva.AllowUserToDeleteRows = false;
             this.dgvReserva.AllowUserToResizeColumns = false;
@@ -127,7 +121,7 @@
             dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.White;
             this.dgvReserva.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
             this.dgvReserva.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
->>>>>>> 16ed0ef5715b47e4749cfc13dadc5c1c70912d8a
+
             this.dgvReserva.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
             dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
@@ -173,11 +167,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-<<<<<<< HEAD
-            this.ClientSize = new System.Drawing.Size(586, 411);
-=======
             this.ClientSize = new System.Drawing.Size(825, 420);
->>>>>>> 16ed0ef5715b47e4749cfc13dadc5c1c70912d8a
             this.ControlBox = false;
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.lblReservaciones);
