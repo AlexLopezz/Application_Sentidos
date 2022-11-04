@@ -53,18 +53,6 @@
             this.panelContenedor.Size = new System.Drawing.Size(825, 419);
             this.panelContenedor.TabIndex = 0;
             // 
-<<<<<<< HEAD
-            // panel3
-            // 
-            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel3.Location = new System.Drawing.Point(198, 0);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(586, 411);
-            this.panel3.TabIndex = 1;
-            // 
-=======
->>>>>>> 16ed0ef5715b47e4749cfc13dadc5c1c70912d8a
             // panelLateralIzquierdo
             // 
             this.panelLateralIzquierdo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));

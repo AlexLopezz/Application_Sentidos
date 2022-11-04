@@ -52,8 +52,12 @@ namespace Application_Sentidos.Roles.Chef
             {
                 if (txtNombreMenu.TextLength > 20)
                 {
+                    int diferencia = txtNombreMenu.Text.Length - 20;
                     MessageBox.Show("El nombre del menu no debe ser mayor a 20 caracteres.");
-                    txtNombreMenu.Text = txtNombreMenu.Text.Remove(txtNombreMenu.Text.Length - 1);
+                    for (int i = 0; i < diferencia; i++)
+                    {
+                        txtNombreMenu.Text = txtNombreMenu.Text.Remove(txtNombreMenu.Text.Length - 1);
+                    }
                 }
             }
         }

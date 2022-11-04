@@ -10,6 +10,7 @@ namespace Application_Sentidos.Roles.Chef
         {
             InitializeComponent();
             dgvDetalleMenu.ColumnHeadersVisible = false;
+            dgvMenuName.ColumnHeadersVisible = false;
             loadNameMenu();
         }
         private void emptyDgv(DataGridView dgv) { dgv.Rows.Clear();  }
@@ -26,6 +27,7 @@ namespace Application_Sentidos.Roles.Chef
         }
         private async void loadNameMenu()
         {
+            lblDetalleMenu.Text = "";
             emptyDgv(dgvMenuName);
             emptyDgv(dgvDetalleMenu);
             string URL = "https://binarysystem.pythonanywhere.com/api/menuAdmin/";
@@ -39,26 +41,9 @@ namespace Application_Sentidos.Roles.Chef
                 foreach (var m in menus) {
                     dgvMenuName.Rows.Add(m.name); 
                 }
-                
             }
         }
 
-        private async void dgvMenuName_CellClick(object sender, DataGridViewCellEventArgs e)
-        {
-            
-            string text = dgvMenuName.CurrentCell.Value.ToString();
-            lblDetalleMenu.Text = text+": Contenido";
-            string URL = "https://binarysystem.pythonanywhere.com/api/filterMenu/?name="+ text;
-            var response = await client.GetAsync(URL);
-
-            if (response.IsSuccessStatusCode)
-            {
-                var content = await response.Content.ReadAsStringAsync();
-                var detalleProducto = JsonSerializer.Deserialize<MenuGet>(content);
-                loadDgvDetalleProducts(detalleProducto);
-            }
-
-        }
         private async void filterNameMenuAndDelete(string text)
         {
             var httpResponse = await client.DeleteAsync("https://binarysystem.pythonanywhere.com/api/menuAdmin/?nameMenu=" + text);
@@ -78,24 +63,9 @@ namespace Application_Sentidos.Roles.Chef
         {
             if (MessageBox.Show("Esta seguro que desea eliminar?", "Eliminar menu", MessageBoxButtons.YesNo) == DialogResult.Yes)
             {
-                string text = dgvMenuName.CurrentCell.Value.ToString();
+                string text = dgvMenuName.Rows[dgvMenuName.CurrentRow.Index].Cells[0].Value.ToString();
                 filterNameMenuAndDelete(text);
                 loadNameMenu();
-            }
-        }
-
-        private async void dgvMenuName_Click(object sender, EventArgs e)
-        {
-            string text = dgvMenuName.CurrentCell.Value.ToString();
-            lblDetalleMenu.Text = text + ": Contenido";
-            string URL = "https://binarysystem.pythonanywhere.com/api/filterMenu/?name=" + text;
-            var response = await client.GetAsync(URL);
-
-            if (response.IsSuccessStatusCode)
-            {
-                var content = await response.Content.ReadAsStringAsync();
-                var detalleProducto = JsonSerializer.Deserialize<MenuGet>(content);
-                loadDgvDetalleProducts(detalleProducto);
             }
         }
 
@@ -107,8 +77,32 @@ namespace Application_Sentidos.Roles.Chef
 
         private void bttModificarMenu_Click(object sender, EventArgs e)
         {
-            Modificar modificarMenu = new Modificar(dgvMenuName.CurrentCell.Value.ToString());
+            Modificar modificarMenu = new Modificar(dgvMenuName.Rows[dgvMenuName.CurrentRow.Index].Cells[0].Value.ToString());
             modificarMenu.ShowDialog();
+        }
+
+        private async void dgvMenuName_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if(e.ColumnIndex == 1)
+            {
+                string text = dgvMenuName.Rows[dgvMenuName.CurrentRow.Index].Cells[0].Value.ToString();
+                lblDetalleMenu.Text = text + ": Contenido";
+                string URL = "https://binarysystem.pythonanywhere.com/api/filterMenu/?name=" + text;
+                var response = await client.GetAsync(URL);
+
+                if (response.IsSuccessStatusCode)
+                {
+                    var content = await response.Content.ReadAsStringAsync();
+                    var detalleProducto = JsonSerializer.Deserialize<MenuGet>(content);
+                    loadDgvDetalleProducts(detalleProducto);
+                }
+            }
+        }
+
+        private void bttRefrescar_Click(object sender, EventArgs e)
+        {
+            loadNameMenu();
+            emptyDgv(dgvDetalleMenu);
         }
     }
 }

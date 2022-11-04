@@ -27,9 +27,7 @@ namespace Application_Sentidos.Roles.Chef
 
         private void bttProductos_Click(object sender, EventArgs e) => utilidades.openChildForm(new ProductosCategorias(), panelContenedor);
 
-        private void bttCategorias_Click(object sender, EventArgs e) => utilidades.openChildForm(new Categoria(), panelContenedor);
-
-        private void bttSalir_Click(object sender, EventArgs e)
+        private void bttSalir_Click_1(object sender, EventArgs e)
         {
             Login login = new Login();
             login.Show();
