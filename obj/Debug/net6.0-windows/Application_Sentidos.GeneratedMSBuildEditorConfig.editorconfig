@@ -13,8 +13,4 @@ build_property.InvariantGlobalization =
 build_property.PlatformNeutralAssembly = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = Application_Sentidos
-<<<<<<< HEAD
 build_property.ProjectDir = C:\Users\Alex Lopez\Documents\C#\Application_Sentidos\
-=======
-build_property.ProjectDir = C:\Users\alexdev\Documents\C#\Application_Sentidos\
->>>>>>> 78f065daf1151f03d3e03a97a520e7baa6fc2664

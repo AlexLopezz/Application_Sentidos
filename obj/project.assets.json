@@ -4736,16 +4736,11 @@
     ]
   },
   "packageFolders": {
-<<<<<<< HEAD
     "C:\\Users\\Alex Lopez\\.nuget\\packages\\": {}
-=======
-    "C:\\Users\\alexdev\\.nuget\\packages\\": {}
->>>>>>> 78f065daf1151f03d3e03a97a520e7baa6fc2664
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-<<<<<<< HEAD
       "projectUniqueName": "C:\\Users\\Alex Lopez\\Documents\\C#\\Application_Sentidos\\Application_Sentidos.csproj",
       "projectName": "Application_Sentidos",
       "projectPath": "C:\\Users\\Alex Lopez\\Documents\\C#\\Application_Sentidos\\Application_Sentidos.csproj",
@@ -4754,16 +4749,6 @@
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Alex Lopez\\AppData\\Roaming\\NuGet\\NuGet.Config",
-=======
-      "projectUniqueName": "C:\\Users\\alexdev\\Documents\\C#\\Application_Sentidos\\Application_Sentidos.csproj",
-      "projectName": "Application_Sentidos",
-      "projectPath": "C:\\Users\\alexdev\\Documents\\C#\\Application_Sentidos\\Application_Sentidos.csproj",
-      "packagesPath": "C:\\Users\\alexdev\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\alexdev\\Documents\\C#\\Application_Sentidos\\obj\\",
-      "projectStyle": "PackageReference",
-      "configFilePaths": [
-        "C:\\Users\\alexdev\\AppData\\Roaming\\NuGet\\NuGet.Config",
->>>>>>> 78f065daf1151f03d3e03a97a520e7baa6fc2664
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
