@@ -1,8 +1,5 @@
 C:\Users\alexdev\Documents\C#\Application_Sentidos\bin\Debug\net6.0-windows\Application_Sentidos.exe
-C:\Users\alexdev\Documents\C#\Application_Sentidos\bin\Debug\net6.0-windows\System.Net.Http.Formatting.dll
-C:\Users\alexdev\Documents\C#\Application_Sentidos\bin\Debug\net6.0-windows\System.Web.Http.dll
 C:\Users\alexdev\Documents\C#\Application_Sentidos\bin\Debug\net6.0-windows\Newtonsoft.Json.dll
-C:\Users\alexdev\Documents\C#\Application_Sentidos\bin\Debug\net6.0-windows\Newtonsoft.Json.Bson.dll
 C:\Users\alexdev\Documents\C#\Application_Sentidos\bin\Debug\net6.0-windows\RestSharp.dll
 C:\Users\alexdev\Documents\C#\Application_Sentidos\obj\Debug\net6.0-windows\Application_Sentidos.csproj.AssemblyReference.cache
 C:\Users\alexdev\Documents\C#\Application_Sentidos\obj\Debug\net6.0-windows\Application_Sentidos.Authentication.Login.resources
@@ -45,3 +42,4 @@ C:\Users\alexdev\Documents\C#\Application_Sentidos\bin\Debug\net6.0-windows\Appl
 C:\Users\alexdev\Documents\C#\Application_Sentidos\bin\Debug\net6.0-windows\es-AR\Application_Sentidos.resources.dll
 C:\Users\alexdev\Documents\C#\Application_Sentidos\obj\Debug\net6.0-windows\Application_Sentidos.genruntimeconfig.cache
 C:\Users\alexdev\Documents\C#\Application_Sentidos\obj\Debug\net6.0-windows\ref\Application_Sentidos.dll
+C:\Users\alexdev\Documents\C#\Application_Sentidos\obj\Debug\net6.0-windows\Application_Sentidos.Roles.Chef.CrearMenuNuevo.resources

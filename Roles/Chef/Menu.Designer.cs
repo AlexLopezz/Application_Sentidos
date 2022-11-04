@@ -99,7 +99,7 @@
             this.dgvMenuName.RowsDefaultCellStyle = dataGridViewCellStyle4;
             this.dgvMenuName.RowTemplate.Height = 25;
             this.dgvMenuName.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvMenuName.Size = new System.Drawing.Size(188, 278);
+            this.dgvMenuName.Size = new System.Drawing.Size(134, 278);
             this.dgvMenuName.TabIndex = 0;
             this.dgvMenuName.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvMenuName_CellClick);
             // 
@@ -154,7 +154,7 @@
             dataGridViewCellStyle8.SelectionForeColor = System.Drawing.Color.Black;
             dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dgvDetalleMenu.DefaultCellStyle = dataGridViewCellStyle8;
-            this.dgvDetalleMenu.Location = new System.Drawing.Point(287, 75);
+            this.dgvDetalleMenu.Location = new System.Drawing.Point(242, 75);
             this.dgvDetalleMenu.Name = "dgvDetalleMenu";
             this.dgvDetalleMenu.ReadOnly = true;
             dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
@@ -170,7 +170,7 @@
             this.dgvDetalleMenu.RowHeadersWidth = 100;
             this.dgvDetalleMenu.RowTemplate.Height = 75;
             this.dgvDetalleMenu.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvDetalleMenu.Size = new System.Drawing.Size(457, 278);
+            this.dgvDetalleMenu.Size = new System.Drawing.Size(485, 278);
             this.dgvDetalleMenu.TabIndex = 2;
             // 
             // Imagen_Producto
@@ -211,7 +211,7 @@
             // 
             this.lblDetalleMenu.AutoSize = true;
             this.lblDetalleMenu.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lblDetalleMenu.Location = new System.Drawing.Point(287, 57);
+            this.lblDetalleMenu.Location = new System.Drawing.Point(242, 57);
             this.lblDetalleMenu.Name = "lblDetalleMenu";
             this.lblDetalleMenu.Size = new System.Drawing.Size(82, 15);
             this.lblDetalleMenu.TabIndex = 3;
@@ -229,6 +229,7 @@
             this.bttNuevoMenu.TabIndex = 4;
             this.bttNuevoMenu.Text = "Nuevo menu";
             this.bttNuevoMenu.UseVisualStyleBackColor = false;
+            this.bttNuevoMenu.Click += new System.EventHandler(this.bttNuevoMenu_Click);
             // 
             // bttModificarMenu
             // 

@@ -18,6 +18,7 @@ namespace Application_Sentidos.Roles.Chef
         public Chef(HttpUser user)
         {
             InitializeComponent();
+            this.CenterToScreen();
             lblUser.Text = user.username;
         }
 

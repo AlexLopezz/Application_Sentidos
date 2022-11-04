@@ -1,18 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Text.Json;
-using System.Threading.Tasks;
-using System.Windows.Forms;
+﻿using System.Text.Json;
 
 namespace Application_Sentidos.Roles.Chef
 {
     public partial class Menu : Form
     {
+        CrearMenuNuevo m = new CrearMenuNuevo();
         HttpClient client = new HttpClient();
         public Menu()
         {
@@ -69,7 +61,7 @@ namespace Application_Sentidos.Roles.Chef
         }
         private async void filterNameMenuAndDelete(string text)
         {
-            var httpResponse = await client.GetAsync("https://binarysystem.pythonanywhere.com/api/findAndDeleteMenu/?name=" + text);
+            var httpResponse = await client.DeleteAsync("https://binarysystem.pythonanywhere.com/api/menuAdmin/?nameMenu=" + text);
 
             if (httpResponse.IsSuccessStatusCode)
             {
@@ -105,6 +97,12 @@ namespace Application_Sentidos.Roles.Chef
                 var detalleProducto = JsonSerializer.Deserialize<MenuGet>(content);
                 loadDgvDetalleProducts(detalleProducto);
             }
+        }
+
+        private void bttNuevoMenu_Click(object sender, EventArgs e)
+        {
+            m.ShowDialog();
+            loadNameMenu();
         }
     }
 }

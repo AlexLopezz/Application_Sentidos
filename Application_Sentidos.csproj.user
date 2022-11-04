@@ -40,6 +40,9 @@
     <Compile Update="Roles\Chef\Menu.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="Roles\Chef\CrearMenuNuevo.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="Roles\Chef\Productos.cs">
       <SubType>Form</SubType>
     </Compile>
