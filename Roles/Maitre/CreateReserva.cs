@@ -92,7 +92,6 @@ namespace Application_Sentidos.Resources.Mitre
             {
                 string[] table_selected = txtSelected_tables.Text.Split(',');
 
-
                 List<int> table = new List<int>();
 
                 for (int i = 0; i < table_selected.Length - 1; i++)
@@ -170,21 +169,33 @@ namespace Application_Sentidos.Resources.Mitre
 
         private void bttSelectUser_Click(object sender, EventArgs e)
         {
+            string user= string.Empty;
+            string id = string.Empty;
             if (listUserFilter.Items.Count != 0)
             {
-               var id = listUserFilter.SelectedItem.ToString().Substring(0,1);
+                string text = listUserFilter.SelectedItem.ToString();
+                text = text.Replace(" ", string.Empty);
+                for (int i = 0; i < text.Length; i++)
+                {
+                    if (Char.IsDigit(text[i]))
+                    {
+                        id += text[i];
+                    }
+                    else if(!text.Equals(" "))
+                    {
+                        user+= text[i];
+                    }
+                }
+                if (id.Length > 0) userSelected.id = Convert.ToInt32(id);
 
-               userSelected.id = Convert.ToInt32(id);
-                
-               txtUser.Text = listUserFilter.SelectedItem.ToString().Substring(1);
-               emptyListFilter();
-               txtBusquedaUser.Text = String.Empty;
+            txtUser.Text = user;
+            emptyListFilter();
+            txtBusquedaUser.Text = String.Empty;
             }
             else
             {
                 MessageBox.Show("No selecciono ningun usuario.");
-            }
-            
+            } 
         }
 
 

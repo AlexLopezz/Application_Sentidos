@@ -46,10 +46,13 @@
             this.label8 = new System.Windows.Forms.Label();
             this.btnPagar = new System.Windows.Forms.Button();
             this.btnCancelar = new System.Windows.Forms.Button();
-            this.dgvDetalleCaja = new System.Windows.Forms.DataGridView();
+            this.dgvDetalleCajaTarjeta = new System.Windows.Forms.DataGridView();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.txtBoxTotal = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvDetalleCaja)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvDetalleCajaTarjeta)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -116,7 +119,6 @@
             // 
             resources.ApplyResources(this.txtBoxDireccion, "txtBoxDireccion");
             this.txtBoxDireccion.Name = "txtBoxDireccion";
-            this.txtBoxDireccion.TextChanged += new System.EventHandler(this.txtBoxDireccion_TextChanged);
             // 
             // cboBoxTipoFatura
             // 
@@ -146,18 +148,47 @@
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.UseVisualStyleBackColor = true;
             // 
-            // dgvDetalleCaja
+            // dgvDetalleCajaTarjeta
             // 
-            this.dgvDetalleCaja.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            resources.ApplyResources(this.dgvDetalleCaja, "dgvDetalleCaja");
-            this.dgvDetalleCaja.Name = "dgvDetalleCaja";
-            this.dgvDetalleCaja.RowTemplate.Height = 25;
+            this.dgvDetalleCajaTarjeta.AllowUserToAddRows = false;
+            this.dgvDetalleCajaTarjeta.AllowUserToDeleteRows = false;
+            this.dgvDetalleCajaTarjeta.AllowUserToResizeColumns = false;
+            this.dgvDetalleCajaTarjeta.AllowUserToResizeRows = false;
+            this.dgvDetalleCajaTarjeta.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvDetalleCajaTarjeta.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvDetalleCajaTarjeta.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Column1,
+            this.Column2,
+            this.Column3});
+            resources.ApplyResources(this.dgvDetalleCajaTarjeta, "dgvDetalleCajaTarjeta");
+            this.dgvDetalleCajaTarjeta.Name = "dgvDetalleCajaTarjeta";
+            this.dgvDetalleCajaTarjeta.ReadOnly = true;
+            this.dgvDetalleCajaTarjeta.RowHeadersVisible = false;
+            this.dgvDetalleCajaTarjeta.RowTemplate.Height = 25;
+            // 
+            // Column1
+            // 
+            resources.ApplyResources(this.Column1, "Column1");
+            this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
+            // 
+            // Column2
+            // 
+            resources.ApplyResources(this.Column2, "Column2");
+            this.Column2.Name = "Column2";
+            this.Column2.ReadOnly = true;
+            // 
+            // Column3
+            // 
+            resources.ApplyResources(this.Column3, "Column3");
+            this.Column3.Name = "Column3";
+            this.Column3.ReadOnly = true;
             // 
             // txtBoxTotal
             // 
             this.txtBoxTotal.BackColor = System.Drawing.SystemColors.WindowFrame;
-            this.txtBoxTotal.ForeColor = System.Drawing.Color.Lime;
             resources.ApplyResources(this.txtBoxTotal, "txtBoxTotal");
+            this.txtBoxTotal.ForeColor = System.Drawing.Color.LimeGreen;
             this.txtBoxTotal.Name = "txtBoxTotal";
             // 
             // label9
@@ -174,7 +205,7 @@
             this.CancelButton = this.btnCancelar;
             this.Controls.Add(this.txtBoxTotal);
             this.Controls.Add(this.label9);
-            this.Controls.Add(this.dgvDetalleCaja);
+            this.Controls.Add(this.dgvDetalleCajaTarjeta);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.btnPagar);
             this.Controls.Add(this.label8);
@@ -195,7 +226,7 @@
             this.Cursor = System.Windows.Forms.Cursors.Hand;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Name = "Caja_Tarjetas";
-            ((System.ComponentModel.ISupportInitialize)(this.dgvDetalleCaja)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvDetalleCajaTarjeta)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -220,8 +251,11 @@
         private Label label8;
         private Button btnPagar;
         private Button btnCancelar;
-        private DataGridView dgvDetalleCaja;
+        private DataGridView dgvDetalleCajaTarjeta;
         private TextBox txtBoxTotal;
         private Label label9;
+        private DataGridViewTextBoxColumn Column1;
+        private DataGridViewTextBoxColumn Column2;
+        private DataGridViewTextBoxColumn Column3;
     }
 }

@@ -50,6 +50,7 @@
             this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgvPedidosACerrar = new System.Windows.Forms.DataGridView();
             this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -57,7 +58,6 @@
             this.txtBoxCantidad = new System.Windows.Forms.TextBox();
             this.btnNuevoPedido = new System.Windows.Forms.Button();
             this.btnCerrarMesa = new System.Windows.Forms.Button();
-            this.Column10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvProductos)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPedidoMesa)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPedidosACerrar)).BeginInit();
@@ -96,7 +96,7 @@
             this.cboBoxCategorias.Location = new System.Drawing.Point(120, 38);
             this.cboBoxCategorias.Name = "cboBoxCategorias";
             this.cboBoxCategorias.Size = new System.Drawing.Size(121, 23);
-            this.cboBoxCategorias.TabIndex = 3;
+            this.cboBoxCategorias.TabIndex = 2;
             this.cboBoxCategorias.SelectedIndexChanged += new System.EventHandler(this.cboBoxCategorias_SelectedIndexChanged);
             // 
             // btnAgregar
@@ -104,7 +104,7 @@
             this.btnAgregar.Location = new System.Drawing.Point(247, 260);
             this.btnAgregar.Name = "btnAgregar";
             this.btnAgregar.Size = new System.Drawing.Size(75, 23);
-            this.btnAgregar.TabIndex = 5;
+            this.btnAgregar.TabIndex = 4;
             this.btnAgregar.Text = "Agregar";
             this.btnAgregar.UseVisualStyleBackColor = true;
             this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
@@ -114,7 +114,7 @@
             this.btnBorrar.Location = new System.Drawing.Point(247, 309);
             this.btnBorrar.Name = "btnBorrar";
             this.btnBorrar.Size = new System.Drawing.Size(75, 23);
-            this.btnBorrar.TabIndex = 6;
+            this.btnBorrar.TabIndex = 5;
             this.btnBorrar.Text = "Borrar";
             this.btnBorrar.UseVisualStyleBackColor = true;
             this.btnBorrar.Click += new System.EventHandler(this.btnBorrar_Click);
@@ -151,7 +151,7 @@
             this.btnCargarMesa.Location = new System.Drawing.Point(537, 21);
             this.btnCargarMesa.Name = "btnCargarMesa";
             this.btnCargarMesa.Size = new System.Drawing.Size(103, 61);
-            this.btnCargarMesa.TabIndex = 14;
+            this.btnCargarMesa.TabIndex = 7;
             this.btnCargarMesa.Text = "Cargar Mesa";
             this.btnCargarMesa.UseVisualStyleBackColor = true;
             this.btnCargarMesa.Click += new System.EventHandler(this.btnCargarMesa_Click);
@@ -161,7 +161,7 @@
             this.btnModificarPedido.Location = new System.Drawing.Point(698, 21);
             this.btnModificarPedido.Name = "btnModificarPedido";
             this.btnModificarPedido.Size = new System.Drawing.Size(103, 61);
-            this.btnModificarPedido.TabIndex = 15;
+            this.btnModificarPedido.TabIndex = 8;
             this.btnModificarPedido.Text = "Modificar Mesa";
             this.btnModificarPedido.UseVisualStyleBackColor = true;
             this.btnModificarPedido.Click += new System.EventHandler(this.btnModificarPedido_Click);
@@ -177,6 +177,7 @@
             // 
             // cboBoxMesas
             // 
+            this.cboBoxMesas.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboBoxMesas.FormattingEnabled = true;
             this.cboBoxMesas.Items.AddRange(new object[] {
             "1",
@@ -202,7 +203,7 @@
             this.cboBoxMesas.Location = new System.Drawing.Point(120, 6);
             this.cboBoxMesas.Name = "cboBoxMesas";
             this.cboBoxMesas.Size = new System.Drawing.Size(121, 23);
-            this.cboBoxMesas.TabIndex = 17;
+            this.cboBoxMesas.TabIndex = 1;
             this.cboBoxMesas.SelectedIndexChanged += new System.EventHandler(this.cboBoxMesas_SelectedIndexChanged);
             // 
             // dgvProductos
@@ -221,7 +222,7 @@
             this.dgvProductos.RowHeadersVisible = false;
             this.dgvProductos.RowTemplate.Height = 25;
             this.dgvProductos.Size = new System.Drawing.Size(229, 304);
-            this.dgvProductos.TabIndex = 18;
+            this.dgvProductos.TabIndex = 10;
             // 
             // Column1
             // 
@@ -259,7 +260,7 @@
             this.dgvPedidoMesa.RowHeadersVisible = false;
             this.dgvPedidoMesa.RowTemplate.Height = 25;
             this.dgvPedidoMesa.Size = new System.Drawing.Size(329, 304);
-            this.dgvPedidoMesa.TabIndex = 19;
+            this.dgvPedidoMesa.TabIndex = 11;
             // 
             // Column3
             // 
@@ -285,6 +286,12 @@
             this.Column6.Name = "Column6";
             this.Column6.ReadOnly = true;
             // 
+            // Column10
+            // 
+            this.Column10.HeaderText = "Cod Prod";
+            this.Column10.Name = "Column10";
+            this.Column10.ReadOnly = true;
+            // 
             // dgvPedidosACerrar
             // 
             this.dgvPedidosACerrar.AllowUserToAddRows = false;
@@ -300,7 +307,7 @@
             this.dgvPedidosACerrar.RowHeadersVisible = false;
             this.dgvPedidosACerrar.RowTemplate.Height = 25;
             this.dgvPedidosACerrar.Size = new System.Drawing.Size(287, 304);
-            this.dgvPedidosACerrar.TabIndex = 20;
+            this.dgvPedidosACerrar.TabIndex = 12;
             // 
             // Column7
             // 
@@ -328,14 +335,14 @@
             this.txtBoxCantidad.Location = new System.Drawing.Point(120, 72);
             this.txtBoxCantidad.Name = "txtBoxCantidad";
             this.txtBoxCantidad.Size = new System.Drawing.Size(121, 23);
-            this.txtBoxCantidad.TabIndex = 22;
+            this.txtBoxCantidad.TabIndex = 3;
             // 
             // btnNuevoPedido
             // 
             this.btnNuevoPedido.Location = new System.Drawing.Point(379, 21);
             this.btnNuevoPedido.Name = "btnNuevoPedido";
             this.btnNuevoPedido.Size = new System.Drawing.Size(103, 61);
-            this.btnNuevoPedido.TabIndex = 23;
+            this.btnNuevoPedido.TabIndex = 6;
             this.btnNuevoPedido.Text = "Nuevo";
             this.btnNuevoPedido.UseVisualStyleBackColor = true;
             this.btnNuevoPedido.Click += new System.EventHandler(this.btnNuevoPedido_Click);
@@ -345,16 +352,10 @@
             this.btnCerrarMesa.Location = new System.Drawing.Point(847, 21);
             this.btnCerrarMesa.Name = "btnCerrarMesa";
             this.btnCerrarMesa.Size = new System.Drawing.Size(103, 61);
-            this.btnCerrarMesa.TabIndex = 24;
+            this.btnCerrarMesa.TabIndex = 9;
             this.btnCerrarMesa.Text = "Cerrar Mesa";
             this.btnCerrarMesa.UseVisualStyleBackColor = true;
             this.btnCerrarMesa.Click += new System.EventHandler(this.btnCerrarMesa_Click_1);
-            // 
-            // Column10
-            // 
-            this.Column10.HeaderText = "Cod Prod";
-            this.Column10.Name = "Column10";
-            this.Column10.ReadOnly = true;
             // 
             // Mozo
             // 

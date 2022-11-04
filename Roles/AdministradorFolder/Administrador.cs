@@ -54,5 +54,8 @@ namespace Application_Sentidos.Roles
         }
 
         private void bttConsultas_Click(object sender, EventArgs e) => utilidades.openChildForm(new ContactForm(), panelContenedor);
+
+        private void bttFacturas_Click(object sender, EventArgs e) => utilidades.openChildForm(new Factura(), panelContenedor);
+
     }
 }

@@ -30,36 +30,30 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Maitre));
             this.panelContenedor = new System.Windows.Forms.Panel();
-            this.panel3 = new System.Windows.Forms.Panel();
             this.panelLateralIzquierdo = new System.Windows.Forms.Panel();
             this.panelSalir = new System.Windows.Forms.Panel();
             this.bttSalir = new System.Windows.Forms.Button();
-            this.panel2 = new System.Windows.Forms.Panel();
             this.bttReservas = new System.Windows.Forms.Button();
-            this.bttMisDatos = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.lblUser = new System.Windows.Forms.Label();
             this.lblBienvenido = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.panelContenedor.SuspendLayout();
             this.panelLateralIzquierdo.SuspendLayout();
             this.panelSalir.SuspendLayout();
-            this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // panelContenedor
             // 
-            this.panelContenedor.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            this.panelContenedor.Controls.Add(this.panel3);
-            this.panelContenedor.Controls.Add(this.panelLateralIzquierdo);
+            this.panelContenedor.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
             this.panelContenedor.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelContenedor.Location = new System.Drawing.Point(0, 0);
+            this.panelContenedor.Location = new System.Drawing.Point(266, 0);
             this.panelContenedor.Name = "panelContenedor";
-            this.panelContenedor.Size = new System.Drawing.Size(784, 411);
+            this.panelContenedor.Size = new System.Drawing.Size(825, 419);
             this.panelContenedor.TabIndex = 0;
             // 
+<<<<<<< HEAD
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
@@ -69,25 +63,27 @@
             this.panel3.Size = new System.Drawing.Size(586, 411);
             this.panel3.TabIndex = 1;
             // 
+=======
+>>>>>>> 16ed0ef5715b47e4749cfc13dadc5c1c70912d8a
             // panelLateralIzquierdo
             // 
             this.panelLateralIzquierdo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.panelLateralIzquierdo.Controls.Add(this.bttReservas);
             this.panelLateralIzquierdo.Controls.Add(this.panelSalir);
-            this.panelLateralIzquierdo.Controls.Add(this.panel2);
             this.panelLateralIzquierdo.Controls.Add(this.panel1);
             this.panelLateralIzquierdo.Dock = System.Windows.Forms.DockStyle.Left;
             this.panelLateralIzquierdo.Location = new System.Drawing.Point(0, 0);
             this.panelLateralIzquierdo.Name = "panelLateralIzquierdo";
-            this.panelLateralIzquierdo.Size = new System.Drawing.Size(198, 411);
+            this.panelLateralIzquierdo.Size = new System.Drawing.Size(266, 419);
             this.panelLateralIzquierdo.TabIndex = 0;
             // 
             // panelSalir
             // 
             this.panelSalir.Controls.Add(this.bttSalir);
             this.panelSalir.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panelSalir.Location = new System.Drawing.Point(0, 362);
+            this.panelSalir.Location = new System.Drawing.Point(0, 370);
             this.panelSalir.Name = "panelSalir";
-            this.panelSalir.Size = new System.Drawing.Size(198, 49);
+            this.panelSalir.Size = new System.Drawing.Size(266, 49);
             this.panelSalir.TabIndex = 2;
             // 
             // bttSalir
@@ -102,20 +98,11 @@
             this.bttSalir.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.bttSalir.Location = new System.Drawing.Point(0, 0);
             this.bttSalir.Name = "bttSalir";
-            this.bttSalir.Size = new System.Drawing.Size(198, 49);
+            this.bttSalir.Size = new System.Drawing.Size(266, 49);
             this.bttSalir.TabIndex = 2;
             this.bttSalir.Text = "SALIR";
             this.bttSalir.UseVisualStyleBackColor = false;
             this.bttSalir.Click += new System.EventHandler(this.bttSalir_Click);
-            // 
-            // panel2
-            // 
-            this.panel2.Controls.Add(this.bttReservas);
-            this.panel2.Controls.Add(this.bttMisDatos);
-            this.panel2.Location = new System.Drawing.Point(3, 138);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(194, 134);
-            this.panel2.TabIndex = 1;
             // 
             // bttReservas
             // 
@@ -129,29 +116,11 @@
             this.bttReservas.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.bttReservas.Location = new System.Drawing.Point(0, 68);
             this.bttReservas.Name = "bttReservas";
-            this.bttReservas.Size = new System.Drawing.Size(194, 66);
+            this.bttReservas.Size = new System.Drawing.Size(266, 72);
             this.bttReservas.TabIndex = 1;
             this.bttReservas.Text = "RESERVAS";
             this.bttReservas.UseVisualStyleBackColor = false;
             this.bttReservas.Click += new System.EventHandler(this.bttReservas_Click);
-            // 
-            // bttMisDatos
-            // 
-            this.bttMisDatos.BackColor = System.Drawing.Color.Gray;
-            this.bttMisDatos.Dock = System.Windows.Forms.DockStyle.Top;
-            this.bttMisDatos.FlatAppearance.BorderSize = 0;
-            this.bttMisDatos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.bttMisDatos.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.bttMisDatos.ForeColor = System.Drawing.Color.White;
-            this.bttMisDatos.Image = ((System.Drawing.Image)(resources.GetObject("bttMisDatos.Image")));
-            this.bttMisDatos.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.bttMisDatos.Location = new System.Drawing.Point(0, 0);
-            this.bttMisDatos.Name = "bttMisDatos";
-            this.bttMisDatos.Size = new System.Drawing.Size(194, 68);
-            this.bttMisDatos.TabIndex = 0;
-            this.bttMisDatos.Text = "MIS DATOS";
-            this.bttMisDatos.UseVisualStyleBackColor = false;
-            this.bttMisDatos.Click += new System.EventHandler(this.bttMisDatos_Click);
             // 
             // panel1
             // 
@@ -161,7 +130,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(198, 68);
+            this.panel1.Size = new System.Drawing.Size(266, 68);
             this.panel1.TabIndex = 0;
             // 
             // lblUser
@@ -169,7 +138,7 @@
             this.lblUser.AutoSize = true;
             this.lblUser.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.lblUser.ForeColor = System.Drawing.Color.White;
-            this.lblUser.Location = new System.Drawing.Point(111, 21);
+            this.lblUser.Location = new System.Drawing.Point(88, 21);
             this.lblUser.Name = "lblUser";
             this.lblUser.Size = new System.Drawing.Size(89, 21);
             this.lblUser.TabIndex = 2;
@@ -200,17 +169,16 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(784, 411);
+            this.ClientSize = new System.Drawing.Size(1091, 419);
             this.Controls.Add(this.panelContenedor);
+            this.Controls.Add(this.panelLateralIzquierdo);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Name = "Maitre";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Maitre";
             this.Load += new System.EventHandler(this.Maitre_Load);
-            this.panelContenedor.ResumeLayout(false);
             this.panelLateralIzquierdo.ResumeLayout(false);
             this.panelSalir.ResumeLayout(false);
-            this.panel2.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -221,13 +189,10 @@
         #endregion
 
         private Panel panelContenedor;
-        private Panel panel3;
         private Panel panelLateralIzquierdo;
         private Panel panelSalir;
         private Button bttSalir;
-        private Panel panel2;
         private Button bttReservas;
-        private Button bttMisDatos;
         private Panel panel1;
         private Label lblUser;
         private Label lblBienvenido;

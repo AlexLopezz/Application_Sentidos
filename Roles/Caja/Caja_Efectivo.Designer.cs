@@ -28,7 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dgvDetallesPedidoIndividual = new System.Windows.Forms.DataGridView();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -38,17 +41,46 @@
             this.btnPagar = new System.Windows.Forms.Button();
             this.btnCancelar = new System.Windows.Forms.Button();
             this.txtBoxVuelto = new System.Windows.Forms.TextBox();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvDetallesPedidoIndividual)).BeginInit();
             this.SuspendLayout();
             // 
-            // dataGridView1
+            // dgvDetallesPedidoIndividual
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(12, 67);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowTemplate.Height = 25;
-            this.dataGridView1.Size = new System.Drawing.Size(240, 322);
-            this.dataGridView1.TabIndex = 0;
+            this.dgvDetallesPedidoIndividual.AllowUserToAddRows = false;
+            this.dgvDetallesPedidoIndividual.AllowUserToDeleteRows = false;
+            this.dgvDetallesPedidoIndividual.AllowUserToResizeColumns = false;
+            this.dgvDetallesPedidoIndividual.AllowUserToResizeRows = false;
+            this.dgvDetallesPedidoIndividual.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvDetallesPedidoIndividual.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvDetallesPedidoIndividual.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Column1,
+            this.Column2,
+            this.Column3});
+            this.dgvDetallesPedidoIndividual.Location = new System.Drawing.Point(12, 67);
+            this.dgvDetallesPedidoIndividual.Name = "dgvDetallesPedidoIndividual";
+            this.dgvDetallesPedidoIndividual.ReadOnly = true;
+            this.dgvDetallesPedidoIndividual.RowHeadersVisible = false;
+            this.dgvDetallesPedidoIndividual.RowTemplate.Height = 25;
+            this.dgvDetallesPedidoIndividual.Size = new System.Drawing.Size(343, 322);
+            this.dgvDetallesPedidoIndividual.TabIndex = 0;
+            // 
+            // Column1
+            // 
+            this.Column1.HeaderText = "Producto";
+            this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
+            // 
+            // Column2
+            // 
+            this.Column2.HeaderText = "Cantidad";
+            this.Column2.Name = "Column2";
+            this.Column2.ReadOnly = true;
+            // 
+            // Column3
+            // 
+            this.Column3.HeaderText = "Total";
+            this.Column3.Name = "Column3";
+            this.Column3.ReadOnly = true;
             // 
             // label1
             // 
@@ -64,7 +96,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label2.Location = new System.Drawing.Point(256, 278);
+            this.label2.Location = new System.Drawing.Point(361, 278);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(75, 20);
             this.label2.TabIndex = 2;
@@ -74,7 +106,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label3.Location = new System.Drawing.Point(256, 328);
+            this.label3.Location = new System.Drawing.Point(361, 328);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(64, 20);
             this.label3.TabIndex = 3;
@@ -83,33 +115,35 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label4.Location = new System.Drawing.Point(61, 432);
+            this.label4.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label4.Location = new System.Drawing.Point(72, 419);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(50, 20);
+            this.label4.Size = new System.Drawing.Size(64, 23);
             this.label4.TabIndex = 4;
             this.label4.Text = "TOTAL";
             // 
             // txtBoxTotalItems
             // 
             this.txtBoxTotalItems.BackColor = System.Drawing.SystemColors.WindowFrame;
-            this.txtBoxTotalItems.ForeColor = System.Drawing.Color.Lime;
-            this.txtBoxTotalItems.Location = new System.Drawing.Point(142, 412);
-            this.txtBoxTotalItems.Multiline = true;
+            this.txtBoxTotalItems.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.txtBoxTotalItems.ForeColor = System.Drawing.Color.LimeGreen;
+            this.txtBoxTotalItems.Location = new System.Drawing.Point(142, 409);
             this.txtBoxTotalItems.Name = "txtBoxTotalItems";
-            this.txtBoxTotalItems.Size = new System.Drawing.Size(112, 39);
+            this.txtBoxTotalItems.Size = new System.Drawing.Size(112, 33);
             this.txtBoxTotalItems.TabIndex = 5;
+            this.txtBoxTotalItems.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // txtBoxIngreso
             // 
-            this.txtBoxIngreso.Location = new System.Drawing.Point(337, 275);
+            this.txtBoxIngreso.Location = new System.Drawing.Point(442, 275);
             this.txtBoxIngreso.Name = "txtBoxIngreso";
             this.txtBoxIngreso.Size = new System.Drawing.Size(112, 22);
             this.txtBoxIngreso.TabIndex = 3;
+            this.txtBoxIngreso.TextChanged += new System.EventHandler(this.txtBoxIngreso_TextChanged);
             // 
             // btnPagar
             // 
-            this.btnPagar.Location = new System.Drawing.Point(337, 67);
+            this.btnPagar.Location = new System.Drawing.Point(442, 67);
             this.btnPagar.Name = "btnPagar";
             this.btnPagar.Size = new System.Drawing.Size(112, 44);
             this.btnPagar.TabIndex = 1;
@@ -119,7 +153,7 @@
             // 
             // btnCancelar
             // 
-            this.btnCancelar.Location = new System.Drawing.Point(337, 133);
+            this.btnCancelar.Location = new System.Drawing.Point(442, 133);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(112, 44);
             this.btnCancelar.TabIndex = 2;
@@ -130,19 +164,20 @@
             // txtBoxVuelto
             // 
             this.txtBoxVuelto.BackColor = System.Drawing.SystemColors.WindowFrame;
-            this.txtBoxVuelto.ForeColor = System.Drawing.Color.Lime;
-            this.txtBoxVuelto.Location = new System.Drawing.Point(337, 319);
-            this.txtBoxVuelto.Multiline = true;
+            this.txtBoxVuelto.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.txtBoxVuelto.ForeColor = System.Drawing.Color.LimeGreen;
+            this.txtBoxVuelto.Location = new System.Drawing.Point(442, 321);
             this.txtBoxVuelto.Name = "txtBoxVuelto";
-            this.txtBoxVuelto.Size = new System.Drawing.Size(112, 39);
+            this.txtBoxVuelto.Size = new System.Drawing.Size(112, 33);
             this.txtBoxVuelto.TabIndex = 10;
+            this.txtBoxVuelto.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // Caja_Efectivo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.ClientSize = new System.Drawing.Size(461, 461);
+            this.ClientSize = new System.Drawing.Size(566, 461);
             this.Controls.Add(this.txtBoxVuelto);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.btnPagar);
@@ -152,12 +187,12 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.dgvDetallesPedidoIndividual);
             this.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Name = "Caja_Efectivo";
             this.Text = "CAJA EFECTIVO";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvDetallesPedidoIndividual)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -165,7 +200,7 @@
 
         #endregion
 
-        private DataGridView dataGridView1;
+        private DataGridView dgvDetallesPedidoIndividual;
         private Label label1;
         private Label label2;
         private Label label3;
@@ -175,5 +210,8 @@
         private Button btnPagar;
         private Button btnCancelar;
         private TextBox txtBoxVuelto;
+        private DataGridViewTextBoxColumn Column1;
+        private DataGridViewTextBoxColumn Column2;
+        private DataGridViewTextBoxColumn Column3;
     }
 }

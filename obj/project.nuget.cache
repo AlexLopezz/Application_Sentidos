@@ -1,9 +1,14 @@
 {
   "version": 2,
+<<<<<<< HEAD
   "dgSpecHash": "K/HbQiNaM1RdE5YXWsd1SjGLA3dwMWHkZ1RJJALrGoFUcJo4W5GUn+gAZ88usYLqDTOSESonhks4ERNoogPgow==",
+=======
+  "dgSpecHash": "GoH1R/ThOOVx8hPawaDMfEfr4y4+xPKaSevObNURf/ovJ4cUxwXScJweXjeAZRfVQjjGNtjAKvgqHfaXBkoLGg==",
+>>>>>>> 16ed0ef5715b47e4749cfc13dadc5c1c70912d8a
   "success": true,
   "projectFilePath": "C:\\Users\\Alex Lopez\\Documents\\C#\\Application_Sentidos\\Application_Sentidos.csproj",
   "expectedPackageFiles": [
+<<<<<<< HEAD
     "C:\\Users\\Alex Lopez\\.nuget\\packages\\microsoft.aspnet.webapi.client\\5.2.9\\microsoft.aspnet.webapi.client.5.2.9.nupkg.sha512",
     "C:\\Users\\Alex Lopez\\.nuget\\packages\\microsoft.aspnet.webapi.core\\5.2.9\\microsoft.aspnet.webapi.core.5.2.9.nupkg.sha512",
     "C:\\Users\\Alex Lopez\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
@@ -95,4 +100,10 @@
       ]
     }
   ]
+=======
+    "C:\\Users\\alexdev\\.nuget\\packages\\newtonsoft.json\\13.0.1\\newtonsoft.json.13.0.1.nupkg.sha512",
+    "C:\\Users\\alexdev\\.nuget\\packages\\restsharp\\108.0.2\\restsharp.108.0.2.nupkg.sha512"
+  ],
+  "logs": []
+>>>>>>> 16ed0ef5715b47e4749cfc13dadc5c1c70912d8a
 }

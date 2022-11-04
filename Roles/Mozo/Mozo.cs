@@ -168,29 +168,58 @@ namespace Application_Sentidos.Roles
             {
                 MessageBox.Show("Debe generar un pedido antes de cargarlo", "Carga de Pedido Requerida");
             }
-            else
+            else if (dgvPedidosACerrar.Rows.Count == 0)
             {
-                foreach (DataGridViewRow row in dgvPedidoMesa.Rows)
+                foreach (DataGridViewRow row1 in dgvPedidoMesa.Rows)
                 {
-                    total += (double)row.Cells[3].Value;
+                    total += (double)row1.Cells[3].Value;
                 }
                 dgvPedidosACerrar.Rows.Add(cboBoxMesas.Text, total);
 
 
-                foreach (DataGridViewRow row in dgvPedidoMesa.Rows)
+                foreach (DataGridViewRow row2 in dgvPedidoMesa.Rows)
                 {
                     Productos prod = new Productos();
-                    prod.id = Convert.ToInt32(row.Cells[4].Value);
+                    prod.id = Convert.ToInt32(row2.Cells[4].Value);
                     prod.numMesa = int.Parse(cboBoxMesas.Text);
-                    prod.name = row.Cells[0].Value.ToString();
-                    prod.quantity = Convert.ToInt32(row.Cells[1].Value);
-                    prod.price = (double)row.Cells[2].Value;
-                    prod.totalProducto = (double)row.Cells[3].Value;
+                    prod.name = row2.Cells[0].Value.ToString();
+                    prod.quantity = Convert.ToInt32(row2.Cells[1].Value);
+                    prod.price = (double)row2.Cells[2].Value;
+                    prod.totalProducto = (double)row2.Cells[3].Value;
                     listaProductos.Add(prod);
-                }
-                dgvPedidoMesa.Rows.Clear();
-            }
+                }                
+            }else
+            {
+                foreach (DataGridViewRow row in dgvPedidosACerrar.Rows)
+                {
+                    if (row.Cells[0].Value.ToString() == cboBoxMesas.Text)
+                    {
+                        MessageBox.Show("Ya existe un pedido con el mismo numero de mesa, por favor modifíquelo", "Numero de mesa existente");
+                    }
+                    else
+                    {
+                        foreach (DataGridViewRow row1 in dgvPedidoMesa.Rows)
+                        {
+                            total += (double)row1.Cells[3].Value;
+                        }
+                        dgvPedidosACerrar.Rows.Add(cboBoxMesas.Text, total);
 
+
+                        foreach (DataGridViewRow row2 in dgvPedidoMesa.Rows)
+                        {
+                            Productos prod = new Productos();
+                            prod.id = Convert.ToInt32(row2.Cells[4].Value);
+                            prod.numMesa = int.Parse(cboBoxMesas.Text);
+                            prod.name = row2.Cells[0].Value.ToString();
+                            prod.quantity = Convert.ToInt32(row2.Cells[1].Value);
+                            prod.price = (double)row2.Cells[2].Value;
+                            prod.totalProducto = (double)row2.Cells[3].Value;
+                            listaProductos.Add(prod);
+                        }
+                    }
+                }
+            }
+            dgvPedidoMesa.Rows.Clear();
         }
         private void btnNuevoPedido_Click(object sender, EventArgs e)
         {
@@ -203,7 +232,6 @@ namespace Application_Sentidos.Roles
         }
         private async void btnCerrarMesa_Click_1(object sender, EventArgs e)
         {
-
             List<Products> listaProducts = new List<Products>();
             string url = "https://binarysystem.pythonanywhere.com/api/orderPost/";
             var client = new HttpClient();
@@ -232,7 +260,9 @@ namespace Application_Sentidos.Roles
 
             if (httpResponse.IsSuccessStatusCode)
             {
+                var result = await httpResponse.Content.ReadAsStringAsync();
                 MessageBox.Show("Pedido cerrado con exito", "Sentidos Restaurant & Casa de Té");
+                dgvPedidosACerrar.Rows.RemoveAt(dgvPedidosACerrar.CurrentRow.Index);
             }
         }
         private void Mozo_Load(object sender, EventArgs e)

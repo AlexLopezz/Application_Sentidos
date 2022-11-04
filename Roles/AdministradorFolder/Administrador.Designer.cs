@@ -33,7 +33,7 @@
             this.panelContenedorOpciones = new System.Windows.Forms.Panel();
             this.bttConsultas = new System.Windows.Forms.Button();
             this.bttReservas = new System.Windows.Forms.Button();
-            this.bttMisDatos = new System.Windows.Forms.Button();
+            this.bttFacturas = new System.Windows.Forms.Button();
             this.bttUsuarios = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
@@ -66,19 +66,19 @@
             this.panelMenuLateral.ForeColor = System.Drawing.Color.White;
             this.panelMenuLateral.Location = new System.Drawing.Point(0, 0);
             this.panelMenuLateral.Name = "panelMenuLateral";
-            this.panelMenuLateral.Size = new System.Drawing.Size(266, 425);
+            this.panelMenuLateral.Size = new System.Drawing.Size(266, 420);
             this.panelMenuLateral.TabIndex = 3;
             // 
             // panelContenedorOpciones
             // 
             this.panelContenedorOpciones.Controls.Add(this.bttConsultas);
             this.panelContenedorOpciones.Controls.Add(this.bttReservas);
-            this.panelContenedorOpciones.Controls.Add(this.bttMisDatos);
+            this.panelContenedorOpciones.Controls.Add(this.bttFacturas);
             this.panelContenedorOpciones.Controls.Add(this.bttUsuarios);
             this.panelContenedorOpciones.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelContenedorOpciones.Location = new System.Drawing.Point(0, 87);
             this.panelContenedorOpciones.Name = "panelContenedorOpciones";
-            this.panelContenedorOpciones.Size = new System.Drawing.Size(266, 253);
+            this.panelContenedorOpciones.Size = new System.Drawing.Size(266, 264);
             this.panelContenedorOpciones.TabIndex = 7;
             // 
             // bttConsultas
@@ -120,24 +120,25 @@
             this.bttReservas.UseVisualStyleBackColor = false;
             this.bttReservas.Click += new System.EventHandler(this.bttReservas_Click);
             // 
-            // bttMisDatos
+            // bttFacturas
             // 
-            this.bttMisDatos.BackColor = System.Drawing.SystemColors.GrayText;
-            this.bttMisDatos.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.bttMisDatos.FlatAppearance.BorderSize = 0;
-            this.bttMisDatos.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Black;
-            this.bttMisDatos.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.GrayText;
-            this.bttMisDatos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.bttMisDatos.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.bttMisDatos.ForeColor = System.Drawing.Color.Transparent;
-            this.bttMisDatos.Image = ((System.Drawing.Image)(resources.GetObject("bttMisDatos.Image")));
-            this.bttMisDatos.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.bttMisDatos.Location = new System.Drawing.Point(3, 7);
-            this.bttMisDatos.Name = "bttMisDatos";
-            this.bttMisDatos.Size = new System.Drawing.Size(263, 53);
-            this.bttMisDatos.TabIndex = 3;
-            this.bttMisDatos.Text = "MIS DATOS";
-            this.bttMisDatos.UseVisualStyleBackColor = false;
+            this.bttFacturas.BackColor = System.Drawing.SystemColors.GrayText;
+            this.bttFacturas.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.bttFacturas.FlatAppearance.BorderSize = 0;
+            this.bttFacturas.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Black;
+            this.bttFacturas.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.GrayText;
+            this.bttFacturas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.bttFacturas.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.bttFacturas.ForeColor = System.Drawing.Color.Transparent;
+            this.bttFacturas.Image = ((System.Drawing.Image)(resources.GetObject("bttFacturas.Image")));
+            this.bttFacturas.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.bttFacturas.Location = new System.Drawing.Point(3, 7);
+            this.bttFacturas.Name = "bttFacturas";
+            this.bttFacturas.Size = new System.Drawing.Size(263, 53);
+            this.bttFacturas.TabIndex = 3;
+            this.bttFacturas.Text = "FACTURAS";
+            this.bttFacturas.UseVisualStyleBackColor = false;
+            this.bttFacturas.Click += new System.EventHandler(this.bttFacturas_Click);
             // 
             // bttUsuarios
             // 
@@ -163,7 +164,7 @@
             // 
             this.panel2.Controls.Add(this.panel3);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel2.Location = new System.Drawing.Point(0, 376);
+            this.panel2.Location = new System.Drawing.Point(0, 371);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(266, 49);
             this.panel2.TabIndex = 5;
@@ -249,7 +250,7 @@
             this.panelContenedor.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelContenedor.Location = new System.Drawing.Point(266, 0);
             this.panelContenedor.Name = "panelContenedor";
-            this.panelContenedor.Size = new System.Drawing.Size(825, 425);
+            this.panelContenedor.Size = new System.Drawing.Size(825, 420);
             this.panelContenedor.TabIndex = 4;
             // 
             // pictureBox2
@@ -276,7 +277,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1091, 425);
+            this.ClientSize = new System.Drawing.Size(1091, 420);
             this.Controls.Add(this.panelContenedor);
             this.Controls.Add(this.panelMenuLateral);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
@@ -303,7 +304,7 @@
         private Button bttConsultas;
         private Button bttReservas;
         private Button bttUsuarios;
-        private Button bttMisDatos;
+        private Button bttFacturas;
         private Panel panel2;
         private Panel panel3;
         private Button bttSalir;

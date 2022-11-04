@@ -10,6 +10,8 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Application_Sentidos.Resources.Objects;
 using Application_Sentidos.Roles;
+using Application_Sentidos.Roles.Chef;
+
 namespace Application_Sentidos.Authentication
 {
     public partial class Login : Form
@@ -70,6 +72,11 @@ namespace Application_Sentidos.Authentication
                             this.Hide();
                             Caja caja = new Caja(user);
                             caja.ShowDialog();
+                            break;
+                        case "Chef":
+                            this.Hide();
+                            Chef chef = new Chef(user);
+                            chef.ShowDialog();
                             break;
                         default:
                             MessageBox.Show("No tiene autorizacion para entrar al sistema.");

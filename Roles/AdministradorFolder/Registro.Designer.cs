@@ -125,7 +125,8 @@
             "Maitre",
             "Mozo",
             "Caja",
-            "Usuario"});
+            "Usuario",
+            "Chef"});
             this.cboRoles.Location = new System.Drawing.Point(111, 313);
             this.cboRoles.Name = "cboRoles";
             this.cboRoles.Size = new System.Drawing.Size(160, 23);
@@ -135,7 +136,6 @@
             // 
             this.txtVerifyPassword.Location = new System.Drawing.Point(111, 268);
             this.txtVerifyPassword.Name = "txtVerifyPassword";
-            this.txtVerifyPassword.PasswordChar = '*';
             this.txtVerifyPassword.Size = new System.Drawing.Size(160, 21);
             this.txtVerifyPassword.TabIndex = 12;
             // 
@@ -155,7 +155,6 @@
             // 
             this.txtPassword.Location = new System.Drawing.Point(111, 223);
             this.txtPassword.Name = "txtPassword";
-            this.txtPassword.PasswordChar = '*';
             this.txtPassword.Size = new System.Drawing.Size(160, 21);
             this.txtPassword.TabIndex = 10;
             // 
