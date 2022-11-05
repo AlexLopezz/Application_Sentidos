@@ -10,5 +10,10 @@ namespace Application_Sentidos.Roles.Chef
     {
         public int id { get; set; }
         public string name{ get; set; }
+    }    
+    public class CategoriesPOST
+    {
+        public string name{ get; set; }
     }
+    
 }

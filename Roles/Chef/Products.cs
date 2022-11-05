@@ -19,5 +19,12 @@ namespace Application_Sentidos.Roles.Chef
         public string description { get; set; }
         public double price { get; set; }
         public string img { get; set; }
+    }public class ProductPOST
+    {
+        public string name { get; set; }
+        public string description { get; set; }
+        public double price { get; set; }
+        public string img { get; set; }
+        public List<int> category { get; set; }
     }
 }
