@@ -43,5 +43,5 @@ C:\Users\Alex Lopez\Documents\C#\Application_Sentidos\obj\Debug\net6.0-windows\r
 C:\Users\Alex Lopez\Documents\C#\Application_Sentidos\obj\Debug\net6.0-windows\Application_Sentidos.pdb
 C:\Users\Alex Lopez\Documents\C#\Application_Sentidos\obj\Debug\net6.0-windows\Application_Sentidos.genruntimeconfig.cache
 C:\Users\Alex Lopez\Documents\C#\Application_Sentidos\obj\Debug\net6.0-windows\ref\Application_Sentidos.dll
-C:\Users\Alex Lopez\Documents\C#\Application_Sentidos\obj\Debug\net6.0-windows\Application_Sentidos.Roles.Chef.CrearProducto.resources
 C:\Users\Alex Lopez\Documents\C#\Application_Sentidos\obj\Debug\net6.0-windows\Application_Sentidos.Roles.Chef.CategoriaAgregar_Modificar.resources
+C:\Users\Alex Lopez\Documents\C#\Application_Sentidos\obj\Debug\net6.0-windows\Application_Sentidos.Roles.Chef.CrearModificarProducto.resources

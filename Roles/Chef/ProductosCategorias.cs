@@ -13,9 +13,9 @@ namespace Application_Sentidos.Roles.Chef
 {
     public partial class ProductosCategorias : Form
     {
-
+       
         HttpClient client = new HttpClient();
-        CrearProducto producto = new CrearProducto();
+
         public ProductosCategorias()
         {
             InitializeComponent();
@@ -86,6 +86,7 @@ namespace Application_Sentidos.Roles.Chef
 
         private void bttAgregarProducto_Click(object sender, EventArgs e)
         {
+            CrearModificarProducto producto = new CrearModificarProducto("Crear producto");
             producto.ShowDialog();
             loadDgvCategoria();
             loadDgvProductos();
@@ -145,6 +146,12 @@ namespace Application_Sentidos.Roles.Chef
             {
                 MessageBox.Show("Hubo un error de conexion.");
             }
+        }
+
+        private void bttModificarProducto_Click(object sender, EventArgs e)
+        {
+            CrearModificarProducto crearModificar = new CrearModificarProducto("Modificar producto", dgvProductos.CurrentRow.Cells[1].Value.ToString());
+            crearModificar.ShowDialog();
         }
     }
 }

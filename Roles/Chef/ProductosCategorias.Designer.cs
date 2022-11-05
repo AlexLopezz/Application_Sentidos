@@ -127,6 +127,7 @@
             this.bttModificarProducto.TabIndex = 7;
             this.bttModificarProducto.Text = "Modificar Producto";
             this.bttModificarProducto.UseVisualStyleBackColor = false;
+            this.bttModificarProducto.Click += new System.EventHandler(this.bttModificarProducto_Click);
             // 
             // bttEliminarProducto
             // 
