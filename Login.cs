@@ -54,22 +54,22 @@ namespace Application_Sentidos.Authentication
                         case "Administrador":
                             this.Hide();
                             Administrador myAdmin = new Administrador(user);
-                            myAdmin.ShowDialog();
+                            myAdmin.Show();
                             break;
                         case "Maitre":
                             this.Hide();
                             Maitre maitre = new Maitre(user);
-                            maitre.ShowDialog();
+                            maitre.Show();
                             break;
                         case "Mozo":
                             this.Hide();
                             Mozo mozo = new Mozo(user);
-                            mozo.ShowDialog();
+                            mozo.Show();
                             break;
                         case "Caja":
                             this.Hide();
                             Caja caja = new Caja(user);
-                            caja.ShowDialog();
+                            caja.Show();
                             break;
                         default:
                             MessageBox.Show("No tiene autorizacion para entrar al sistema.");

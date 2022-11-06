@@ -16,21 +16,31 @@ namespace Application_Sentidos.Roles
         double totalFactura = 0;
         public int numeroOrden { get; set; }
         public int numeroMesa { get; set; }
-        public Caja_Tarjetas(int numero)
+        public int tarjeta { get; set; }
+
+        public Caja_Tarjetas(int numero, int method_payment, int mesa)
         {
+            tarjeta = method_payment;
             numeroOrden = numero;
-            numeroMesa = numero;
+            numeroMesa = mesa;
             InitializeComponent();
             DetailOrder(numero);
         }
 
         private void btnPagar_Click(object sender, EventArgs e)
-        {
-            //Imprimir ticket o factura
-            //metodo put => enviar id order + pay = true
-            //para la factura
-            //string urlFactura = "https://binarysystem.pythonanywhere.com/api/checking_invoice/";
-            ModifyOrder(numeroOrden);
+        {            
+            if(cboBoxTipoFatura.Text == "" || txtBoxNombre.Text == "" || txtBoxApellido.Text == "" || 
+                txtNumTarjeta.Text == "" || txtBoxCodTarjeta.Text == "" || txtBoxDireccion.Text == "" || 
+                txtBoxTelefono.Text == "")
+            {
+                MessageBox.Show("Todos los campos son requeridos", "Complete todos los campos");
+            }
+            else
+            {
+                Facturas facturas = new Facturas(numeroOrden, tarjeta, numeroMesa, cboBoxTipoFatura.Text);
+                facturas.Show();
+                this.Close();
+            }
         }
         public async Task DetailOrder(int order)
         {
@@ -52,30 +62,7 @@ namespace Application_Sentidos.Roles
                     totalFactura += item.price;
                 }
             }
-            txtBoxTotal.Text = "$"+totalFactura.ToString();
-        }
-        private async Task ModifyOrder(int order)
-        {
-            string url = "https://binarysystem.pythonanywhere.com/api/updateOrder/?id=" + order + "&pay=True";
-            var client = new HttpClient();
-
-            Ordenes ordenActualizada = new Ordenes()
-            {
-                id = order,
-                pay = "True",
-            };
-
-            var data = JsonSerializer.Serialize<Ordenes>(ordenActualizada);
-            HttpContent httpContent = new StringContent(data, System.Text.Encoding.UTF8, "application/json");
-            var httpResponse = await client.PutAsync(url, httpContent);
-
-            if (httpResponse.IsSuccessStatusCode)
-            {
-                //var result = await httpResponse.Content.ReadAsStringAsync();
-                Facturas crearFactura = new Facturas(numeroMesa);
-                crearFactura.Show();
-                this.Close();
-            }
+            txtBoxTotal.Text = totalFactura.ToString();
         }
         public class Ordenes
         {

@@ -7,44 +7,28 @@ namespace Application_Sentidos.Roles
         double totalFactura = 0;
         public int numeroOrden { get; set; }
         public int numeroMesa { get; set; }
-        public Caja_Efectivo(int numero)
+        public int efectivo { get; set; }
+        public Caja_Efectivo(int numero, int mesa)
         {
+            efectivo = 1;
             numeroOrden = numero;
-            numeroMesa = numero;
+            numeroMesa = mesa;
             InitializeComponent();
             DetailOrder(numero);
         }
-
         private void btnPagar_Click(object sender, EventArgs e)
         {
-            //Imprimir ticket o factura
-            //metodo put => enviar id order + pay = true
-            //para la factura
-            //
-            ModifyOrder(numeroOrden);
-        }
-        private async Task ModifyOrder(int order)
-        {
-            string url = "https://binarysystem.pythonanywhere.com/api/updateOrder/?id=" + order + "&pay=True";
-            var client = new HttpClient();
-
-            Ordenes ordenActualizada = new Ordenes()
+            if (txtBoxIngreso.Text == "" || cboTipoFactura.Text == "")
             {
-                id = order,
-                pay = "True",
-            };
-
-            var data = JsonSerializer.Serialize<Ordenes>(ordenActualizada);
-            HttpContent httpContent = new StringContent(data, System.Text.Encoding.UTF8, "application/json");
-            var httpResponse = await client.PutAsync(url, httpContent);
-
-            if (httpResponse.IsSuccessStatusCode)
-            {
-                //var result = await httpResponse.Content.ReadAsStringAsync();
-                Facturas crearFactura = new Facturas(numeroMesa);
-                crearFactura.Show();
-                this.Close();
+                MessageBox.Show("Compruebe que todos los campos no esten vacios", "Faltan completar campos");
             }
+            else
+            {
+                Facturas factura = new Facturas(numeroOrden, efectivo, numeroMesa, cboTipoFactura.Text);
+                this.Close();
+                factura.Show();
+            }
+
         }
         private void btnCancelar_Click(object sender, EventArgs e)
         {
@@ -70,14 +54,14 @@ namespace Application_Sentidos.Roles
                     totalFactura += item.price;
                 }
             }
-            txtBoxTotalItems.Text = "$" + totalFactura.ToString();
+            txtBoxTotalItems.Text = totalFactura.ToString();
         }
         public class Ordenes
         {
             public int id { get; set; }
             public int table { get; set; }
             public List<Products> products { get; set; }
-            public string? pay  { get; set; }
+            public string? pay { get; set; }
         }
         public class Products
         {
@@ -85,10 +69,17 @@ namespace Application_Sentidos.Roles
             public int quantity { get; set; }
             public double price { get; set; }
         }
-
         private void txtBoxIngreso_TextChanged(object sender, EventArgs e)
         {
-            txtBoxVuelto.Text = "$" + (double.Parse(txtBoxIngreso.Text) - totalFactura).ToString();
+            try
+            {
+                txtBoxVuelto.Text = "$" + (double.Parse(txtBoxIngreso.Text) - totalFactura).ToString();
+            }
+            catch (Exception error)
+            {
+                txtBoxIngreso.Text = "";
+                MessageBox.Show("El valor ingresado es incorrecto, solo se aceptan numeros", "Error de tipo de dato");
+            }
         }
     }
 }

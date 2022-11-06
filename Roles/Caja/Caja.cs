@@ -15,27 +15,28 @@ namespace Application_Sentidos.Roles
 
         private void TarjCreditoToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            int numberOrder = (int)dgvDetallesPedidos.CurrentRow.Cells[0].Value;
-            Caja_Tarjetas caja_Credito = new Caja_Tarjetas(numberOrder);
-            caja_Credito.numeroOrden = numberOrder;
-            caja_Credito.ShowDialog();
+            int payment = 3;
+            int numberOrder = (int)dgvDetallesPedidos.CurrentRow.Cells[0].Value; 
+            int numMesa = (int)dgvDetallesPedidos.CurrentRow.Cells[1].Value;
+            Caja_Tarjetas caja_Credito = new Caja_Tarjetas(numberOrder, payment, numMesa );
+            caja_Credito.Show();
         }
 
         private void TarjDebitoToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            int payment = 2;
+            int numMesa = (int)dgvDetallesPedidos.CurrentRow.Cells[1].Value;
             int numberOrder = (int)dgvDetallesPedidos.CurrentRow.Cells[0].Value;
-            Caja_Tarjetas caja_Debito = new Caja_Tarjetas(numberOrder);
-            caja_Debito.numeroOrden = numberOrder;
-            caja_Debito.ShowDialog();
+            Caja_Tarjetas caja_Debito = new Caja_Tarjetas(numberOrder, payment, numMesa);
+            caja_Debito.Show();
         }
 
         private void EfectivoToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            int numMesa = (int)dgvDetallesPedidos.CurrentRow.Cells[1].Value;
             int numberOrder = (int)dgvDetallesPedidos.CurrentRow.Cells[0].Value;
-            Caja_Efectivo caja_Efectivo = new Caja_Efectivo(numberOrder);
-            caja_Efectivo.numeroOrden = numberOrder;
-            caja_Efectivo.numeroMesa = numberOrder;
-            caja_Efectivo.ShowDialog();
+            Caja_Efectivo caja_Efectivo = new Caja_Efectivo(numberOrder, numMesa);
+            caja_Efectivo.Show();
         }
 
         private void BtnActualizar_Click(object sender, EventArgs e)
@@ -57,14 +58,22 @@ namespace Application_Sentidos.Roles
                 var content = await httpResponse.Content.ReadAsStringAsync();
                 List<Ordenes> pedidos = JsonSerializer.Deserialize<List<Ordenes>>(content);
 
-                foreach (var item in pedidos)
+                if (pedidos != null)
                 {
-                    dgvDetallesPedidos.Rows.Add(item.id, item.table);
+                    foreach (var item in pedidos)
+                    {
+                        dgvDetallesPedidos.Rows.Add(item.id, item.table);
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("No hay pedidos pendientes", "Pedidos vacios");
                 }
             }
         }
         private void Caja_Load(object sender, EventArgs e)
         {
+            cargarPedidos();
             this.FormClosed += new FormClosedEventHandler(CloseApp);
         }
         private void CloseApp(object sender, EventArgs e)
@@ -73,15 +82,15 @@ namespace Application_Sentidos.Roles
         }
         public class Products
         {
-            public string product { get; set; }
-            public int quantity { get; set; }
-            public double price { get; set; }
+            public string? product { get; set; }
+            public int? quantity { get; set; }
+            public double? price { get; set; }
         }
         public class Ordenes
         {
-            public int id { get; set; }
-            public int table { get; set; }
-            public List<Products> products { get; set; }
+            public int? id { get; set; }
+            public int? table { get; set; }
+            public List<Products>? products { get; set; }
         }
     }
 }
