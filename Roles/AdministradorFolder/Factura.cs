@@ -74,7 +74,6 @@ namespace Application_Sentidos.Roles.AdministradorFolder
 
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            Process.Start(new ProcessStartInfo { FileName = @"http://localhost:8000/prueba/", UseShellExecute = true }); //De esta forma podemos utilizar.
         }
     }
 }
