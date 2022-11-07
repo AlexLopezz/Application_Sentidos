@@ -260,7 +260,6 @@ namespace Application_Sentidos.Roles
 
             if (httpResponse.IsSuccessStatusCode)
             {
-                var result = await httpResponse.Content.ReadAsStringAsync();
                 MessageBox.Show("Pedido cerrado con exito", "Sentidos Restaurant & Casa de Té");
                 dgvPedidosACerrar.Rows.RemoveAt(dgvPedidosACerrar.CurrentRow.Index);
             }

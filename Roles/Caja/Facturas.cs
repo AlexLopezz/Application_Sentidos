@@ -1,24 +1,101 @@
-﻿using Application_Sentidos.Authentication;
-using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Text.Json;
-using System.Threading.Tasks;
-using System.Windows.Forms;
+﻿using System.Text.Json;
 
 namespace Application_Sentidos.Roles
 {
     public partial class Facturas : Form
     {
-        double totalFactura = 0;
-        public Facturas(int numero)
+        public double totalFactura = 0;
+        public int numFactura = 0;
+        public DateTime date = DateTime.Now;
+        public int numOrden { get; set; }
+        public int typePayment { get; set; }
+        public int numeroMesa { get; set; }
+        public string tipoDeFactura { get; set; }
+        public Facturas(int numero, int method_payment, int mesa, string typeFactura)
         {
+            tipoDeFactura = typeFactura;
+            numeroMesa = mesa;
+            numOrden = numero;
             InitializeComponent();
-            txtBoxNumeroMeza.Text = numero.ToString();
+            txtBoxNumeroMeza.Text = mesa.ToString();
+            typePayment = method_payment;
+            actualizarDatosFactura();
+        }
+        private void actualizarDatosFactura()
+        {
+            numFactura++;
+            lblFecha.Text = date.ToString();
+            lblNumFactura.Text = numFactura.ToString();
+        }
+        public class Ordenes
+        {
+            public int id { get; set; }
+            public int table { get; set; }
+            public List<Products>? products { get; set; }
+            public string? pay { get; set; }
+        }
+        public class Products
+        {
+            public string? product { get; set; }
+            public int quantity { get; set; }
+            public double price { get; set; }
+        }
+        private void btnCancelar_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+        private void btnPagar_Click(object sender, EventArgs e)
+        {
+            if (txtBoxNombreCliente.Text == "" || txtBoxDniCliente.Text == "")
+            {
+                MessageBox.Show("Todos los campos son requeridos", "Faltan completar los campos");
+            }
+            else
+            {
+                GenerarFactura(typePayment);
+            }
+        }
+        public async void GenerarFactura(int payment)
+        {
+            string url = "https://binarysystem.pythonanywhere.com/api/checking_invoice/";
+            var client = new HttpClient();
+            //orden - tipo de pago - total factura
+            Facturacion factura = new Facturacion()
+            {
+                order = numOrden,
+                method_pay = payment,
+                totalPrice = double.Parse(txtBoxTotal.Text),
+            };
+            var data = JsonSerializer.Serialize<Facturacion>(factura);
+            HttpContent httpContent = new StringContent(data, System.Text.Encoding.UTF8, "application/json");
+            var httpResponse = await client.PostAsync(url, httpContent);
+
+            if (httpResponse.IsSuccessStatusCode)
+            {
+                MessageBox.Show("Factura creada con exito, ¡Gracias por su compra!", "Sentidos Restaurant & Casa de Té");
+                ModifyOrder(numOrden);
+            }
+        }
+        public async Task ModifyOrder(int order)
+        {
+            string url = "https://binarysystem.pythonanywhere.com/api/updateOrder/?id=" + order + "&pay=True";
+            var client = new HttpClient();
+
+            Ordenes ordenActualizada = new Ordenes()
+            {
+                id = order,
+                pay = "True",
+            };
+
+            var data = JsonSerializer.Serialize<Ordenes>(ordenActualizada);
+            HttpContent httpContent = new StringContent(data, System.Text.Encoding.UTF8, "application/json");
+            var httpResponse = await client.PutAsync(url, httpContent);
+
+            if (httpResponse.IsSuccessStatusCode)
+            {
+                //var result = await httpResponse.Content.ReadAsStringAsync();
+                this.Close();
+            }
         }
         public async Task DetailOrder(int order)
         {
@@ -40,25 +117,18 @@ namespace Application_Sentidos.Roles
                     totalFactura += item.price;
                 }
             }
-            txtBoxTotal.Text = "$" + totalFactura.ToString();
+            txtBoxTotal.Text = totalFactura.ToString();
         }
-        public class Ordenes
+        private void Facturas_Load(object sender, EventArgs e)
         {
-            public int id { get; set; }
-            public int table { get; set; }
-            public List<Products> products { get; set; }
-            public string? pay { get; set; }
+            DetailOrder(numOrden);
+            lblTipoFactura.Text = tipoDeFactura.ToString();
         }
-        public class Products
-        {
-            public string product { get; set; }
-            public int quantity { get; set; }
-            public double price { get; set; }
-        }
-
-        private void btnCancelar_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
+    }
+    public class Facturacion
+    {
+        public int order { get; set; }
+        public int method_pay { get; set; }
+        public double totalPrice { get; set; }
     }
 }
