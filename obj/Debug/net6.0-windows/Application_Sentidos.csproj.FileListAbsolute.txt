@@ -4,8 +4,6 @@ C:\Users\Alex Lopez\Documents\C#\Application_Sentidos\bin\Debug\net6.0-windows\A
 C:\Users\Alex Lopez\Documents\C#\Application_Sentidos\bin\Debug\net6.0-windows\Application_Sentidos.dll
 C:\Users\Alex Lopez\Documents\C#\Application_Sentidos\bin\Debug\net6.0-windows\Application_Sentidos.pdb
 C:\Users\Alex Lopez\Documents\C#\Application_Sentidos\bin\Debug\net6.0-windows\es-AR\Application_Sentidos.resources.dll
-C:\Users\Alex Lopez\Documents\C#\Application_Sentidos\bin\Debug\net6.0-windows\itextsharp.dll
-C:\Users\Alex Lopez\Documents\C#\Application_Sentidos\bin\Debug\net6.0-windows\itextsharp.xmlworker.dll
 C:\Users\Alex Lopez\Documents\C#\Application_Sentidos\bin\Debug\net6.0-windows\Newtonsoft.Json.dll
 C:\Users\Alex Lopez\Documents\C#\Application_Sentidos\bin\Debug\net6.0-windows\RestSharp.dll
 C:\Users\Alex Lopez\Documents\C#\Application_Sentidos\obj\Debug\net6.0-windows\Application_Sentidos.csproj.AssemblyReference.cache

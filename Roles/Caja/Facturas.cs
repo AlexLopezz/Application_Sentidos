@@ -1,7 +1,4 @@
 ﻿using System.Text.Json;
-using iTextSharp.text;
-using iTextSharp.text.pdf;
-using iTextSharp.tool.xml;
 using System.IO;
 using System.Diagnostics;
 

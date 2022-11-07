@@ -9,9 +9,7 @@
       "Application_Sentidos/1.0.0": {
         "dependencies": {
           "Newtonsoft.Json": "13.0.1",
-          "RestSharp": "108.0.2",
-          "iTextSharp": "5.5.13",
-          "itextsharp.xmlworker": "5.5.13"
+          "RestSharp": "108.0.2"
         },
         "runtime": {
           "Application_Sentidos.dll": {}
@@ -19,25 +17,6 @@
         "resources": {
           "es-AR/Application_Sentidos.resources.dll": {
             "locale": "es-AR"
-          }
-        }
-      },
-      "iTextSharp/5.5.13": {
-        "runtime": {
-          "lib/itextsharp.dll": {
-            "assemblyVersion": "5.5.13.0",
-            "fileVersion": "5.5.13.0"
-          }
-        }
-      },
-      "itextsharp.xmlworker/5.5.13": {
-        "dependencies": {
-          "iTextSharp": "5.5.13"
-        },
-        "runtime": {
-          "lib/itextsharp.xmlworker.dll": {
-            "assemblyVersion": "5.5.13.0",
-            "fileVersion": "5.5.13.0"
           }
         }
       },
@@ -64,20 +43,6 @@
       "type": "project",
       "serviceable": false,
       "sha512": ""
-    },
-    "iTextSharp/5.5.13": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-MigtmZrqjrJ4QERhgNZc+zhl+XSNV5y3JoH5nNxzdNjPvZJgzYN2qLRQhqtWsF9F/1H28SnOkoS6uIlSduSrXQ==",
-      "path": "itextsharp/5.5.13",
-      "hashPath": "itextsharp.5.5.13.nupkg.sha512"
-    },
-    "itextsharp.xmlworker/5.5.13": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-ETGikGMSYIn5WsdMHLJZMLSDAFb7UEF4Hw7VdckLA7v5pnayRHu/p7wRrt+Jw+qF0RaXYYPXwRkXZ7bWhctYig==",
-      "path": "itextsharp.xmlworker/5.5.13",
-      "hashPath": "itextsharp.xmlworker.5.5.13.nupkg.sha512"
     },
     "Newtonsoft.Json/13.0.1": {
       "type": "package",

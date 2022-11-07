@@ -35,7 +35,7 @@
             this.lblEmail = new System.Windows.Forms.Label();
             this.lblRol = new System.Windows.Forms.Label();
             this.cboRoles = new System.Windows.Forms.ComboBox();
-            this.txtVerifyPassword = new System.Windows.Forms.TextBox();
+            this.txtPassword2 = new System.Windows.Forms.TextBox();
             this.lblVerifyPassword = new System.Windows.Forms.Label();
             this.txtPassword = new System.Windows.Forms.TextBox();
             this.lblPassword = new System.Windows.Forms.Label();
@@ -58,7 +58,7 @@
             this.panel1.Controls.Add(this.lblEmail);
             this.panel1.Controls.Add(this.lblRol);
             this.panel1.Controls.Add(this.cboRoles);
-            this.panel1.Controls.Add(this.txtVerifyPassword);
+            this.panel1.Controls.Add(this.txtPassword2);
             this.panel1.Controls.Add(this.lblVerifyPassword);
             this.panel1.Controls.Add(this.txtPassword);
             this.panel1.Controls.Add(this.lblPassword);
@@ -73,7 +73,6 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(354, 428);
             this.panel1.TabIndex = 1;
-            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // bttRegistrar
             // 
@@ -95,6 +94,7 @@
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(160, 21);
             this.txtEmail.TabIndex = 17;
+            this.txtEmail.Leave += new System.EventHandler(this.txtEmail_Leave);
             // 
             // lblEmail
             // 
@@ -131,13 +131,16 @@
             this.cboRoles.Name = "cboRoles";
             this.cboRoles.Size = new System.Drawing.Size(160, 23);
             this.cboRoles.TabIndex = 13;
+            this.cboRoles.Leave += new System.EventHandler(this.cboRoles_Leave);
             // 
-            // txtVerifyPassword
+            // txtPassword2
             // 
-            this.txtVerifyPassword.Location = new System.Drawing.Point(111, 268);
-            this.txtVerifyPassword.Name = "txtVerifyPassword";
-            this.txtVerifyPassword.Size = new System.Drawing.Size(160, 21);
-            this.txtVerifyPassword.TabIndex = 12;
+            this.txtPassword2.Location = new System.Drawing.Point(111, 268);
+            this.txtPassword2.Name = "txtPassword2";
+            this.txtPassword2.PasswordChar = '*';
+            this.txtPassword2.Size = new System.Drawing.Size(160, 21);
+            this.txtPassword2.TabIndex = 12;
+            this.txtPassword2.Leave += new System.EventHandler(this.txtVerifyPassword_Leave);
             // 
             // lblVerifyPassword
             // 
@@ -155,8 +158,10 @@
             // 
             this.txtPassword.Location = new System.Drawing.Point(111, 223);
             this.txtPassword.Name = "txtPassword";
+            this.txtPassword.PasswordChar = '*';
             this.txtPassword.Size = new System.Drawing.Size(160, 21);
             this.txtPassword.TabIndex = 10;
+            this.txtPassword.Leave += new System.EventHandler(this.txtPassword_Leave);
             // 
             // lblPassword
             // 
@@ -175,16 +180,17 @@
             this.txtUsername.Name = "txtUsername";
             this.txtUsername.Size = new System.Drawing.Size(160, 21);
             this.txtUsername.TabIndex = 8;
+            this.txtUsername.Leave += new System.EventHandler(this.txtUsername_Leave);
             // 
             // lblUsuario
             // 
             this.lblUsuario.AutoSize = true;
             this.lblUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lblUsuario.Location = new System.Drawing.Point(12, 181);
+            this.lblUsuario.Location = new System.Drawing.Point(12, 178);
             this.lblUsuario.Name = "lblUsuario";
-            this.lblUsuario.Size = new System.Drawing.Size(57, 15);
+            this.lblUsuario.Size = new System.Drawing.Size(58, 30);
             this.lblUsuario.TabIndex = 7;
-            this.lblUsuario.Text = "Usuario";
+            this.lblUsuario.Text = "Nombre\r\nUsuario";
             // 
             // txtDNI
             // 
@@ -192,6 +198,7 @@
             this.txtDNI.Name = "txtDNI";
             this.txtDNI.Size = new System.Drawing.Size(160, 21);
             this.txtDNI.TabIndex = 6;
+            this.txtDNI.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtDNI_KeyPress);
             // 
             // lblDNI
             // 
@@ -209,16 +216,17 @@
             this.txtFullname.Name = "txtFullname";
             this.txtFullname.Size = new System.Drawing.Size(160, 21);
             this.txtFullname.TabIndex = 4;
+            this.txtFullname.Leave += new System.EventHandler(this.txtFullname_Leave);
             // 
             // lblFullname
             // 
             this.lblFullname.AutoSize = true;
             this.lblFullname.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lblFullname.Location = new System.Drawing.Point(12, 46);
+            this.lblFullname.Location = new System.Drawing.Point(12, 34);
             this.lblFullname.Name = "lblFullname";
-            this.lblFullname.Size = new System.Drawing.Size(58, 15);
+            this.lblFullname.Size = new System.Drawing.Size(68, 30);
             this.lblFullname.TabIndex = 3;
-            this.lblFullname.Text = "Nombre";
+            this.lblFullname.Text = "Nombre\r\nCompleto";
             // 
             // Registro
             // 
@@ -227,7 +235,7 @@
             this.ClientSize = new System.Drawing.Size(354, 428);
             this.Controls.Add(this.panel1);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "Registro";
             this.Text = "Registro de Usuarios";
             this.panel1.ResumeLayout(false);
@@ -241,7 +249,7 @@
         private Button bttRegistrar;
         private Label lblRol;
         private ComboBox cboRoles;
-        private TextBox txtVerifyPassword;
+        private TextBox txtPassword2;
         private Label lblVerifyPassword;
         private TextBox txtPassword;
         private Label lblPassword;

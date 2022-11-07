@@ -29,7 +29,10 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Usuarios));
-            this.dgvUsuarios = new System.Windows.Forms.DataGridView();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.label1 = new System.Windows.Forms.Label();
             this.rb_Client = new System.Windows.Forms.RadioButton();
             this.rb_None = new System.Windows.Forms.RadioButton();
@@ -45,31 +48,27 @@
             this.lblAdminUser = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.rb_Chef = new System.Windows.Forms.RadioButton();
             this.txtSearchUser = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvUsuarios)).BeginInit();
+            this.dgvUsuarios = new System.Windows.Forms.DataGridView();
+            this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.USERNAME_USER = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.USER_NAME = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.EMAIL_USER = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DNI_USER = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ROL_USER = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvUsuarios)).BeginInit();
             this.SuspendLayout();
-            // 
-            // dgvUsuarios
-            // 
-            this.dgvUsuarios.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.dgvUsuarios.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.dgvUsuarios.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.dgvUsuarios.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvUsuarios.Location = new System.Drawing.Point(43, 109);
-            this.dgvUsuarios.Name = "dgvUsuarios";
-            this.dgvUsuarios.RowTemplate.Height = 25;
-            this.dgvUsuarios.Size = new System.Drawing.Size(476, 262);
-            this.dgvUsuarios.TabIndex = 0;
             // 
             // label1
             // 
             this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label1.Location = new System.Drawing.Point(659, 88);
+            this.label1.Location = new System.Drawing.Point(666, 109);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(80, 15);
             this.label1.TabIndex = 6;
@@ -79,9 +78,9 @@
             // 
             this.rb_Client.AutoSize = true;
             this.rb_Client.Dock = System.Windows.Forms.DockStyle.Top;
-            this.rb_Client.Location = new System.Drawing.Point(0, 95);
+            this.rb_Client.Location = new System.Drawing.Point(0, 76);
             this.rb_Client.Name = "rb_Client";
-            this.rb_Client.Size = new System.Drawing.Size(145, 19);
+            this.rb_Client.Size = new System.Drawing.Size(155, 19);
             this.rb_Client.TabIndex = 5;
             this.rb_Client.Text = "Usuarios - Sentidos";
             this.rb_Client.UseVisualStyleBackColor = true;
@@ -92,9 +91,9 @@
             this.rb_None.AutoSize = true;
             this.rb_None.Checked = true;
             this.rb_None.Dock = System.Windows.Forms.DockStyle.Top;
-            this.rb_None.Location = new System.Drawing.Point(0, 0);
+            this.rb_None.Location = new System.Drawing.Point(0, 95);
             this.rb_None.Name = "rb_None";
-            this.rb_None.Size = new System.Drawing.Size(145, 19);
+            this.rb_None.Size = new System.Drawing.Size(155, 19);
             this.rb_None.TabIndex = 4;
             this.rb_None.TabStop = true;
             this.rb_None.Text = "Ninguno";
@@ -107,7 +106,7 @@
             this.rb_Caja.Dock = System.Windows.Forms.DockStyle.Top;
             this.rb_Caja.Location = new System.Drawing.Point(0, 19);
             this.rb_Caja.Name = "rb_Caja";
-            this.rb_Caja.Size = new System.Drawing.Size(145, 19);
+            this.rb_Caja.Size = new System.Drawing.Size(155, 19);
             this.rb_Caja.TabIndex = 3;
             this.rb_Caja.Text = "Caja - Sentidos";
             this.rb_Caja.UseVisualStyleBackColor = true;
@@ -116,14 +115,11 @@
             // rb_Mitre
             // 
             this.rb_Mitre.AutoSize = true;
-            this.rb_Mitre.Dock = System.Windows.Forms.DockStyle.Top;
-            this.rb_Mitre.Location = new System.Drawing.Point(0, 38);
+            this.rb_Mitre.Location = new System.Drawing.Point(0, 19);
             this.rb_Mitre.Name = "rb_Mitre";
-
-            this.rb_Mitre.Size = new System.Drawing.Size(145, 19);
+            this.rb_Mitre.Size = new System.Drawing.Size(118, 19);
             this.rb_Mitre.TabIndex = 2;
             this.rb_Mitre.Text = "Maitre  - Sentidos";
-
             this.rb_Mitre.UseVisualStyleBackColor = true;
             this.rb_Mitre.CheckedChanged += new System.EventHandler(this.rb_Mitre_CheckedChanged);
             // 
@@ -131,9 +127,9 @@
             // 
             this.rb_Mozo.AutoSize = true;
             this.rb_Mozo.Dock = System.Windows.Forms.DockStyle.Top;
-            this.rb_Mozo.Location = new System.Drawing.Point(0, 57);
+            this.rb_Mozo.Location = new System.Drawing.Point(0, 38);
             this.rb_Mozo.Name = "rb_Mozo";
-            this.rb_Mozo.Size = new System.Drawing.Size(145, 19);
+            this.rb_Mozo.Size = new System.Drawing.Size(155, 19);
             this.rb_Mozo.TabIndex = 1;
             this.rb_Mozo.Text = "Mozo - Sentidos";
             this.rb_Mozo.UseVisualStyleBackColor = true;
@@ -143,9 +139,9 @@
             // 
             this.rb_allUser.AutoSize = true;
             this.rb_allUser.Dock = System.Windows.Forms.DockStyle.Top;
-            this.rb_allUser.Location = new System.Drawing.Point(0, 76);
+            this.rb_allUser.Location = new System.Drawing.Point(0, 57);
             this.rb_allUser.Name = "rb_allUser";
-            this.rb_allUser.Size = new System.Drawing.Size(145, 19);
+            this.rb_allUser.Size = new System.Drawing.Size(155, 19);
             this.rb_allUser.TabIndex = 0;
             this.rb_allUser.Text = "Todos los Roles";
             this.rb_allUser.UseVisualStyleBackColor = true;
@@ -246,17 +242,30 @@
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.rb_None);
             this.panel1.Controls.Add(this.rb_Client);
             this.panel1.Controls.Add(this.rb_allUser);
             this.panel1.Controls.Add(this.rb_Mozo);
             this.panel1.Controls.Add(this.rb_Mitre);
             this.panel1.Controls.Add(this.rb_Caja);
-            this.panel1.Controls.Add(this.rb_None);
-            this.panel1.Location = new System.Drawing.Point(659, 109);
+            this.panel1.Controls.Add(this.rb_Chef);
+            this.panel1.Location = new System.Drawing.Point(658, 130);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(145, 116);
+            this.panel1.Size = new System.Drawing.Size(155, 125);
             this.panel1.TabIndex = 8;
-            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+            // 
+            // rb_Chef
+            // 
+            this.rb_Chef.AutoSize = true;
+            this.rb_Chef.Dock = System.Windows.Forms.DockStyle.Top;
+            this.rb_Chef.Location = new System.Drawing.Point(0, 0);
+            this.rb_Chef.Name = "rb_Chef";
+            this.rb_Chef.Size = new System.Drawing.Size(155, 19);
+            this.rb_Chef.TabIndex = 12;
+            this.rb_Chef.TabStop = true;
+            this.rb_Chef.Text = "Chef - Sentidos";
+            this.rb_Chef.UseVisualStyleBackColor = true;
+            this.rb_Chef.CheckedChanged += new System.EventHandler(this.rb_Chef_CheckedChanged);
             // 
             // txtSearchUser
             // 
@@ -275,12 +284,105 @@
             this.label3.TabIndex = 10;
             this.label3.Text = "Usuario";
             // 
+            // dgvUsuarios
+            // 
+            this.dgvUsuarios.AllowUserToAddRows = false;
+            this.dgvUsuarios.AllowUserToDeleteRows = false;
+            this.dgvUsuarios.AllowUserToResizeColumns = false;
+            this.dgvUsuarios.AllowUserToResizeRows = false;
+            this.dgvUsuarios.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.dgvUsuarios.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvUsuarios.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.dgvUsuarios.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
+            this.dgvUsuarios.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.Transparent;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvUsuarios.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.dgvUsuarios.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvUsuarios.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.ID,
+            this.USERNAME_USER,
+            this.USER_NAME,
+            this.EMAIL_USER,
+            this.DNI_USER,
+            this.ROL_USER});
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvUsuarios.DefaultCellStyle = dataGridViewCellStyle2;
+            this.dgvUsuarios.EnableHeadersVisualStyles = false;
+            this.dgvUsuarios.GridColor = System.Drawing.Color.Black;
+            this.dgvUsuarios.Location = new System.Drawing.Point(39, 109);
+            this.dgvUsuarios.Name = "dgvUsuarios";
+            this.dgvUsuarios.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvUsuarios.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            this.dgvUsuarios.RowHeadersVisible = false;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.Black;
+            this.dgvUsuarios.RowsDefaultCellStyle = dataGridViewCellStyle4;
+            this.dgvUsuarios.RowTemplate.Height = 25;
+            this.dgvUsuarios.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvUsuarios.Size = new System.Drawing.Size(480, 271);
+            this.dgvUsuarios.TabIndex = 11;
+            // 
+            // ID
+            // 
+            this.ID.HeaderText = "ID";
+            this.ID.Name = "ID";
+            // 
+            // USERNAME_USER
+            // 
+            this.USERNAME_USER.HeaderText = "Nombre usuario";
+            this.USERNAME_USER.Name = "USERNAME_USER";
+            // 
+            // USER_NAME
+            // 
+            this.USER_NAME.HeaderText = "Nombre Completo";
+            this.USER_NAME.Name = "USER_NAME";
+            this.USER_NAME.ReadOnly = true;
+            // 
+            // EMAIL_USER
+            // 
+            this.EMAIL_USER.HeaderText = "Email";
+            this.EMAIL_USER.Name = "EMAIL_USER";
+            // 
+            // DNI_USER
+            // 
+            this.DNI_USER.HeaderText = "Dni";
+            this.DNI_USER.Name = "DNI_USER";
+            this.DNI_USER.ReadOnly = true;
+            // 
+            // ROL_USER
+            // 
+            this.ROL_USER.HeaderText = "Rol";
+            this.ROL_USER.Name = "ROL_USER";
+            // 
             // Usuarios
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.ClientSize = new System.Drawing.Size(825, 420);
+            this.Controls.Add(this.dgvUsuarios);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.txtSearchUser);
@@ -289,17 +391,16 @@
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.bttRegistrar);
             this.Controls.Add(this.bttEliminar);
-            this.Controls.Add(this.dgvUsuarios);
             this.Controls.Add(this.lblAdminUser);
             this.Controls.Add(this.bttBuscar);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Usuarios";
             this.Text = "Usuarios";
-            ((System.ComponentModel.ISupportInitialize)(this.dgvUsuarios)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvUsuarios)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -308,7 +409,6 @@
         #endregion
         private Button bttRegistrar;
         private Button bttEliminar;
-        public DataGridView dgvUsuarios;
         private RadioButton rb_Caja;
         private RadioButton rb_Mitre;
         private RadioButton rb_Mozo;
@@ -324,5 +424,13 @@
         private Panel panel1;
         private TextBox txtSearchUser;
         private Label label3;
+        private DataGridView dgvUsuarios;
+        private DataGridViewTextBoxColumn ID;
+        private DataGridViewTextBoxColumn USERNAME_USER;
+        private DataGridViewTextBoxColumn USER_NAME;
+        private DataGridViewTextBoxColumn EMAIL_USER;
+        private DataGridViewTextBoxColumn DNI_USER;
+        private DataGridViewTextBoxColumn ROL_USER;
+        private RadioButton rb_Chef;
     }
 }
