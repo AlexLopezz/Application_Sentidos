@@ -4,10 +4,10 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Net;
 using System.Text;
 using System.Text.Json;
-using System.Threading.Tasks;
-using System.Windows.Forms;
+using System.Diagnostics;
 
 namespace Application_Sentidos.Roles.AdministradorFolder
 {
@@ -70,6 +70,11 @@ namespace Application_Sentidos.Roles.AdministradorFolder
 
             }
             else { MessageBox.Show("Ocurrio un error, verifique los campos.\nEste error puede ocurrir por que:\n*La fecha de inicio es mayor a la fecha de Fin.\n*El metodo de pago no fue seleccionado."); }
+        }
+
+        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            Process.Start(new ProcessStartInfo { FileName = @"http://localhost:8000/prueba/", UseShellExecute = true }); //De esta forma podemos utilizar.
         }
     }
 }
