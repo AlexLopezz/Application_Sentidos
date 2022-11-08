@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Chef));
             this.panelLateralIzquierdo = new System.Windows.Forms.Panel();
+            this.bttSalir = new System.Windows.Forms.Button();
             this.bttProductos = new System.Windows.Forms.Button();
             this.bttMenu = new System.Windows.Forms.Button();
             this.lblUser = new System.Windows.Forms.Label();
@@ -38,7 +39,6 @@
             this.panelContenedor = new System.Windows.Forms.Panel();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.bttSalir = new System.Windows.Forms.Button();
             this.panelLateralIzquierdo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panelContenedor.SuspendLayout();
@@ -60,6 +60,25 @@
             this.panelLateralIzquierdo.Name = "panelLateralIzquierdo";
             this.panelLateralIzquierdo.Size = new System.Drawing.Size(266, 420);
             this.panelLateralIzquierdo.TabIndex = 0;
+            // 
+            // bttSalir
+            // 
+            this.bttSalir.BackColor = System.Drawing.SystemColors.GrayText;
+            this.bttSalir.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.bttSalir.FlatAppearance.BorderSize = 0;
+            this.bttSalir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.bttSalir.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.bttSalir.ForeColor = System.Drawing.Color.White;
+            this.bttSalir.Image = ((System.Drawing.Image)(resources.GetObject("bttSalir.Image")));
+            this.bttSalir.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.bttSalir.Location = new System.Drawing.Point(0, 364);
+            this.bttSalir.Name = "bttSalir";
+            this.bttSalir.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
+            this.bttSalir.Size = new System.Drawing.Size(266, 56);
+            this.bttSalir.TabIndex = 4;
+            this.bttSalir.Text = "SALIR";
+            this.bttSalir.UseVisualStyleBackColor = false;
+            this.bttSalir.Click += new System.EventHandler(this.bttSalir_Click_1);
             // 
             // bttProductos
             // 
@@ -162,25 +181,6 @@
             this.pictureBox2.TabIndex = 2;
             this.pictureBox2.TabStop = false;
             // 
-            // bttSalir
-            // 
-            this.bttSalir.BackColor = System.Drawing.SystemColors.GrayText;
-            this.bttSalir.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.bttSalir.FlatAppearance.BorderSize = 0;
-            this.bttSalir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.bttSalir.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.bttSalir.ForeColor = System.Drawing.Color.White;
-            this.bttSalir.Image = ((System.Drawing.Image)(resources.GetObject("bttSalir.Image")));
-            this.bttSalir.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.bttSalir.Location = new System.Drawing.Point(0, 364);
-            this.bttSalir.Name = "bttSalir";
-            this.bttSalir.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
-            this.bttSalir.Size = new System.Drawing.Size(266, 56);
-            this.bttSalir.TabIndex = 4;
-            this.bttSalir.Text = "SALIR";
-            this.bttSalir.UseVisualStyleBackColor = false;
-            this.bttSalir.Click += new System.EventHandler(this.bttSalir_Click_1);
-            // 
             // Chef
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -188,6 +188,7 @@
             this.ClientSize = new System.Drawing.Size(1091, 420);
             this.Controls.Add(this.panelContenedor);
             this.Controls.Add(this.panelLateralIzquierdo);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
             this.Name = "Chef";
             this.Text = "Chef - Restaurante Sentidos & Casa de Té";

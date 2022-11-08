@@ -28,6 +28,7 @@ public class HttpPostReserva
     public string phone { get; set; } = "";
     public string schedule { get; set; } = "";
     public string date { get; set; } = "";
+    public bool paid { get; set; } = false;
     public List<int> selected_tables { get; set; }
 }
 
@@ -50,8 +51,12 @@ public class GetUserFilter
 
     public override string ToString()
     {
-        return id + " " + username;
+        return id+" Usuario: "+username.ToUpper();
     }
+}
+public class PutReservaPaid
+{
+    public bool paid { get; set; }
 }
 
 

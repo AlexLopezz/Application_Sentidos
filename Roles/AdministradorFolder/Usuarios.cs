@@ -141,6 +141,11 @@ namespace Application_Sentidos.Resources.Administrador
         }
         private void emptyDgv() { dgvUsuarios.Rows.Clear(); }
         private void rb_None_CheckedChanged(object sender, EventArgs e) => emptyDgv(); //RadioButton por defecto en la vista Usuarios.
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 
 }

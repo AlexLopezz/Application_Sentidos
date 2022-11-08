@@ -28,8 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ContactForm));
             this.dgvContact = new System.Windows.Forms.DataGridView();
             this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -64,7 +64,6 @@
             this.bttDeleteAll = new System.Windows.Forms.Button();
             this.bttDelete = new System.Windows.Forms.Button();
             this.lblPuntuacion = new System.Windows.Forms.Label();
-            this.bttShowOpinions = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.button2 = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -86,14 +85,14 @@
             this.dgvContact.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
             this.dgvContact.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.dgvContact.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvContact.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvContact.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.dgvContact.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvContact.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Nombre,
@@ -107,12 +106,12 @@
             this.dgvContact.ReadOnly = true;
             this.dgvContact.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             this.dgvContact.RowHeadersVisible = false;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.DeepSkyBlue;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.Black;
-            this.dgvContact.RowsDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.DeepSkyBlue;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.Black;
+            this.dgvContact.RowsDefaultCellStyle = dataGridViewCellStyle4;
             this.dgvContact.RowTemplate.Height = 25;
             this.dgvContact.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvContact.Size = new System.Drawing.Size(527, 326);
@@ -172,7 +171,7 @@
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.lblPlace);
             this.panel1.Controls.Add(this.lblAttention);
-            this.panel1.Location = new System.Drawing.Point(561, 247);
+            this.panel1.Location = new System.Drawing.Point(559, 218);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(252, 135);
             this.panel1.TabIndex = 1;
@@ -289,7 +288,7 @@
             // 
             // Star5_Place
             // 
-            this.Star5_Place.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.Star5_Place.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.Star5_Place.FlatAppearance.BorderSize = 0;
             this.Star5_Place.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Star5_Place.Image = ((System.Drawing.Image)(resources.GetObject("Star5_Place.Image")));
@@ -353,6 +352,7 @@
             this.Star5_Attention.Size = new System.Drawing.Size(26, 23);
             this.Star5_Attention.TabIndex = 8;
             this.Star5_Attention.UseVisualStyleBackColor = true;
+            this.Star5_Attention.Click += new System.EventHandler(this.Star5_Attention_Click);
             // 
             // Star4_Attention
             // 
@@ -467,30 +467,19 @@
             this.lblPuntuacion.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.lblPuntuacion.AutoSize = true;
             this.lblPuntuacion.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lblPuntuacion.Location = new System.Drawing.Point(561, 229);
+            this.lblPuntuacion.Location = new System.Drawing.Point(559, 200);
             this.lblPuntuacion.Name = "lblPuntuacion";
             this.lblPuntuacion.Size = new System.Drawing.Size(241, 15);
             this.lblPuntuacion.TabIndex = 5;
             this.lblPuntuacion.Text = "PUNTUACION ACERCA DEL RESTAURANTE";
             // 
-            // bttShowOpinions
-            // 
-            this.bttShowOpinions.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.bttShowOpinions.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.bttShowOpinions.Location = new System.Drawing.Point(668, 388);
-            this.bttShowOpinions.Name = "bttShowOpinions";
-            this.bttShowOpinions.Size = new System.Drawing.Size(145, 23);
-            this.bttShowOpinions.TabIndex = 6;
-            this.bttShowOpinions.Text = "Ver comentarios";
-            this.bttShowOpinions.UseVisualStyleBackColor = true;
-            // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label1.Location = new System.Drawing.Point(246, 9);
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label1.Location = new System.Drawing.Point(131, 6);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(416, 21);
+            this.label1.Size = new System.Drawing.Size(340, 17);
             this.label1.TabIndex = 7;
             this.label1.Text = "CONSULTA DE CONTACTO - OPINIONES DE USUARIOS";
             // 
@@ -519,7 +508,7 @@
             // 
             this.lblPrhase.AutoSize = true;
             this.lblPrhase.Font = new System.Drawing.Font("Segoe Script", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lblPrhase.Location = new System.Drawing.Point(183, 30);
+            this.lblPrhase.Location = new System.Drawing.Point(131, 23);
             this.lblPrhase.Name = "lblPrhase";
             this.lblPrhase.Size = new System.Drawing.Size(575, 20);
             this.lblPrhase.TabIndex = 10;
@@ -530,18 +519,17 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.ClientSize = new System.Drawing.Size(825, 420);
             this.Controls.Add(this.lblPrhase);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.bttShowOpinions);
             this.Controls.Add(this.lblPuntuacion);
             this.Controls.Add(this.bttDelete);
             this.Controls.Add(this.bttDeleteAll);
-            this.Controls.Add(this.panel1);
             this.Controls.Add(this.dgvContact);
+            this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "ContactForm";
             this.Text = "ContactForm";
@@ -589,7 +577,6 @@
         private Label label2;
         private Label lblPlace;
         private Label lblPuntuacion;
-        private Button bttShowOpinions;
         private Label label1;
         private Button button2;
         private PictureBox pictureBox1;

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Application_Sentidos.Resources.Objects;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,6 +16,9 @@ namespace Application_Sentidos.Roles.Chef
 {
     public partial class CrearModificarProducto : Form
     {
+        bool errNombre = false, errDescripcion = false, errPrecio = false;
+        ErrorProvider err = new ErrorProvider();
+        Utilidades utilidades = new Utilidades();
         string auxNameProduct = "";
         HttpClient client = new HttpClient();
         string imgBase64 = "";
@@ -138,112 +142,184 @@ namespace Application_Sentidos.Roles.Chef
             }
 
         }
+
+
+
         private async void bttCrearProducto_Click(object sender, EventArgs e)
         {
-            switch (bttCrearProducto.Text)
+            if (errNombre || errDescripcion || errPrecio || string.IsNullOrEmpty(txtImagen.Text) || listCategorias.Items.Count == 0)
             {
-                case "Crear producto":
-
-                    
-                    if (!(string.IsNullOrEmpty(txtNombre.Text)) && !(string.IsNullOrEmpty(txtDescripcion.Text)) && !(string.IsNullOrEmpty(txtImagen.Text)) &&
-                        !(string.IsNullOrEmpty(txtPrecio.Text)) && listCategorias.Items.Count != 0)
-                    {
-                        string URL = "https://binarysystem.pythonanywhere.com/imgJson/";
-
-                        rellenarListaCategoria(categoryList);
+                MessageBox.Show("Verifique los campos, recuerde que:\n*Debe especificar el nombre del producto.\n*Debe especificar una descripcion.\n*Debe darle un precio al producto.\n*Debe ingresar una imagen representativa.\n*Debe por lo menos tener una categoria asociada.");
+            }
+            else
+            {
+                switch (bttCrearProducto.Text)
+                {
+                    case "Crear producto":
 
 
-                        ProductPOST postProducto = new ProductPOST()
+                        if (!(string.IsNullOrEmpty(txtNombre.Text)) && !(string.IsNullOrEmpty(txtDescripcion.Text)) && !(string.IsNullOrEmpty(txtImagen.Text)) &&
+                            !(string.IsNullOrEmpty(txtPrecio.Text)) && listCategorias.Items.Count != 0)
                         {
-                            name = txtNombre.Text,
-                            description = txtDescripcion.Text,
-                            price = double.Parse(txtPrecio.Text),
-                            img = imgBase64,
-                            category = categoryList
-                        };
+                            string URL = "https://binarysystem.pythonanywhere.com/imgJson/";
 
-                        var requestJSON = JsonSerializer.Serialize<ProductPOST>(postProducto); //I Serialized to JSON the Object post.
-                        HttpContent content = new StringContent(requestJSON, Encoding.UTF8, "application/json"); //Serialized the content.
+                            rellenarListaCategoria(categoryList);
 
-                        var httpResponse = await client.PostAsync(URL, content);
 
-                        if (httpResponse.IsSuccessStatusCode)
-                        {
-                            MessageBox.Show("Producto creado con exito!");
-                            this.Close();
-                        }
-                        else
-                        {
-                            MessageBox.Show("Hubo un error de servidor.");
-                        }
-                    }
-                    break;
-                
-                case "Modificar producto":
+                            ProductPOST postProducto = new ProductPOST()
+                            {
+                                name = txtNombre.Text,
+                                description = txtDescripcion.Text,
+                                price = double.Parse(txtPrecio.Text),
+                                img = imgBase64,
+                                category = categoryList
+                            };
 
-                    if (!(string.IsNullOrEmpty(txtNombre.Text)) && !(string.IsNullOrEmpty(txtDescripcion.Text)) && !(string.IsNullOrEmpty(txtImagen.Text)) &&
-                        !(string.IsNullOrEmpty(txtPrecio.Text)) && listCategorias.Items.Count != 0)
-                    {
-                        rellenarListaCategoria(categoryList);
-                        string URLModificar = "https://binarysystem.pythonanywhere.com/imgJson/?id="+producto.id;
+                            var requestJSON = JsonSerializer.Serialize<ProductPOST>(postProducto); //I Serialized to JSON the Object post.
+                            HttpContent content = new StringContent(requestJSON, Encoding.UTF8, "application/json"); //Serialized the content.
 
-                        if (txtImagen.Text == "Imagen obtenida de BinarySystem API.")
-                        {
-                            ProductPUT putProductoSINIMG = new ProductPUT();
-                            
-                            putProductoSINIMG.name = txtNombre.Text;
-                            putProductoSINIMG.description = txtDescripcion.Text;
-                            putProductoSINIMG.price = double.Parse(txtPrecio.Text);
-                            putProductoSINIMG.category = categoryList;
-
-                            var requestJSON = JsonSerializer.Serialize<ProductPUT>(putProductoSINIMG);
-                            HttpContent content = new StringContent(requestJSON, Encoding.UTF8, "application/json");
-
-                            var httpResponse = await client.PutAsync(URLModificar, content);
+                            var httpResponse = await client.PostAsync(URL, content);
 
                             if (httpResponse.IsSuccessStatusCode)
                             {
-                                MessageBox.Show("Producto modificado con exito.");
+                                MessageBox.Show("Producto creado con exito!");
                                 this.Close();
                             }
                             else
                             {
-                                MessageBox.Show("Error banda :/");
+                                MessageBox.Show("Hubo un error de servidor.");
                             }
                         }
-                        else
+                        break;
+
+                    case "Modificar producto":
+
+                        if (!(string.IsNullOrEmpty(txtNombre.Text)) && !(string.IsNullOrEmpty(txtDescripcion.Text)) && !(string.IsNullOrEmpty(txtImagen.Text)) &&
+                            !(string.IsNullOrEmpty(txtPrecio.Text)) && listCategorias.Items.Count != 0)
                         {
-                            ProductPOST putProducto = new ProductPOST();
-                            putProducto.name = txtNombre.Text;
-                            putProducto.description = txtDescripcion.Text;
-                            putProducto.price = double.Parse(txtPrecio.Text);
-                            putProducto.img = imgBase64;
-                            putProducto.category = categoryList;
+                            rellenarListaCategoria(categoryList);
+                            string URLModificar = "https://binarysystem.pythonanywhere.com/imgJson/?id=" + producto.id;
 
-                            var requestJSON = JsonSerializer.Serialize<ProductPOST>(putProducto);
-                            HttpContent content = new StringContent(requestJSON, Encoding.UTF8, "application/json");
-
-                            var httpResponse = await client.PutAsync(URLModificar, content);
-
-                            if (httpResponse.IsSuccessStatusCode)
+                            if (txtImagen.Text == "Imagen obtenida de BinarySystem API.")
                             {
-                                MessageBox.Show("Producto modificado con exito.");
-                                this.Close();
+                                ProductPUT putProductoSINIMG = new ProductPUT();
+
+                                putProductoSINIMG.name = txtNombre.Text;
+                                putProductoSINIMG.description = txtDescripcion.Text;
+                                putProductoSINIMG.price = double.Parse(txtPrecio.Text);
+                                putProductoSINIMG.category = categoryList;
+
+                                var requestJSON = JsonSerializer.Serialize<ProductPUT>(putProductoSINIMG);
+                                HttpContent content = new StringContent(requestJSON, Encoding.UTF8, "application/json");
+
+                                var httpResponse = await client.PutAsync(URLModificar, content);
+
+                                if (httpResponse.IsSuccessStatusCode)
+                                {
+                                    MessageBox.Show("Producto modificado con exito.");
+                                    this.Close();
+                                }
+                                else
+                                {
+                                    MessageBox.Show("Error banda :/");
+                                }
                             }
                             else
                             {
-                                MessageBox.Show("Error banda :/");
-                            }
-                        }
+                                ProductPOST putProducto = new ProductPOST();
+                                putProducto.name = txtNombre.Text;
+                                putProducto.description = txtDescripcion.Text;
+                                putProducto.price = double.Parse(txtPrecio.Text);
+                                putProducto.img = imgBase64;
+                                putProducto.category = categoryList;
 
+                                var requestJSON = JsonSerializer.Serialize<ProductPOST>(putProducto);
+                                HttpContent content = new StringContent(requestJSON, Encoding.UTF8, "application/json");
+
+                                var httpResponse = await client.PutAsync(URLModificar, content);
+
+                                if (httpResponse.IsSuccessStatusCode)
+                                {
+                                    MessageBox.Show("Producto modificado con exito.");
+                                    this.Close();
+                                }
+                                else
+                                {
+                                    MessageBox.Show("Error banda :/");
+                                }
+                            }
+
+                        }
+                        else
+                        {
+                            MessageBox.Show("Verifique los campos, puede que no esteen vacios.");
+                        }
+                        break;
+                }
+            }
+        }
+
+        private void txtPrecio_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            foreach(var x in txtPrecio.Text)
+            {
+                if (char.IsDigit(x))
+                {
+                    if(x < 0)
+                    {
+                        err.SetError(txtPrecio, "Solo se acepta numeros positivos como precio del producto.");
+                        errPrecio = true;
                     }
                     else
                     {
-                        MessageBox.Show("Verifique los campos, puede que no esteen vacios.");
+                        err.Clear();
+                        errPrecio = false;
                     }
-                    break;
+                }
             }
-            
+            if (!utilidades.onlyNumbers(e))
+            {
+                err.SetError(txtPrecio, "Solo se acepta numeros positivos.");
+                errPrecio = true;
+            }else if (string.IsNullOrEmpty(txtPrecio.Text))
+            {
+                err.SetError(txtPrecio, "Este campo no debe estar vacio.");
+                errPrecio = true;
+            }
+            else
+            {
+                err.Clear();
+                errPrecio = false;
+            }
         }
+
+        //Validaciones:
+        private void txtNombre_Leave(object sender, EventArgs e)
+        {
+            if (txtNombre.Text.Length > 30 || txtNombre.Text == String.Empty)
+            {
+                err.SetError(txtNombre, "Verifique lo siguiente: \n*El nombre del producto no debe estar vacio.\n*El nombre del producto no debe ser muy largo.");
+                errNombre = true;
+            }
+            else
+            {
+                err.Clear();
+                errNombre = false;
+            }
+        }
+        private void txtDescripcion_Leave(object sender, EventArgs e)
+        {
+            if (txtDescripcion.Text.Length > 30 || txtDescripcion.Text == String.Empty)
+            {
+                err.SetError(txtDescripcion, "Verifique lo siguiente: \n*El nombre del producto no debe estar vacio.\n*El nombre del producto no debe ser muy largo.");
+                errDescripcion = true;
+            }
+            else
+            {
+                err.Clear();
+                errDescripcion = false;
+            }
+        }
+
     }
 }

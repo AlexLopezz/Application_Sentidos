@@ -154,6 +154,7 @@
             this.txtPhone.Name = "txtPhone";
             this.txtPhone.Size = new System.Drawing.Size(124, 23);
             this.txtPhone.TabIndex = 11;
+            this.txtPhone.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPhone_KeyPress);
             // 
             // txtSelected_tables
             // 
@@ -712,7 +713,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.ClientSize = new System.Drawing.Size(858, 446);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.bttBuscarMesas);
@@ -733,7 +734,7 @@
             this.Controls.Add(this.button1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Name = "CreateReserva";
-            this.Text = "CreateReserva";
+            this.Text = "Crear una reserva";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.CreateReserva_FormClosed);
             this.panelMesas.ResumeLayout(false);
             this.panelMesas.PerformLayout();

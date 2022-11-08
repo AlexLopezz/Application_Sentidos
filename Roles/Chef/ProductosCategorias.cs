@@ -54,8 +54,11 @@ namespace Application_Sentidos.Roles.Chef
                 {
                     var imgBytes = await client.GetByteArrayAsync("https://binarysystem.pythonanywhere.com" + p.img);
                     MemoryStream ms = new MemoryStream(imgBytes);
-
-                    dgvProductos.Rows.Add(p.id, p.name, Image.FromStream(ms));
+                    try
+                    {
+                        dgvProductos.Rows.Add(p.id, p.name, Image.FromStream(ms));
+                    }
+                    catch (Exception) { MessageBox.Show("Intentelo de nuevo."); }
                 }
             }
         }
@@ -152,6 +155,11 @@ namespace Application_Sentidos.Roles.Chef
         {
             CrearModificarProducto crearModificar = new CrearModificarProducto("Modificar producto", dgvProductos.CurrentRow.Cells[1].Value.ToString());
             crearModificar.ShowDialog();
+        }
+
+        private void bttRefresh_Click(object sender, EventArgs e)
+        {
+            loadDgvProductos();
         }
     }
 }

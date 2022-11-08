@@ -324,10 +324,10 @@
             // lblMenu
             // 
             this.lblMenu.AutoSize = true;
-            this.lblMenu.Font = new System.Drawing.Font("Segoe Print", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
-            this.lblMenu.Location = new System.Drawing.Point(385, 8);
+            this.lblMenu.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lblMenu.Location = new System.Drawing.Point(432, 16);
             this.lblMenu.Name = "lblMenu";
-            this.lblMenu.Size = new System.Drawing.Size(263, 28);
+            this.lblMenu.Size = new System.Drawing.Size(191, 17);
             this.lblMenu.TabIndex = 15;
             this.lblMenu.Text = "MI NUEVO MENU - SENTIDOS";
             // 

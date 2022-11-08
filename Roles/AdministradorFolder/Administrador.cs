@@ -12,6 +12,7 @@ using Application_Sentidos.Authentication;
 using Application_Sentidos.Resources.Objects;
 using Application_Sentidos.Resources.Administrador;
 using Application_Sentidos.Resources;
+using Application_Sentidos.Roles.Chef;
 
 namespace Application_Sentidos.Roles
 {
@@ -57,5 +58,6 @@ namespace Application_Sentidos.Roles
 
         private void bttFacturas_Click(object sender, EventArgs e) => utilidades.openChildForm(new Factura(), panelContenedor);
 
+        private void bttMenu_Click(object sender, EventArgs e) => utilidades.openChildForm(new Menu(), panelContenedor);
     }
 }

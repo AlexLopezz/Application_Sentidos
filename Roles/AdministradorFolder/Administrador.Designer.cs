@@ -30,17 +30,17 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Administrador));
             this.panelMenuLateral = new System.Windows.Forms.Panel();
-            this.bttConsultas = new System.Windows.Forms.Button();
+            this.bttMenu = new System.Windows.Forms.Button();
+            this.bttSalir = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
             this.bttReservas = new System.Windows.Forms.Button();
             this.bttFacturas = new System.Windows.Forms.Button();
-            this.bttUsuarios = new System.Windows.Forms.Button();
-            this.bttSalir = new System.Windows.Forms.Button();
             this.lblUser = new System.Windows.Forms.Label();
+            this.bttUsuarios = new System.Windows.Forms.Button();
             this.pictureBoxAdmin = new System.Windows.Forms.PictureBox();
             this.panelContenedor = new System.Windows.Forms.Panel();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.label1 = new System.Windows.Forms.Label();
             this.panelMenuLateral.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxAdmin)).BeginInit();
             this.panelContenedor.SuspendLayout();
@@ -51,8 +51,8 @@
             // panelMenuLateral
             // 
             this.panelMenuLateral.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.panelMenuLateral.Controls.Add(this.bttMenu);
             this.panelMenuLateral.Controls.Add(this.bttSalir);
-            this.panelMenuLateral.Controls.Add(this.bttConsultas);
             this.panelMenuLateral.Controls.Add(this.label1);
             this.panelMenuLateral.Controls.Add(this.bttReservas);
             this.panelMenuLateral.Controls.Add(this.bttFacturas);
@@ -66,24 +66,54 @@
             this.panelMenuLateral.Size = new System.Drawing.Size(266, 420);
             this.panelMenuLateral.TabIndex = 3;
             // 
-            // bttConsultas
+            // bttMenu
             // 
-            this.bttConsultas.BackColor = System.Drawing.SystemColors.GrayText;
-            this.bttConsultas.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.bttConsultas.FlatAppearance.BorderSize = 0;
-            this.bttConsultas.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Black;
-            this.bttConsultas.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.GrayText;
-            this.bttConsultas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.bttConsultas.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.bttConsultas.Image = ((System.Drawing.Image)(resources.GetObject("bttConsultas.Image")));
-            this.bttConsultas.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.bttConsultas.Location = new System.Drawing.Point(0, 215);
-            this.bttConsultas.Name = "bttConsultas";
-            this.bttConsultas.Size = new System.Drawing.Size(266, 53);
-            this.bttConsultas.TabIndex = 6;
-            this.bttConsultas.Text = "CONTACTO";
-            this.bttConsultas.UseVisualStyleBackColor = false;
-            this.bttConsultas.Click += new System.EventHandler(this.bttConsultas_Click);
+            this.bttMenu.BackColor = System.Drawing.SystemColors.GrayText;
+            this.bttMenu.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.bttMenu.FlatAppearance.BorderSize = 0;
+            this.bttMenu.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Black;
+            this.bttMenu.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.GrayText;
+            this.bttMenu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.bttMenu.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.bttMenu.ForeColor = System.Drawing.Color.Transparent;
+            this.bttMenu.Image = ((System.Drawing.Image)(resources.GetObject("bttMenu.Image")));
+            this.bttMenu.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.bttMenu.Location = new System.Drawing.Point(0, 215);
+            this.bttMenu.Name = "bttMenu";
+            this.bttMenu.Size = new System.Drawing.Size(266, 53);
+            this.bttMenu.TabIndex = 7;
+            this.bttMenu.Text = "MENUS";
+            this.bttMenu.UseVisualStyleBackColor = false;
+            this.bttMenu.Click += new System.EventHandler(this.bttMenu_Click);
+            // 
+            // bttSalir
+            // 
+            this.bttSalir.BackColor = System.Drawing.SystemColors.GrayText;
+            this.bttSalir.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.bttSalir.FlatAppearance.BorderSize = 0;
+            this.bttSalir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.bttSalir.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.bttSalir.Image = ((System.Drawing.Image)(resources.GetObject("bttSalir.Image")));
+            this.bttSalir.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.bttSalir.Location = new System.Drawing.Point(0, 364);
+            this.bttSalir.Name = "bttSalir";
+            this.bttSalir.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
+            this.bttSalir.Size = new System.Drawing.Size(266, 56);
+            this.bttSalir.TabIndex = 3;
+            this.bttSalir.Text = "SALIR";
+            this.bttSalir.UseVisualStyleBackColor = false;
+            this.bttSalir.Click += new System.EventHandler(this.bttSalir_Click);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(100, 3);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(127, 21);
+            this.label1.TabIndex = 6;
+            this.label1.Text = "BIENVENIDO/A";
             // 
             // bttReservas
             // 
@@ -125,6 +155,16 @@
             this.bttFacturas.UseVisualStyleBackColor = false;
             this.bttFacturas.Click += new System.EventHandler(this.bttFacturas_Click);
             // 
+            // lblUser
+            // 
+            this.lblUser.AutoSize = true;
+            this.lblUser.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lblUser.Location = new System.Drawing.Point(100, 24);
+            this.lblUser.Name = "lblUser";
+            this.lblUser.Size = new System.Drawing.Size(142, 32);
+            this.lblUser.TabIndex = 5;
+            this.lblUser.Text = "*user here*";
+            // 
             // bttUsuarios
             // 
             this.bttUsuarios.BackColor = System.Drawing.SystemColors.GrayText;
@@ -144,34 +184,6 @@
             this.bttUsuarios.Text = "USUARIOS";
             this.bttUsuarios.UseVisualStyleBackColor = false;
             this.bttUsuarios.Click += new System.EventHandler(this.bttUsuarios_Click);
-            // 
-            // bttSalir
-            // 
-            this.bttSalir.BackColor = System.Drawing.SystemColors.GrayText;
-            this.bttSalir.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.bttSalir.FlatAppearance.BorderSize = 0;
-            this.bttSalir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.bttSalir.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.bttSalir.Image = ((System.Drawing.Image)(resources.GetObject("bttSalir.Image")));
-            this.bttSalir.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.bttSalir.Location = new System.Drawing.Point(0, 364);
-            this.bttSalir.Name = "bttSalir";
-            this.bttSalir.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
-            this.bttSalir.Size = new System.Drawing.Size(266, 56);
-            this.bttSalir.TabIndex = 3;
-            this.bttSalir.Text = "SALIR";
-            this.bttSalir.UseVisualStyleBackColor = false;
-            this.bttSalir.Click += new System.EventHandler(this.bttSalir_Click);
-            // 
-            // lblUser
-            // 
-            this.lblUser.AutoSize = true;
-            this.lblUser.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lblUser.Location = new System.Drawing.Point(100, 24);
-            this.lblUser.Name = "lblUser";
-            this.lblUser.Size = new System.Drawing.Size(142, 32);
-            this.lblUser.TabIndex = 5;
-            this.lblUser.Text = "*user here*";
             // 
             // pictureBoxAdmin
             // 
@@ -216,17 +228,6 @@
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(100, 3);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(127, 21);
-            this.label1.TabIndex = 6;
-            this.label1.Text = "BIENVENIDO/A";
-            // 
             // Administrador
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -235,8 +236,9 @@
             this.Controls.Add(this.panelContenedor);
             this.Controls.Add(this.panelMenuLateral);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "Administrador";
             this.Text = "Administrador - Restaurante Sentidos & Casa de Te";
             this.Load += new System.EventHandler(this.Administrador_Load);
@@ -252,7 +254,6 @@
 
         #endregion
         private Panel panelMenuLateral;
-        private Button bttConsultas;
         private Button bttReservas;
         private Button bttUsuarios;
         private Button bttFacturas;
@@ -263,5 +264,6 @@
         private PictureBox pictureBox2;
         private PictureBox pictureBox1;
         private Label label1;
+        private Button bttMenu;
     }
 }

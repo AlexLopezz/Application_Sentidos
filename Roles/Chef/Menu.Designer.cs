@@ -293,10 +293,10 @@
             // lblAdminMenu
             // 
             this.lblAdminMenu.AutoSize = true;
-            this.lblAdminMenu.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lblAdminMenu.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.lblAdminMenu.Location = new System.Drawing.Point(118, 9);
             this.lblAdminMenu.Name = "lblAdminMenu";
-            this.lblAdminMenu.Size = new System.Drawing.Size(409, 21);
+            this.lblAdminMenu.Size = new System.Drawing.Size(334, 17);
             this.lblAdminMenu.TabIndex = 8;
             this.lblAdminMenu.Text = "ADMINISTRACION Y ARMADO DE MENU - SENTIDOS";
             // 

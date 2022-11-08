@@ -31,22 +31,29 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Maitre));
             this.panelContenedor = new System.Windows.Forms.Panel();
             this.panelLateralIzquierdo = new System.Windows.Forms.Panel();
+            this.bttReservas = new System.Windows.Forms.Button();
             this.panelSalir = new System.Windows.Forms.Panel();
             this.bttSalir = new System.Windows.Forms.Button();
-            this.bttReservas = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.lblUser = new System.Windows.Forms.Label();
             this.lblBienvenido = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.panelContenedor.SuspendLayout();
             this.panelLateralIzquierdo.SuspendLayout();
             this.panelSalir.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.SuspendLayout();
             // 
             // panelContenedor
             // 
-            this.panelContenedor.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.panelContenedor.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.panelContenedor.Controls.Add(this.pictureBox3);
+            this.panelContenedor.Controls.Add(this.pictureBox2);
             this.panelContenedor.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelContenedor.Location = new System.Drawing.Point(266, 0);
             this.panelContenedor.Name = "panelContenedor";
@@ -64,6 +71,24 @@
             this.panelLateralIzquierdo.Name = "panelLateralIzquierdo";
             this.panelLateralIzquierdo.Size = new System.Drawing.Size(266, 419);
             this.panelLateralIzquierdo.TabIndex = 0;
+            // 
+            // bttReservas
+            // 
+            this.bttReservas.BackColor = System.Drawing.Color.Gray;
+            this.bttReservas.Dock = System.Windows.Forms.DockStyle.Top;
+            this.bttReservas.FlatAppearance.BorderSize = 0;
+            this.bttReservas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.bttReservas.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.bttReservas.ForeColor = System.Drawing.Color.White;
+            this.bttReservas.Image = ((System.Drawing.Image)(resources.GetObject("bttReservas.Image")));
+            this.bttReservas.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.bttReservas.Location = new System.Drawing.Point(0, 68);
+            this.bttReservas.Name = "bttReservas";
+            this.bttReservas.Size = new System.Drawing.Size(266, 72);
+            this.bttReservas.TabIndex = 1;
+            this.bttReservas.Text = "RESERVAS";
+            this.bttReservas.UseVisualStyleBackColor = false;
+            this.bttReservas.Click += new System.EventHandler(this.bttReservas_Click);
             // 
             // panelSalir
             // 
@@ -91,24 +116,6 @@
             this.bttSalir.Text = "SALIR";
             this.bttSalir.UseVisualStyleBackColor = false;
             this.bttSalir.Click += new System.EventHandler(this.bttSalir_Click);
-            // 
-            // bttReservas
-            // 
-            this.bttReservas.BackColor = System.Drawing.Color.Gray;
-            this.bttReservas.Dock = System.Windows.Forms.DockStyle.Top;
-            this.bttReservas.FlatAppearance.BorderSize = 0;
-            this.bttReservas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.bttReservas.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.bttReservas.ForeColor = System.Drawing.Color.White;
-            this.bttReservas.Image = ((System.Drawing.Image)(resources.GetObject("bttReservas.Image")));
-            this.bttReservas.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.bttReservas.Location = new System.Drawing.Point(0, 68);
-            this.bttReservas.Name = "bttReservas";
-            this.bttReservas.Size = new System.Drawing.Size(266, 72);
-            this.bttReservas.TabIndex = 1;
-            this.bttReservas.Text = "RESERVAS";
-            this.bttReservas.UseVisualStyleBackColor = false;
-            this.bttReservas.Click += new System.EventHandler(this.bttReservas_Click);
             // 
             // panel1
             // 
@@ -153,6 +160,26 @@
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.Location = new System.Drawing.Point(125, 24);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(580, 330);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 2;
+            this.pictureBox2.TabStop = false;
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
+            this.pictureBox3.Location = new System.Drawing.Point(381, 360);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(72, 56);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox3.TabIndex = 3;
+            this.pictureBox3.TabStop = false;
+            // 
             // Maitre
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -165,11 +192,14 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Maitre";
             this.Load += new System.EventHandler(this.Maitre_Load);
+            this.panelContenedor.ResumeLayout(false);
             this.panelLateralIzquierdo.ResumeLayout(false);
             this.panelSalir.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -185,5 +215,7 @@
         private Label lblUser;
         private Label lblBienvenido;
         private PictureBox pictureBox1;
+        private PictureBox pictureBox2;
+        private PictureBox pictureBox3;
     }
 }

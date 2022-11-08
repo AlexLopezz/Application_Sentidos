@@ -118,7 +118,7 @@ namespace Application_Sentidos.Resources
         {
             
             emptyDgv();
-            string urlBase = "https://binarysystem.pythonanywhere.com/api/allReservation/";
+            string urlBase = "https://binarysystem.pythonanywhere.com/api/reservationPay/";
             var httpResponse = await httpClient.GetAsync(urlBase);
             if (httpResponse.IsSuccessStatusCode)
             {
@@ -138,7 +138,7 @@ namespace Application_Sentidos.Resources
                             mesas += mesa.number_mesa.ToString() + ",";
                         }
                         mesas = mesas.Remove(mesas.Length - 1);
-                        dgvReserva.Rows.Add(r.id, mesas, r.date, r.schedule, r.user_id);
+                        dgvReserva.Rows.Add(r.id, r.user_id, r.schedule, r.date, mesas);
                         mesas = string.Empty;
                     }
                 }

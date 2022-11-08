@@ -15,6 +15,8 @@ namespace Application_Sentidos.Resources.Mitre
 {
     public partial class CreateReserva : Form
     {
+        ErrorProvider err = new ErrorProvider();
+        Utilidades utilidades = new Utilidades();
         GetUserFilter userSelected = new GetUserFilter();
         DateTime date = DateTime.Now;
         HttpClient httpClient = new HttpClient();
@@ -79,17 +81,32 @@ namespace Application_Sentidos.Resources.Mitre
         }
         private bool validateFields()
         {
-            return string.IsNullOrEmpty(txtUser.Text) && string.IsNullOrEmpty(txtPhone.Text) &&
-                string.IsNullOrEmpty(cboSchedule.Text)  && string.IsNullOrEmpty(txtSelected_tables.Text);
+            return string.IsNullOrEmpty(txtUser.Text) || string.IsNullOrEmpty(txtPhone.Text) ||
+                string.IsNullOrEmpty(cboSchedule.Text)  || string.IsNullOrEmpty(txtSelected_tables.Text);
         }
         private async void button1_Click(object sender, EventArgs e)
         {
+            bool paid_bool = false;
             if (validateFields())
             {
                 MessageBox.Show("Debe completar los campos para realizar una reserva.");
             }
             else
             {
+                if (dateFecha.Value.ToString("yyyy-MM-dd").Equals(DateTime.Now.ToString("yyyy-MM-dd")))
+                {
+                    if (MessageBox.Show("Las reservas realizadas en el dia, se deben abonarlas.\n*Al realizar esta reserva, usted se compromete a que esta reserva ya fue pagada.\n¿Esta de acuerdo?", "Reservas" +
+                        "en el dia actual.", MessageBoxButtons.YesNo) == DialogResult.Yes)
+                    { 
+                        paid_bool = true; 
+                    }
+                    else
+                    {
+                        MessageBox.Show("Usted no puede realizar esta reserva, debido a que el usuario no pago la reserva en el dia actual.", "Reserva no realizada.");
+                        return;
+                    }
+                }
+
                 string[] table_selected = txtSelected_tables.Text.Split(',');
 
                 List<int> table = new List<int>();
@@ -108,6 +125,7 @@ namespace Application_Sentidos.Resources.Mitre
                     phone = txtPhone.Text,
                     schedule = cboSchedule.Text,
                     date = dateFecha.Text,
+                    paid = paid_bool,
                     selected_tables = table
                 };
 
@@ -146,16 +164,14 @@ namespace Application_Sentidos.Resources.Mitre
                 var httpResponse = await httpClient.GetAsync(URLBuscarUser+txtBusquedaUser.Text);
                 if (httpResponse.IsSuccessStatusCode)
                 {
-                    emptyListFilter();
-                    var body = await httpResponse.Content.ReadAsStringAsync();
-                    try
-                    {
-                        var userFilter = JsonSerializer.Deserialize<List<GetUserFilter>>(body);
-                        loadListFilter(userFilter);
-                    }
-                    catch (Exception) { listUserFilter.Items.Add("No se encontro usuario.");  }
+                  emptyListFilter();
+                  var body = await httpResponse.Content.ReadAsStringAsync();
+
+                  var userFilter = JsonSerializer.Deserialize<List<GetUserFilter>>(body);
+                  loadListFilter(userFilter);
+
                 }
-                else { MessageBox.Show("Ocurrio un error");  }
+                else { MessageBox.Show("No se encontraron resultados.","Usuario no encontrado.");  }
             }
         }
         
@@ -293,6 +309,24 @@ namespace Application_Sentidos.Resources.Mitre
         private void CreateReserva_FormClosed(object sender, FormClosedEventArgs e)
         {
             this.Close();
+        }
+
+        private void txtPhone_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            bool validate = utilidades.onlyNumbers(e);
+            if (!validate)
+            {
+                err.SetError(txtPhone, "Debe ingresar solo numeros.");
+            }
+            else if (txtPhone.Text.Length == 9)
+            {
+                err.Clear();
+            }
+            else
+            {
+                err.SetError(txtPhone, "Verifique lo siguiente:\n*Numerico telefonico no valido.\n*Ingrese numero sin 0, ni 15, tampoco +.");
+
+            }
         }
     }
 }

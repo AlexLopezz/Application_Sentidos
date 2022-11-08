@@ -222,10 +222,10 @@
             // 
             this.lblAdminUser.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lblAdminUser.AutoSize = true;
-            this.lblAdminUser.Font = new System.Drawing.Font("Segoe UI Emoji", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lblAdminUser.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.lblAdminUser.Location = new System.Drawing.Point(119, 9);
             this.lblAdminUser.Name = "lblAdminUser";
-            this.lblAdminUser.Size = new System.Drawing.Size(355, 21);
+            this.lblAdminUser.Size = new System.Drawing.Size(276, 17);
             this.lblAdminUser.TabIndex = 1;
             this.lblAdminUser.Text = "ADMINISTRACION DE USUARIOS SENTIDOS";
             // 
@@ -234,7 +234,7 @@
             this.label2.AutoSize = true;
             this.label2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label2.Font = new System.Drawing.Font("Segoe Script", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
-            this.label2.Location = new System.Drawing.Point(119, 30);
+            this.label2.Location = new System.Drawing.Point(118, 26);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(443, 20);
             this.label2.TabIndex = 7;
@@ -251,8 +251,9 @@
             this.panel1.Controls.Add(this.rb_Chef);
             this.panel1.Location = new System.Drawing.Point(658, 130);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(155, 125);
+            this.panel1.Size = new System.Drawing.Size(155, 116);
             this.panel1.TabIndex = 8;
+            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // rb_Chef
             // 

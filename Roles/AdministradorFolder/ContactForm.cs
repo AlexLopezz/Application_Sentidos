@@ -78,7 +78,7 @@ namespace Application_Sentidos.Roles.AdministradorFolder
             {
                 if (i < avg)
                 {
-                    a.BackColor = Color.DeepSkyBlue;
+                    a.BackColor = Color.Red;
                     i++;
                 }
             }
@@ -147,5 +147,10 @@ namespace Application_Sentidos.Roles.AdministradorFolder
         }
 
         private void button2_Click(object sender, EventArgs e) => loadDgvContact();
+
+        private void Star5_Attention_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

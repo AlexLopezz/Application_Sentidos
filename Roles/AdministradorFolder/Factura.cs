@@ -23,7 +23,13 @@ namespace Application_Sentidos.Roles.AdministradorFolder
         private void emptyDgv() => dgvFacturas.Rows.Clear();
         private async void loadDgvInvoice(string URLBase)
         {
+            lblTotal.Text = "Total pagado: $";
+            lblTotalCredito.Text = "$0";
+            lblTotalDebito.Text = "$0";
+            lblTotalEfectivo.Text = "$0";
             emptyDgv();
+            double debito = 0, credito = 0, efectivo = 0;
+            
             var httpResponse = await httpClient.GetAsync(URLBase);
 
             if (httpResponse.IsSuccessStatusCode)
@@ -35,13 +41,28 @@ namespace Application_Sentidos.Roles.AdministradorFolder
                 {
                     totalPrice += invoice.totalPrice;
                     dgvFacturas.Rows.Add(invoice.number_invoice, invoice.date, invoice.method_pay, $"${invoice.totalPrice}","Consumidor final");
+                    switch (invoice.method_pay)
+                    {
+                        case "Efectivo":
+                            efectivo += invoice.totalPrice;
+                            break;
+                        case "Debito":
+                            debito+= invoice.totalPrice;
+                            break;
+                        case "Credito":
+                            credito+= invoice.totalPrice;
+                            break;
+                    }
                 }
+                lblTotalEfectivo.Text ="$"+efectivo.ToString();
+                lblTotalDebito.Text = "$"+debito.ToString();
+                lblTotalCredito.Text = "$"+credito.ToString();
                 lblTotal.Text += totalPrice.ToString();
-                
             }
             else
             {
                 MessageBox.Show("No existen facturas por el momento.");
+                lblTotal.Text = "Total pagado: $";
             }
         }
 
@@ -74,6 +95,11 @@ namespace Application_Sentidos.Roles.AdministradorFolder
 
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
+        }
+
+        private void label5_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

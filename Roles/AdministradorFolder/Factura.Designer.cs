@@ -30,9 +30,8 @@
         {
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Factura));
             this.dgvFacturas = new System.Windows.Forms.DataGridView();
             this.NUMERO_FACTURA = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -40,7 +39,6 @@
             this.METODO_PAGO = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.PRECIO_TOTAL = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Cliente = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.DETALLE = new System.Windows.Forms.DataGridViewButtonColumn();
             this.label1 = new System.Windows.Forms.Label();
             this.dateStart = new System.Windows.Forms.DateTimePicker();
             this.dateEnd = new System.Windows.Forms.DateTimePicker();
@@ -51,12 +49,22 @@
             this.label4 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.lblTotalEfectivo = new System.Windows.Forms.Label();
+            this.lblEfectivo = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
             this.lblTotal = new System.Windows.Forms.Label();
-            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.lblTotalDebito = new System.Windows.Forms.Label();
+            this.lblDebito = new System.Windows.Forms.Label();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.lblTotalCredito = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvFacturas)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
+            this.panel2.SuspendLayout();
+            this.panel4.SuspendLayout();
             this.SuspendLayout();
             // 
             // dgvFacturas
@@ -76,7 +84,7 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvFacturas.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dgvFacturas.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.dgvFacturas.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
             this.dgvFacturas.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.dgvFacturas.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
@@ -93,25 +101,24 @@
             this.DATE,
             this.METODO_PAGO,
             this.PRECIO_TOTAL,
-            this.Cliente,
-            this.DETALLE});
+            this.Cliente});
             this.dgvFacturas.EnableHeadersVisualStyles = false;
             this.dgvFacturas.GridColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.dgvFacturas.Location = new System.Drawing.Point(75, 94);
             this.dgvFacturas.Name = "dgvFacturas";
             this.dgvFacturas.ReadOnly = true;
             this.dgvFacturas.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvFacturas.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvFacturas.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.dgvFacturas.RowHeadersVisible = false;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.dgvFacturas.RowsDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.dgvFacturas.RowsDefaultCellStyle = dataGridViewCellStyle4;
             this.dgvFacturas.RowTemplate.Height = 25;
             this.dgvFacturas.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvFacturas.Size = new System.Drawing.Size(604, 279);
@@ -147,19 +154,6 @@
             this.Cliente.HeaderText = "Cliente";
             this.Cliente.Name = "Cliente";
             this.Cliente.ReadOnly = true;
-            // 
-            // DETALLE
-            // 
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.DETALLE.DefaultCellStyle = dataGridViewCellStyle3;
-            this.DETALLE.HeaderText = "";
-            this.DETALLE.Name = "DETALLE";
-            this.DETALLE.ReadOnly = true;
-            this.DETALLE.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.DETALLE.Text = "Detalle";
-            this.DETALLE.ToolTipText = "Descripcion de la factura detalladamente.";
-            this.DETALLE.UseColumnTextForButtonValue = true;
             // 
             // label1
             // 
@@ -259,19 +253,42 @@
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            this.panel1.Location = new System.Drawing.Point(685, 94);
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.panel1.Controls.Add(this.lblTotalEfectivo);
+            this.panel1.Location = new System.Drawing.Point(727, 158);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(139, 279);
+            this.panel1.Size = new System.Drawing.Size(69, 29);
             this.panel1.TabIndex = 10;
+            // 
+            // lblTotalEfectivo
+            // 
+            this.lblTotalEfectivo.AutoSize = true;
+            this.lblTotalEfectivo.Dock = System.Windows.Forms.DockStyle.Left;
+            this.lblTotalEfectivo.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lblTotalEfectivo.Location = new System.Drawing.Point(0, 0);
+            this.lblTotalEfectivo.Name = "lblTotalEfectivo";
+            this.lblTotalEfectivo.Size = new System.Drawing.Size(32, 25);
+            this.lblTotalEfectivo.TabIndex = 1;
+            this.lblTotalEfectivo.Text = "$0";
+            this.lblTotalEfectivo.Click += new System.EventHandler(this.label5_Click);
+            // 
+            // lblEfectivo
+            // 
+            this.lblEfectivo.AutoSize = true;
+            this.lblEfectivo.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lblEfectivo.Location = new System.Drawing.Point(727, 140);
+            this.lblEfectivo.Name = "lblEfectivo";
+            this.lblEfectivo.Size = new System.Drawing.Size(60, 15);
+            this.lblEfectivo.TabIndex = 0;
+            this.lblEfectivo.Text = "EFECTIVO";
             // 
             // panel3
             // 
-            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
             this.panel3.Controls.Add(this.lblTotal);
-            this.panel3.Location = new System.Drawing.Point(466, 379);
+            this.panel3.Location = new System.Drawing.Point(454, 379);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(213, 36);
+            this.panel3.Size = new System.Drawing.Size(225, 40);
             this.panel3.TabIndex = 11;
             // 
             // lblTotal
@@ -284,24 +301,77 @@
             this.lblTotal.TabIndex = 0;
             this.lblTotal.Text = "Total pagado: $";
             // 
-            // linkLabel1
+            // panel2
             // 
-            this.linkLabel1.AutoSize = true;
-            this.linkLabel1.Location = new System.Drawing.Point(391, 394);
-            this.linkLabel1.Name = "linkLabel1";
-            this.linkLabel1.Size = new System.Drawing.Size(40, 15);
-            this.linkLabel1.TabIndex = 12;
-            this.linkLabel1.TabStop = true;
-            this.linkLabel1.Text = "Check";
-            this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.panel2.Controls.Add(this.lblTotalDebito);
+            this.panel2.Location = new System.Drawing.Point(727, 208);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(69, 30);
+            this.panel2.TabIndex = 11;
+            // 
+            // lblTotalDebito
+            // 
+            this.lblTotalDebito.AutoSize = true;
+            this.lblTotalDebito.Dock = System.Windows.Forms.DockStyle.Left;
+            this.lblTotalDebito.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lblTotalDebito.Location = new System.Drawing.Point(0, 0);
+            this.lblTotalDebito.Name = "lblTotalDebito";
+            this.lblTotalDebito.Size = new System.Drawing.Size(32, 25);
+            this.lblTotalDebito.TabIndex = 1;
+            this.lblTotalDebito.Text = "$0";
+            // 
+            // lblDebito
+            // 
+            this.lblDebito.AutoSize = true;
+            this.lblDebito.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lblDebito.Location = new System.Drawing.Point(727, 190);
+            this.lblDebito.Name = "lblDebito";
+            this.lblDebito.Size = new System.Drawing.Size(50, 15);
+            this.lblDebito.TabIndex = 0;
+            this.lblDebito.Text = "DEBITO";
+            // 
+            // panel4
+            // 
+            this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.panel4.Controls.Add(this.lblTotalCredito);
+            this.panel4.Location = new System.Drawing.Point(727, 258);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(69, 30);
+            this.panel4.TabIndex = 12;
+            // 
+            // lblTotalCredito
+            // 
+            this.lblTotalCredito.AutoSize = true;
+            this.lblTotalCredito.Dock = System.Windows.Forms.DockStyle.Left;
+            this.lblTotalCredito.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lblTotalCredito.Location = new System.Drawing.Point(0, 0);
+            this.lblTotalCredito.Name = "lblTotalCredito";
+            this.lblTotalCredito.Size = new System.Drawing.Size(32, 25);
+            this.lblTotalCredito.TabIndex = 1;
+            this.lblTotalCredito.Text = "$0";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label8.Location = new System.Drawing.Point(727, 240);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(57, 15);
+            this.label8.TabIndex = 0;
+            this.label8.Text = "CREDITO";
             // 
             // Factura
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.ClientSize = new System.Drawing.Size(825, 420);
-            this.Controls.Add(this.linkLabel1);
+            this.Controls.Add(this.panel4);
+            this.Controls.Add(this.label8);
+            this.Controls.Add(this.lblDebito);
+            this.Controls.Add(this.lblEfectivo);
+            this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.pictureBox1);
@@ -319,8 +389,14 @@
             this.Text = "Factura";
             ((System.ComponentModel.ISupportInitialize)(this.dgvFacturas)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
+            this.panel4.ResumeLayout(false);
+            this.panel4.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -338,15 +414,21 @@
         private Label label3;
         private Label label4;
         private PictureBox pictureBox1;
+        private Panel panel1;
+        private Panel panel3;
+        private Label lblTotal;
         private DataGridViewTextBoxColumn NUMERO_FACTURA;
         private DataGridViewTextBoxColumn DATE;
         private DataGridViewTextBoxColumn METODO_PAGO;
         private DataGridViewTextBoxColumn PRECIO_TOTAL;
         private DataGridViewTextBoxColumn Cliente;
-        private DataGridViewButtonColumn DETALLE;
-        private Panel panel1;
-        private Panel panel3;
-        private Label lblTotal;
-        private LinkLabel linkLabel1;
+        private Label lblTotalEfectivo;
+        private Label lblEfectivo;
+        private Panel panel2;
+        private Label lblTotalDebito;
+        private Label lblDebito;
+        private Panel panel4;
+        private Label lblTotalCredito;
+        private Label label8;
     }
 }

@@ -14,6 +14,7 @@ namespace Application_Sentidos.Roles.Chef
 {
     public partial class CategoriaAgregar_Modificar : Form
     {
+        ErrorProvider err = new ErrorProvider();
         HttpClient client = new HttpClient();
         string auxNameCategory = "";
         public CategoriaAgregar_Modificar(string txtCategoria)
@@ -33,7 +34,7 @@ namespace Application_Sentidos.Roles.Chef
 
         private async void bttCategoria_Click(object sender, EventArgs e)
         {
-            if(textBox1.Text != null)
+            if(textBox1.Text != string.Empty && textBox1.Text.Length > 3)
             {
                 switch (bttCategoria.Text)
                 {
@@ -89,10 +90,12 @@ namespace Application_Sentidos.Roles.Chef
                             else { MessageBox.Show("Hubo un error de conexion."); }
 
                         }
-                        else { MessageBox.Show("Hubo un error de conexion."); }
-
                         break;
                 }
+            }
+            else
+            {
+                MessageBox.Show("Ocurrio un error, verifique lo siguiente:\n*El campo no debe estar vacio.\n*El campo debe ser tener almenos 4 caracteres.");
             }
         }
     }
